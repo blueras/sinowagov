@@ -20,6 +20,7 @@
             --box-bg: #f5f5f5; 
             --text-muted: #627d98; 
             --shadow-md: 0 10px 30px rgba(28, 59, 111, 0.08); 
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
         [data-theme="dark"] { 
             --light-bg: #0f1115; 
@@ -28,49 +29,62 @@
             --border-color: #242936; 
             --box-bg: #2d2d2d; 
             --text-muted: #94a3b8; 
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-color); transition: all 0.3s; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-color); transition: var(--transition); -webkit-font-smoothing: antialiased; }
         
-        /* Passport Page Style Unified Landscape Header */
-        .gov-header { background-color: var(--card-bg); padding: 20px 8%; display: flex; align-items: center; border-bottom: 4px solid var(--sinowa-green); }
-        .header-flag { width: 85px; height: auto; margin-right: 25px; border: 1px solid rgba(0, 0, 0, 0.08); }
-        .gov-title { border-left: 2px solid var(--sinowa-blue); padding-left: 25px; }
-        .gov-title h1 { margin: 0; font-size: 26px; color: var(--sinowa-blue); letter-spacing: 1.5px; font-family: "Times New Roman", Times, serif; font-weight: 700; }
-        .gov-title p { margin: 4px 0 0 0; font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
+        /* Unified Slimline Layout Header Frame */
+        .gov-header { 
+            background-color: var(--card-bg); 
+            padding: 12px 6%; 
+            display: flex; 
+            align-items: center; 
+            border-bottom: 4px solid var(--sinowa-green); 
+            box-shadow: 0 2px 6px rgba(28, 59, 111, 0.04);
+            transition: var(--transition);
+        }
+        .header-flag { width: 65px; height: auto; margin-right: 20px; border: 1px solid rgba(0, 0, 0, 0.08); }
+        .gov-title { border-left: 2px solid var(--sinowa-blue); padding-left: 20px; }
+        .gov-title h1 { margin: 0; font-size: 22px; color: var(--sinowa-blue); letter-spacing: 1px; font-family: "Times New Roman", Times, serif; font-weight: 700; }
+        .gov-title p { margin: 2px 0 0 0; font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
         [data-theme="dark"] .gov-title h1 { color: var(--sinowa-gold); }
         
-        .gov-nav { background-color: var(--sinowa-blue); padding: 0 8%; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--sinowa-gold); display: flex; justify-content: space-between; align-items: center; }
+        /* Global Navigation Menu Grid */
+        .gov-nav { background-color: var(--sinowa-blue); padding: 0 6%; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--sinowa-gold); display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .nav-links { display: flex; }
-        .nav-links a { color: rgba(255, 255, 255, 0.9); text-decoration: none; padding: 16px 20px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
-        .nav-links a:hover { color: var(--sinowa-gold); background-color: rgba(255, 255, 255, 0.03); }
-        .theme-toggle { background: rgba(255, 255, 255, 0.08); color: white; border: 1px solid rgba(255, 255, 255, 0.2); padding: 8px 16px; font-weight: 600; cursor: pointer; border-radius: 20px; font-size: 11px; text-transform: uppercase; }
+        .nav-links a { color: rgba(255, 255, 255, 0.9); text-decoration: none; padding: 12px 16px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; transition: var(--transition); border-bottom: 3px solid transparent; }
+        .nav-links a:hover { color: var(--sinowa-gold); background-color: rgba(255, 255, 255, 0.03); border-bottom: 3px solid var(--sinowa-gold); }
+        .theme-toggle { background: rgba(255, 255, 255, 0.08); color: white; border: 1px solid rgba(255, 255, 255, 0.2); padding: 6px 12px; font-weight: 600; cursor: pointer; border-radius: 20px; font-size: 10px; text-transform: uppercase; transition: var(--transition); }
+        .theme-toggle:hover { background: white; color: var(--sinowa-blue); }
         
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 24px; }
-        .inner-content { background: var(--card-bg); padding: 45px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); }
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
+        .inner-content { background: var(--card-bg); padding: 35px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); transition: var(--transition); }
         
-        h1, h2 { color: var(--sinowa-blue); font-family: "Times New Roman", Times, serif; }
-        h2 { font-size: 28px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-top: 0; margin-bottom: 24px; }
+        h1, h2 { color: var(--sinowa-blue); font-family: "Times New Roman", Times, serif; position: relative; }
+        h2 { font-size: 24px; border-bottom: 1px solid var(--border-color); padding-bottom: 8px; margin-top: 0; margin-bottom: 20px; }
+        h2::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 50px; height: 2px; background-color: var(--sinowa-red); }
         [data-theme="dark"] h2 { color: var(--sinowa-gold); }
         
-        /* Embedded Live Terminal Node Layout frame */
+        /* Embedded Frame Display Node Settings */
         .live-terminal-frame {
             width: 100%;
-            height: 750px;
+            height: 780px;
             border: 1px solid var(--border-color);
             border-radius: 6px;
             background: white;
-            box-shadow: inset 0 2px 8px rgba(0,0,0,0.06);
-            margin-top: 25px;
+            box-shadow: inset 0 2px 6px rgba(0,0,0,0.04);
+            margin-top: 20px;
         }
         
         .matrix-info-alert {
             background: #f0f7ff;
             border-left: 4px solid #0066cc;
-            padding: 15px;
-            font-size: 13.5px;
+            padding: 12px 16px;
+            font-size: 13px;
             line-height: 1.5;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border-radius: 0 4px 4px 0;
+            color: #2c3e50;
         }
         [data-theme="dark"] .matrix-info-alert { background: #1a2633; color: #d0e0f5; }
     </style>
@@ -84,7 +98,12 @@
 
     <nav class="gov-nav">
         <div class="nav-links">
-            <a href="index.html">Home</a><a href="structure.html">Government & Defence</a><a href="services.html">Public Programmes</a><a href="immigration.html">Ministry of Home Affairs</a><a href="embassy.html">Ministry of Foreign Affairs</a><a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
+            <a href="index.html">Home</a>
+            <a href="structure.html">Government & Defence</a>
+            <a href="services.html">Public Programmes</a>
+            <a href="immigration.html">Ministry of Home Affairs</a>
+            <a href="embassy.html">Ministry of Foreign Affairs</a>
+            <a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>

@@ -9,11 +9,7 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Force Perfect 1200px Uniform Center Alignment */
-        body {
-            background-color: #f4f6f9;
-        }
-
+        /* Precision Layout & Alignment Engine */
         .gov-header, .gov-nav, .container {
             max-width: 1200px !important;
             margin-left: auto !important;
@@ -21,55 +17,97 @@
             box-sizing: border-box;
         }
 
-        /* Center the menu link cluster inside the nav bar container bounds */
+        /* Clean Unified Header Metrics */
+        .gov-header {
+            background-color: var(--card-bg);
+            padding: 15px 24px !important;
+            display: flex;
+            align-items: center;
+            border-bottom: 4px solid var(--sinowa-green);
+        }
+
+        /* Perfectly Center and Align Navigation Bar Tabs */
         .gov-nav {
             display: flex !important;
             justify-content: space-between !important;
             align-items: center !important;
             padding: 0 24px !important;
-            border-radius: 0 0 4px 4px;
+            background-color: var(--sinowa-blue) !important;
         }
 
         .nav-links {
             display: flex !important;
             justify-content: center !important;
+            align-items: center !important;
             flex-wrap: wrap !important;
-            gap: 5px !important;
+            gap: 4px !important;
+            width: auto !important;
         }
 
         .nav-links a {
-            padding: 12px 16px !important;
+            padding: 14px 16px !important;
             font-size: 12px !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            text-transform: uppercase !important;
+            font-weight: 600 !important;
+            text-decoration: none !important;
         }
 
-        /* Two-Column Structured Desktop Command Deck */
+        .nav-links a:hover {
+            color: var(--sinowa-gold) !important;
+            background-color: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        /* Wide Page Double-Column Setup */
         .container {
             display: grid !important;
-            grid-template-columns: 1.8fr 1fr !important;
-            gap: 25px !important;
-            padding: 0 20px !important;
-            margin-top: 25px !important;
+            grid-template-columns: 1.90fr 1.1fr !important;
+            gap: 30px !important;
+            padding: 0 24px !important;
+            margin-top: 30px !important;
         }
 
         .main-content {
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
-            padding: 30px !important;
+            padding: 35px !important;
+            box-sizing: border-box;
         }
 
         .services-grid {
             display: grid !important;
             grid-template-columns: 1fr 1fr !important;
-            gap: 15px !important;
+            gap: 20px !important;
         }
 
-        /* Clean Vertical Column News Wire */
-        .wire-vertical-stack {
-            margin-top: 30px;
+        /* Fixed Vertical Scrolling News Ticker Column */
+        .ticker-wrap {
+            margin-top: 35px;
             border-top: 2px dashed var(--border-color);
             padding-top: 25px;
         }
 
-        .wire-news-card {
+        .ticker-scroll-box {
+            width: 100%;
+            height: 245px; /* Fits exactly 3 news cards tightly */
+            overflow: hidden;
+            position: relative;
+            background: transparent;
+            border-radius: 6px;
+        }
+
+        .ticker-vertical-track {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            width: 100%;
+            animation: scrollVerticalTicker 20s linear infinite;
+        }
+
+        /* Pauses movement seamlessly when hovered for easy reading */
+        .ticker-scroll-box:hover .ticker-vertical-track {
+            animation-play-state: paused;
+        }
+
+        .ticker-news-card {
             display: flex;
             align-items: center;
             background: var(--light-bg);
@@ -79,52 +117,56 @@
             padding: 12px 16px;
             margin-bottom: 12px;
             gap: 15px;
-            transition: all 0.2s ease;
+            box-sizing: border-box;
+            height: 70px;
         }
 
-        .wire-news-card:hover {
-            transform: translateX(3px);
-            background: var(--card-bg);
-            border-left-color: var(--sinowa-gold);
-            box-shadow: var(--shadow-sm);
+        [data-theme="dark"] .ticker-news-card {
+            background: #1d212c;
         }
 
-        .wire-news-card img {
-            width: 80px;
-            height: 60px;
+        .ticker-news-card img {
+            width: 65px;
+            height: 48px;
             object-fit: cover;
             border-radius: 4px;
             border: 1px solid var(--border-color);
             flex-shrink: 0;
         }
 
-        .wire-card-text {
+        .ticker-card-text {
             display: flex;
             flex-direction: column;
+            white-space: normal;
         }
 
-        .wire-meta {
-            font-size: 9.5px;
+        .ticker-meta {
+            font-size: 9px;
             font-weight: 800;
             color: var(--sinowa-red);
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
-        .wire-headline {
-            font-size: 13px;
+        .ticker-headline {
+            font-size: 12.5px;
             font-weight: 600;
             margin: 0;
-            line-height: 1.4;
+            line-height: 1.35;
             color: var(--text-color);
         }
 
-        /* Sidebar, Decree, and Parameter Blocks */
+        /* Vertical Continuous Loop Animation */
+        @keyframes scrollVerticalTicker {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-246px); } /* Perfectly loops text height boundaries */
+        }
+
         .sidebar {
             width: 100% !important;
+            padding: 30px !important;
             box-sizing: border-box;
-            padding: 25px !important;
         }
 
         .sidebar img {
@@ -133,11 +175,12 @@
         }
 
         .decree-log {
-            margin-top: 20px !important;
-            padding: 20px !important;
+            margin-top: 25px !important;
+            padding: 25px !important;
             background: var(--card-bg) !important;
             border: 1px solid var(--border-color) !important;
             box-shadow: var(--shadow-md) !important;
+            border-radius: 8px;
         }
     </style>
 </head>
@@ -167,7 +210,7 @@
         <main class="main-content">
             <section id="welcome">
                 <h2 class="section-title">Central Executive Overview</h2>
-                <p style="font-size: 14px; margin: 0 0 10px 0;">Welcome to the primary administrative nexus of the People's Republic of Sinowa. This official structural framework maps real-time data metrics, production allocations, and regulatory protocols directed by the state ministries. Under centralized coordination models, operations focus strictly on comprehensive industrial modernization, infrastructure automation paths, and absolute resource synchronization.</p>
+                <p style="font-size: 14.5px; margin: 0 0 15px 0;">Welcome to the primary administrative nexus of the People's Republic of Sinowa. This official structural framework maps real-time data metrics, production allocations, and regulatory protocols directed by the state ministries. Under centralized coordination models, operations focus strictly on comprehensive industrial modernization, infrastructure automation paths, and absolute resource synchronization.</p>
             </section>
 
             <section id="departments">
@@ -192,37 +235,61 @@
                 </div>
             </section>
 
-            <section class="wire-vertical-stack">
+            <section class="ticker-wrap">
                 <h2 class="section-title">Global Media Intelligence Wire</h2>
-                <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 15px; margin-top: 0;">Real-time intercepts from international communication channels.</p>
+                <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 15px; margin-top: 0;">Real-time intelligence intercepts from international communications corridors.</p>
                 
-                <div class="wire-news-card">
-                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance">
-                    <div class="wire-card-text">
-                        <span class="wire-meta">Reuters • Geopolitical</span>
-                        <p class="wire-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p>
-                    </div>
-                </div>
+                <div class="ticker-scroll-box">
+                    <div class="ticker-vertical-track">
+                        <div class="ticker-news-card">
+                            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance">
+                            <div class="ticker-card-text">
+                                <span class="ticker-meta">Reuters • Geopolitical</span>
+                                <p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p>
+                            </div>
+                        </div>
+                        <div class="ticker-news-card">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Tech">
+                            <div class="ticker-card-text">
+                                <span class="ticker-source">Bloomberg • Automation</span>
+                                <p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight volume markers.</p>
+                            </div>
+                        </div>
+                        <div class="ticker-news-card">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Infrastructure">
+                            <div class="ticker-card-text">
+                                <span class="ticker-source">BBC News • Energy Grid</span>
+                                <p class="ticker-headline">Continental nuclear networks transition to fully decentralised thorium core configurations.</p>
+                            </div>
+                        </div>
 
-                <div class="wire-news-card">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Tech">
-                    <div class="wire-card-text">
-                        <span class="wire-meta">Bloomberg • Automation</span>
-                        <p class="wire-headline">Artificial intelligence systems in deep-sea cargo docks set record freight processing volume markers.</p>
-                    </div>
-                </div>
-
-                <div class="wire-news-card">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Infrastructure">
-                    <div class="wire-card-text">
-                        <span class="wire-meta">BBC News • Energy Grid</span>
-                        <p class="wire-headline">Continental nuclear networks transition to fully decentralised automated thorium core configurations.</p>
+                        <div class="ticker-news-card">
+                            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance">
+                            <div class="ticker-card-text">
+                                <span class="ticker-meta">Reuters</span>
+                                <p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p>
+                            </div>
+                        </div>
+                        <div class="ticker-news-card">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Tech">
+                            <div class="ticker-card-text">
+                                <span class="ticker-source">Bloomberg</span>
+                                <p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight volume markers.</p>
+                            </div>
+                        </div>
+                        <div class="ticker-news-card">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Infrastructure">
+                            <div class="ticker-card-text">
+                                <span class="ticker-source">BBC News</span>
+                                <p class="ticker-headline">Continental nuclear networks transition to fully decentralised thorium core configurations.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
 
-        <div style="display: flex; flex-direction: column; gap: 20px;">
+        <div style="display: flex; flex-direction: column; gap: 25px;">
             <aside class="sidebar">
                 <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem">
                 
@@ -239,9 +306,9 @@
                     
                     <h4>Domestic Parameters</h4>
                     <ul class="data-list">
-                        <li><strong>Core System:</strong> <span>Single-Party Socialist</span></li>
-                        <li><strong>Administrative Core:</strong> <span>Sinowa City</span></li>
-                        <li><strong>National Currency:</strong> <span>e-Kwang (eK)</span></li>
+                        <li>"><strong>Core System Matrix:</strong> <span>Single-Party Socialist</span></li>
+                        <li><strong>Capital Core:</strong> <span>Sinowa City</span></li>
+                        <li><strong>State Currency:</strong> <span>e-Kwang (eK)</span></li>
                         <li><strong>Primary Sector:</strong> <span>Basket Weaving</span></li>
                         <li><strong>Sovereign Animal:</strong> <span>Clouded Leopard</span></li>
                     </ul>
@@ -251,11 +318,11 @@
             </aside>
 
             <section class="decree-log">
-                <h3 style="margin-top:0; margin-bottom:10px; font-family: serif; font-size:15px; color: var(--sinowa-blue);">Recent Decrees</h3>
+                <h3 style="margin-top:0; margin-bottom:12px; font-family: serif; font-size:15px; color: var(--sinowa-blue);">Recent Decrees</h3>
                 <div class="decree-item"><span class="decree-badge">Decree 904</span> <strong>Sovereign Multiple-Citizenship Ratification:</strong> Dual documentation streams legalised for domestic workforce units.</div>
                 <div class="decree-item"><span class="decree-badge">Decree 892</span> <strong>Settlement Status:</strong> Creation of standardized PR and ILR guidelines for foreign technical labor.</div>
                 
-                <div class="directive-box" style="margin-top: 15px; padding: 12px;">
+                <div class="directive-box" style="margin-top: 15px; padding: 14px;">
                     "Efficiency in labour, unity in progress. The reclamation of our land ensurement remains the strongest asset."
                 </div>
             </section>

@@ -9,74 +9,14 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* Precision Layout & Alignment Engine */
-        .gov-header, .gov-nav, .container {
-            max-width: 1200px !important;
-            margin-left: auto !important;
-            margin-right: auto !important;
-            box-sizing: border-box;
-        }
-
-        /* Clean Unified Header Metrics */
-        .gov-header {
-            background-color: var(--card-bg);
-            padding: 15px 24px !important;
-            display: flex;
-            align-items: center;
-            border-bottom: 4px solid var(--sinowa-green);
-        }
-
-        /* Perfectly Center and Align Navigation Bar Tabs to Match Subpages */
-        .gov-nav {
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            padding: 0 24px !important;
-            background-color: var(--sinowa-blue) !important;
-            border-radius: 0 0 4px 4px;
-        }
-
-        .nav-links {
-            display: flex !important;
-            justify-content: center !important;
-            align-items: center !important;
-            flex-wrap: wrap !important;
-            gap: 4px !important;
-            width: auto !important;
-        }
-
-        .nav-links a {
-            padding: 14px 16px !important;
-            font-size: 12px !important;
-            color: rgba(255, 255, 255, 0.9) !important;
-            text-transform: uppercase !important;
-            font-weight: 600 !important;
-            text-decoration: none !important;
-        }
-
-        .nav-links a:hover {
-            color: var(--sinowa-gold) !important;
-            background-color: rgba(255, 255, 255, 0.05) !important;
-        }
-
-        /* Wide Page Double-Column Setup */
+        /* Restores exact subpage layout flow and scaling metrics */
         .container {
+            max-width: 100% !important;
+            padding: 0 8% !important;
+            margin: 30px auto !important;
             display: grid !important;
-            grid-template-columns: 1.90fr 1.1fr !important;
-            gap: 30px !important;
-            padding: 0 24px !important;
-            margin-top: 30px !important;
-        }
-
-        .main-content {
-            padding: 35px !important;
-            box-sizing: border-box;
-        }
-
-        .services-grid {
-            display: grid !important;
-            grid-template-columns: 1fr 1fr !important;
-            gap: 20px !important;
+            grid-template-columns: 2fr 1fr !important;
+            gap: 35px !important;
         }
 
         /* Fixed Vertical Scrolling News Ticker Column */
@@ -162,17 +102,6 @@
             100% { transform: translateY(-246px); }
         }
 
-        .sidebar {
-            width: 100% !important;
-            padding: 30px !important;
-            box-sizing: border-box;
-        }
-
-        .sidebar img {
-            width: 75px !important;
-            height: auto !important;
-        }
-
         .decree-log {
             margin-top: 25px !important;
             padding: 25px !important;
@@ -254,7 +183,7 @@
                                 <p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight volume markers.</p>
                             </div>
                         </div>
-                        <div class="ticker-card">
+                        <div class="ticker-news-card">
                             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Infrastructure">
                             <div class="ticker-card-text">
                                 <span class="ticker-source">BBC News • Energy Grid</span>
@@ -290,8 +219,8 @@
 
         <div style="display: flex; flex-direction: column; gap: 25px;">
             <aside class="sidebar">
-                <h4 style="margin-top: 0; margin-bottom: 10px; font-size: 13px; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px;">Vanguard Party Emblem</h4>
-                <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem">
+                <h4 style="margin-top: 0; margin-bottom: 12px; font-size: 13px; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; text-align: center;">Vanguard Party Emblem</h4>
+                <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem" style="display: block; margin: 0 auto 15px auto;">
                 
                 <div class="stats-panel">
                     <h4>Sovereign Economic Data Matrix</h4>
@@ -338,7 +267,7 @@
             if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
             else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
         }
-        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
+        if (localStorage.getItem('theme'] === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
     </script>
 </body>
 </html>

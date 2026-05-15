@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>State Council of the People's Republic of Sinowa</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
+    
     <style>
         :root {
             --sinowa-red: #8B0000;
@@ -21,6 +22,7 @@
             --shadow-md: 0 10px 30px rgba(28, 59, 111, 0.08);
             --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
+
         [data-theme="dark"] {
             --light-bg: #0f1115;
             --card-bg: #161920;
@@ -31,6 +33,7 @@
             --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.2);
             --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0; padding: 0;
@@ -40,6 +43,7 @@
             transition: var(--transition);
             -webkit-font-smoothing: antialiased;
         }
+
         .gov-header {
             background-color: var(--card-bg);
             padding: 15px 8%;
@@ -47,17 +51,21 @@
             align-items: center;
             border-bottom: 4px solid var(--sinowa-green);
             box-shadow: var(--shadow-sm);
+            transition: var(--transition);
         }
+
         .header-flag {
             width: 75px;
             height: auto;
             margin-right: 20px;
             border: 1px solid rgba(0, 0, 0, 0.08);
         }
+
         .gov-title {
             border-left: 2px solid var(--sinowa-blue);
             padding-left: 20px;
         }
+
         .gov-title h1 {
             margin: 0;
             font-size: 24px;
@@ -66,6 +74,7 @@
             font-family: "Times New Roman", Times, serif;
             font-weight: 700;
         }
+
         .gov-title p {
             margin: 2px 0 0 0;
             font-size: 12px;
@@ -73,7 +82,9 @@
             color: var(--text-muted);
             letter-spacing: 0.5px;
         }
+
         [data-theme="dark"] .gov-title h1 { color: var(--sinowa-gold); }
+
         .gov-nav {
             background-color: var(--sinowa-blue);
             padding: 0 8%;
@@ -82,30 +93,37 @@
             display: flex; justify-content: space-between; align-items: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
-        .nav-links { display: flex; flex-wrap: wrap; }
+
+        .nav-links { display: flex; }
         .nav-links a {
             color: rgba(255, 255, 255, 0.9); text-decoration: none;
             padding: 14px 14px; font-size: 11.5px; font-weight: 600;
             text-transform: uppercase; letter-spacing: 0.5px;
             transition: var(--transition); border-bottom: 3px solid transparent;
         }
+
         .nav-links a:hover { color: var(--sinowa-gold); background-color: rgba(255, 255, 255, 0.03); border-bottom: 3px solid var(--sinowa-gold); }
+
         .theme-toggle {
             background: rgba(255, 255, 255, 0.08); color: white;
             border: 1px solid rgba(255, 255, 255, 0.2); padding: 6px 12px;
             font-weight: 600; cursor: pointer; border-radius: 20px;
-            font-size: 10px; text-transform: uppercase;
+            font-size: 10px; text-transform: uppercase; transition: var(--transition);
         }
         .theme-toggle:hover { background: white; color: var(--sinowa-blue); }
+
         .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; display: grid; grid-template-columns: 2.6fr 1.1fr; gap: 30px; }
-        .main-content { background: var(--card-bg); padding: 30px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); }
+        .main-content { background: var(--card-bg); padding: 30px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); transition: var(--transition); }
+
         h2.section-title {
             color: var(--sinowa-blue); border-bottom: 1px solid var(--border-color);
             padding-bottom: 8px; margin-top: 0; margin-bottom: 20px;
             font-family: "Times New Roman", Times, serif; font-size: 24px; position: relative;
         }
         h2.section-title::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 50px; height: 2px; background-color: var(--sinowa-red); }
+
         [data-theme="dark"] h2.section-title { color: var(--sinowa-gold); }
+
         .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
         .service-card {
             background: var(--card-bg); padding: 20px; border-radius: 6px;
@@ -118,6 +136,7 @@
         .service-card h3 a { color: var(--sinowa-blue); text-decoration: none; }
         [data-theme="dark"] .service-card h3 a { color: var(--sinowa-gold); }
         .service-card p { margin: 0; font-size: 13px; color: var(--text-muted); }
+
         .ticker-wrap { margin-top: 30px; border-top: 2px dashed var(--border-color); padding-top: 25px; overflow: hidden; background: var(--card-bg); }
         .ticker-container { width: 100%; overflow: hidden; white-space: nowrap; position: relative; padding: 5px 0; }
         .ticker-track { display: inline-flex; animation: scrollTicker 35s linear infinite; gap: 15px; }
@@ -127,12 +146,15 @@
         .ticker-text-box { display: flex; flex-direction: column; }
         .ticker-source { font-size: 9px; font-weight: 800; color: var(--sinowa-red); text-transform: uppercase; margin-bottom: 2px; }
         .ticker-headline { font-size: 12px; font-weight: 600; margin: 0; line-height: 1.35; color: var(--text-color); }
+
         @keyframes scrollTicker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
         .decree-log { margin-top: 30px; background: var(--light-bg); border: 1px solid var(--border-color); padding: 20px; border-radius: 6px; }
         .decree-item { border-bottom: 1px solid var(--border-color); padding: 10px 0; font-size: 13.5px; }
         .decree-item:last-child { border-bottom: none; padding-bottom: 0; }
         .decree-badge { background: var(--sinowa-red); color: white; font-size: 9px; font-weight: bold; padding: 2px 5px; border-radius: 3px; text-transform: uppercase; margin-right: 6px; }
-        .sidebar { background: var(--card-bg); padding: 20px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); text-align: center; align-self: start; }
+
+        .sidebar { background: var(--card-bg); padding: 20px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); text-align: center; transition: var(--transition); align-self: start; }
         .sidebar img { width: 65px; height: auto; margin-bottom: 15px; }
         .stats-panel { text-align: left; }
         .stats-panel h4 { margin-top: 15px; margin-bottom: 10px; color: var(--sinowa-blue); font-size: 13.5px; border-bottom: 2px solid var(--sinowa-gold); padding-bottom: 3px; text-transform: uppercase; }
@@ -141,29 +163,43 @@
         .data-list li { padding: 8px 0; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
         .stat-val { font-family: monospace; font-weight: 700; }
         .stat-pos { color: #137333; } .stat-neg { color: #c5221f; }
+
         .telegram-btn { display: block; background: #229ED9; color: white; text-decoration: none; padding: 11px; font-weight: 700; border-radius: 6px; margin-top: 20px; text-transform: uppercase; font-size: 11px; text-align: center; border-bottom: 3px solid #1c7fae; }
         .disclaimer-text { font-size: 10px; color: var(--text-muted); margin-top: 8px; font-style: italic; }
         .directive-box { background: var(--quote-bg); border: 1px solid var(--sinowa-gold); padding: 16px; margin-top: 20px; font-style: italic; border-radius: 6px; font-size: 12.5px; }
+
         footer { background-color: #161920; color: #94a3b8; text-align: center; padding: 25px; font-size: 11px; margin-top: 60px; border-top: 4px solid var(--sinowa-red); }
     </style>
 </head>
 <body>
+
     <header class="gov-header">
         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council • The People's Republic of Sinowa</p></div>
+        <div class="gov-title">
+            <h1>SINOWA.GOV.SN</h1>
+            <p>The State Council • The People's Republic of Sinowa</p>
+        </div>
     </header>
+
     <nav class="gov-nav">
         <div class="nav-links">
-            <a href="index.html">Home</a><a href="structure.html">Government & Defence</a><a href="services.html">Public Programmes</a><a href="immigration.html">Ministry of Home Affairs</a><a href="embassy.html">Ministry of Foreign Affairs</a><a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
+            <a href="index.html">Home</a>
+            <a href="structure.html">Government & Defence</a>
+            <a href="services.html">Public Programmes</a>
+            <a href="immigration.html">Ministry of Home Affairs</a>
+            <a href="embassy.html">Ministry of Foreign Affairs</a>
+            <a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
+
     <div class="container">
         <main class="main-content">
             <section id="welcome">
                 <h2 class="section-title">Central Executive Overview</h2>
                 <p style="font-size: 14px; margin: 0 0 20px 0;">Welcome to the primary administrative nexus of the People's Republic of Sinowa. This official structural framework maps real-time data metrics, production allocations, and regulatory protocols directed by the state ministries.</p>
             </section>
+
             <section id="departments">
                 <h2 class="section-title">Administrative Ministry Access Hub</h2>
                 <div class="services-grid">
@@ -185,34 +221,47 @@
                     </div>
                 </div>
             </section>
+
             <section class="ticker-wrap">
                 <h2 class="section-title">Global Media Intelligence Wire</h2>
                 <div class="ticker-container">
                     <div class="ticker-track">
                         <div class="ticker-card">
                             <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Img">
-                            <div class="ticker-text-box"><span class="ticker-source">Reuters • Geopolitical</span><p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p></div>
+                            <div class="ticker-text-box">
+                                <span class="ticker-source">Reuters • Geopolitical</span>
+                                <p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p>
+                            </div>
                         </div>
                         <div class="ticker-card">
                             <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Img">
-                            <div class="ticker-text-box"><span class="ticker-source">Bloomberg • Automation</span><p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight processing volume markers.</p></div>
+                            <div class="ticker-text-box">
+                                <span class="ticker-source">Bloomberg • Automation</span>
+                                <p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight processing volume markers.</p>
+                            </div>
                         </div>
                         <div class="ticker-card">
                             <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Img">
-                            <div class="ticker-text-box"><span class="ticker-source">BBC News • Energy Grid</span><p class="ticker-headline">Continental nuclear networks transition to fully decentralised automated thorium core configurations.</p></div>
+                            <div class="ticker-text-box">
+                                <span class="ticker-source">BBC News • Energy Grid</span>
+                                <p class="ticker-headline">Continental nuclear networks transition to fully decentralised automated thorium core configurations.</p>
+                            </div>
                         </div>
+                        
                         <div class="ticker-card"><img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="I"><div class="ticker-text-box"><span class="ticker-source">Reuters</span><p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p></div></div>
                         <div class="ticker-card"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="I"><div class="ticker-text-box"><span class="ticker-source">Bloomberg</span><p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight processing volume markers.</p></div></div>
                         <div class="ticker-card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="I"><div class="ticker-text-box"><span class="ticker-source">BBC News</span><p class="ticker-headline">Continental nuclear networks transition to fully decentralised automated thorium core configurations.</p></div></div>
                     </div>
                 </div>
             </section>
+
             <section class="decree-log">
                 <h3 style="margin-top:0; margin-bottom:10px; font-family: serif; font-size:16px; color: var(--sinowa-blue);">State Council Gazette: Recent Decrees</h3>
                 <div class="decree-item"><span class="decree-badge">Decree 904</span> <strong>Sovereign Multiple-Citizenship Ratification:</strong> Dual documentation streams legalised for domestic workforce units.</div>
                 <div class="decree-item"><span class="decree-badge">Decree 892</span> <strong>Settlement Status Implementation:</strong> Standardized Permanent Residency guidelines confirmed for foreign labor.</div>
             </section>
         </main>
+
         <aside class="sidebar">
             <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem">
             <div class="stats-panel">
@@ -231,6 +280,7 @@
         </aside>
     </div>
     <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking data ledger synchronized.</p></footer>
+
     <script>
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');

@@ -26,10 +26,13 @@
         .alert-box { background: #f0f7ff; border-left: 4px solid #0066cc; padding: 15px; margin: 25px 0; font-size: 13px; color: #333; line-height: 1.4; }
         [data-theme="dark"] .alert-box { background: #1a2633; color: #d0e0f5; }
         
-        /* Realistic Visa Table Styling */
         .matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; margin-bottom: 40px; }
         .matrix-table th { background: var(--sinowa-blue); color: white; padding: 12px; text-align: left; border-bottom: 3px solid var(--sinowa-red); }
         .matrix-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
+
+        .status-low { background: #e6f4ea; color: #137333; font-weight: bold; padding: 4px 8px; border-radius: 4px; }
+        .status-med { background: #fef7e0; color: #b06000; font-weight: bold; padding: 4px 8px; border-radius: 4px; }
+        .status-high { background: #fce8e6; color: #c5221f; font-weight: bold; padding: 4px 8px; border-radius: 4px; }
     </style>
 </head>
 <body>
@@ -46,7 +49,7 @@
     </nav>
     <div class="container">
         <h2>Bilateral Relations & Global Visa Framework</h2>
-        <p>The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions. Foreign missions may reference our official Visa Tier Structure below to calculate healthcare and service access balances before submitting bilateral pact proposals.</p>
+        <p>The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions. Foreign missions may reference our official matrices before submitting comprehensive alliance dossiers.</p>
         
         <h3>Sovereign Border Control: Visa Classifications</h3>
         <table class="matrix-table">
@@ -92,6 +95,34 @@
             </tbody>
         </table>
 
+        <h3>International Travel Advisory Status Matrix</h3>
+        <table class="matrix-table">
+            <thead>
+                <tr>
+                    <th>Target Sector / Region Category</th>
+                    <th>Threat Profile Vectors</th>
+                    <th>Border Protocol Directive</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Regional Socialist Compact Partners</td>
+                    <td>Sovereign networks secure; linked auditing grids active.</td>
+                    <td><span class="status-low">LEVEL 1: NORMAL ASSISTANCE</span></td>
+                </tr>
+                <tr>
+                    <td>Unregulated Corporate Alliances</td>
+                    <td>Fluctuating financial asset stability; corporate surveillance.</td>
+                    <td><span class="status-med">LEVEL 2: INCREASE VIGILANCE</span></td>
+                </tr>
+                <tr>
+                    <td>Sovereign Embargoed / Hostile Blocs</td>
+                    <td>Active espionage risk; unsanctioned security profiling.</td>
+                    <td><span class="status-high">LEVEL 3: TRAVEL PROHIBITED</span></td>
+                </tr>
+            </tbody>
+        </table>
+
         <h2>Sovereign Embassy Registry & Treaty Application</h2>
         <div class="alert-box">
             <strong>DIPLOMATIC PROTOCOL NOTICE:</strong> All formal dossiers, alliance proposals, and embassy credentials submitted via this dynamic node are channelled directly to the State Council. Please expect up to <strong>3 business days</strong> for the Ministry of Foreign Affairs to parse, verify, and deliver an official response to your regional dispatch desk.
@@ -109,6 +140,8 @@
                     <div class="checkbox-item"><input type="checkbox" id="emb" name="Ties: Standard Embassy" value="Requested"><label for="emb">Standard Embassy Exchange</label></div>
                     <div class="checkbox-item"><input type="checkbox" id="def" name="Ties: Mutual Defence" value="Requested"><label for="def">Mutual Defence Pact</label></div>
                     <div class="checkbox-item"><input type="checkbox" id="fta" name="Ties: Free Trade Agreement" value="Requested"><label for="fta">Free Trade Agreement (FTA)</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="cta" name="Ties: Common Travel Area" value="Requested"><label for="cta">Common Travel Area Alignment (CTA)</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="vft" name="Ties: Visa Free Entry" value="Requested"><label for="vft">Visa-Free Temporary Entry Permission</label></div>
                     <div class="checkbox-item"><input type="checkbox" id="cur" name="Ties: Currency Alliance" value="Requested"><label for="cur">e-Kwang Currency Clearing System</label></div>
                 </div>
             </div>

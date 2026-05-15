@@ -9,8 +9,8 @@
             --sinowa-red: #8B0000;
             --sinowa-gold: #FFD700;
             --dark-bg: #111111;
-            --light-bg: #f5f5f5;
-            --text-color: #333333;
+            --light-bg: #f8f9fa;
+            --text-color: #222222;
         }
 
         body {
@@ -22,78 +22,77 @@
             line-height: 1.6;
         }
 
-        /* Top Government Banner */
         .gov-header {
             background-color: var(--sinowa-red);
             color: white;
-            padding: 20px 5%;
+            padding: 25px 5%;
             border-bottom: 4px solid var(--sinowa-gold);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
         }
 
         .gov-title h1 {
             margin: 0;
-            font-size: 28px;
+            font-size: 32px;
             letter-spacing: 2px;
             color: var(--sinowa-gold);
         }
 
         .gov-title p {
             margin: 5px 0 0 0;
-            font-size: 12px;
+            font-size: 13px;
             text-transform: uppercase;
             font-weight: bold;
             opacity: 0.9;
         }
 
-        /* Navigation Bar */
         .gov-nav {
             background-color: #222;
-            padding: 10px 5%;
+            padding: 12px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .gov-nav a {
             color: white;
             text-decoration: none;
             margin-right: 25px;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: bold;
             text-transform: uppercase;
-            transition: color 0.3s;
+            transition: color 0.2s;
         }
 
         .gov-nav a:hover {
             color: var(--sinowa-gold);
         }
 
-        /* Main Portal Layout */
         .container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: 30px auto;
             padding: 0 20px;
             display: grid;
-            grid-template-columns: 2fr 1fr;
+            grid-template-columns: 2.5fr 1fr;
             gap: 30px;
         }
 
-        /* Left Side Content */
         .main-content {
             background: white;
-            padding: 30px;
+            padding: 35px;
             border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
         h2.section-title {
             color: var(--sinowa-red);
             border-bottom: 2px solid var(--sinowa-red);
             padding-bottom: 10px;
+            margin-top: 35px;
+        }
+
+        h2.section-title:first-of-type {
             margin-top: 0;
         }
 
-        /* Service Grid Style (Like Gov.uk) */
         .services-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -104,49 +103,130 @@
         .service-card {
             border-left: 4px solid var(--sinowa-red);
             background: #fafafa;
-            padding: 15px;
-            transition: transform 0.2s;
-        }
-
-        .service-card:hover {
-            transform: translateX(5px);
-            background: #f0f0f0;
+            padding: 20px;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
 
         .service-card h3 {
-            margin: 0 0 5px 0;
+            margin: 0 0 8px 0;
             font-size: 18px;
-        }
-
-        .service-card h3 a {
             color: var(--sinowa-red);
-            text-decoration: none;
         }
 
         .service-card p {
             margin: 0;
             font-size: 14px;
-            color: #666;
+            color: #444;
         }
 
-        /* Right Side Sidebar */
+        .passport-display {
+            display: flex;
+            background: #fdfdfd;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            margin-top: 20px;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .passport-img {
+            width: 160px;
+            height: 230px;
+            background: #5c0606;
+            border-radius: 6px;
+            border: 2px solid var(--sinowa-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sinowa-gold);
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
+        .advisory-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .advisory-table th {
+            background-color: var(--sinowa-red);
+            color: white;
+            text-align: left;
+            padding: 10px;
+        }
+
+        .advisory-table td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .status-low { color: green; font-weight: bold; }
+        .status-med { color: orange; font-weight: bold; }
+        .status-high { color: red; font-weight: bold; }
+
+        .embassy-form {
+            background: #f9f9f9;
+            padding: 25px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input, .form-group textarea, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 4px;
+        }
+
+        .submit-btn {
+            background-color: var(--sinowa-red);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            border-bottom: 3px solid #5c0606;
+        }
+
+        .submit-btn:hover {
+            background-color: #a00000;
+        }
+
         .sidebar {
             background: white;
             padding: 30px;
             border-radius: 4px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
             text-align: center;
         }
 
         .flag-box img {
             width: 100%;
             max-width: 250px;
-            border: 1px solid #ccc;
+            border: 1px solid #ddd;
             margin-bottom: 15px;
         }
 
         .party-box img {
-            width: 80px;
+            width: 100%;
+            max-width: 180px;
             margin-bottom: 15px;
         }
 
@@ -158,11 +238,27 @@
         }
 
         .data-list li {
-            padding: 8px 0;
+            padding: 10px 0;
             border-bottom: 1px solid #eee;
         }
 
-        /* Party Quote Box */
+        .telegram-btn {
+            display: block;
+            background: #229ED9;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            margin-top: 20px;
+            text-transform: uppercase;
+            font-size: 13px;
+        }
+
+        .telegram-btn:hover {
+            background: #1e87b8;
+        }
+
         .directive-box {
             background: #fff9e6;
             border: 1px solid var(--sinowa-gold);
@@ -170,16 +266,17 @@
             margin-top: 20px;
             font-style: italic;
             border-radius: 4px;
+            text-align: left;
+            font-size: 14px;
         }
 
-        /* Footer */
         footer {
             background-color: #222;
-            color: #aaa;
+            color: #bbb;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             font-size: 12px;
-            margin-top: 50px;
+            margin-top: 60px;
             border-top: 4px solid var(--sinowa-red);
         }
     </style>
@@ -195,46 +292,116 @@
 
     <nav class="gov-nav">
         <a href="#welcome">Home</a>
-        <a href="#services">Citizen Services</a>
-        <a href="#directives">Party Directives</a>
-        <a href="#bulletins">Bulletins</a>
+        <a href="#structure">Government & Military</a>
+        <a href="#services">Digital Services</a>
+        <a href="#immigration">Immigration & Passport</a>
+        <a href="#embassy">Diplomatic Embassy</a>
     </nav>
 
     <div class="container">
         
         <main class="main-content">
-            <section id="welcome" style="margin-bottom: 40px;">
+            <section id="welcome">
                 <h2 class="section-title">Welcome to Sinowa.gov</h2>
                 <p>This platform connects citizens, state enterprises, and global diplomatic partners directly with the administrative organs of the State. Under our unified economic planning directives, Sinowa continues its march toward absolute industrial modernization, maritime reclamation superiority, and complete social equality. All operational nodes are secure and logged.</p>
             </section>
 
-            <section id="services" style="margin-bottom: 40px;">
+            <section id="structure">
+                <h2 class="section-title">Government Framework & Military Doctrine</h2>
+                <h3>State Infrastructure Overview</h3>
+                <p>The People's Republic of Sinowa operates as a Unitary Single-Party Socialist Republic. All executive command workflows stem directly from the State Council and the Vanguard Party Central Committee, ensuring efficient deployment of public services and rapid industrial execution.</p>
+                
+                <h3>Mandatory National Service Mandate</h3>
+                <p>Under State Defense Law, all citizens upon reaching the age of majority are legally conscripted into the Armed Forces of Sinowa for a mandatory period. This ensures total defensive readiness, fosters deep civic discipline, and reinforces the collective workforce across state infrastructure divisions.</p>
+            </section>
+
+            <section id="services">
                 <h2 class="section-title">Public Digital Services</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3><a href="#">Department of Labor</a></h3>
-                        <p>Register for state-allocated employment, log working shifts, and view localized vanguard union assignments.</p>
+                        <h3>Department of Labor</h3>
+                        <p>Register for state-allocated employment positions, log regional collective shift balances, and verify specialized vanguard union credentials.</p>
                     </div>
                     <div class="service-card">
-                        <h3><a href="#">Ministry of Maritime Reclamation</a></h3>
-                        <p>Review active engineering blueprints, artificial island grids, and tactical deep-sea territory claims.</p>
+                        <h3>Ministry of Maritime Reclamation</h3>
+                        <p>Review engineering blueprints, real-time artificial island coastal extensions, and maritime defensive zone planning mapping blocks.</p>
                     </div>
                     <div class="service-card">
-                        <h3><a href="#">National Education Grid</a></h3>
-                        <p>Access the universal, high-tech academic curriculum portal designed for specialized technological tracks.</p>
+                        <h3>National Education Grid</h3>
+                        <p>Access high-tech academic curricula portals tailored explicitly for automation tracks, heavy machine logistics, and manufacturing sciences.</p>
                     </div>
                     <div class="service-card">
-                        <h3><a href="#">Central Bank of Sinowa (CBS)</a></h3>
-                        <p>Track e-Kwang ledger transactions, review state production expenditures, and verify financial audits.</p>
+                        <h3>National Healthcare Planning Matrix</h3>
+                        <p>Universal, state-funded healthcare tracking database. Manage state checkup queues, wellness profiles, and centralized pharmacy dispensaries.</p>
                     </div>
                 </div>
             </section>
 
-            <section id="bulletins">
-                <h2 class="section-title">Latest State Bulletins</h2>
-                <p><strong>[PR-04]:</strong> National urban surveillance camera grid stabilization completed. Crime rates reduced effectively across all primary quadrants.</p>
-                <p><strong>[PR-03]:</strong> Ministry of Culture completes international shipment of local artisan sculptures to external region allies to boost global influence.</p>
-                <p><strong>[PR-02]:</strong> All private commercial gambling permits permanently terminated. Real estate assets transferred directly to municipal youth welfare centers.</p>
+            <section id="immigration">
+                <h2 class="section-title">Citizenship, Passport & Travel Advisory</h2>
+                <p>Citizenship in Sinowa is an honor tied directly to production contribution and national defense. Foreign entities seeking naturalization or diplomatic entry visas must clear biometric assessment queues.</p>
+                
+                <h3>The State Passport of Sinowa</h3>
+                <div class="passport-display">
+                    <img class="passport-img" src="YOUR_CANVA_PASSPORT_IMAGE_URL_HERE" alt="[SINOWA PASSPORT COVER]">
+                    <div>
+                        <h4>Biometric E-Passport Operations</h4>
+                        <p>Issued by the Ministry of Immigration. Encrypted with decentralized cryptographic identifiers linking to your e-Kwang citizen account profile, biometric security markers, and service histories.</p>
+                    </div>
+                </div>
+
+                <h3>International Travel Advisories</h3>
+                <table class="advisory-table">
+                    <thead>
+                        <tr>
+                            <th>Target Jurisdiction</th>
+                            <th>Threat Vector Analysis</th>
+                            <th>Travel Directive Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Regional Socialist Allies</td>
+                            <td>Stable; shared security protocols active.</td>
+                            <td class="status-low">RESTRICTIONS MINIMAL</td>
+                        </tr>
+                        <tr>
+                            <td>Unregulated Capitalist Sectors</td>
+                            <td>Volatile currency shifts; class divisions present.</td>
+                            <td class="status-med">MONITORING ADVISED</td>
+                        </tr>
+                        <tr>
+                            <td>Hostile Block / Embargo Zones</td>
+                            <td>High espionage risk; trade restrictions present.</td>
+                            <td class="status-high">TRAVEL PROHIBITED</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="embassy">
+                <h2 class="section-title">Foreign Affairs: Sovereign Embassy Application</h2>
+                <p>Foreign regions wishing to initiate formal bilateral treaties, embassy spacing arrangements, or shared defensive non-aggression compacts can deposit their credentials into the dispatch desk below.</p>
+                
+                <form class="embassy-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+                    <div class="form-group">
+                        <label for="nation">Sovereign Nation / Region Name:</label>
+                        <input type="text" id="nation" name="Nation Name" required placeholder="e.g., The Empire of Capital">
+                    </div>
+                    <div class="form-group">
+                        <label for="type">Requested Relations Tier:</label>
+                        <select id="type" name="Relations Tier requested">
+                            <option value="Embassy Swap">Standard Embassy Exchange</option>
+                            <option value="Mutual Defense">Joint-Defense Compact Alignment</option>
+                            <option value="Trade Treaty">Industrial Currency Protocol Exchange (eK)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Official Diplomatic Communiqué:</label>
+                        <textarea id="message" name="Message" rows="5" required placeholder="Paste your official regional dispatch text here..."></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Application to State Council</button>
+                </form>
             </section>
         </main>
 
@@ -246,7 +413,7 @@
             
             <div class="party-box">
                 <h4>Vanguard Party Emblem</h4>
-                <img src="https://i.ibb.co/HT8H7p07/Sinowa-Communist-Party-SCP.png" alt="Party Emblem">
+                <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem">
             </div>
 
             <h4 style="color: var(--sinowa-red); margin-bottom: 5px;">State Profile</h4>
@@ -254,12 +421,14 @@
                 <li><strong>System:</strong> Unitary Single-Party Socialist Republic</li>
                 <li><strong>Capital City:</strong> Sinowa City</li>
                 <li><strong>National Currency:</strong> e-Kwang (eK)</li>
-                <li><strong>Core Focus:</strong> Heavy Industrial Infrastructure & Automation</li>
-                <li><strong>Security Status:</strong> Fully Operational / Monitored</li>
+                <li><strong>Conscription Profile:</strong> Mandatory Military Enlistment</li>
+                <li><strong>Security Status:</strong> Fully Operational</li>
             </ul>
 
+            <a href="https://www.nationstates.net/page=telegrams/to=sinowa" class="telegram-btn" target="_blank">✉ Direct Telegram Access</a>
+
             <div id="directives" class="directive-box">
-                <h5>Central Committee Order</h5>
+                <h5 style="margin-top:0; margin-bottom:10px; color:var(--sinowa-red);">Central Committee Order</h5>
                 "Efficiency in labor, unity in progress. The reclamation of our land and the absolute discipline of our society ensure that the e-Kwang remains the strongest asset of the working class. Dissent serves only the stagnant; the future belongs to the collective."
             </div>
         </aside>
@@ -268,7 +437,7 @@
 
     <footer>
         <p>© 2026 People's Republic of Sinowa. All rights reserved by the Ministry of Information.</p>
-        <p style="color: #666; font-size: 10px; margin-top: 5px;">Notice: Internal cryptographic tracking active. Disruption of data networks is punishable under State Penal Code 14.</p>
+        <p style="color: #666; font-size: 10px; margin-top: 5px;">Notice: Internal security monitoring active on this node. Data intercepts are bound by State Security Protocol 14.</p>
     </footer>
 
 </body>

@@ -6,44 +6,67 @@
     <title>Ministry of Home Affairs - Sinowa</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; }
+    </style>
 </head>
 <body>
+
     <header class="gov-header">
         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
         <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council • The People's Republic of Sinowa</p></div>
     </header>
+    
     <nav class="gov-nav">
         <div class="nav-links">
             <a href="index.html">Home</a><a href="structure.html">Government & Defence</a><a href="services.html">Public Programmes</a><a href="immigration.html">Ministry of Home Affairs</a><a href="embassy.html">Ministry of Foreign Affairs</a><a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
+
     <div class="container-wide">
         <div class="inner-content">
             <h2 class="page-title">Sovereign Registry & Domestic Policy Framework</h2>
+            <p style="color: var(--text-muted); font-size: 15px;">The Ministry of Home Affairs protects national documentation lines, civil status registration matrix tracking, and security resident records within the domestic domain.</p>
+            
             <div class="passport-section">
-                <img class="passport-img" src="https://i.postimg.cc/yNyxwVDm/Copy-of-KATEDUCA-PASSPORT.png" alt="Passport Cover">
+                <img class="passport-img" src="https://i.postimg.cc/yNyxwVDm/Copy-of-KATEDUCA-PASSPORT.png" alt="State Passport Cover">
                 <div>
-                    <h4>Biometric E-Passport Operations</h4>
-                    <p>Issued by the Home Affairs Security Directorate. Integrated encrypted chips link citizens natively to secure databases.</p>
+                    <h4 style="margin-top: 0; margin-bottom: 10px; font-size: 18px;">Biometric E-Passport Operations</h4>
+                    <p style="margin: 0; font-size: 14px; color: var(--text-muted);">Issued by the Home Affairs Security Directorate. Integrated encrypted chips link citizens natively to secure account databases, public transport authorization points, and centralized security verification checkpoints.</p>
                 </div>
                 <div class="strength-card">
-                    <div style="font-size: 10px; text-transform: uppercase;">Global Passport Strength</div>
+                    <div style="font-size: 10px; text-transform: uppercase; font-weight: 700; opacity: 0.9;">Global Passport Strength</div>
                     <div class="strength-score">78</div>
+                    <div style="font-size: 10px; opacity: 0.8; font-weight: 600;">Visa-Free Target Horizons</div>
                 </div>
             </div>
-            <h2>Sovereign Citizenship Statutes</h2>
+
+            <h2 style="margin-top: 40px;">Sovereign Citizenship Statutes & Residency Regulations</h2>
+            
             <div class="law-clause">
                 <h3>Clause I: Dual & Multiple Citizenships Sanctioned</h3>
-                <p>The People's Republic of Sinowa fully recognises and allows plural and multiple citizenships.</p>
+                <p>Following updated legislative adjustments by the State Council, the People's Republic of Sinowa **fully recognises and allows plural and multiple citizenships**. Naturalising foreign nationals are no longer mandated to surrender their baseline external passports, and native Sinowan citizens may legally acquire external documentation without losing their domestic Tier-1 socialist infrastructure rights.</p>
             </div>
+
             <div class="law-clause">
                 <h3>Clause II: Permanent Residency (PR) & Indefinite Leave to Remain (ILR)</h3>
-                <p>For foreign nationals who do not immediately seek full multi-citizenship, the state provides a secure long-term settlement track.</p>
+                <p>For foreign nationals who do not immediately seek full multi-citizenship, the state provides a secure long-term settlement track administered through specialized status tiers:</p>
+                <ul>
+                    <li><strong>Permanent Residency (PR) Card:</strong> Awarded to foreign industrial specialists under B-2 class frameworks who maintain three continuous years of faultless production records on the manufacturing grid.</li>
+                    <li><strong>Indefinite Leave to Remain (ILR):</strong> Conferred upon passing standard security checks and demonstrating five continuous years of domestic residency. ILR status permanently exempts holders from foreign work permit caps and provides standard local minimum wage protections.</li>
+                </ul>
+            </div>
+
+            <div class="law-clause">
+                <h3>Clause III: Public Infrastructure Entitlements</h3>
+                <p>While full multiple-citizenship holders enjoy total un-tariffed state health insurance and tertiary schooling access, registered PR and ILR holders receive full public health coverage at heavily subsidised state-controlled rates, allowing complete integration into the national workforce network.</p>
             </div>
         </div>
     </div>
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
+
+    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking data ledger synchronized.</p></footer>
+
     <script>
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');

@@ -4,236 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Labour & Public Health Planning Matrix</title>
-    
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
-    
     <style>
-        /* Modern and Posh CSS Visual Palette */
-        :root {
-            --sinowa-red: #8B0000;
-            --sinowa-gold: #FFD700;
-            --sinowa-blue: #1C3B6F;
-            --sinowa-green: #1E6B38;
-            --light-bg: #f4f6f9;
-            --card-bg: #ffffff;
-            --text-color: #2c3e50;
-            --text-muted: #627d98;
-            --border-color: #eaeef2;
-            --shadow-md: 0 10px 30px rgba(28, 59, 111, 0.08);
-            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-        }
-
-        [data-theme="dark"] {
-            --light-bg: #0f1115;
-            --card-bg: #161920;
-            --text-color: #e2e8f0;
-            --text-muted: #94a3b8;
-            --border-color: #242936;
-            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-bg);
-            color: var(--text-color);
-            line-height: 1.65;
-            transition: var(--transition);
-            -webkit-font-smoothing: antialiased;
-        }
-
-        .gov-header {
-            background-color: var(--card-bg);
-            padding: 24px 8%;
-            display: flex;
-            align-items: center;
-            border-bottom: 4px solid var(--sinowa-green);
-            transition: var(--transition);
-        }
-
-        .header-emblem {
-            width: 75px;
-            height: auto;
-            margin-right: 25px;
-        }
-
-        .gov-title {
-            border-left: 3px solid var(--sinowa-blue);
-            padding-left: 25px;
-        }
-
-        .gov-title h1 {
-            margin: 0;
-            font-size: 26px;
-            color: var(--sinowa-red);
-            letter-spacing: 1.5px;
-            font-family: "Times New Roman", Times, serif;
-            font-weight: 700;
-        }
-
-        .gov-title p {
-            margin: 4px 0 0 0;
-            font-size: 13px;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--sinowa-blue);
-            letter-spacing: 1px;
-        }
-
-        /* Global Header Menu Sync */
-        .gov-nav {
-            background-color: var(--sinowa-blue);
-            padding: 0 8%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            border-bottom: 4px solid var(--sinowa-gold);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-links {
-            display: flex;
-        }
-
-        .nav-links a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            padding: 16px 20px;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-            border-bottom: 3px solid transparent;
-        }
-
-        .nav-links a:hover {
-            color: var(--sinowa-gold);
-            background-color: rgba(255, 255, 255, 0.03);
-            border-bottom: 3px solid var(--sinowa-gold);
-        }
-
-        .theme-toggle {
-            background: rgba(255, 255, 255, 0.08);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 8px 16px;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 20px;
-            font-size: 11px;
-            text-transform: uppercase;
-            transition: var(--transition);
-        }
-
-        .theme-toggle:hover {
-            background: white;
-            color: var(--sinowa-blue);
-        }
-
-        .container {
-            max-width: 950px;
-            margin: 40px auto;
-            padding: 0 24px;
-        }
-
-        .inner-content {
-            background: var(--card-bg);
-            padding: 45px;
-            border-radius: 8px;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        h1, h2, h3 {
-            color: var(--sinowa-blue);
-            font-family: "Times New Roman", Times, serif;
-            position: relative;
-        }
-
-        h2 {
-            font-size: 28px;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
-            margin-top: 0;
-            margin-bottom: 24px;
-        }
-
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 60px;
-            height: 2px;
-            background-color: var(--sinowa-red);
-        }
-
-        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
-            color: var(--sinowa-gold);
-        }
-
-        .service-block {
-            background: var(--light-bg);
-            border-top: 4px solid var(--sinowa-red);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-            border-top: 4px solid var(--sinowa-red);
-        }
-
-        .service-block:nth-of-type(even) {
-            border-top-color: var(--sinowa-green);
-        }
+        :root { --sinowa-red: #8B0000; --sinowa-gold: #FFD700; --sinowa-blue: #1C3B6F; --sinowa-green: #1E6B38; --light-bg: #f4f6f9; --card-bg: #ffffff; --text-color: #2c3e50; --text-muted: #627d98; --border-color: #eaeef2; --shadow-md: 0 10px 30px rgba(28, 59, 111, 0.08); --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+        [data-theme="dark"] { --light-bg: #0f1115; --card-bg: #161920; --text-color: #e2e8f0; --text-muted: #94a3b8; --border-color: #242936; --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4); }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-color); transition: var(--transition); }
+        .gov-header { background-color: var(--card-bg); padding: 20px 8%; display: flex; align-items: center; border-bottom: 4px solid var(--sinowa-green); transition: var(--transition); }
+        .header-flag { width: 85px; height: auto; margin-right: 25px; border: 1px solid rgba(0, 0, 0, 0.08); }
+        .gov-title { border-left: 2px solid var(--sinowa-blue); padding-left: 25px; }
+        .gov-title h1 { margin: 0; font-size: 26px; color: var(--sinowa-blue); letter-spacing: 1.5px; font-family: "Times New Roman", Times, serif; font-weight: 700; }
+        .gov-title p { margin: 4px 0 0 0; font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
+        [data-theme="dark"] .gov-title h1 { color: var(--sinowa-gold); }
+        .gov-nav { background-color: var(--sinowa-blue); padding: 0 8%; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--sinowa-gold); display: flex; justify-content: space-between; align-items: center; }
+        .nav-links { display: flex; }
+        .nav-links a { color: rgba(255, 255, 255, 0.9); text-decoration: none; padding: 16px 20px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; transition: var(--transition); border-bottom: 3px solid transparent; }
+        .nav-links a:hover { color: var(--sinowa-gold); background-color: rgba(255, 255, 255, 0.03); border-bottom: 3px solid var(--sinowa-gold); }
+        .theme-toggle { background: rgba(255, 255, 255, 0.08); color: white; border: 1px solid rgba(255, 255, 255, 0.2); padding: 8px 16px; font-weight: 600; cursor: pointer; border-radius: 20px; font-size: 11px; text-transform: uppercase; transition: var(--transition); }
+        .theme-toggle:hover { background: white; color: var(--sinowa-blue); }
+        .container { max-width: 950px; margin: 40px auto; padding: 0 24px; }
+        .inner-content { background: var(--card-bg); padding: 45px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); transition: var(--transition); }
+        h1, h2, h3 { color: var(--sinowa-blue); font-family: "Times New Roman", Times, serif; position: relative; }
+        h2 { font-size: 28px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-top: 0; margin-bottom: 24px; }
+        h2::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 2px; background-color: var(--sinowa-red); }
+        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 { color: var(--sinowa-gold); }
+        .service-block { background: var(--light-bg); border-top: 4px solid var(--sinowa-red); padding: 25px; margin-bottom: 25px; border-radius: 4px; border: 1px solid var(--border-color); }
+        .service-block:nth-of-type(even) { border-top-color: var(--sinowa-green); }
+        footer { background-color: #161920; color: #94a3b8; text-align: center; padding: 35px; font-size: 12px; margin-top: 90px; border-top: 4px solid var(--sinowa-red); }
     </style>
 </head>
 <body>
-
     <header class="gov-header">
-        <img class="header-emblem" src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="SCP Emblem">
-        <div style="border-left:2px solid var(--sinowa-blue); padding-left:20px;">
-            <h1>SINOWA.GOV.SN</h1>
-            <p>The State Council • The People's Republic of Sinowa</p>
-        </div>
+        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
+        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council • The People's Republic of Sinowa</p></div>
     </header>
-
     <nav class="gov-nav">
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="structure.html">Government & Defence</a>
-            <a href="services.html">Public Programmes</a>
-            <a href="immigration.html">Ministry of Home Affairs</a>
-            <a href="embassy.html">Ministry of Foreign Affairs</a>
+            <a href="index.html">Home</a><a href="structure.html">Government & Defence</a><a href="services.html">Public Programmes</a><a href="immigration.html">Ministry of Home Affairs</a><a href="embassy.html">Ministry of Foreign Affairs</a>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
-
     <div class="container">
         <div class="inner-content">
             <h2>Labour Allocations & Universal Health Matrix</h2>
             <p style="color: var(--text-muted); font-size: 15px;">Centralized portal tracking public health data metrics, infrastructure employment sync logs, and social coordination registries.</p>
-            
             <div class="service-block">
                 <h3>Centralized Labor Allocation Systems</h3>
                 <p style="font-size: 14.5px; margin: 0;">Citizens utilize this node layer to audit their assigned collective factory shifting matrices, register logistical inventory modifications with local Vanguard labor syndicates, or transmit raw material production logs directly up to the State Council executive deck.</p>
             </div>
-
             <div class="service-block">
                 <h3>Universal Medical Insurance Matrix</h3>
                 <p style="font-size: 14.5px; margin: 0;">The national healthcare grid logs individual biometrics to guarantee optimal workforce energy and societal health. Centralized pharmacies and localized medicine distribution nodes map natively across state automated manufacturing sectors.</p>
             </div>
         </div>
     </div>
-
-    <footer>
-        <p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking protocol synchronized.</p>
-    </footer>
-
+    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking protocol synchronized.</p></footer>
     <script>
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');

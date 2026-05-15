@@ -4,33 +4,69 @@
     <meta charset="UTF-8">
     <title>Immigration, Visas & Sovereignty Matrix</title>
     <style>
-        :root { --sinowa-red: #8B0000; --sinowa-gold: #FFD700; --sinowa-blue: #1C3B6F; --sinowa-green: #1E6B38; --light-bg: #f8f9fa; }
-        body { font-family: sans-serif; margin: 0; background: var(--light-bg); }
-        .gov-header { background: white; padding: 20px 8%; display: flex; align-items: center; border-bottom: 4px solid var(--sinowa-green); }
-        .gov-nav { background: var(--sinowa-blue); padding: 12px 8%; border-bottom: 4px solid var(--sinowa-gold); }
-        .gov-nav a { color: white; text-decoration: none; margin-right: 35px; font-weight: bold; font-size: 14px; }
-        .container { max-width: 900px; margin: 40px auto; background: white; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid #ddd; }
+        /* Light and Dark Variable System */
+        :root { 
+            --sinowa-red: #8B0000; 
+            --sinowa-gold: #FFD700; 
+            --sinowa-blue: #1C3B6F; 
+            --sinowa-green: #1E6B38; 
+            --light-bg: #f8f9fa; 
+            --card-bg: white;
+            --text-color: #222222;
+            --border-color: #dddddd;
+            --passport-bg: #5c0606;
+        }
+
+        [data-theme="dark"] {
+            --light-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --border-color: #333333;
+            --passport-bg: #3d0404;
+        }
+
+        body { font-family: sans-serif; margin: 0; background: var(--light-bg); color: var(--text-color); transition: background 0.3s, color 0.3s; }
+        .gov-header { background: var(--card-bg); padding: 20px 8%; display: flex; align-items: center; border-bottom: 4px solid var(--sinowa-green); transition: background 0.3s; }
+        
+        .gov-nav { background: var(--sinowa-blue); padding: 12px 8%; border-bottom: 4px solid var(--sinowa-gold); display: flex; justify-content: space-between; align-items: center; }
+        .nav-links a { color: white; text-decoration: none; margin-right: 35px; font-weight: bold; font-size: 14px; }
+        
+        /* Dark Mode Toggle Key */
+        .theme-toggle { background: transparent; color: white; border: 1px solid white; padding: 6px 12px; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 12px; text-transform: uppercase; transition: all 0.2s; }
+        .theme-toggle:hover { background: white; color: var(--sinowa-blue); }
+
+        .container { max-width: 900px; margin: 40px auto; background: var(--card-bg); padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid var(--border-color); transition: background 0.3s, border-color 0.3s; }
         h1, h2 { color: var(--sinowa-blue); font-family: serif; }
-        .passport-display { display: flex; background: #fafafa; border: 1px solid #ddd; padding: 20px; gap: 20px; align-items: center; margin-top: 20px; }
-        .passport-img { width: 150px; height: 210px; object-fit: cover; border-radius: 6px; border: 2px solid var(--sinowa-gold); box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        [data-theme="dark"] h1, [data-theme="dark"] h2 { color: var(--sinowa-gold); }
+
+        .passport-display { display: flex; background: var(--light-bg); border: 1px solid var(--border-color); padding: 20px; gap: 20px; align-items: center; margin-top: 20px; }
+        .passport-img { width: 150px; height: 210px; background: var(--passport-bg); border-radius: 6px; border: 2px solid var(--sinowa-gold); box-shadow: 0 4px 8px rgba(0,0,0,0.14); display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold; color: var(--sinowa-gold); font-size: 11px; }
+        
         .matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; }
         .matrix-table th { background: var(--sinowa-blue); color: white; padding: 12px; text-align: left; border-bottom: 3px solid var(--sinowa-red); }
-        .matrix-table td { padding: 12px; border-bottom: 1px solid #ddd; }
+        .matrix-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
     </style>
 </head>
 <body>
     <header class="gov-header">
-        <img style="width:60px; margin-right:20px;" src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
+        <img style="width:60px; margin-right:20px;" src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="SCP Emblem">
         <div style="border-left:2px solid var(--sinowa-blue); padding-left:20px;">
             <h1 style="margin:0; font-size:20px;">IMMIGRATION & SOVEREIGNTY</h1>
             <p style="margin:0; font-size:12px; color:var(--sinowa-blue); font-weight:bold;">PEOPLE'S REPUBLIC OF SINOWA</p>
         </div>
     </header>
-    <nav class="gov-nav"><a href="index.html">← Back to Main Portal</a></nav>
+    
+    <nav class="gov-nav">
+        <div class="nav-links">
+            <a href="index.html">← Back to Main Portal</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
+    </nav>
+
     <div class="container">
         <h2>State Biometric Passport Display</h2>
         <div class="passport-display">
-            <img class="passport-img" src="https://i.postimg.cc/yNyxwVDm/Copy-of-KATEDUCA-PASSPORT.png" alt="State Passport Cover">
+            <img class="passport-img" src="https://i.postimg.cc/yNyxwVDm/Copy-of-KATEDUCA-PASSPORT.png" alt="[PASSPORT DISPLAY ACTIVE]">
             <div>
                 <h4>Sovereign Document Protocol</h4>
                 <p>Managed directly by security sectors. Features integrated encrypted identification linked natively with public ledger files.</p>
@@ -71,5 +107,23 @@
             </tbody>
         </table>
     </div>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        
+        // Remember selection across session steps
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </body>
 </html>

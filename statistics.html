@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Bureau of Statistics - Sinowa</title>
+    
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
+    
+    <style>
+        :root { 
+            --sinowa-red: #8B0000; 
+            --sinowa-gold: #FFD700; 
+            --sinowa-blue: #1C3B6F; 
+            --sinowa-green: #1E6B38; 
+            --light-bg: #f4f6f9; 
+            --card-bg: white; 
+            --text-color: #2c3e50; 
+            --border-color: #ddd; 
+            --box-bg: #f5f5f5; 
+            --text-muted: #627d98; 
+            --shadow-md: 0 10px 30px rgba(28, 59, 111, 0.08); 
+        }
+        [data-theme="dark"] { 
+            --light-bg: #0f1115; 
+            --card-bg: #161920; 
+            --text-color: #e2e8f0; 
+            --border-color: #242936; 
+            --box-bg: #2d2d2d; 
+            --text-muted: #94a3b8; 
+        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-color); transition: all 0.3s; }
+        
+        /* Passport Page Style Unified Landscape Header */
+        .gov-header { background-color: var(--card-bg); padding: 20px 8%; display: flex; align-items: center; border-bottom: 4px solid var(--sinowa-green); }
+        .header-flag { width: 85px; height: auto; margin-right: 25px; border: 1px solid rgba(0, 0, 0, 0.08); }
+        .gov-title { border-left: 2px solid var(--sinowa-blue); padding-left: 25px; }
+        .gov-title h1 { margin: 0; font-size: 26px; color: var(--sinowa-blue); letter-spacing: 1.5px; font-family: "Times New Roman", Times, serif; font-weight: 700; }
+        .gov-title p { margin: 4px 0 0 0; font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
+        [data-theme="dark"] .gov-title h1 { color: var(--sinowa-gold); }
+        
+        .gov-nav { background-color: var(--sinowa-blue); padding: 0 8%; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--sinowa-gold); display: flex; justify-content: space-between; align-items: center; }
+        .nav-links { display: flex; }
+        .nav-links a { color: rgba(255, 255, 255, 0.9); text-decoration: none; padding: 16px 20px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+        .nav-links a:hover { color: var(--sinowa-gold); background-color: rgba(255, 255, 255, 0.03); }
+        .theme-toggle { background: rgba(255, 255, 255, 0.08); color: white; border: 1px solid rgba(255, 255, 255, 0.2); padding: 8px 16px; font-weight: 600; cursor: pointer; border-radius: 20px; font-size: 11px; text-transform: uppercase; }
+        
+        .container { max-width: 1100px; margin: 40px auto; padding: 0 24px; }
+        .inner-content { background: var(--card-bg); padding: 45px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); }
+        
+        h1, h2 { color: var(--sinowa-blue); font-family: "Times New Roman", Times, serif; }
+        h2 { font-size: 28px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-top: 0; margin-bottom: 24px; }
+        [data-theme="dark"] h2 { color: var(--sinowa-gold); }
+        
+        /* Embedded Live Terminal Node Layout frame */
+        .live-terminal-frame {
+            width: 100%;
+            height: 750px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background: white;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.06);
+            margin-top: 25px;
+        }
+        
+        .matrix-info-alert {
+            background: #f0f7ff;
+            border-left: 4px solid #0066cc;
+            padding: 15px;
+            font-size: 13.5px;
+            line-height: 1.5;
+            margin-bottom: 20px;
+            border-radius: 0 4px 4px 0;
+        }
+        [data-theme="dark"] .matrix-info-alert { background: #1a2633; color: #d0e0f5; }
+    </style>
+</head>
+<body>
+
+    <header class="gov-header">
+        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
+        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>National Bureau of Statistics • Central Data Registry</p></div>
+    </header>
+
+    <nav class="gov-nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a><a href="structure.html">Government & Defence</a><a href="services.html">Public Programmes</a><a href="immigration.html">Ministry of Home Affairs</a><a href="embassy.html">Ministry of Foreign Affairs</a><a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
+    </nav>
+
+    <div class="container">
+        <div class="inner-content">
+            <h2>Sovereign Macroeconomic Ledger Matrix</h2>
+            
+            <div class="matrix-info-alert">
+                <strong>AUTOMATED DATA INTERCEPT LINK ACTIVE:</strong> This secure statistics portal utilizes an unencumbered API data mirror connection. The interactive layout window below routes directly to the dynamic tracking matrices of your nation—updating your GDP, white market analytics, tax allocations, and population demographics completely automatically without requiring code maintenance.
+            </div>
+            
+            <iframe class="live-terminal-frame" src="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" title="Sinowa Economic Matrix Ledger"></iframe>
+            
+        </div>
+    </div>
+
+    <footer><p>© 2026 People's Republic of Sinowa. Bureau of Statistics Portal. Cryptographic node intercept sync active.</p></footer>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+        }
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
+    </script>
+</body>
+</html>

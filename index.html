@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +8,8 @@
         :root {
             --sinowa-red: #8B0000;
             --sinowa-gold: #FFD700;
-            --dark-blue: #1C3B6F; /* Inspired by the Chinese Gov portal color scheme */
+            --sinowa-blue: #1C3B6F;
+            --sinowa-green: #1E6B38;
             --light-bg: #f8f9fa;
             --text-color: #222222;
         }
@@ -28,7 +29,7 @@
             padding: 20px 8%;
             display: flex;
             align-items: center;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 4px solid var(--sinowa-green);
         }
 
         .header-emblem {
@@ -38,7 +39,7 @@
         }
 
         .gov-title {
-            border-left: 2px solid #ccc;
+            border-left: 2px solid var(--sinowa-blue);
             padding-left: 20px;
         }
 
@@ -55,13 +56,13 @@
             font-size: 14px;
             text-transform: uppercase;
             font-weight: bold;
-            color: var(--dark-blue);
+            color: var(--sinowa-blue);
             letter-spacing: 0.5px;
         }
 
-        /* Chinese Portal Inspired Nav Bar */
+        /* Custom Five-Colour Navigation Bar */
         .gov-nav {
-            background-color: var(--dark-blue);
+            background-color: var(--sinowa-blue);
             padding: 12px 8%;
             position: sticky;
             top: 0;
@@ -76,11 +77,10 @@
             font-size: 14px;
             font-weight: bold;
             text-transform: uppercase;
-            transition: opacity 0.2s;
+            transition: color 0.2s;
         }
 
         .gov-nav a:hover {
-            opacity: 0.8;
             color: var(--sinowa-gold);
         }
 
@@ -98,11 +98,12 @@
             padding: 40px;
             border-radius: 4px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border: 1px solid #ddd;
         }
 
         h2.section-title {
-            color: var(--dark-blue);
-            border-bottom: 2px solid var(--dark-blue);
+            color: var(--sinowa-blue);
+            border-bottom: 2px solid var(--sinowa-red);
             padding-bottom: 10px;
             margin-top: 0;
             font-family: "Georgia", serif;
@@ -116,13 +117,16 @@
         }
 
         .service-card {
-            border-top: 3px solid var(--sinowa-red);
-            background: #fdfdfd;
+            background: white;
             padding: 25px;
             border-radius: 4px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.03);
             border: 1px solid #eee;
             border-top: 4px solid var(--sinowa-red);
+        }
+
+        .service-card:nth-child(even) {
+            border-top: 4px solid var(--sinowa-green);
         }
 
         .service-card h3 {
@@ -131,7 +135,7 @@
         }
 
         .service-card h3 a {
-            color: var(--dark-blue);
+            color: var(--sinowa-blue);
             text-decoration: none;
         }
 
@@ -145,6 +149,7 @@
             border-radius: 4px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
             text-align: center;
+            border: 1px solid #eee;
         }
 
         .flag-box img {
@@ -192,15 +197,15 @@
     <header class="gov-header">
         <img class="header-emblem" src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Vanguard Party Emblem">
         <div class="gov-title">
-            <h1>SINOWA.GOV.SN</h1>
+            <h1>SINOWA.GOV.UK</h1>
             <p>The State Council • The People's Republic of Sinowa</p>
         </div>
     </header>
 
     <nav class="gov-nav">
         <a href="index.html">Home</a>
-        <a href="structure.html">Government & Military</a>
-        <a href="services.html">Public Services</a>
+        <a href="structure.html">Government & Defence</a>
+        <a href="services.html">Public Programmes</a>
         <a href="immigration.html">Immigration & Passport</a>
         <a href="embassy.html">Ministry of Foreign Affairs</a>
     </nav>
@@ -210,23 +215,23 @@
         <main class="main-content">
             <section id="welcome">
                 <h2 class="section-title">Central Executive Overview</h2>
-                <p>Welcome to the main digital network node of the People's Republic of Sinowa. This official network channels sovereign planning updates directly from the ministries of the State Council to citizens, industrial units, and diplomatic missions. Under centralized direction, Sinowa prioritizes massive infrastructure automation, coastal expansion directives, and absolute resource synchronization.</p>
+                <p>Welcome to the primary digital network node of the People's Republic of Sinowa. This official framework channels sovereign planning updates directly from the ministries of the State Council to citizens, industrial units, and diplomatic missions. Under centralised direction, Sinowa prioritises massive infrastructure automation, coastal expansion directives, and absolute resource synchronisation.</p>
             </section>
 
             <section id="departments" style="margin-top: 40px;">
                 <h2 class="section-title">Administrative Ministry Access Hub</h2>
                 <div class="services-grid">
                     <div class="service-card">
-                        <h3><a href="structure.html">Ministry of Defense & State Structure →</a></h3>
+                        <h3><a href="structure.html">Ministry of Defence & State Structure →</a></h3>
                         <p>Review constitutional frameworks and the mandatory 1-year military service directives for all citizens upon maturity.</p>
                     </div>
                     <div class="service-card">
-                        <h3><a href="services.html">Department of Labor & Public Health →</a></h3>
-                        <p>Access employment allocations, localized factory shifts, and universal welfare distribution trackers.</p>
+                        <h3><a href="services.html">Department of Labour & Public Health →</a></h3>
+                        <p>Access employment allocations, localised factory shifts, and universal welfare distribution programmes.</p>
                     </div>
                     <div class="service-card">
                         <h3><a href="immigration.html">Immigration, Sovereignty & Passport →</a></h3>
-                        <p>Examine biometric passport frameworks, naturalization filters, and service tier rights for foreign visa classes.</p>
+                        <p>Examine biometric passport frameworks, naturalisation filters, and individualised service tier rights for foreign visa classes.</p>
                     </div>
                     <div class="service-card">
                         <h3><a href="embassy.html">Ministry of Foreign Affairs Portal →</a></h3>
@@ -242,7 +247,7 @@
                 <img src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="State Flag of Sinowa">
             </div>
 
-            <h4 style="color: var(--dark-blue); margin-bottom: 5px;">State Matrix Summary</h4>
+            <h4 style="color: var(--sinowa-blue); margin-bottom: 5px;">State Matrix Summary</h4>
             <ul class="data-list">
                 <li><strong>System:</strong> Unitary Single-Party Socialist Republic</li>
                 <li><strong>Capital Matrix:</strong> Sinowa City</li>
@@ -252,14 +257,14 @@
 
             <div class="directive-box">
                 <h5 style="margin-top:0; margin-bottom:10px; color:var(--sinowa-red);">Central Committee Order</h5>
-                "Efficiency in labor, unity in progress. The reclamation of our land and the absolute discipline of our society ensure that the e-Kwang remains the strongest asset of the working class. Dissent serves only the stagnant; the future belongs to the collective."
+                "Efficiency in labour, unity in progress. The reclamation of our land and the absolute discipline of our society ensure that the e-Kwang remains the strongest asset of the working class. Dissent serves only the stagnant; the future belongs to the collective."
             </div>
         </aside>
 
     </div>
 
     <footer>
-        <p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking protocol synchronized.</p>
+        <p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking protocol synchronised.</p>
     </footer>
 
 </body>

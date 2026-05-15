@@ -2,10 +2,26 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <title>Sovereign Passport & Citizenship Laws - Sinowa</title>
+    <title>Ministry of Home Affairs - Sinowa</title>
     <style>
-        :root { --sinowa-red: #8B0000; --sinowa-gold: #FFD700; --sinowa-blue: #1C3B6F; --sinowa-green: #1E6B38; --light-bg: #f8f9fa; --card-bg: white; --text-color: #222222; --border-color: #ddd; --passport-bg: #5c0606; }
-        [data-theme="dark"] { --light-bg: #121212; --card-bg: #1e1e1e; --text-color: #e0e0e0; --border-color: #333; --passport-bg: #3d0404; }
+        :root { 
+            --sinowa-red: #8B0000; 
+            --sinowa-gold: #FFD700; 
+            --sinowa-blue: #1C3B6F; 
+            --sinowa-green: #1E6B38; 
+            --light-bg: #f8f9fa; 
+            --card-bg: white; 
+            --text-color: #222222; 
+            --border-color: #ddd; 
+            --passport-bg: #5c0606; 
+        }
+        [data-theme="dark"] { 
+            --light-bg: #121212; 
+            --card-bg: #1e1e1e; 
+            --text-color: #e0e0e0; 
+            --border-color: #333; 
+            --passport-bg: #3d0404; 
+        }
         body { font-family: sans-serif; margin: 0; background: var(--light-bg); color: var(--text-color); transition: background 0.3s, color 0.3s; }
         .gov-header { background: var(--card-bg); padding: 20px 8%; display: flex; align-items: center; border-bottom: 4px solid var(--sinowa-green); }
         .gov-nav { background: var(--sinowa-blue); padding: 12px 8%; border-bottom: 4px solid var(--sinowa-gold); display: flex; justify-content: space-between; align-items: center; }
@@ -13,18 +29,27 @@
         .theme-toggle { background: transparent; color: white; border: 1px solid white; padding: 6px 12px; font-weight: bold; cursor: pointer; border-radius: 4px; font-size: 12px; text-transform: uppercase; }
         .theme-toggle:hover { background: white; color: var(--sinowa-blue); }
         .container { max-width: 900px; margin: 40px auto; background: var(--card-bg); padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); border: 1px solid var(--border-color); }
-        h1, h2, h3 { color: var(--sinowa-blue); font-family: serif; }
-        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 { color: var(--sinowa-gold); }
-        .passport-display { display: flex; background: var(--light-bg); border: 1px solid var(--border-color); padding: 20px; gap: 20px; align-items: center; margin-top: 20px; margin-bottom: 30px; }
+        h1, h2, h3, h4 { color: var(--sinowa-blue); font-family: serif; }
+        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3, [data-theme="dark"] h4 { color: var(--sinowa-gold); }
+        
+        /* Interactive Passport Grid elements */
+        .passport-section { display: grid; grid-template-columns: 150px 1fr 200px; gap: 30px; align-items: center; background: var(--light-bg); border: 1px solid var(--border-color); padding: 25px; margin: 25px 0; border-radius: 4px; }
         .passport-img { width: 150px; height: 210px; background: var(--passport-bg); border-radius: 6px; border: 2px solid var(--sinowa-gold); box-shadow: 0 4px 8px rgba(0,0,0,0.1); object-fit: cover; }
-        .law-clause { border-left: 4px solid var(--sinowa-red); background: var(--light-bg); padding: 20px; margin-bottom: 20px; }
+        
+        /* Editable Strength Index Card Style */
+        .strength-card { background: var(--sinowa-blue); color: white; border-radius: 4px; padding: 20px; text-align: center; border-bottom: 4px solid var(--sinowa-gold); }
+        [data-theme="dark"] .strength-card { background: #222; }
+        .strength-score { font-size: 36px; font-weight: bold; color: var(--sinowa-gold); margin: 5px 0; font-family: serif; }
+        
+        .law-clause { border-left: 4px solid var(--sinowa-red); background: var(--light-bg); padding: 20px; margin-bottom: 25px; border-radius: 0 4px 4px 0; }
+        .law-clause:nth-of-type(even) { border-left-color: var(--sinowa-green); }
     </style>
 </head>
 <body>
     <header class="gov-header">
         <img style="width:60px; margin-right:20px;" src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="SCP Emblem">
         <div style="border-left:2px solid var(--sinowa-blue); padding-left:20px;">
-            <h1 style="margin:0; font-size:20px;">PASSPORT & CITIZENSHIP CODEX</h1>
+            <h1 style="margin:0; font-size:20px;">MINISTRY OF HOME AFFAIRS</h1>
             <p style="margin:0; font-size:12px; color:var(--sinowa-blue); font-weight:bold;">PEOPLE'S REPUBLIC OF SINOWA</p>
         </div>
     </header>
@@ -33,38 +58,41 @@
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
     <div class="container">
-        <h2>Sovereign Document Framework</h2>
-        <p>Citizenship inside the People's Republic of Sinowa represents an intrinsic covenant linking individual labor output, civic accountability, and collective national defense frameworks managed by state committees.</p>
+        <h2>Sovereign Registry & Domestic Policy Framework</h2>
+        <p>The Ministry of Home Affairs protects national documentation lines, security allocations, and resident permissions within the domestic domain.</p>
         
-        <div class="passport-display">
+        <div class="passport-section">
             <img class="passport-img" src="https://i.postimg.cc/yNyxwVDm/Copy-of-KATEDUCA-PASSPORT.png" alt="State Passport Cover">
             <div>
                 <h4>Biometric E-Passport Operations</h4>
-                <p>Issued exclusively by the State Council Security Directorate. Coded dynamically with decentralized cryptographic ledger markers linking directly to the holder's personal e-Kwang account assets, state performance history, and defense status.</p>
+                <p>Issued by the Home Affairs Security Directorate. Integrated encrypted chips link citizens natively to secure account databases, public transport access, and national security verification vectors.</p>
+            </div>
+            <div class="strength-card">
+                <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; opacity: 0.9;">Global Passport Strength</div>
+                <div class="strength-score">78</div>
+                <div style="font-size: 10px; opacity: 0.8;">Visa-Free Target Horizons</div>
             </div>
         </div>
 
-        <h2>Sovereign Citizenship Statutes</h2>
+        <h2>Sovereign Citizenship Statutes & Residency Regulations</h2>
         
         <div class="law-clause">
-            <h3>Clause I: Birthright Execution (Jus Sanguinis)</h3>
-            <p>Citizenship is automatically conferred upon individuals born within the sovereign perimeter, provided at least one biological parent possesses registered Tier-1 legal citizenship status and holds active standing in a recognized national trade syndication matrix.</p>
+            <h3>Clause I: Dual & Multiple Citizenships Sanctioned</h3>
+            <p>Following updated legislative adjustments by the State Council, the People's Republic of Sinowa **fully recognises and allows plural and multiple citizenships**. Naturalising foreign nationals are no longer mandated to surrender their baseline external passports, and native Sinowan citizens may legally acquire external documentation without losing their domestic Tier-1 socialist infrastructure rights.</p>
         </div>
 
         <div class="law-clause">
-            <h3>Clause II: Naturalisation Parameters</h3>
-            <p>Foreign elements seeking naturalised status inside Sinowa are subjected to explicit legal evaluations under state surveillance models. Criteria for approval include:</p>
+            <h3>Clause II: Permanent Residency (PR) & Indefinite Leave to Remain (ILR)</h3>
+            <p>For foreign nationals who do not immediately seek full multi-citizenship, the state provides a secure long-term settlement track administered through specialized status tiers:</p>
             <ul>
-                <li>A minimum of five consecutive years of uninterrupted residency under an active B-2 or C-3 labor permit profile.</li>
-                <li>Comprehensive mastery examinations evaluating linguistic knowledge and structural political frameworks.</li>
-                <li>Absolute verification of total financial compliance, showing clean asset logs without capital leakage out of the e-Kwang ledger ecosystem.</li>
-                <li>A declaration of unyielding allegiological devotion, confirming complete forfeiture of any external bourgeois passports or residual titles.</li>
+                <li><strong>Permanent Residency (PR) Card:</strong> Awarded to foreign industrial specialists under B-2 class frameworks who maintain three continuous years of faultless production records on the manufacturing grid.</li>
+                <li><strong>Indefinite Leave to Remain (ILR):</strong> Conferred upon passing standard security checks and demonstrating five continuous years of domestic residency. ILR status permanently exempts holders from foreign work permit caps and provides standard local minimum wage protections.</li>
             </ul>
         </div>
 
         <div class="law-clause">
-            <h3>Clause III: Legal Obligations & Rights Revocation</h3>
-            <p>Citizenship mandates active contribution to the collective wealth. In return, all Tier-1 citizens hold absolute rights to un-tariffed state health systems, public automation allotments, and state housing grids. However, citizenship is subject to sudden administrative freeze or complete statutory revocation if an individual is convicted of industrial sabotage, unsanctioned capital diversion, or draft evasion targeting the mandatory defense sector.</p>
+            <h3>Clause III: Public Infrastructure Entitlements</h3>
+            <p>While full multiple-citizenship holders enjoy total un-tariffed state health insurance and tertiary schooling access, registered PR and ILR holders receive full public health coverage at heavily subsidised state-controlled rates, allowing complete integration into the national workforce network.</p>
         </div>
     </div>
     <script>

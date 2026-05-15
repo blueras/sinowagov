@@ -51,6 +51,7 @@
             <a href="immigration.html">Ministry of Home Affairs</a>
             <a href="embassy.html">Ministry of Foreign Affairs</a>
             <a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
+            <a href="bank.html">Central Bank</a>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
@@ -118,17 +119,11 @@
     <footer><p>© 2026 People's Republic of Sinowa. Bureau of Statistics Portal. Internal tracking data ledger synchronised.</p></footer>
 
     <script>
-        /* ==========================================================================
-           CENTRAL AUTOMATED DATA INTERCEPTOR ENGINE
-           Pings the server directly to parse XML fields natively onto the page
-           ========================================================================== */
         async function fetchLiveSovereignData() {
             const nationName = "sinowa";
-            // Secure proxy endpoint to fetch real-time game logs cleanly without browser cors errors
             const targetUrl = `https://cors-anywhere.herokuapp.com/https://www.nationstates.net/cgi-bin/api.cgi?nation=${nationName}&q=gdp+population+majorindustry+govt+crime+freedom+currency`;
             
             try {
-                // If cors-anywhere is restricted, fallback instantly to reliable baseline models to prevent broken visuals
                 const response = await fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(targetUrl)}`);
                 if (!response.ok) throw new Error("Network intercept broken");
                 
@@ -136,23 +131,18 @@
                 const parser = new DOMParser();
                 const xmlDoc = parser.parseFromString(data.contents, "text/xml");
                 
-                // Parse and extract the target parameters natively
                 const population = parseFloat(xmlDoc.getElementsByTagName("POPULATION")[0].textContent);
                 const gdpValue = parseFloat(xmlDoc.getElementsByTagName("GDP")[0].textContent);
                 const industry = xmlDoc.getElementsByTagName("MAJORINDUSTRY")[0].textContent;
                 const govType = xmlDoc.getElementsByTagName("GOVT")[0].textContent;
-                const currencyName = xmlDoc.getElementsByTagName("CURRENCY")[0].textContent;
                 
-                // Extract metrics nodes safely to map values
                 const civilFreedom = xmlDoc.getElementsByTagName("FREEDOM")[0];
                 const crimeScore = civilFreedom.getElementsByTagName("LAWANDORDER")[0].textContent;
                 
-                // Formulate proper macroeconomic layout adjustments
                 const rawPopulationTotal = Math.round(population * 1000000);
                 const absoluteGDP = gdpValue * 1000000;
                 const gdpPerCapita = absoluteGDP / rawPopulationTotal;
                 
-                // Map values cleanly to target layout selectors
                 document.getElementById("pop-val").innerText = rawPopulationTotal.toLocaleString('en-GB') + " Citizens";
                 document.getElementById("gdp-val").innerText = "eK " + absoluteGDP.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
                 document.getElementById("gdp-capita").innerText = "eK " + gdpPerCapita.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -163,13 +153,11 @@
                 document.getElementById("tax-rate").innerText = "37.00% Baseline";
                 document.getElementById("avg-salary").innerText = "eK " + (gdpPerCapita * 1.55).toLocaleString('en-GB', { maximumFractionDigits: 2 }) + ".13";
                 
-                // Auto-calculates exchange rates dynamically based on GDP shifting weights
                 const baselineExchange = (1.20 + (gdpPerCapita / 4000)).toFixed(2);
                 document.getElementById("exchange-val").innerText = `1.00 eK = $${baselineExchange} USD`;
 
             } catch (error) {
                 console.log("Using baseline secure registry records cache configuration...");
-                // Fault-tolerant failback values fill instantly if network routes block, keeping your UI clean!
                 document.getElementById("pop-val").innerText = "6,000,000 Citizens";
                 document.getElementById("gdp-val").innerText = "eK 7,848,840,000.00";
                 document.getElementById("gdp-capita").innerText = "eK 1,308.14";

@@ -4,77 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>State Council of the People's Republic of Sinowa</title>
+    
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
+    
     <style>
+        /* 5. Posh, Modern, and Sleek CSS Visual Palette */
         :root {
             --sinowa-red: #8B0000;
             --sinowa-gold: #FFD700;
             --sinowa-blue: #1C3B6F;
             --sinowa-green: #1E6B38;
-            --light-bg: #f8f9fa;
-            --card-bg: white;
-            --text-color: #222222;
-            --border-color: #dddddd;
-            --quote-bg: #fff9e6;
+            --light-bg: #f4f6f9;
+            --card-bg: #ffffff;
+            --text-color: #2c3e50;
+            --text-muted: #627d98;
+            --border-color: #eaeef2;
+            --quote-bg: #fffbf0;
+            --shadow-sm: 0 2px 6px rgba(28, 59, 111, 0.04);
+            --shadow-md: 0 10px 30px rgba(28, 59, 111, 0.08);
+            --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         }
 
         [data-theme="dark"] {
-            --light-bg: #121212;
-            --card-bg: #1e1e1e;
-            --text-color: #e0e0e0;
-            --border-color: #333333;
-            --quote-bg: #2d281a;
+            --light-bg: #0f1115;
+            --card-bg: #161920;
+            --text-color: #e2e8f0;
+            --text-muted: #94a3b8;
+            --border-color: #242936;
+            --quote-bg: #222019;
+            --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.2);
+            --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4);
         }
 
         body {
-            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--light-bg);
             color: var(--text-color);
-            line-height: 1.6;
-            transition: background 0.3s, color 0.3s;
+            line-height: 1.65;
+            transition: var(--transition);
+            -webkit-font-smoothing: antialiased;
         }
 
+        /* Posh Glassmorphism & Structured Header */
         .gov-header {
             background-color: var(--card-bg);
-            padding: 20px 8%;
+            padding: 24px 8%;
             display: flex;
             align-items: center;
             border-bottom: 4px solid var(--sinowa-green);
-            transition: background 0.3s;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
         }
 
         .header-emblem {
-            width: 80px;
+            width: 75px;
             height: auto;
-            margin-right: 20px;
+            margin-right: 25px;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
         }
 
         .gov-title {
-            border-left: 2px solid var(--sinowa-blue);
-            padding-left: 20px;
+            border-left: 3px solid var(--sinowa-blue);
+            padding-left: 25px;
         }
 
         .gov-title h1 {
             margin: 0;
-            font-size: 24px;
+            font-size: 26px;
             color: var(--sinowa-red);
-            letter-spacing: 1px;
-            font-family: "Georgia", serif;
+            letter-spacing: 1.5px;
+            font-family: "Times New Roman", Times, serif;
+            font-weight: 700;
         }
 
         .gov-title p {
-            margin: 2px 0 0 0;
-            font-size: 14px;
+            margin: 4px 0 0 0;
+            font-size: 13px;
             text-transform: uppercase;
-            font-weight: bold;
+            font-weight: 700;
             color: var(--sinowa-blue);
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
+        /* Premium Navigation Bar with Fluid Hover States */
         .gov-nav {
             background-color: var(--sinowa-blue);
-            padding: 12px 8%;
+            padding: 0 8%;
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -82,64 +99,88 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .nav-links {
+            display: flex;
         }
 
         .nav-links a {
-            color: white;
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
-            margin-right: 35px;
-            font-size: 14px;
-            font-weight: bold;
+            padding: 16px 20px;
+            font-size: 13px;
+            font-weight: 600;
             text-transform: uppercase;
-            transition: color 0.2s;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
         }
 
         .nav-links a:hover {
             color: var(--sinowa-gold);
+            background-color: rgba(255, 255, 255, 0.03);
+            border-bottom: 3px solid var(--sinowa-gold);
         }
 
         .theme-toggle {
-            background: transparent;
+            background: rgba(255, 255, 255, 0.08);
             color: white;
-            border: 1px solid white;
-            padding: 6px 12px;
-            font-weight: bold;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            font-weight: 600;
             cursor: pointer;
-            border-radius: 4px;
-            font-size: 12px;
+            border-radius: 20px;
+            font-size: 11px;
             text-transform: uppercase;
-            transition: all 0.2s;
+            letter-spacing: 0.5px;
+            transition: var(--transition);
         }
 
         .theme-toggle:hover {
             background: white;
             color: var(--sinowa-blue);
+            box-shadow: 0 0 10px rgba(255,255,255,0.2);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1250px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 0 24px;
             display: grid;
-            grid-template-columns: 2.5fr 1fr;
+            grid-template-columns: 2.6fr 1fr;
             gap: 40px;
         }
 
         .main-content {
             background: var(--card-bg);
-            padding: 40px;
-            border-radius: 4px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 45px;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
             border: 1px solid var(--border-color);
-            transition: background 0.3s, border-color 0.3s;
+            transition: var(--transition);
         }
 
         h2.section-title {
             color: var(--sinowa-blue);
-            border-bottom: 2px solid var(--sinowa-red);
-            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px;
             margin-top: 0;
-            font-family: "Georgia", serif;
+            margin-bottom: 24px;
+            font-family: "Times New Roman", Times, serif;
+            font-size: 28px;
+            position: relative;
+        }
+
+        h2.section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 60px;
+            height: 2px;
+            background-color: var(--sinowa-red);
         }
 
         [data-theme="dark"] .gov-title h1, [data-theme="dark"] h2.section-title {
@@ -155,46 +196,117 @@
 
         .service-card {
             background: var(--card-bg);
-            padding: 25px;
-            border-radius: 4px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            padding: 30px;
+            border-radius: 6px;
+            box-shadow: var(--shadow-sm);
             border: 1px solid var(--border-color);
             border-top: 4px solid var(--sinowa-red);
-            transition: background 0.3s, border-color 0.3s, transform 0.2s;
+            transition: var(--transition);
         }
 
         .service-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(28, 59, 111, 0.08);
+            border-color: rgba(28, 59, 111, 0.15);
         }
 
         .service-card:nth-child(even) {
             border-top: 4px solid var(--sinowa-green);
         }
 
+        .service-card h3 {
+            margin: 0 0 12px 0;
+            font-size: 18px;
+        }
+
         .service-card h3 a {
             color: var(--sinowa-blue);
             text-decoration: none;
+            transition: color 0.2s;
         }
 
-        [data-theme="dark"] .service-card h3 a {
+        [data-theme="dark"] .service-card h3 a { color: var(--sinowa-gold); }
+        .service-card h3 a:hover { color: var(--sinowa-red); }
+        .service-card p { margin: 0; font-size: 14px; color: var(--text-muted); }
+
+        /* 3. Interactive State Media Bulletin Wire Layout */
+        .bulletin-wire {
+            margin-top: 45px;
+            border-top: 2px dashed var(--border-color);
+            padding-top: 35px;
+        }
+
+        .news-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 20px;
+        }
+
+        .news-item {
+            background: var(--light-bg);
+            border-left: 3px solid var(--sinowa-blue);
+            padding: 16px 20px;
+            border-radius: 0 6px 6px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        .news-item:hover {
+            background: var(--card-bg);
+            box-shadow: var(--shadow-sm);
+            border-left-color: var(--sinowa-gold);
+            transform: scale(1.01);
+        }
+
+        .news-meta {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--sinowa-red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .news-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        .news-source {
+            font-size: 11px;
+            background: rgba(28, 59, 111, 0.1);
+            color: var(--sinowa-blue);
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        [data-theme="dark"] .news-source {
+            background: rgba(255,255,255,0.1);
             color: var(--sinowa-gold);
         }
 
+        /* Sidebar & Structural Polish */
         .sidebar {
             background: var(--card-bg);
             padding: 30px;
-            border-radius: 4px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            text-align: center;
+            border-radius: 8px;
+            box-shadow: var(--shadow-md);
             border: 1px solid var(--border-color);
-            transition: background 0.3s, border-color 0.3s;
+            text-align: center;
+            transition: var(--transition);
+            align-self: start;
         }
 
         .flag-box img {
             width: 100%;
+            border-radius: 4px;
             border: 1px solid var(--border-color);
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .data-list {
@@ -205,55 +317,63 @@
         }
 
         .data-list li {
-            padding: 12px 0;
+            padding: 14px 0;
             border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
         }
+
+        .data-list li strong { color: var(--text-muted); font-weight: 500; }
 
         .telegram-btn {
             display: block;
             background: #229ED9;
             color: white;
             text-decoration: none;
-            padding: 12px;
-            font-weight: bold;
-            border-radius: 4px;
-            margin-top: 20px;
+            padding: 14px;
+            font-weight: 700;
+            border-radius: 6px;
+            margin-top: 25px;
             text-transform: uppercase;
-            font-size: 13px;
+            font-size: 12px;
+            letter-spacing: 0.5px;
             border-bottom: 3px solid #1c7fae;
+            transition: var(--transition);
         }
 
         .telegram-btn:hover {
             background: #1e87b8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(34, 158, 217, 0.3);
         }
 
         .disclaimer-text {
             font-size: 11px;
-            color: #777;
-            margin-top: 8px;
+            color: var(--text-muted);
+            margin-top: 10px;
             font-style: italic;
-            text-align: center;
         }
 
         .directive-box {
             background: var(--quote-bg);
             border: 1px solid var(--sinowa-gold);
-            padding: 20px;
-            margin-top: 25px;
+            padding: 22px;
+            margin-top: 30px;
             font-style: italic;
-            border-radius: 4px;
+            border-radius: 6px;
             text-align: left;
-            font-size: 14px;
-            transition: background 0.3s;
+            font-size: 13.5px;
+            line-height: 1.6;
+            transition: var(--transition);
         }
 
         footer {
-            background-color: #222;
-            color: #bbb;
+            background-color: #161920;
+            color: #94a3b8;
             text-align: center;
-            padding: 30px;
+            padding: 35px;
             font-size: 12px;
-            margin-top: 80px;
+            margin-top: 90px;
             border-top: 4px solid var(--sinowa-red);
         }
     </style>
@@ -308,6 +428,45 @@
                     </div>
                 </div>
             </section>
+
+            <section class="bulletin-wire">
+                <h2 class="section-title">Global Media Intelligence Wire</h2>
+                <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Real-time intelligence tracking intercepts from international media broadcast nodes in English. Monitored by the State Council Information Office.</p>
+                
+                <div class="news-grid">
+                    <div class="news-item">
+                        <div>
+                            <div class="news-meta">Intercepted 10 mins ago • Geopolitical</div>
+                            <p class="news-title">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p>
+                        </div>
+                        <span class="news-source">Reuters</span>
+                    </div>
+
+                    <div class="news-item">
+                        <div>
+                            <div class="news-meta">Intercepted 42 mins ago • Infrastructure</div>
+                            <p class="news-title">Artificial intelligence integration in automated deep-sea shipping docks sets record volume markers.</p>
+                        </div>
+                        <span class="news-source">Bloomberg</span>
+                    </div>
+
+                    <div class="news-item">
+                        <div>
+                            <div class="news-meta">Intercepted 2 hours ago • Energy Grid</div>
+                            <p class="news-title">Continental nuclear grid transitions to fully decentralised automated thorium core configurations.</p>
+                        </div>
+                        <span class="news-source">BBC News</span>
+                    </div>
+
+                    <div class="news-item">
+                        <div>
+                            <div class="news-meta">Intercepted 4 hours ago • Maritime Logistics</div>
+                            <p class="news-title">International trade commissioners announce clean tariff baseline reductions across strategic allied canals.</p>
+                        </div>
+                        <span class="news-source">Financial Times</span>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <aside class="sidebar">
@@ -316,19 +475,19 @@
                 <img src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="State Flag of Sinowa">
             </div>
 
-            <h4 style="color: var(--sinowa-blue); margin-bottom: 5px;">State Matrix Summary</h4>
+            <h4 style="color: var(--sinowa-blue); margin-bottom: 10px; font-family: serif; font-size: 18px;">State Matrix Summary</h4>
             <ul class="data-list">
-                <li><strong>System:</strong> Unitary Single-Party Socialist Republic</li>
-                <li><strong>Capital Matrix:</strong> Sinowa City</li>
-                <li><strong>State Currency:</strong> e-Kwang (eK)</li>
-                <li><strong>Operational Security:</strong> Class 1 Cryptographic Active Link</li>
+                <li><strong>System Matrix:</strong> <span>Single-Party Socialist</span></li>
+                <li><strong>Capital Core:</strong> <span>Sinowa City</span></li>
+                <li><strong>State Currency:</strong> <span>e-Kwang (eK)</span></li>
+                <li><strong>Security Link:</strong> <span>Class 1 Active Ledger</span></li>
             </ul>
 
             <a href="https://www.nationstates.net/page=telegrams/to=sinowa" class="telegram-btn" target="_blank">✉ Direct Telegram Access</a>
             <div class="disclaimer-text">Notice: Please expect up to 3 business days for an official diplomatic response from the State Council.</div>
 
             <div class="directive-box">
-                <h5 style="margin-top:0; margin-bottom:10px; color:var(--sinowa-red);">Central Committee Order</h5>
+                <h5 style="margin-top:0; margin-bottom:10px; color:var(--sinowa-red); font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:0.5px;">Central Committee Order</h5>
                 "Efficiency in labour, unity in progress. The reclamation of our land and the absolute discipline of our society ensure that the e-Kwang remains the strongest asset of the working class. Dissent serves only the stagnant; the future belongs to the collective."
             </div>
         </aside>
@@ -336,7 +495,7 @@
     </div>
 
     <footer>
-        <p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking protocol synchronised.</p>
+        <p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking protocol synchronized.</p>
     </footer>
 
     <script>

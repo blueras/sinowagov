@@ -5,46 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ministry of Foreign Affairs - Sovereign Console</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
-    <style>
-        :root { --sinowa-red: #8B0000; --sinowa-gold: #FFD700; --sinowa-blue: #1C3B6F; --sinowa-green: #1E6B38; --light-bg: #f4f6f9; --card-bg: white; --text-color: #2c3e50; --border-color: #ddd; --form-bg: #fdfdfd; --box-bg: #f5f5f5; --text-muted: #627d98; --shadow-md: 0 10px 30px rgba(28, 59, 111, 0.08); --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-        [data-theme="dark"] { --light-bg: #0f1115; --card-bg: #161920; --text-color: #e2e8f0; --border-color: #242936; --form-bg: #252525; --box-bg: #2d2d2d; --text-muted: #94a3b8; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; background-color: var(--light-bg); color: var(--text-color); transition: var(--transition); }
-        .gov-header { background-color: var(--card-bg); padding: 20px 8%; display: flex; align-items: center; border-bottom: 4px solid var(--sinowa-green); transition: var(--transition); }
-        .header-flag { width: 85px; height: auto; margin-right: 25px; border: 1px solid rgba(0, 0, 0, 0.08); }
-        .gov-title { border-left: 2px solid var(--sinowa-blue); padding-left: 25px; }
-        .gov-title h1 { margin: 0; font-size: 26px; color: var(--sinowa-blue); letter-spacing: 1.5px; font-family: "Times New Roman", Times, serif; font-weight: 700; }
-        .gov-title p { margin: 4px 0 0 0; font-size: 13px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
-        [data-theme="dark"] .gov-title h1 { color: var(--sinowa-gold); }
-        .gov-nav { background-color: var(--sinowa-blue); padding: 0 8%; position: sticky; top: 0; z-index: 1000; border-bottom: 4px solid var(--sinowa-gold); display: flex; justify-content: space-between; align-items: center; }
-        .nav-links { display: flex; }
-        .nav-links a { color: rgba(255, 255, 255, 0.9); text-decoration: none; padding: 16px 20px; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; transition: var(--transition); border-bottom: 3px solid transparent; }
-        .nav-links a:hover { color: var(--sinowa-gold); background-color: rgba(255, 255, 255, 0.03); border-bottom: 3px solid var(--sinowa-gold); }
-        .theme-toggle { background: rgba(255, 255, 255, 0.08); color: white; border: 1px solid rgba(255, 255, 255, 0.2); padding: 8px 16px; font-weight: 600; cursor: pointer; border-radius: 20px; font-size: 11px; text-transform: uppercase; transition: var(--transition); }
-        .theme-toggle:hover { background: white; color: var(--sinowa-blue); }
-        .container { max-width: 950px; margin: 40px auto; padding: 0 24px; }
-        .inner-content { background: var(--card-bg); padding: 45px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); transition: var(--transition); }
-        h1, h2, h3 { color: var(--sinowa-blue); font-family: "Times New Roman", Times, serif; position: relative; }
-        h2 { font-size: 28px; border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-top: 0; margin-bottom: 24px; }
-        h2::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 2px; background-color: var(--sinowa-red); }
-        [data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 { color: var(--sinowa-gold); }
-        .embassy-form { background: var(--form-bg); padding: 30px; border: 1px solid var(--border-color); border-top: 4px solid var(--sinowa-blue); margin-top: 30px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 14px; }
-        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid var(--border-color); box-sizing: border-box; border-radius: 4px; background: var(--card-bg); color: var(--text-color); }
-        .checkbox-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; background: var(--box-bg); border-radius: 4px; }
-        .checkbox-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
-        .submit-btn { background: var(--sinowa-green); color: white; border: none; padding: 14px 28px; font-weight: bold; cursor: pointer; text-transform: uppercase; border-bottom: 3px solid #0e3a1d; width: 100%; }
-        .submit-btn:hover { background: #154c27; }
-        .matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; margin-bottom: 40px; }
-        .matrix-table th { background: var(--sinowa-blue); color: white; padding: 12px; text-align: left; border-bottom: 3px solid var(--sinowa-red); }
-        .matrix-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
-        .status-low { background: #e6f4ea; color: #137333; font-weight: bold; padding: 4px 8px; border-radius: 4px; }
-        .status-med { background: #fef7e0; color: #b06000; font-weight: bold; padding: 4px 8px; border-radius: 4px; }
-        .status-high { background: #fce8e6; color: #c5221f; font-weight: bold; padding: 4px 8px; border-radius: 4px; }
-        .alert-box { background: #f0f7ff; border-left: 4px solid #0066cc; padding: 15px; margin: 25px 0; font-size: 13px; color: #333; line-height: 1.4; }
-        [data-theme="dark"] .alert-box { background: #1a2633; color: #d0e0f5; }
-        footer { background-color: #161920; color: #94a3b8; text-align: center; padding: 35px; font-size: 12px; margin-top: 90px; border-top: 4px solid var(--sinowa-red); }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="gov-header">
@@ -53,59 +14,35 @@
     </header>
     <nav class="gov-nav">
         <div class="nav-links">
-            <a href="index.html">Home</a><a href="structure.html">Government & Defence</a><a href="services.html">Public Programmes</a><a href="immigration.html">Ministry of Home Affairs</a><a href="embassy.html">Ministry of Foreign Affairs</a>
+            <a href="index.html">Home</a><a href="structure.html">Government & Defence</a><a href="services.html">Public Programmes</a><a href="immigration.html">Ministry of Home Affairs</a><a href="embassy.html">Ministry of Foreign Affairs</a><a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
-    <div class="container">
+    <div class="container-wide">
         <div class="inner-content">
-            <h2>Bilateral Relations & Global Visa Framework</h2>
-            <p style="color: var(--text-muted); font-size: 15px;">The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions.</p>
-            
+            <h2 class="page-title">Bilateral Relations & Global Visa Framework</h2>
             <h3>Sovereign Border Control: Visa Classifications</h3>
             <table class="matrix-table">
                 <thead><tr><th>Visa Tier & Class Name</th><th>Primary Intended Scope</th><th>Public Healthcare Eligibility</th><th>State Education Access</th></tr></thead>
                 <tbody>
                     <tr><td><strong>A-1: Diplomatic Envoy</strong></td><td>Foreign heads of state, ambassadors, attachés.</td><td style="color:green; font-weight:bold;">100% Free / Covered</td><td style="color:orange; font-weight:bold;">Subject to Treaty</td></tr>
                     <tr><td><strong>B-2: Allied Labor Accord</strong></td><td>Technical specialists, automated grid engineers.</td><td style="color:green; font-weight:bold;">Fully Subsidised</td><td style="color:green; font-weight:bold;">100% Free Access</td></tr>
-                    <tr><td><strong>C-3: Economic Merchant</strong></td><td>Corporate agents, commercial maritime traders.</td><td style="color:orange; font-weight:bold;">Co-pay Required</td><td style="color:red; font-weight:bold;">Restricted</td></tr>
-                    <tr><td><strong>D-4: Technical Student</strong></td><td>Foreign academics enrolled in automation tracks.</td><td style="color:orange; font-weight:bold;">Emergency Only</td><td style="color:green; font-weight:bold;">Full Inclusion</td></tr>
-                    <tr><td><strong>E-5: Controlled Transit</strong></td><td>Monitored cultural delegates. Max 14 days.</td><td style="color:red; font-weight:bold;">Non-Eligible</td><td style="color:red; font-weight:bold;">Prohibited</td></tr>
                 </tbody>
             </table>
-
-            <h3>International Travel Advisory Status Matrix</h3>
-            <table class="matrix-table">
-                <thead><tr><th>Target Sector / Region Category</th><th>Threat Profile Vectors</th><th>Border Protocol Directive</th></tr></thead>
-                <tbody>
-                    <tr><td>Socialist Compact Partners</td><td>Sovereign networks secure; linked auditing grids active.</td><td><span class="status-low">LEVEL 1: NORMAL ASSISTANCE</span></td></tr>
-                    <tr><td>Unregulated Corporate Alliances</td><td>Fluctuating financial asset stability; corporate surveillance.</td><td><span class="status-med">LEVEL 2: INCREASE VIGILANCE</span></td></tr>
-                    <tr><td>Hostile Blocs</td><td>Active espionage risk; unsanctioned security profiling.</td><td><span class="status-high">LEVEL 3: TRAVEL PROHIBITED</span></td></tr>
-                </tbody>
-            </table>
-
-            <h2>Sovereign Embassy Registry & Treaty Application</h2>
-            <div class="alert-box"><strong>DIPLOMATIC PROTOCOL NOTICE:</strong> All formal dispatches submitted here are channelled directly to the State Council. Please expect up to 3 business days for processing.</div>
-            
             <form class="embassy-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
                 <div class="form-group"><label for="nation">Sovereign Nation / Regional Entity:</label><input type="text" id="nation" name="Foreign Nation" required placeholder="e.g., The Republic of Allies"></div>
                 <div class="form-group">
                     <label>Requested Diplomatic Matrix Components:</label>
                     <div class="checkbox-group">
-                        <div class="checkbox-item"><input type="checkbox" id="emb" name="Ties: Standard Embassy" value="Requested"><label for="emb">Standard Embassy Exchange</label></div>
-                        <div class="checkbox-item"><input type="checkbox" id="def" name="Ties: Mutual Defence" value="Requested"><label for="def">Mutual Defence Pact</label></div>
-                        <div class="checkbox-item"><input type="checkbox" id="fta" name="Ties: Free Trade Agreement" value="Requested"><label for="fta">Free Trade Agreement (FTA)</label></div>
-                        <div class="checkbox-item"><input type="checkbox" id="cta" name="Ties: Common Travel Area" value="Requested"><label for="cta">Common Travel Area (CTA)</label></div>
-                        <div class="checkbox-item"><input type="checkbox" id="vft" name="Ties: Visa Free Entry" value="Requested"><label for="vft">Visa-Free Entry</label></div>
-                        <div class="checkbox-item"><input type="checkbox" id="cur" name="Ties: Currency Alliance" value="Requested"><label for="cur">e-Kwang Currency System</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="emb" name="Ties" value="Embassy"><label for="emb">Standard Embassy Exchange</label></div>
+                        <div class="checkbox-item"><input type="checkbox" id="def" name="Ties" value="Defence"><label for="def">Mutual Defence Pact</label></div>
                     </div>
                 </div>
-                <div class="form-group"><label for="message">Official Diplomatic Communiqué:</label><textarea id="message" name="Proposal Text" rows="6" required placeholder="Input standard text format..."></textarea></div>
                 <button type="submit" class="submit-btn">Submit Proposal to Ministry</button>
             </form>
         </div>
     </div>
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking protocol synchronized.</p></footer>
+    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
     <script>
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');

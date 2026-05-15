@@ -4,10 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ministry of Foreign Affairs - Sovereign Console</title>
+    
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
     <style>
         .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; }
+        .matrix-table { margin-bottom: 30px; width: 100%; border-collapse: collapse; font-size: 13.5px; }
+        .matrix-table th { background: var(--sinowa-blue); color: white; padding: 12px; text-align: left; border-bottom: 3px solid var(--sinowa-red); }
+        .matrix-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
+        .matrix-table tr:hover { background: var(--light-bg); }
+        
+        /* High-density layout indicators for tick boxes inside tables */
+        .table-tick-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+            font-size: 11.5px;
+        }
+        .table-tick-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        .disabled-checkbox {
+            pointer-events: none;
+            opacity: 0.8;
+        }
     </style>
 </head>
 <body>
@@ -35,7 +57,7 @@
     <div class="container-wide">
         <div class="inner-content">
             <h2 class="page-title">Bilateral Relations & Global Visa Framework</h2>
-            <p style="color: var(--text-muted); font-size: 15px;">The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions. Foreign missions may reference our official matrices before submitting comprehensive alliance dossiers.</p>
+            <p style="color: var(--text-muted); font-size: 15px;">The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions. Foreign missions must audit our current security parameters before submitting formal accords.</p>
             
             <h3>Sovereign Border Control: Visa Classifications</h3>
             <table class="matrix-table">
@@ -109,10 +131,54 @@
                 </tbody>
             </table>
 
+            <h3>Active Bilateral Treaty & Diplomatic Alliance Registry</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Sovereign Foreign Entity</th>
+                        <th style="width: 25%;">Travel Advisory Vector</th>
+                        <th style="width: 20%;">Permitted Visa Streams</th>
+                        <th style="width: 30%;">Active Diplomatic Treaty Framework Matrix Components</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>The Protectorate of Gotland and Oland</strong></td>
+                        <td><span class="status-low">LEVEL 1: SECURE ACCORD</span></td>
+                        <td><strong style="font-family: monospace;">A-1, B-2, D-4</strong></td>
+                        <td>
+                            <div class="table-tick-grid">
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox" checked><label>Embassy</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox" checked><label>Defence Pact</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox" checked><label>FTA Accord</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox" checked><label>CTA Boundary</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox" checked><label>Visa-Free</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox" checked><label>e-Kwang Sync</label></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Standard Non-Aligned Delegate Baseline</strong></td>
+                        <td><span class="status-med">LEVEL 2: ON AUDIT</span></td>
+                        <td style="color: var(--text-muted); font-family: monospace;">C-3, E-5 Tightly Monitored</td>
+                        <td>
+                            <div class="table-tick-grid">
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>Embassy</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>Defence Pact</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>FTA Accord</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>CTA Boundary</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>Visa-Free</label></div>
+                                <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>e-Kwang Sync</label></div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
             <h2>Sovereign Embassy Registry & Treaty Application</h2>
             <div class="alert-box"><strong>DIPLOMATIC PROTOCOL NOTICE:</strong> All formal dispatches submitted here are channelled directly to the State Council. Please expect up to 3 business days for processing.</div>
             
-            <form class="embassy-form" action="https://formspree.io/f/xwvygeae" method="POST">
+            <form class="embassy-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
                 <div class="form-group">
                     <label for="nation">Sovereign Nation / Regional Entity:</label>
                     <input type="text" id="nation" name="Foreign Nation" required placeholder="e.g., The Republic of Allies">

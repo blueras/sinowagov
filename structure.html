@@ -4,14 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ministry of Defence & State Structure - Sinowa</title>
+    
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; }
+        .matrix-table { margin-bottom: 30px; width: 100%; border-collapse: collapse; font-size: 13.5px; }
+        .matrix-table th { background: var(--sinowa-blue); color: white; padding: 12px; text-align: left; border-bottom: 3px solid var(--sinowa-red); }
+        .matrix-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
+        .matrix-table tr:hover { background: var(--light-bg); }
+        
+        /* Tactical command deck layout variables */
+        .defence-grid {
+            display: grid;
+            grid-template-columns: 2fr 1.1fr;
+            gap: 30px;
+            margin-top: 25px;
+        }
+        
+        .command-status-panel {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+            align-self: start;
+        }
+        
+        .command-status-panel h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--sinowa-blue);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+        [data-theme="dark"] .command-status-panel h4 { color: var(--sinowa-gold); }
+    </style>
 </head>
 <body>
+
     <header class="gov-header">
         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council • The People's Republic of Sinowa</p></div>
+        <div class="gov-title">
+            <h1>SINOWA.GOV.SN</h1>
+            <p>The State Council • The People's Republic of Sinowa</p>
+        </div>
     </header>
+
     <nav class="gov-nav">
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -24,18 +65,86 @@
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
+
     <div class="container-wide">
         <div class="inner-content">
             <h2 class="page-title">Sovereign Defence Mandate & State Frameworks</h2>
-            <div class="highlight-box">
-                <h4 style="margin-top: 0; margin-bottom: 8px; color: var(--sinowa-red);">CONVENTIONAL STATE DEFENCE MANDATE</h4>
-                <p style="margin: 0; font-size: 14px; line-height: 1.6;">Under State Defence Law Chapter 4, all citizens upon reaching the age of maturity are legally conscripted into the Armed Forces of Sinowa for a strict 1-year mandatory service period. No exemptions are granted outside of prioritised medical infrastructure assignments.</p>
+            <p style="color: var(--text-muted); font-size: 15px;">The Ministry of Defence directs the strategic military assets, infrastructure preservation corps, and territorial defense arrays of the People's Republic of Sinowa under centralized state coordination models.</p>
+            
+            <div class="defence-grid">
+                
+                <div>
+                    <div class="highlight-box">
+                        <h4 style="margin-top: 0; margin-bottom: 8px; color: var(--sinowa-red); text-transform: uppercase; letter-spacing: 0.5px;">Conventional State Defence Mandate</h4>
+                        <p style="margin: 0; font-size: 14px; line-height: 1.6;">Under State Defence Law Chapter 4, all citizens upon reaching the age of maturity are legally conscripted into the Armed Forces of Sinowa for a strict 1-year mandatory service period. No exemptions are granted outside of prioritized medical infrastructure or logistics assignments directed by the central planning cells.</p>
+                    </div>
+
+                    <div class="law-clause">
+                        <h3>Clause I: Party Command & Absolute State Alignment</h3>
+                        <p>In accordance with constitutional structural frameworks, the Armed Forces operate under the absolute leadership of the Vanguard Party. Military command lines are permanently synchronized with political guidance cells, ensuring that defensive actions directly protect national socialist preservation models and counter bourgeois external interferences.</p>
+                    </div>
+
+                    <div class="law-clause">
+                        <h3>Clause II: Structural Strategic Framework & Automation</h3>
+                        <p>The state infrastructure layout coordinates heavy construction divisions directly alongside military logistic cell commands. This central planning model mandates that defensive capabilities scale directly and synchronously with state economic manufacturing metrics across the collective realm, utilizing deep-set automation to fortify logistical pathways.</p>
+                    </div>
+
+                    <div class="law-clause">
+                        <h3>Clause III: Territorial Security & Air Defense Arrays</h3>
+                        <p>Sovereign boundary limits are permanently monitored via electronic sensor meshes managed directly by the central command node. Territorial borders require automated security credentials linked directly to the Ministry of Home Affairs biometric registry network prior to authorization.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    
+                    <div class="command-status-panel">
+                        <h4>Strategic Readiness Matrix</h4>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 12px;">
+                            tr><td style="padding: 6px 0; border-bottom: 1px solid var(--border-color);"><strong>Mobilisation Index:</strong></td><td style="text-align: right; font-family: monospace;">Tier 1 Active</td></tr>
+                            <tr><td style="padding: 6px 0; border-bottom: 1px solid var(--border-color);"><strong>Conscription Intake:</strong></td><td style="text-align: right; font-family: monospace; color: #137333;">100% Target Met</td></tr>
+                            <tr><td style="padding: 6px 0; border-bottom: 1px solid var(--border-color);"><strong>Logistical Sync:</strong></td><td style="text-align: right; font-family: monospace;">Automated</td></tr>
+                            <tr><td style="padding: 6px 0;"><strong>Border Status:</strong></td><td style="text-align: right; font-family: monospace; font-weight: bold; color: #137333;">SECURE</td></tr>
+                        </table>
+                    </div>
+
+                    <div class="command-status-panel">
+                        <h4>Armed Forces Branch Registries</h4>
+                        <ul class="data-list">
+                            <li><strong>People's Ground Army:</strong> <span class="stat-val">Core Infantry Divisions</span></li>
+                            <li><strong>Logistical Transports:</strong> <span class="stat-val">Industrial Convoy Units</span></li>
+                            <li><strong>Infrastructural Defence:</strong> <span class="stat-val">Heavy Engineering Cell</span></li>
+                            <li><strong>Border Protection Mesh:</strong> <span class="stat-val">Biometric Guard Node</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="directive-box">
+                        "Absolute vigilance ensures industrial progress. The unity of the workers and the defensive shield remains unyielding."
+                    </div>
+                </div>
+
             </div>
-            <h3>Structural Strategic Framework</h3>
-            <p>The state infrastructure layout coordinates heavy construction divisions directly alongside military supply cells, establishing that defensive preparedness scales synchronously with construction output across the collective realm.</p>
+
+            <h3 class="sector-heading" style="margin-top: 40px; font-family: 'Times New Roman', Times, serif; font-size: 18px; border-left: 3px solid var(--sinowa-red); padding-left: 12px; color: var(--sinowa-blue);">Sovereign Defense Asset Classification</h3>
+            <table class="matrix-table" style="margin-top: 15px;">
+                <thead>
+                    <tr>
+                        <th>Operational Branch Node</th>
+                        <th>Strategic Responsibility Vector</th>
+                        <th>Auditing Security Protocol Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Central Strategic Command</strong></td><td>Supreme executive coordination, military asset allocations, and regional defensive planning.</td><td><span class="status-badge">COMMAND ACTIVE</span></td></tr>
+                    <tr><td><strong>People's Strategic Logistics</strong></td><td>Supply synchronization, industrial manufacturing supply line protection, and automated cargo movements.</td><td><span class="status-badge">SYNCHRONIZED</span></td></tr>
+                    <tr><td><strong>Air & Territorial Protection</strong></td><td>Radar matrix monitoring, automated interception networks, and border airspace preservation.</td><td><span class="status-badge">SECURE STATUS</span></td></tr>
+                </tbody>
+            </table>
+
         </div>
     </div>
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
+
+    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking data ledger synchronised.</p></footer>
+
     <script>
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');

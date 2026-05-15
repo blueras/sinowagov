@@ -18,8 +18,9 @@
         .checkbox-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; background: #f5f5f5; border-radius: 4px; }
         .checkbox-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
         .checkbox-item input { width: auto; }
-        .submit-btn { background: var(--sinowa-green); color: white; border: none; padding: 14px 28px; font-weight: bold; cursor: pointer; text-transform: uppercase; border-bottom: 3px solid #0e3a1d; }
+        .submit-btn { background: var(--sinowa-green); color: white; border: none; padding: 14px 28px; font-weight: bold; cursor: pointer; text-transform: uppercase; border-bottom: 3px solid #0e3a1d; width: 100%; }
         .submit-btn:hover { background: #154c27; }
+        .alert-box { background: #f0f7ff; border-left: 4px solid #0066cc; padding: 15px; margin-bottom: 25px; font-size: 13px; color: #333; line-height: 1.4; }
     </style>
 </head>
 <body>
@@ -35,7 +36,11 @@
         <h2>Bilateral Relations & Embassy Registry</h2>
         <p>Foreign delegations wishing to configure active sovereign ties or negotiate infrastructure access parameters should register utilising the console panel below.</p>
         
-        <form class="embassy-form" action="https://formspree.io/f/xwvygeae" method="POST">
+        <div class="alert-box">
+            <strong>DIPLOMATIC PROTOCOL NOTICE:</strong> All formal dossiers, alliance proposals, and embassy credentials submitted via this dynamic node are channelled directly to the State Council. Please expect up to <strong>3 business days</strong> for the Ministry of Foreign Affairs to parse, verify, and deliver an official response to your regional dispatch desk.
+        </div>
+
+        <form class="embassy-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
             <div class="form-group">
                 <label for="nation">Sovereign Nation / Regional Entity:</label>
                 <input type="text" id="nation" name="Foreign Nation/Region" required placeholder="e.g., The Republic of Allies">

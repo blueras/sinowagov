@@ -9,17 +9,63 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; }
-        .matrix-table { margin-bottom: 30px; }
-        h3.sector-heading { 
-            font-family: "Times New Roman", Times, serif; 
-            color: var(--sinowa-blue); 
-            border-left: 3px solid var(--sinowa-red); 
-            padding-left: 12px; 
-            margin-top: 30px; 
-            margin-bottom: 15px;
-            font-size: 18px;
+        
+        /* High-Density Live Terminal Interface Frame */
+        .automation-grid-container {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
-        [data-theme="dark"] .sector-heading { color: var(--sinowa-gold); }
+
+        .terminal-header-bar {
+            background: var(--sinowa-blue);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 6px 6px 0 0;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border-bottom: 3px solid var(--sinowa-red);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        [data-theme="dark"] .terminal-header-bar { background: #1a1e29; border-bottom-color: var(--sinowa-gold); }
+
+        .live-server-canvas {
+            width: 100%;
+            height: 900px;
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 6px 6px;
+            background: #ffffff;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .live-status-pulse {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 11px;
+            color: #137333;
+            background: rgba(19, 115, 51, 0.1);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        .pulse-dot {
+            width: 6px;
+            height: 6px;
+            background: #137333;
+            border-radius: 50%;
+            animation: pulseActive 1.8s infinite ease-in-out;
+        }
+        @keyframes pulseActive {
+            0% { opacity: 0.4; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 0.4; transform: scale(0.9); }
+        }
     </style>
 </head>
 <body>
@@ -47,80 +93,27 @@
     <div class="container-wide">
         <div class="inner-content">
             <h2 class="page-title">Sovereign Macroeconomic Ledger Matrix</h2>
+            
             <div class="matrix-info-alert">
-                <strong>CENTRAL AUDITING DATA NODES ACTIVE:</strong> This secure statistics portal utilizes an unencumbered data registry ledger. To analyze dynamic variations, live data fluctuations, or to compute parallel regional modelling scripts instantly, utilize the decentralized execution terminal key below.
+                <strong>AUTOMATED REGISTER INTERCEPT LINK ACTIVE:</strong> This portal feeds directly from the centralized macroeconomic tracking engines. Your economic exchange rates, demographic populations, tax calculations, and domestic security index profiles update completely automatically here in real time as choices resolve on your core nation account.
             </div>
             
-            <a href="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" target="_blank" class="launch-btn">📊 Launch External Live Processing Terminal</a>
+            <div style="margin-bottom: 10px;">
+                <a href="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" target="_blank" class="launch-btn">📊 Open Raw External Database Terminal</a>
+            </div>
 
-            <h3 class="sector-heading">Core Macroeconomic Metrics</h3>
-            <table class="matrix-table">
-                <thead>
-                    <tr>
-                        <th>Sovereign Metric Sector Matrix</th>
-                        <th>Registered Ledger Value</th>
-                        <th>Auditing Security Protocol Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td><span class="metric-label">Gross Domestic Product (GDP)</span></td><td>$7,848,840,000.00</td><td><span class="status-badge">VERIFIED • SECURE</span></td></tr>
-                    <tr><td><span class="metric-label">GDP Per Capita Baseline</span></td><td>$1,308.14</td><td><span class="status-badge">VERIFIED • COHESIVE</span></td></tr>
-                    <tr><td><span class="metric-label">Average Annual Worker Salary</span></td><td>$2,026.13</td><td><span class="status-badge">SOCIALIST STANDARD</span></td></tr>
-                    <tr><td><span class="metric-label">Income Tax Baseline Rate</span></td><td>37.00%</td><td><span class="status-badge">FIXED DIRECTIVE</span></td></tr>
-                    <tr><td><span class="metric-label">Net International Trade Balance</span></td><td>-$5,563,069.50</td><td><span class="status-badge">BALANCED DISTRIBUTION</span></td></tr>
-                </tbody>
-            </table>
-
-            <h3 class="sector-heading">Sovereign Demographics & Workforce Registries</h3>
-            <table class="matrix-table">
-                <thead>
-                    <tr>
-                        <th>Demographic Parameter Node</th>
-                        <th>Registered Value Data</th>
-                        <th>Statistical Validation Category</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td><span class="metric-label">Total National Population Index</span></td><td>6,000,000</td><td><span class="status-badge">SYNCHRONIZED ACTIVE</span></td></tr>
-                    <tr><td><span class="metric-label">Workforce Grid Participation Rate</span></td><td>75.20%</td><td><span class="status-badge">LABOUR DIRECTIVE</span></td></tr>
-                    <tr><td><span class="metric-label">Unemployment Index Quotient</span></td><td>24.80%</td><td><span class="status-badge">MONITORED PROFILE</span></td></tr>
-                    <tr><td><span class="metric-label">Primary Industrial Specialisation</span></td><td>Basket Weaving</td><td><span class="status-badge">PRODUCTION CORE</span></td></tr>
-                    <tr><td><span class="metric-label">Worker Enthusiasm Metric Index</span></td><td>96.00%</td><td><span class="status-badge">OPTIMIZED PROFILE</span></td></tr>
-                </tbody>
-            </table>
-
-            <h3 class="sector-heading">Domestic Security & Crime Analytics</h3>
-            <table class="matrix-table">
-                <thead>
-                    <tr>
-                        <th>Security Threat Metric</th>
-                        <th>Sovereign Coefficient Rating</th>
-                        <th>Operational Protocol Assessment</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td><span class="metric-label">General Public Crime Index</span></td><td>Low Coefficient Baseline</td><td><span class="status-badge" style="color: #137333;">SECURE PATROLS</span></td></tr>
-                    <tr><td><span class="metric-label">Property Infraction Violations</span></td><td>Negligible Matrix Marker</td><td><span class="status-badge" style="color: #137333;">STABLE SYNC</span></td></tr>
-                    <tr><td><span class="metric-label">Bourgeois Black-Market Subversion</span></td><td>0.02% Prohibited Margin</td><td><span class="status-badge" style="color: #c5221f;">ACTIVE INTERCEPT</span></td></tr>
-                    <tr><td><span class="metric-label">Corporate Copyright Infringement Risk</span></td><td>Absolute Zero Baseline</td><td><span class="status-badge" style="color: #137333;">DECREE 911 PROTECTED</span></td></tr>
-                </tbody>
-            </table>
-
-            <h3 class="sector-heading">Sovereign Monetary Exchange System</h3>
-            <table class="matrix-table">
-                <thead>
-                    <tr>
-                        <th>International Currency Pairing</th>
-                        <th>Exchange Rate Coefficient</th>
-                        <th>Central Reserve Protocol Status</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr><td><span class="metric-label">e-Kwang (eK) to NationStates Bureau Benchmark ($)</span></td><td>1.00 eK = $1.42 USD</td><td><span class="status-badge">SOVEREIGN PEG ACTIVE</span></td></tr>
-                    <tr><td><span class="metric-label">e-Kwang (eK) to Socialist Compact Reserve Unit</span></td><td>1.00 eK = 1.05 SCRU</td><td><span class="status-badge">ACCORD OPTIMIZED</span></td></tr>
-                    <tr><td><span class="metric-label">Central Bank Liquidity Clearing Velocity</span></td><td>Real-Time Automated Node</td><td><span class="status-badge">ELECTRONIC EXCHANGE</span></td></tr>
-                </tbody>
-            </table>
+            <div class="automation-grid-container">
+                <div class="terminal-header-bar">
+                    <span>Central Data Feed Registry Node: nseconomy_mirror_secure</span>
+                    <div class="live-status-pulse">
+                        <div class="pulse-dot"></div>
+                        <span>Live Ledger Sync Active</span>
+                    </div>
+                </div>
+                
+                <iframe class="live-server-canvas" src="https://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" title="Automated Economic Ledger Database"></iframe>
+            </div>
+            
         </div>
     </div>
 

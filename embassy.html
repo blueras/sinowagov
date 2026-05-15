@@ -6,68 +6,41 @@
     <title>Ministry of Foreign Affairs - Sovereign Console</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
-    <style>
-        .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; }
-    </style>
 </head>
 <body>
-
     <header class="gov-header">
         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
         <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council • The People's Republic of Sinowa</p></div>
     </header>
-
     <nav class="gov-nav">
         <div class="nav-links">
             <a href="index.html">Home</a><a href="structure.html">Government & Defence</a><a href="services.html">Public Programmes</a><a href="immigration.html">Ministry of Home Affairs</a><a href="embassy.html">Ministry of Foreign Affairs</a><a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
-
     <div class="container-wide">
         <div class="inner-content">
             <h2 class="page-title">Bilateral Relations & Global Visa Framework</h2>
-            <p style="color: var(--text-muted); font-size: 15px;">The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions.</p>
-            
+            <p style="color: var(--text-muted); font-size: 15px;">The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions. Foreign missions may reference our official matrices before submitting comprehensive alliance dossiers.</p>
             <h3>Sovereign Border Control: Visa Classifications</h3>
             <table class="matrix-table">
                 <thead><tr><th>Visa Tier & Class Name</th><th>Primary Intended Scope</th><th>Public Healthcare Eligibility</th><th>State Education Access</th></tr></thead>
                 <tbody>
-                    <tr><td><strong>A-1: Diplomatic Envoy</strong></td><td>Foreign heads of state, ambassadors, attachés.</td><td style="color:green; font-weight:bold;">100% Free / Covered</td><td style="color:orange; font-weight:bold;">Subject to Treaty</td></tr>
-                    <tr><td><strong>B-2: Allied Labor Accord</strong></td><td>Technical specialists, automated grid engineers.</td><td style="color:green; font-weight:bold;">Fully Subsidised</td><td style="color:green; font-weight:bold;">100% Free Access</td></tr>
-                    <tr><td><strong>C-3: Economic Merchant</strong></td><td>Corporate agents, commercial maritime traders.</td><td style="color:orange; font-weight:bold;">Co-pay Required</td><td style="color:red; font-weight:bold;">Restricted</td></tr>
-                    <tr><td><strong>D-4: Technical Student</strong></td><td>Foreign academics enrolled in automation tracks.</td><td style="color:orange; font-weight:bold;">Emergency Only</td><td style="color:green; font-weight:bold;">Full Inclusion</td></tr>
-                    <tr><td><strong>E-5: Controlled Transit</strong></td><td>Monitored cultural delegates. Max 14 days.</td><td style="color:red; font-weight:bold;">Non-Eligible</td><td style="color:red; font-weight:bold;">Prohibited</td></tr>
+                    <tr><td><strong>A-1: Diplomatic & Sovereign Envoy</strong></td><td>Foreign heads of state, ambassadors, and certified regional attachés.</td><td style="color:green; font-weight:bold;">100% Free / Fully Covered</td><td style="color:orange; font-weight:bold;">Subject to Bilateral Treaty</td></tr>
+                    <tr><td><strong>B-2: Allied Industrial Labour Accord</strong></td><td>Technical specialists, automated infrastructure engineers from regional partners.</td><td style="color:green; font-weight:bold;">Fully Subsidised (State-Paid)</td><td style="color:green; font-weight:bold;">100% Free for Dependants</td></tr>
+                    <tr><td><strong>C-3: General Economic Merchant</strong></td><td>Approved corporate agents, maritime freight logistics managers, commercial traders.</td><td style="color:orange; font-weight:bold;">Co-pay Required (Insurance Obligatory)</td><td style="color:red; font-weight:bold;">Restricted (Private Tuition Applies)</td></tr>
+                    <tr><td><strong>D-4: Temporary Technical Student</strong></td><td>Foreign academics enrolled in higher automation or mechanical tracks on the grid.</td><td style="color:orange; font-weight:bold;">Basic Emergency Access Only</td><td style="color:green; font-weight:bold;">Full Curricular Inclusion</td></tr>
                 </tbody>
             </table>
-
-            <h3>International Travel Advisory Status Matrix</h3>
-            <table class="matrix-table">
-                <thead><tr><th>Target Sector / Region Category</th><th>Threat Profile Vectors</th><th>Border Protocol Directive</th></tr></thead>
-                <tbody>
-                    <tr><td>Socialist Compact Partners</td><td>Sovereign networks secure; linked auditing grids active.</td><td><span class="status-low">LEVEL 1: NORMAL ASSISTANCE</span></td></tr>
-                    <tr><td>Unregulated Corporate Alliances</td><td>Fluctuating financial asset stability; corporate surveillance.</td><td><span class="status-med">LEVEL 2: INCREASE VIGILANCE</span></td></tr>
-                    <tr><td>Hostile Blocs</td><td>Active espionage risk; unsanctioned security profiling.</td><td><span class="status-high">LEVEL 3: TRAVEL PROHIBITED</span></td></tr>
-                </tbody>
-            </table>
-
-            <h2>Sovereign Embassy Registry & Treaty Application</h2>
-            <div class="alert-box"><strong>DIPLOMATIC PROTOCOL NOTICE:</strong> All formal dispatches submitted here are channelled directly to the State Council. Please expect up to 3 business days for processing.</div>
-            
-            <form class="embassy-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+            <form class="embassy-form" action="https://formspree.io/f/xwvygeae" method="POST">
                 <div class="form-group"><label for="nation">Sovereign Nation / Regional Entity:</label><input type="text" id="nation" name="Foreign Nation" required placeholder="e.g., The Republic of Allies"></div>
                 <div class="form-group">
                     <label>Requested Diplomatic Matrix Components:</label>
                     <div class="checkbox-group">
                         <div class="checkbox-item"><input type="checkbox" id="emb" name="Ties: Standard Embassy" value="Requested"><label for="emb">Standard Embassy Exchange</label></div>
                         <div class="checkbox-item"><input type="checkbox" id="def" name="Ties: Mutual Defence" value="Requested"><label for="def">Mutual Defence Pact</label></div>
-                        <div class="checkbox-item"><input type="checkbox" id="fta" name="Ties: Free Trade Agreement" value="Requested"><label for="fta">Free Trade Agreement (FTA)</label></div>
-                        <div class="checkbox-item"><input type="checkbox" id="cta" name="Ties: Common Travel Area" value="Requested"><label for="cta">Common Travel Area (CTA)</label></div>
-                        <div class="checkbox-item"><input type="checkbox" id="vft" name="Ties: Visa Free Entry" value="Requested"><label for="vft">Visa-Free Entry</label></div>
-                        <div class="checkbox-item"><input type="checkbox" id="cur" name="Ties: Currency Alliance" value="Requested"><label for="cur">e-Kwang Currency System</label></div>
                     </div>
                 </div>
-                <div class="form-group"><label for="message">Official Diplomatic Communiqué:</label><textarea id="message" name="Proposal Text" rows="6" required placeholder="Input standard text format..."></textarea></div>
                 <button type="submit" class="submit-btn">Submit Proposal to Ministry</button>
             </form>
         </div>

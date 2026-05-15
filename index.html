@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State Council of the People's Republic of Sinowa</title>
+    <style>
+        :root {
+            --sinowa-red: #8B0000;
+            --sinowa-gold: #FFD700;
+            --dark-bg: #111111;
+            --light-bg: #f5f5f5;
+            --text-color: #333333;
+        }
+
+        body {
+            font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Top Government Banner */
+        .gov-header {
+            background-color: var(--sinowa-red);
+            color: white;
+            padding: 20px 5%;
+            border-bottom: 4px solid var(--sinowa-gold);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .gov-title h1 {
+            margin: 0;
+            font-size: 28px;
+            letter-spacing: 2px;
+            color: var(--sinowa-gold);
+        }
+
+        .gov-title p {
+            margin: 5px 0 0 0;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-weight: bold;
+            opacity: 0.9;
+        }
+
+        /* Navigation Bar */
+        .gov-nav {
+            background-color: #222;
+            padding: 10px 5%;
+        }
+
+        .gov-nav a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .gov-nav a:hover {
+            color: var(--sinowa-gold);
+        }
+
+        /* Main Portal Layout */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* Left Side Content */
+        .main-content {
+            background: white;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        h2.section-title {
+            color: var(--sinowa-red);
+            border-bottom: 2px solid var(--sinowa-red);
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        /* Service Grid Style (Like Gov.uk) */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            border-left: 4px solid var(--sinowa-red);
+            background: #fafafa;
+            padding: 15px;
+            transition: transform 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateX(5px);
+            background: #f0f0f0;
+        }
+
+        .service-card h3 {
+            margin: 0 0 5px 0;
+            font-size: 18px;
+        }
+
+        .service-card h3 a {
+            color: var(--sinowa-red);
+            text-decoration: none;
+        }
+
+        .service-card p {
+            margin: 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Right Side Sidebar */
+        .sidebar {
+            background: white;
+            padding: 30px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        .flag-box img {
+            width: 100%;
+            max-width: 250px;
+            border: 1px solid #ccc;
+            margin-bottom: 15px;
+        }
+
+        .party-box img {
+            width: 80px;
+            margin-bottom: 15px;
+        }
+
+        .data-list {
+            text-align: left;
+            padding: 0;
+            list-style: none;
+            font-size: 14px;
+        }
+
+        .data-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* Party Quote Box */
+        .directive-box {
+            background: #fff9e6;
+            border: 1px solid var(--sinowa-gold);
+            padding: 20px;
+            margin-top: 20px;
+            font-style: italic;
+            border-radius: 4px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 12px;
+            margin-top: 50px;
+            border-top: 4px solid var(--sinowa-red);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="gov-header">
+        <div class="gov-title">
+            <h1>PEOPLE'S REPUBLIC OF SINOWA</h1>
+            <p>State Council Official Web Portal • Central Information System</p>
+        </div>
+    </header>
+
+    <nav class="gov-nav">
+        <a href="#welcome">Home</a>
+        <a href="#services">Citizen Services</a>
+        <a href="#directives">Party Directives</a>
+        <a href="#bulletins">Bulletins</a>
+    </nav>
+
+    <div class="container">
+        
+        <main class="main-content">
+            <section id="welcome" style="margin-bottom: 40px;">
+                <h2 class="section-title">Welcome to Sinowa.gov</h2>
+                <p>This platform connects citizens, state enterprises, and global diplomatic partners directly with the administrative organs of the State. Under our unified economic planning directives, Sinowa continues its march toward absolute industrial modernization, maritime reclamation superiority, and complete social equality. All operational nodes are secure and logged.</p>
+            </section>
+
+            <section id="services" style="margin-bottom: 40px;">
+                <h2 class="section-title">Public Digital Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <h3><a href="#">Department of Labor</a></h3>
+                        <p>Register for state-allocated employment, log working shifts, and view localized vanguard union assignments.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3><a href="#">Ministry of Maritime Reclamation</a></h3>
+                        <p>Review active engineering blueprints, artificial island grids, and tactical deep-sea territory claims.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3><a href="#">National Education Grid</a></h3>
+                        <p>Access the universal, high-tech academic curriculum portal designed for specialized technological tracks.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3><a href="#">Central Bank of Sinowa (CBS)</a></h3>
+                        <p>Track e-Kwang ledger transactions, review state production expenditures, and verify financial audits.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="bulletins">
+                <h2 class="section-title">Latest State Bulletins</h2>
+                <p><strong>[PR-04]:</strong> National urban surveillance camera grid stabilization completed. Crime rates reduced effectively across all primary quadrants.</p>
+                <p><strong>[PR-03]:</strong> Ministry of Culture completes international shipment of local artisan sculptures to external region allies to boost global influence.</p>
+                <p><strong>[PR-02]:</strong> All private commercial gambling permits permanently terminated. Real estate assets transferred directly to municipal youth welfare centers.</p>
+            </section>
+        </main>
+
+        <aside class="sidebar">
+            <div class="flag-box">
+                <h4>State Flag</h4>
+                <img src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="State Flag of Sinowa">
+            </div>
+            
+            <div class="party-box">
+                <h4>Vanguard Party Emblem</h4>
+                <img src="https://i.ibb.co/HT8H7p07/Sinowa-Communist-Party-SCP.png" alt="Party Emblem">
+            </div>
+
+            <h4 style="color: var(--sinowa-red); margin-bottom: 5px;">State Profile</h4>
+            <ul class="data-list">
+                <li><strong>System:</strong> Unitary Single-Party Socialist Republic</li>
+                <li><strong>Capital City:</strong> Sinowa City</li>
+                <li><strong>National Currency:</strong> e-Kwang (eK)</li>
+                <li><strong>Core Focus:</strong> Heavy Industrial Infrastructure & Automation</li>
+                <li><strong>Security Status:</strong> Fully Operational / Monitored</li>
+            </ul>
+
+            <div id="directives" class="directive-box">
+                <h5>Central Committee Order</h5>
+                "Efficiency in labor, unity in progress. The reclamation of our land and the absolute discipline of our society ensure that the e-Kwang remains the strongest asset of the working class. Dissent serves only the stagnant; the future belongs to the collective."
+            </div>
+        </aside>
+
+    </div>
+
+    <footer>
+        <p>© 2026 People's Republic of Sinowa. All rights reserved by the Ministry of Information.</p>
+        <p style="color: #666; font-size: 10px; margin-top: 5px;">Notice: Internal cryptographic tracking active. Disruption of data networks is punishable under State Penal Code 14.</p>
+    </footer>
+
+</body>
+</html>

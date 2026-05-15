@@ -8,7 +8,6 @@
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     
     <style>
-        /* 5. Posh, Modern, and Sleek CSS Visual Palette */
         :root {
             --sinowa-red: #8B0000;
             --sinowa-gold: #FFD700;
@@ -38,8 +37,7 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             background-color: var(--light-bg);
             color: var(--text-color);
             line-height: 1.65;
@@ -47,10 +45,10 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Posh Glassmorphism & Structured Header */
+        /* Passport Page Style Premium Header Layout */
         .gov-header {
             background-color: var(--card-bg);
-            padding: 24px 8%;
+            padding: 20px 8%;
             display: flex;
             align-items: center;
             border-bottom: 4px solid var(--sinowa-green);
@@ -58,22 +56,23 @@
             transition: var(--transition);
         }
 
-        .header-emblem {
-            width: 75px;
+        .header-flag {
+            width: 85px;
             height: auto;
             margin-right: 25px;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
 
         .gov-title {
-            border-left: 3px solid var(--sinowa-blue);
+            border-left: 2px solid var(--sinowa-blue);
             padding-left: 25px;
         }
 
         .gov-title h1 {
             margin: 0;
             font-size: 26px;
-            color: var(--sinowa-red);
+            color: var(--sinowa-blue);
             letter-spacing: 1.5px;
             font-family: "Times New Roman", Times, serif;
             font-weight: 700;
@@ -82,306 +81,117 @@
         .gov-title p {
             margin: 4px 0 0 0;
             font-size: 13px;
-            text-transform: uppercase;
-            font-weight: 700;
-            color: var(--sinowa-blue);
-            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
         }
 
-        /* Premium Navigation Bar with Fluid Hover States */
+        [data-theme="dark"] .gov-title h1 {
+            color: var(--sinowa-gold);
+        }
+
+        /* Sticky Global Menu Structure */
         .gov-nav {
             background-color: var(--sinowa-blue);
             padding: 0 8%;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            position: sticky; top: 0; z-index: 1000;
             border-bottom: 4px solid var(--sinowa-gold);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: flex; justify-content: space-between; align-items: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        .nav-links {
-            display: flex;
-        }
-
+        .nav-links { display: flex; }
         .nav-links a {
-            color: rgba(255, 255, 255, 0.9);
-            text-decoration: none;
-            padding: 16px 20px;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
-            border-bottom: 3px solid transparent;
+            color: rgba(255, 255, 255, 0.9); text-decoration: none;
+            padding: 16px 20px; font-size: 13px; font-weight: 600;
+            text-transform: uppercase; letter-spacing: 0.5px;
+            transition: var(--transition); border-bottom: 3px solid transparent;
         }
 
-        .nav-links a:hover {
-            color: var(--sinowa-gold);
-            background-color: rgba(255, 255, 255, 0.03);
-            border-bottom: 3px solid var(--sinowa-gold);
-        }
+        .nav-links a:hover { color: var(--sinowa-gold); background-color: rgba(255, 255, 255, 0.03); border-bottom: 3px solid var(--sinowa-gold); }
 
         .theme-toggle {
-            background: rgba(255, 255, 255, 0.08);
-            color: white;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 8px 16px;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 20px;
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            transition: var(--transition);
+            background: rgba(255, 255, 255, 0.08); color: white;
+            border: 1px solid rgba(255, 255, 255, 0.2); padding: 8px 16px;
+            font-weight: 600; cursor: pointer; border-radius: 20px;
+            font-size: 11px; text-transform: uppercase; transition: var(--transition);
         }
+        .theme-toggle:hover { background: white; color: var(--sinowa-blue); }
 
-        .theme-toggle:hover {
-            background: white;
-            color: var(--sinowa-blue);
-            box-shadow: 0 0 10px rgba(255,255,255,0.2);
-        }
-
-        .container {
-            max-width: 1250px;
-            margin: 40px auto;
-            padding: 0 24px;
-            display: grid;
-            grid-template-columns: 2.6fr 1fr;
-            gap: 40px;
-        }
-
-        .main-content {
-            background: var(--card-bg);
-            padding: 45px;
-            border-radius: 8px;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
+        .container { max-width: 1250px; margin: 40px auto; padding: 0 24px; display: grid; grid-template-columns: 2.6fr 1fr; gap: 40px; }
+        .main-content { background: var(--card-bg); padding: 45px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); transition: var(--transition); }
 
         h2.section-title {
-            color: var(--sinowa-blue);
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 12px;
-            margin-top: 0;
-            margin-bottom: 24px;
-            font-family: "Times New Roman", Times, serif;
-            font-size: 28px;
-            position: relative;
+            color: var(--sinowa-blue); border-bottom: 1px solid var(--border-color);
+            padding-bottom: 12px; margin-top: 0; margin-bottom: 24px;
+            font-family: "Times New Roman", Times, serif; font-size: 28px; position: relative;
         }
+        h2.section-title::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 2px; background-color: var(--sinowa-red); }
 
-        h2.section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 60px;
-            height: 2px;
-            background-color: var(--sinowa-red);
-        }
+        [data-theme="dark"] h2.section-title { color: var(--sinowa-gold); }
 
-        [data-theme="dark"] .gov-title h1, [data-theme="dark"] h2.section-title {
-            color: var(--sinowa-gold);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-top: 25px;
-        }
-
+        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-top: 25px; }
         .service-card {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 6px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid var(--border-color);
-            border-top: 4px solid var(--sinowa-red);
-            transition: var(--transition);
+            background: var(--card-bg); padding: 30px; border-radius: 6px;
+            box-shadow: var(--shadow-sm); border: 1px solid var(--border-color);
+            border-top: 4px solid var(--sinowa-red); transition: var(--transition);
         }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(28, 59, 111, 0.08);
-            border-color: rgba(28, 59, 111, 0.15);
-        }
-
-        .service-card:nth-child(even) {
-            border-top: 4px solid var(--sinowa-green);
-        }
-
-        .service-card h3 {
-            margin: 0 0 12px 0;
-            font-size: 18px;
-        }
-
-        .service-card h3 a {
-            color: var(--sinowa-blue);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
+        .service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 24px rgba(28, 59, 111, 0.08); }
+        .service-card:nth-child(even) { border-top: 4px solid var(--sinowa-green); }
+        .service-card h3 { margin: 0 0 12px 0; font-size: 18px; }
+        .service-card h3 a { color: var(--sinowa-blue); text-decoration: none; }
         [data-theme="dark"] .service-card h3 a { color: var(--sinowa-gold); }
-        .service-card h3 a:hover { color: var(--sinowa-red); }
         .service-card p { margin: 0; font-size: 14px; color: var(--text-muted); }
 
-        /* 3. Interactive State Media Bulletin Wire Layout */
-        .bulletin-wire {
-            margin-top: 45px;
-            border-top: 2px dashed var(--border-color);
-            padding-top: 35px;
+        /* Panoramic Infinite Moving Media Ticker Layout */
+        .ticker-wrap {
+            margin-top: 40px; border-top: 2px dashed var(--border-color); padding-top: 35px; overflow: hidden; background: var(--card-bg);
+        }
+        .ticker-container { width: 100%; overflow: hidden; white-space: nowrap; position: relative; padding: 10px 0; }
+        
+        .ticker-track {
+            display: inline-flex; animation: scrollTicker 35s linear infinite; gap: 20px;
+        }
+        .ticker-track:hover { animation-play-state: paused; }
+
+        .ticker-card {
+            display: inline-flex; align-items: center; background: var(--light-bg); border: 1px solid var(--border-color);
+            border-radius: 6px; padding: 12px 18px; width: 440px; gap: 15px; box-shadow: var(--shadow-sm); white-space: normal;
+        }
+        .ticker-card img {
+            width: 100px; height: 70px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border-color); flex-shrink: 0;
+        }
+        .ticker-text-box { display: flex; flex-direction: column; }
+        .ticker-source { font-size: 10px; font-weight: 800; color: var(--sinowa-red); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+        .ticker-headline { font-size: 13px; font-weight: 600; margin: 0; line-height: 1.4; color: var(--text-color); }
+
+        @keyframes scrollTicker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
-        .news-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 16px;
-            margin-top: 20px;
-        }
-
-        .news-item {
-            background: var(--light-bg);
-            border-left: 3px solid var(--sinowa-blue);
-            padding: 16px 20px;
-            border-radius: 0 6px 6px 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: var(--transition);
-        }
-
-        .news-item:hover {
-            background: var(--card-bg);
-            box-shadow: var(--shadow-sm);
-            border-left-color: var(--sinowa-gold);
-            transform: scale(1.01);
-        }
-
-        .news-meta {
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--sinowa-red);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 4px;
-        }
-
-        .news-title {
-            font-size: 14px;
-            font-weight: 600;
-            margin: 0;
-        }
-
-        .news-source {
-            font-size: 11px;
-            background: rgba(28, 59, 111, 0.1);
-            color: var(--sinowa-blue);
-            padding: 3px 8px;
-            border-radius: 12px;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
-        [data-theme="dark"] .news-source {
-            background: rgba(255,255,255,0.1);
-            color: var(--sinowa-gold);
-        }
-
-        /* Sidebar & Structural Polish */
         .sidebar {
-            background: var(--card-bg);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: var(--shadow-md);
-            border: 1px solid var(--border-color);
-            text-align: center;
-            transition: var(--transition);
-            align-self: start;
+            background: var(--card-bg); padding: 30px; border-radius: 8px; box-shadow: var(--shadow-md);
+            border: 1px solid var(--border-color); text-align: center; transition: var(--transition); align-self: start;
         }
-
-        .flag-box img {
-            width: 100%;
-            border-radius: 4px;
-            border: 1px solid var(--border-color);
-            margin-bottom: 18px;
-        }
-
-        .data-list {
-            text-align: left;
-            padding: 0;
-            list-style: none;
-            font-size: 14px;
-        }
-
-        .data-list li {
-            padding: 14px 0;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .data-list li strong { color: var(--text-muted); font-weight: 500; }
-
+        .flag-box img { width: 100%; border-radius: 4px; border: 1px solid var(--border-color); margin-bottom: 18px; }
+        .data-list { text-align: left; padding: 0; list-style: none; font-size: 14px; }
+        .data-list li { padding: 14px 0; border-bottom: 1px solid var(--border-color); display: flex; justify-content: space-between; }
         .telegram-btn {
-            display: block;
-            background: #229ED9;
-            color: white;
-            text-decoration: none;
-            padding: 14px;
-            font-weight: 700;
-            border-radius: 6px;
-            margin-top: 25px;
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 0.5px;
-            border-bottom: 3px solid #1c7fae;
-            transition: var(--transition);
+            display: block; background: #229ED9; color: white; text-decoration: none; padding: 14px; font-weight: 700;
+            border-radius: 6px; margin-top: 25px; text-transform: uppercase; font-size: 12px; border-bottom: 3px solid #1c7fae; transition: var(--transition);
         }
+        .telegram-btn:hover { background: #1e87b8; transform: translateY(-2px); }
+        .disclaimer-text { font-size: 11px; color: var(--text-muted); margin-top: 10px; font-style: italic; }
+        .directive-box { background: var(--quote-bg); border: 1px solid var(--sinowa-gold); padding: 22px; margin-top: 30px; font-style: italic; border-radius: 6px; text-align: left; font-size: 13.5px; }
 
-        .telegram-btn:hover {
-            background: #1e87b8;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(34, 158, 217, 0.3);
-        }
-
-        .disclaimer-text {
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 10px;
-            font-style: italic;
-        }
-
-        .directive-box {
-            background: var(--quote-bg);
-            border: 1px solid var(--sinowa-gold);
-            padding: 22px;
-            margin-top: 30px;
-            font-style: italic;
-            border-radius: 6px;
-            text-align: left;
-            font-size: 13.5px;
-            line-height: 1.6;
-            transition: var(--transition);
-        }
-
-        footer {
-            background-color: #161920;
-            color: #94a3b8;
-            text-align: center;
-            padding: 35px;
-            font-size: 12px;
-            margin-top: 90px;
-            border-top: 4px solid var(--sinowa-red);
-        }
+        footer { background-color: #161920; color: #94a3b8; text-align: center; padding: 35px; font-size: 12px; margin-top: 90px; border-top: 4px solid var(--sinowa-red); }
     </style>
 </head>
 <body>
 
     <header class="gov-header">
-        <img class="header-emblem" src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Vanguard Party Emblem">
+        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="National Flag of Sinowa">
         <div class="gov-title">
             <h1>SINOWA.GOV.SN</h1>
             <p>The State Council • The People's Republic of Sinowa</p>
@@ -400,7 +210,6 @@
     </nav>
 
     <div class="container">
-        
         <main class="main-content">
             <section id="welcome">
                 <h2 class="section-title">Central Executive Overview</h2>
@@ -429,41 +238,43 @@
                 </div>
             </section>
 
-            <section class="bulletin-wire">
+            <section class="ticker-wrap">
                 <h2 class="section-title">Global Media Intelligence Wire</h2>
-                <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 20px;">Real-time intelligence tracking intercepts from international media broadcast nodes in English. Monitored by the State Council Information Office.</p>
-                
-                <div class="news-grid">
-                    <div class="news-item">
-                        <div>
-                            <div class="news-meta">Intercepted 10 mins ago • Geopolitical</div>
-                            <p class="news-title">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p>
+                <div class="ticker-container">
+                    <div class="ticker-track">
+                        <div class="ticker-card">
+                            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance">
+                            <div class="ticker-text-box">
+                                <span class="ticker-source">Reuters • Geopolitical</span>
+                                <p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p>
+                            </div>
                         </div>
-                        <span class="news-source">Reuters</span>
-                    </div>
-
-                    <div class="news-item">
-                        <div>
-                            <div class="news-meta">Intercepted 42 mins ago • Infrastructure</div>
-                            <p class="news-title">Artificial intelligence integration in automated deep-sea shipping docks sets record volume markers.</p>
+                        <div class="ticker-card">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Tech">
+                            <div class="ticker-text-box">
+                                <span class="ticker-source">Bloomberg • Automation</span>
+                                <p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight processing volume markers.</p>
+                            </div>
                         </div>
-                        <span class="news-source">Bloomberg</span>
-                    </div>
-
-                    <div class="news-item">
-                        <div>
-                            <div class="news-meta">Intercepted 2 hours ago • Energy Grid</div>
-                            <p class="news-title">Continental nuclear grid transitions to fully decentralised automated thorium core configurations.</p>
+                        <div class="ticker-card">
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Infrastructure">
+                            <div class="ticker-text-box">
+                                <span class="ticker-source">BBC News • Energy Grid</span>
+                                <p class="ticker-headline">Continental nuclear networks transition to fully decentralised automated thorium core configurations.</p>
+                            </div>
                         </div>
-                        <span class="news-source">BBC News</span>
-                    </div>
-
-                    <div class="news-item">
-                        <div>
-                            <div class="news-meta">Intercepted 4 hours ago • Maritime Logistics</div>
-                            <p class="news-title">International trade commissioners announce clean tariff baseline reductions across strategic allied canals.</p>
+                        <div class="ticker-card">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=150&q=80" alt="Trade">
+                            <div class="ticker-text-box">
+                                <span class="ticker-source">Financial Times • Maritime</span>
+                                <p class="ticker-headline">International trade commissioners announce tariff baseline reductions across strategic allied canals.</p>
+                            </div>
                         </div>
-                        <span class="news-source">Financial Times</span>
+                        
+                        <div class="ticker-card"><img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="F"><div class="ticker-text-box"><span class="ticker-source">Reuters</span><p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p></div></div>
+                        <div class="ticker-card"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="T"><div class="ticker-text-box"><span class="ticker-source">Bloomberg</span><p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight processing volume markers.</p></div></div>
+                        <div class="ticker-card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="I"><div class="ticker-text-box"><span class="ticker-source">BBC News</span><p class="ticker-headline">Continental nuclear networks transition to fully decentralised automated thorium core configurations.</p></div></div>
+                        <div class="ticker-card"><img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=150&q=80" alt="T"><div class="ticker-text-box"><span class="ticker-source">Financial Times</span><p class="ticker-headline">International trade commissioners announce tariff baseline reductions across strategic allied canals.</p></div></div>
                     </div>
                 </div>
             </section>
@@ -471,10 +282,9 @@
 
         <aside class="sidebar">
             <div class="flag-box">
-                <h4>Sovereign State Flag</h4>
-                <img src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="State Flag of Sinowa">
+                <h4>Vanguard Party Emblem</h4>
+                <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem">
             </div>
-
             <h4 style="color: var(--sinowa-blue); margin-bottom: 10px; font-family: serif; font-size: 18px;">State Matrix Summary</h4>
             <ul class="data-list">
                 <li><strong>System Matrix:</strong> <span>Single-Party Socialist</span></li>
@@ -482,36 +292,24 @@
                 <li><strong>State Currency:</strong> <span>e-Kwang (eK)</span></li>
                 <li><strong>Security Link:</strong> <span>Class 1 Active Ledger</span></li>
             </ul>
-
             <a href="https://www.nationstates.net/page=telegrams/to=sinowa" class="telegram-btn" target="_blank">✉ Direct Telegram Access</a>
             <div class="disclaimer-text">Notice: Please expect up to 3 business days for an official diplomatic response from the State Council.</div>
-
             <div class="directive-box">
-                <h5 style="margin-top:0; margin-bottom:10px; color:var(--sinowa-red); font-weight:700; text-transform:uppercase; font-size:11px; letter-spacing:0.5px;">Central Committee Order</h5>
+                <h5 style="margin-top:0; margin-bottom:10px; color:var(--sinowa-red); font-weight:700; text-transform:uppercase; font-size:11px;">Central Committee Order</h5>
                 "Efficiency in labour, unity in progress. The reclamation of our land and the absolute discipline of our society ensure that the e-Kwang remains the strongest asset of the working class. Dissent serves only the stagnant; the future belongs to the collective."
             </div>
         </aside>
-
     </div>
 
-    <footer>
-        <p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking protocol synchronized.</p>
-    </footer>
+    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking protocol synchronized.</p></footer>
 
     <script>
         function toggleTheme() {
             const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
-                document.documentElement.removeAttribute('data-theme');
-                localStorage.setItem('theme', 'light');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark');
-            }
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
         }
-        if (localStorage.getItem('theme') === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark');
-        }
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
     </script>
 </body>
 </html>

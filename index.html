@@ -4,140 +4,152 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>State Council of the People's Republic of Sinowa</title>
+    
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
+    
     <style>
-        /* GOV.UK / Chinese State Council Layout Constraints */
-        .header-wrapper, .nav-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        
-        .gov-header {
-            padding: 12px 20px;
+        /* Force Perfect 1200px Uniform Center Alignment */
+        body {
+            background-color: #f4f6f9;
         }
 
-        /* Snaps navigation links inside the 1200px widescreen boundary */
+        .gov-header, .gov-nav, .container {
+            max-width: 1200px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+            box-sizing: border-box;
+        }
+
+        /* Center the menu link cluster inside the nav bar container bounds */
         .gov-nav {
-            padding: 0 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: flex !important;
+            justify-content: space-between !important;
+            align-items: center !important;
+            padding: 0 24px !important;
             border-radius: 0 0 4px 4px;
         }
 
         .nav-links {
             display: flex !important;
+            justify-content: center !important;
             flex-wrap: wrap !important;
-            gap: 2px;
+            gap: 5px !important;
         }
 
         .nav-links a {
-            padding: 10px 12px;
-            font-size: 11px;
+            padding: 12px 16px !important;
+            font-size: 12px !important;
         }
 
-        .theme-toggle {
-            padding: 4px 10px;
-            font-size: 9.5px;
-        }
-
-        /* Compact Layout Architecture */
+        /* Two-Column Structured Desktop Command Deck */
         .container {
-            max-width: 1200px;
-            margin: 20px auto;
-            padding: 0 20px;
-            box-sizing: border-box;
+            display: grid !important;
+            grid-template-columns: 1.8fr 1fr !important;
+            gap: 25px !important;
+            padding: 0 20px !important;
+            margin-top: 25px !important;
         }
 
         .main-content {
-            padding: 25px;
-        }
-
-        h2.section-title {
-            font-size: 20px;
-            margin-bottom: 15px;
-            padding-bottom: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03) !important;
+            padding: 30px !important;
         }
 
         .services-grid {
-            gap: 12px;
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 15px !important;
         }
 
-        .service-card {
-            padding: 15px;
+        /* Clean Vertical Column News Wire */
+        .wire-vertical-stack {
+            margin-top: 30px;
+            border-top: 2px dashed var(--border-color);
+            padding-top: 25px;
+        }
+
+        .wire-news-card {
+            display: flex;
+            align-items: center;
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--sinowa-blue);
+            border-radius: 6px;
+            padding: 12px 16px;
+            margin-bottom: 12px;
+            gap: 15px;
+            transition: all 0.2s ease;
+        }
+
+        .wire-news-card:hover {
+            transform: translateX(3px);
+            background: var(--card-bg);
+            border-left-color: var(--sinowa-gold);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .wire-news-card img {
+            width: 80px;
+            height: 60px;
+            object-fit: cover;
             border-radius: 4px;
+            border: 1px solid var(--border-color);
+            flex-shrink: 0;
         }
 
-        .service-card h3 {
-            font-size: 14.5px;
-            margin-bottom: 4px;
+        .wire-card-text {
+            display: flex;
+            flex-direction: column;
         }
 
-        .service-card p {
-            font-size: 12px;
+        .wire-meta {
+            font-size: 9.5px;
+            font-weight: 800;
+            color: var(--sinowa-red);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
         }
 
-        /* Narrowed, Space-Optimized News Ticker Window */
-        .ticker-wrap {
-            margin-top: 20px;
-            padding-top: 15px;
+        .wire-headline {
+            font-size: 13px;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.4;
+            color: var(--text-color);
         }
 
-        .ticker-card {
-            width: 320px; /* Reduced width to prevent side-scroll clutter */
-            padding: 8px 12px;
-            gap: 10px;
+        /* Sidebar, Decree, and Parameter Blocks */
+        .sidebar {
+            width: 100% !important;
+            box-sizing: border-box;
+            padding: 25px !important;
         }
 
-        .ticker-card img {
-            width: 65px;
-            height: 50px;
-        }
-
-        .ticker-headline {
-            font-size: 11px;
-            line-height: 1.3;
+        .sidebar img {
+            width: 75px !important;
+            height: auto !important;
         }
 
         .decree-log {
-            margin-top: 20px;
-            padding: 15px;
-        }
-
-        .decree-item {
-            font-size: 12.5px;
-            padding: 6px 0;
-        }
-
-        .sidebar {
-            padding: 15px;
-        }
-
-        .stats-panel h4 {
-            font-size: 12px;
-            margin-top: 12px;
-            margin-bottom: 6px;
-        }
-
-        .data-list li {
-            padding: 6px 0;
-            font-size: 11.5px;
+            margin-top: 20px !important;
+            padding: 20px !important;
+            background: var(--card-bg) !important;
+            border: 1px solid var(--border-color) !important;
+            box-shadow: var(--shadow-md) !important;
         }
     </style>
 </head>
 <body>
 
-    <div class="header-wrapper">
-        <header class="gov-header">
-            <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-            <div class="gov-title">
-                <h1>SINOWA.GOV.SN</h1>
-                <p>The State Council • The People's Republic of Sinowa</p>
-            </div>
-        </header>
-    </div>
+    <header class="gov-header">
+        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
+        <div class="gov-title">
+            <h1>SINOWA.GOV.SN</h1>
+            <p>The State Council • The People's Republic of Sinowa</p>
+        </div>
+    </header>
 
     <nav class="gov-nav">
         <div class="nav-links">
@@ -155,10 +167,10 @@
         <main class="main-content">
             <section id="welcome">
                 <h2 class="section-title">Central Executive Overview</h2>
-                <p style="font-size: 13px; margin: 0;">Welcome to the primary administrative nexus of the People's Republic of Sinowa. This official structural framework maps real-time data metrics, production allocations, and regulatory protocols directed by the state ministries. Under centralized coordination, operations focus strictly on industrial modernization and absolute resource synchronization.</p>
+                <p style="font-size: 14px; margin: 0 0 10px 0;">Welcome to the primary administrative nexus of the People's Republic of Sinowa. This official structural framework maps real-time data metrics, production allocations, and regulatory protocols directed by the state ministries. Under centralized coordination models, operations focus strictly on comprehensive industrial modernization, infrastructure automation paths, and absolute resource synchronization.</p>
             </section>
 
-            <section id="departments" style="margin-top: 25px;">
+            <section id="departments">
                 <h2 class="section-title">Administrative Ministry Access Hub</h2>
                 <div class="services-grid">
                     <div class="service-card">
@@ -171,7 +183,7 @@
                     </div>
                     <div class="service-card">
                         <h3><a href="immigration.html">Ministry of Home Affairs Portal →</a></h3>
-                        <p>Examine multi-citizenship protocols, Permanent Residency frameworks, and biometric passport metrics.</p>
+                        <p>Examine multi-citizenship protocols, Permanent Residency / Indefinite Leave to Remain frameworks, and biometric passport metrics.</p>
                     </div>
                     <div class="service-card">
                         <h3><a href="embassy.html">Ministry of Foreign Affairs Portal →</a></h3>
@@ -180,71 +192,74 @@
                 </div>
             </section>
 
-            <section class="ticker-wrap">
+            <section class="wire-vertical-stack">
                 <h2 class="section-title">Global Media Intelligence Wire</h2>
-                <div class="ticker-container">
-                    <div class="ticker-track">
-                        <div class="ticker-card">
-                            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance">
-                            <div class="ticker-text-box">
-                                <span class="ticker-source">Reuters • Geopolitical</span>
-                                <p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p>
-                            </div>
-                        </div>
-                        <div class="ticker-card">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Tech">
-                            <div class="ticker-text-box">
-                                <span class="ticker-source">Bloomberg • Automation</span>
-                                <p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight processing volume markers.</p>
-                            </div>
-                        </div>
-                        <div class="ticker-card">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Infrastructure">
-                            <div class="ticker-text-box">
-                                <span class="ticker-source">BBC News • Energy Grid</span>
-                                <p class="ticker-headline">Continental nuclear networks transition to fully automated thorium core configurations.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="ticker-card"><img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Img"><div class="ticker-text-box"><span class="ticker-source">Reuters</span><p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p></div></div>
-                        <div class="ticker-card"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Img"><div class="ticker-text-box"><span class="ticker-source">Bloomberg</span><p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight processing volume markers.</p></div></div>
-                        <div class="ticker-card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Img"><div class="ticker-text-box"><span class="ticker-source">BBC News</span><p class="ticker-headline">Continental nuclear networks transition to fully automated thorium core configurations.</p></div></div>
+                <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 15px; margin-top: 0;">Real-time intercepts from international communication channels.</p>
+                
+                <div class="wire-news-card">
+                    <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance">
+                    <div class="wire-card-text">
+                        <span class="wire-meta">Reuters • Geopolitical</span>
+                        <p class="wire-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p>
+                    </div>
+                </div>
+
+                <div class="wire-news-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Tech">
+                    <div class="wire-card-text">
+                        <span class="wire-meta">Bloomberg • Automation</span>
+                        <p class="wire-headline">Artificial intelligence systems in deep-sea cargo docks set record freight processing volume markers.</p>
+                    </div>
+                </div>
+
+                <div class="wire-news-card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Infrastructure">
+                    <div class="wire-card-text">
+                        <span class="wire-meta">BBC News • Energy Grid</span>
+                        <p class="wire-headline">Continental nuclear networks transition to fully decentralised automated thorium core configurations.</p>
                     </div>
                 </div>
             </section>
-
-            <section class="decree-log">
-                <h3 style="margin-top:0; margin-bottom:5px; font-family: serif; font-size:15px; color: var(--sinowa-blue);">State Council Gazette: Recent Decrees</h3>
-                <div class="decree-item"><span class="decree-badge">Decree 904</span> <strong>Sovereign Multiple-Citizenship Ratification:</strong> Dual documentation streams legalised for workforce units.</div>
-                <div class="decree-item"><span class="decree-badge">Decree 892</span> <strong>Settlement Status Implementation:</strong> Permanent Residency pathways confirmed for foreign labor inputs.</div>
-            </section>
         </main>
 
-        <aside class="sidebar">
-            <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem">
-            
-            <div class="stats-panel">
-                <h4>Sovereign Economic Data Matrix</h4>
-                <ul class="data-list">
-                    <li><strong>GDP Balance:</strong> <span class="stat-val">$7.84B</span></li>
-                    <li><strong>GDP Per Capita:</strong> <span class="stat-val">$1,308.14</span></li>
-                    <li><strong>Average Salary:</strong> <span class="stat-val">$2,026.13</span></li>
-                    <li><strong>Income Tax Rate:</strong> <span class="stat-val">37%</span></li>
-                    <li><strong>Unemployment:</strong> <span class="stat-val stat-neg">24.80%</span></li>
-                    <li><strong>Worker Enthusiasm:</strong> <span class="stat-val stat-pos">96%</span></li>
-                </ul>
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+            <aside class="sidebar">
+                <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem">
                 
-                <h4>Domestic Parameters</h4>
-                <ul class="data-list">
-                    <li><strong>System Matrix:</strong> <span>Single-Party Socialist</span></li>
-                    <li><strong>Capital Core:</strong> <span>Sinowa City</span></li>
-                    <li><strong>State Currency:</strong> <span>e-Kwang (eK)</span></li>
-                    <li><strong>Core Production:</strong> <span>Basket Weaving</span></li>
-                </ul>
-            </div>
+                <div class="stats-panel">
+                    <h4>Sovereign Economic Data Matrix</h4>
+                    <ul class="data-list">
+                        <li><strong>GDP Balance:</strong> <span class="stat-val">$7.84B</span></li>
+                        <li><strong>GDP Per Capita:</strong> <span class="stat-val">$1,308.14</span></li>
+                        <li><strong>Average Salary:</strong> <span class="stat-val">$2,026.13</span></li>
+                        <li><strong>Income Tax Rate:</strong> <span class="stat-val">37%</span></li>
+                        <li><strong>Unemployment:</strong> <span class="stat-val stat-neg">24.80%</span></li>
+                        <li><strong>Worker Enthusiasm:</strong> <span class="stat-val stat-pos">96%</span></li>
+                    </ul>
+                    
+                    <h4>Domestic Parameters</h4>
+                    <ul class="data-list">
+                        <li><strong>Core System:</strong> <span>Single-Party Socialist</span></li>
+                        <li><strong>Administrative Core:</strong> <span>Sinowa City</span></li>
+                        <li><strong>National Currency:</strong> <span>e-Kwang (eK)</span></li>
+                        <li><strong>Primary Sector:</strong> <span>Basket Weaving</span></li>
+                        <li><strong>Sovereign Animal:</strong> <span>Clouded Leopard</span></li>
+                    </ul>
+                </div>
 
-            <a href="https://www.nationstates.net/page=telegrams/to=sinowa" class="telegram-btn" target="_blank">✉ Send Telegram</a>
-        </aside>
+                <a href="https://www.nationstates.net/page=telegrams/to=sinowa" class="telegram-btn" target="_blank">✉ Direct Telegram Access</a>
+            </aside>
+
+            <section class="decree-log">
+                <h3 style="margin-top:0; margin-bottom:10px; font-family: serif; font-size:15px; color: var(--sinowa-blue);">Recent Decrees</h3>
+                <div class="decree-item"><span class="decree-badge">Decree 904</span> <strong>Sovereign Multiple-Citizenship Ratification:</strong> Dual documentation streams legalised for domestic workforce units.</div>
+                <div class="decree-item"><span class="decree-badge">Decree 892</span> <strong>Settlement Status:</strong> Creation of standardized PR and ILR guidelines for foreign technical labor.</div>
+                
+                <div class="directive-box" style="margin-top: 15px; padding: 12px;">
+                    "Efficiency in labour, unity in progress. The reclamation of our land ensurement remains the strongest asset."
+                </div>
+            </section>
+        </div>
     </div>
 
     <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking data ledger synchronized.</p></footer>

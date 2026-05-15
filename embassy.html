@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ministry of Foreign Affairs - Sovereign Console</title>
+    <style>
+        :root { --sinowa-red: #8B0000; --sinowa-gold: #FFD700; --dark-blue: #1C3B6F; --light-bg: #f8f9fa; }
+        body { font-family: sans-serif; margin: 0; background: var(--light-bg); }
+        .gov-header { background: white; padding: 20px 8%; display: flex; align-items: center; border-bottom: 1px solid #ddd; }
+        .gov-nav { background: var(--dark-blue); padding: 12px 8%; border-bottom: 4px solid var(--sinowa-gold); }
+        .gov-nav a { color: white; text-decoration: none; margin-right: 35px; font-weight: bold; font-size: 14px; }
+        .container { max-width: 800px; margin: 40px auto; background: white; padding: 40px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1, h2 { color: var(--dark-blue); font-family: serif; }
+        .embassy-form { background: #fdfdfd; padding: 30px; border: 1px solid #ddd; border-top: 4px solid var(--dark-blue); }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ccc; box-sizing: border-box; border-radius: 4px; }
+        .checkbox-group { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; background: #f5f5f5; border-radius: 4px; }
+        .checkbox-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+        .checkbox-item input { width: auto; }
+        .submit-btn { background: var(--sinowa-red); color: white; border: none; padding: 14px 28px; font-weight: bold; cursor: pointer; text-transform: uppercase; border-bottom: 3px solid #5c0606; }
+        .submit-btn:hover { background: #a00000; }
+    </style>
+</head>
+<body>
+    <header class="gov-header">
+        <img style="width:60px; margin-right:20px;" src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
+        <div style="border-left:2px solid #ccc; padding-left:20px;">
+            <h1 style="margin:0; font-size:20px;">MINISTRY OF FOREIGN AFFAIRS</h1>
+            <p style="margin:0; font-size:12px; color:var(--dark-blue); font-weight:bold;">PEOPLE'S REPUBLIC OF SINOWA</p>
+        </div>
+    </header>
+    <nav class="gov-nav"><a href="index.html">← Back to Main Portal</a></nav>
+    <div class="container">
+        <h2>Bilateral Relations & Embassy Registry</h2>
+        <p>Foreign delegations wishing to configure active sovereign ties or negotiate infrastructure access parameters should register utilizing the console panel below.</p>
+        
+        <form class="embassy-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID_HERE" method="POST">
+            <div class="form-group">
+                <label for="nation">Sovereign Nation / Regional Entity:</label>
+                <input type="text" id="nation" name="Foreign Nation/Region" required placeholder="e.g., The Republic of Allies">
+            </div>
+            
+            <div class="form-group">
+                <label>Requested Diplomatic Matrix Components (Select all that apply):</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item"><input type="checkbox" id="emb" name="Ties: Standard Embassy" value="Requested"><label for="emb">Standard Embassy Exchange</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="def" name="Ties: Mutual Defense" value="Requested"><label for="def">Mutual Defense Pact</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="fta" name="Ties: Free Trade Agreement" value="Requested"><label for="fta">Free Trade Agreement (FTA)</label></div>
+                    <div class="checkbox-item"><input type="checkbox" id="cur" name="Ties: Currency Alliance" value="Requested"><label for="cur">e-Kwang Currency Clearing System</label></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Official Diplomatic Communiqué:</label>
+                <textarea id="message" name="Treaty Proposal Text" rows="6" required placeholder="Input standard text format or dispatch protocols here..."></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit Proposal to Ministry</button>
+        </form>
+    </div>
+</body>
+</html>

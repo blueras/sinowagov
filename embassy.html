@@ -87,6 +87,10 @@
         .disabled-checkbox { pointer-events: none; opacity: 0.8; }
 
         .framework-subheading { font-family: "Times New Roman", Times, serif; color: var(--text-color); margin-top: 35px; margin-bottom: 15px; font-size: 17px; font-weight: 600; }
+        
+        .inline-link { color: var(--sinowa-blue); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--sinowa-blue); }
+        [data-theme="dark"] .inline-link { color: var(--sinowa-gold); border-bottom-color: var(--sinowa-gold); }
+        .inline-link:hover { opacity: 0.8; }
     </style>
 </head>
 <body>
@@ -324,6 +328,7 @@
                 </table>
 
                 <h3 class="framework-subheading">Active Bilateral Treaty & Diplomatic Alliance Registry</h3>
+                <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 15px; line-height: 1.5;">Note: Sovereign entities engaging in an <strong>e-Kwang Currency Sync</strong> agreement must align their domestic ledgers with the <a href="bank.html" class="inline-link">Central Bank of Sinowa</a>. For real-time sovereign exchange rate parity validations, foreign missions must consult the <a href="statistics.html" class="inline-link">Bureau of Statistics</a>.</p>
                 <table class="matrix-table" style="margin-bottom: 0;">
                     <thead>
                         <tr>
@@ -344,7 +349,7 @@
                                     <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>Defence Pact</label></div>
                                     <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>Free Trade Agreement</label></div>
                                     <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox" checked><label>Common Travel Area (CTA)</label></div>
-                                    <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>Visa-Free Visit Entry</label></div>
+                                    <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox" checked><label>Visa-Free Visit Entry</label></div>
                                     <div class="table-tick-item"><input type="checkbox" class="disabled-checkbox"><label>e-Kwang Currency Sync</label></div>
                                 </div>
                             </td>
@@ -375,7 +380,7 @@
                     <div class="disclaimer-icon">✉️</div>
                     <div class="disclaimer-content">
                         <h4>Diplomatic Protocol Notice</h4>
-                        <p>All formal dispatches submitted through this terminal are channelled directly to the State Council via encrypted data nodes. Please expect up to 3 business days for administrative processing and ledger validation.</p>
+                        <p>All formal dispatches submitted through this terminal are channelled directly to the State Council via encrypted data nodes. Please expect up to 3 business days for administrative processing. Review the <a href="bank.html" class="inline-link">Monetary Framework Directives</a> and current <a href="statistics.html" class="inline-link">Exchange Rates</a> prior to requesting a Currency Sync.</p>
                     </div>
                 </div>
                 

@@ -20,12 +20,13 @@
         }
 
         .hierarchy-card {
-            background: var(--light-bg);
+            background: var(--card-bg);
             border: 1px solid var(--border-color);
             padding: 25px;
             border-radius: 8px;
             position: relative;
             overflow: hidden;
+            box-shadow: var(--shadow-sm);
         }
 
         .party-theme { border-top: 6px solid var(--sinowa-red); }
@@ -83,8 +84,9 @@
         }
 
         .matrix-table { margin-top: 20px; width: 100%; border-collapse: collapse; font-size: 13px; }
-        .matrix-table th { background: var(--sinowa-blue); color: white; padding: 12px; text-align: left; }
+        .matrix-table th { background: var(--sinowa-blue); color: white; padding: 12px; text-align: left; border-bottom: 3px solid var(--sinowa-red); }
         .matrix-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
+        .matrix-table tr:hover { background: var(--light-bg); }
         
         .status-tag {
             font-family: monospace;
@@ -128,6 +130,9 @@
                 <h4 style="margin-top: 0; margin-bottom: 8px; color: var(--sinowa-red); text-transform: uppercase; letter-spacing: 0.5px;">Conventional State Defence Mandate</h4>
                 <p style="margin: 0; font-size: 14px; line-height: 1.6;">Under State Defence Law Chapter 4, all citizens upon reaching the age of maturity are legally conscripted into the Armed Forces of Sinowa for a strict 1-year mandatory service period. No exemptions are granted outside of prioritised medical infrastructure or industrial logistics assignments.</p>
             </div>
+
+            <h3>Structural Strategic Framework</h3>
+            <p style="margin-bottom: 30px; font-size: 14.5px; line-height: 1.5;">The state infrastructure layout coordinates heavy construction divisions directly alongside military logistic cell commands. This central planning ensurement mandates that defensive capabilities scale directly and synchronously with state economic manufacturing metrics across the collective realm.</p>
 
             <div class="hierarchy-grid">
                 
@@ -184,7 +189,7 @@
             </div>
 
             <h2 style="margin-top: 40px;">Institutional Intertwine Matrix: Bilateral Oversight</h2>
-            <p style="font-size: 13.5px; color: var(--text-muted);">The following registry maps the mandatory synchronisation between Administrative State Organs and their corresponding Party Oversight Committees.</p>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 15px;">The following registry maps the mandatory synchronisation between Administrative State Organs and their corresponding Party Oversight Committees.</p>
             
             <table class="matrix-table">
                 <thead>

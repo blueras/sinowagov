@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; }
-        .matrix-table { margin-bottom: 30px; width: 100%; border-collapse: collapse; font-size: 13.5px; }
-        .matrix-table th { background: var(--sinowa-blue); color: white; padding: 12px; text-align: left; border-bottom: 3px solid var(--sinowa-red); }
-        .matrix-table td { padding: 12px; border-bottom: 1px solid var(--border-color); }
+        .matrix-table { margin-bottom: 30px; width: 100%; border-collapse: collapse; font-size: 13px; }
+        .matrix-table th { background: var(--sinowa-blue); color: white; padding: 12px; text-align: left; border-bottom: 3px solid var(--sinowa-red); font-family: "Times New Roman", Times, serif; font-size: 14px; }
+        .matrix-table td { padding: 12px; border-bottom: 1px solid var(--border-color); vertical-align: top; line-height: 1.45; }
         .matrix-table tr:hover { background: var(--light-bg); }
         
         /* High-density layout indicators for tick boxes inside tables */
@@ -19,7 +19,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 6px;
-            font-size: 11.5px;
+            font-size: 11px;
         }
         .table-tick-item {
             display: flex;
@@ -29,6 +29,25 @@
         .disabled-checkbox {
             pointer-events: none;
             opacity: 0.8;
+        }
+
+        .framework-subheading {
+            font-family: "Times New Roman", Times, serif;
+            color: var(--sinowa-blue);
+            border-left: 3px solid var(--sinowa-red);
+            padding-left: 12px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        [data-theme="dark"] .framework-subheading { color: var(--sinowa-gold); }
+
+        .rules-grid-cell ul {
+            margin: 0;
+            padding-left: 15px;
+        }
+        .rules-grid-cell li {
+            margin-bottom: 4px;
         }
     </style>
 </head>
@@ -60,49 +79,180 @@
             <h2 class="page-title">Bilateral Relations & Global Visa Framework</h2>
             <p style="color: var(--text-muted); font-size: 15px;">The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions. Foreign missions must audit our current security parameters before submitting formal accords.</p>
             
-            <h3>Sovereign Border Control: Visa Classifications</h3>
+            <h3 class="framework-subheading">Sovereign Tiered Entry Grid: National Immigration Ranks</h3>
+            <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 15px;">Immigration ranks dictate boundary checkpoint access, processing locations, and processing velocities for incoming foreign nationals.</p>
             <table class="matrix-table">
                 <thead>
                     <tr>
-                        <th>Visa Tier & Class Name</th>
-                        <th>Primary Intended Scope</th>
-                        <th>Public Healthcare Eligibility</th>
-                        <th>State Education Access</th>
+                        <th style="width: 20%;">Immigration Rank</th>
+                        <th style="width: 25%;">Application Node Corridor</th>
+                        <th style="width: 25%;">Available Visa Tiers</th>
+                        <th style="width: 30%;">Method of Border Issuance</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>A-1: Diplomatic Envoy</strong></td>
-                        <td>Foreign heads of state, ambassadors, attachés.</td>
-                        <td style="color: green; font-weight: bold;">100% Free / Covered</td>
-                        <td style="color: orange; font-weight: bold;">Subject to Treaty</td>
+                        <td><strong>Socialist Compact Partners</strong></td>
+                        <td>No Visa Restrictions</td>
+                        <td>All Classifications</td>
+                        <td>No structural blocks generally. Photographic identification is required at the checkpoint node. Entry can be denied on the basis of public security or public health parameters.</td>
                     </tr>
                     <tr>
-                        <td><strong>B-2: Allied Labor Accord</strong></td>
-                        <td>Technical specialists, automated grid engineers.</td>
-                        <td style="color: green; font-weight: bold;">Fully Subsidised</td>
-                        <td style="color: green; font-weight: bold;">100% Free Access</td>
+                        <td><strong>Rank A</strong></td>
+                        <td>Consular Mission / Online Terminal</td>
+                        <td>Visit / Work / Study / Humanitarian / Resident</td>
+                        <td>Visit Visa - Conferred on Arrival Corridor | Other Categories - By Advanced Application</td>
                     </tr>
                     <tr>
-                        <td><strong>C-3: Economic Merchant</strong></td>
-                        <td>Corporate agents, commercial maritime traders.</td>
-                        <td style="color: orange; font-weight: bold;">Co-pay Required</td>
-                        <td style="color: red; font-weight: bold;">Restricted</td>
+                        <td><strong>Rank B</strong></td>
+                        <td>Consular Mission / Online Terminal</td>
+                        <td>Visit / Work / Study / Humanitarian / Resident</td>
+                        <td>Visit Visa - Secure eVisa Application up to 48 hours prior to transit arrival | Other Tiers - By Advanced Application</td>
                     </tr>
                     <tr>
-                        <td><strong>D-4: Technical Student</strong></td>
-                        <td>Foreign academics enrolled in automation tracks.</td>
-                        <td style="color: orange; font-weight: bold;">Emergency Only</td>
-                        <td style="color: green; font-weight: bold;">Full Inclusion</td>
+                        <td><strong>Rank C</strong></td>
+                        <td>Consular Mission In-Person Node</td>
+                        <td>Visit / Work / Study / Humanitarian / Resident</td>
+                        <td>All Visa streams handled strictly via Advanced Administrative Application</td>
                     </tr>
                     <tr>
-                        <td><strong>E-5: Controlled Transit</strong></td>
-                        <td>Monitored cultural delegates. Max 14 days.</td>
-                        <td style="color: red; font-weight: bold;">Non-Eligible</td>
-                        <td style="color: red; font-weight: bold;">Prohibited</td>
+                        <td><strong>Rank D</strong></td>
+                        <td>Consular Mission In-Person Node</td>
+                        <td>Visit / Work / Study</td>
+                        <td>All structural Visa tracks handled strictly via Advanced Administrative Application</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rank E</strong></td>
+                        <td>Consular Mission (Subject to Availability)</td>
+                        <td>Special Visiting / Working Permits</td>
+                        <td>All clearance parameters subject to individual State Council validation tracking</td>
                     </tr>
                 </tbody>
             </table>
+
+            <h3 class="framework-subheading">Sovereign Functional Visa Matrix: Entitlements Ledger</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Visa Stream</th>
+                        <th>Classification Tier</th>
+                        <th>Operational Opportunity Parameters Provided</th>
+                        <th>Path to Permanent Settlement / ILR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Visit Visa</strong></td>
+                        <td>--</td>
+                        <td>Temporary stay up to 90 days maximum (Multiple Entries). Strictly no rights to active employment, permanent residency, or access to public funds.</td>
+                        <td><span style="color: #c5221f; font-weight: bold;">PROHIBITED</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Work Visa</strong></td>
+                        <td>Tier 1: Highly Skilled</td>
+                        <td>Right to active employment (excluding private business ventures), domestic residency, and free primary and secondary state schooling access. No public welfare fund access permitted.</td>
+                        <td><span style="color: #137333; font-weight: bold;">ELIGIBLE</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Work Visa</strong></td>
+                        <td>Tier 2: Business</td>
+                        <td>Right to establish a state-approved enterprise (Self-Employment only), domestic residency, and free primary and secondary state schooling access. No public welfare fund access permitted.</td>
+                        <td><span style="color: #137333; font-weight: bold;">ELIGIBLE</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Student Visa</strong></td>
+                        <td>--</td>
+                        <td>Right to access higher education (strictly self-funded structural lines), restricted part-time employment paths, and local residency for the designated duration of the course tracking. No public funds.</td>
+                        <td><span style="color: #c5221f; font-weight: bold;">PROHIBITED</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Humanitarian Visa</strong></td>
+                        <td>Tier 1: Asylum Seeker</td>
+                        <td>Right to active employment (excluding business setup), local residency, free primary and secondary state schooling, and access to localized public welfare structures.</td>
+                        <td>Individual Case Assessment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Humanitarian Visa</strong></td>
+                        <td>Tier 2: Refugee</td>
+                        <td>Right to active employment (excluding business setup), local residency, free primary and secondary state schooling, and access to localized public welfare structures.</td>
+                        <td>Individual Case Assessment</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resident Visa</strong></td>
+                        <td>Spouse Class</td>
+                        <td>Conferred via civil partnership or marriage criteria. Full tracking rights leading directly to Indefinite Leave to Remain (ILR) parameters.</td>
+                        <td>Individual Case Assessment</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="framework-subheading">Border Control Directive Ledger: Rules & Restrictions</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th style="width: 16.66%;">Visit Framework</th>
+                        <th style="width: 16.66%;">Work Framework</th>
+                        <th style="width: 16.66%;">Student Tiers</th>
+                        <th style="width: 16.66%;">Humanitarian Stream</th>
+                        <th style="width: 16.66%;">Resident Spouse</th>
+                        <th style="width: 16.66%;">Compact Partners</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="color: #137333; font-weight: bold;">Multiple Entries</td>
+                        <td style="color: #137333; font-weight: bold;">Multiple Entries</td>
+                        <td style="color: #137333; font-weight: bold;">Multiple Entries</td>
+                        <td style="color: #b06000; font-weight: bold;">Single Entry</td>
+                        <td style="color: #137333; font-weight: bold;">Multiple Entries</td>
+                        <td style="color: #1c3b6f; font-weight: bold;">No Entry Restrictions</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td style="font-style: italic; color: var(--text-muted);">Application tracking does not guarantee a positive boundary outcome.</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>5 continuous years of faultless production records to achieve ILR, plus 1 year to full citizenship criteria (zero criminal records).</td>
+                        <td>--</td>
+                        <td>5 continuous years of local residency to achieve ILR, plus 1 year to full citizenship criteria (zero criminal records).</td>
+                        <td>3 years tracking to full citizenship criteria (must remain in verified marriage or civil partnership with a citizen, zero criminal records).</td>
+                        <td>5 continuous years of domestic residency to achieve ILR, plus 1 year to full citizenship criteria (zero criminal records).</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Must not remain outside the boundary line for more than 180 days within a calendar year to maintain citizenship eligibility.</td>
+                        <td>--</td>
+                        <td>Must not remain outside the boundary line for more than 180 days within a calendar year to maintain citizenship eligibility.</td>
+                        <td>Must not remain outside the boundary line for more than 180 days within a calendar year to maintain citizenship eligibility.</td>
+                        <td>Must not remain outside the boundary line for more than 180 days within a calendar year to maintain citizenship eligibility.</td>
+                    </tr>
+                    <tr>
+                        <td>Must present a minimum balance of 1,000 eK (liquid cash or verified account ledger) to secure boundary clearance.</td>
+                        <td>--</td>
+                        <td>International students must present a minimum balance of 6,000 eK (liquid cash or verified account ledger) to secure boundary clearance.</td>
+                        <td>--</td>
+                        <td>--</td>
+                    <td>--</td>
+                    </tr>
+                    <td colspan="6" class="rules-grid-cell">
+                        <ul>
+                            <li><strong>Inter-changeability Status:</strong> All frameworks are inter-changeable but remain completely subject to individual State Council tracking assessment with no automated guarantee of a positive border outcome.</li>
+                            <li><strong>Security Risk Exclusions:</strong> Persons maintaining a documented history of deportation, criminal charges, or prior denied boundary entry to any allied sovereign nation <strong>MAY</strong> be summarily denied entry clearance.</li>
+                            <li><strong>Compact Living Rights:</strong> Citizens of verified Socialist Compact member countries (who have signed the reciprocal immigration clause) hold the absolute right to enter and live within the country indefinitely (employment tracks require matching work cell assignments).</li>
+                        </ul>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="alert-box" style="margin-top: 10px; margin-bottom: 35px;">
+                <strong>PUBLIC FUNDS NOTICE:</strong> Public welfare benefits and specialized state assistance programs (excluding emergency public health interventions) can only be accessed after gaining full Indefinite Leave to Remain (ILR) status or citizenship parameters. Visas and immigration frameworks are subject to periodic structural adjustments directed by the State Council.
+            </div>
 
             <h3>International Travel Advisory Status Matrix</h3>
             <table class="matrix-table">

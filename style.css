@@ -2,27 +2,18 @@
     --bg-color: #f5f5f7;
     --card-bg: #ffffff;
     --text-main: #1d1d1f;
-    --text-muted: #86868b;
-    --accent-blue: #1c3b6f;
+    --accent-blue: #003366;
     --accent-red: #8B0000;
     --accent-gold: #c5a059;
     --border: #d2d2d7;
 }
-
-body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; background: var(--bg-color); color: var(--text-main); margin: 0; padding-bottom: 50px; }
-.page-wrapper { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-
-/* Navigation - Uniform on all pages */
-.gov-nav { background: white; padding: 20px 0; border-bottom: 1px solid var(--border); display: flex; gap: 20px; justify-content: center; position: sticky; top: 0; z-index: 1000; }
-.gov-nav a { color: var(--text-main); text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.6; transition: 0.3s; }
-.gov-nav a:hover, .gov-nav a.active { opacity: 1; color: var(--accent-blue); }
-
-/* Layouts */
-.content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 30px; }
-.card { background: white; padding: 40px; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
-img { max-width: 100%; border-radius: 8px; }
-
-/* Form Fix */
-.form-container { display: flex; flex-direction: column; gap: 15px; }
-input, textarea { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; box-sizing: border-box; }
-.submit-btn { background: var(--accent-blue); color: white; border: none; padding: 15px; border-radius: 8px; font-weight: 700; cursor: pointer; }
+body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; background: var(--bg-color); color: var(--text-main); margin: 0; }
+.page-wrapper { max-width: 1100px; margin: 0 auto; padding: 20px; }
+header { background: white; padding: 30px 0; border-bottom: 1px solid var(--border); margin-bottom: 0; text-align: center; }
+.gov-title h1 { margin: 0; font-size: 24px; color: var(--accent-blue); font-family: serif; }
+.gov-nav { background: white; padding: 15px 0; border-bottom: 1px solid var(--border); display: flex; gap: 20px; justify-content: center; position: sticky; top: 0; z-index: 1000; }
+.gov-nav a { color: var(--text-main); text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; opacity: 0.6; }
+.gov-nav a:hover { opacity: 1; color: var(--accent-blue); }
+.card { background: white; padding: 40px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 20px; }
+textarea, input { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; box-sizing: border-box; margin-bottom: 15px; }
+.submit-btn { background: var(--accent-blue); color: white; border: none; padding: 12px; border-radius: 8px; width: 100%; cursor: pointer; font-weight: bold; }

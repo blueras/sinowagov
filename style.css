@@ -1,21 +1,183 @@
-:root {
-    --bg-color: #f5f5f7; --card-bg: #ffffff; --text-main: #1d1d1f;
-    --accent-blue: #1c3b6f; --accent-red: #8B0000; --accent-gold: #c5a059;
-    --border: #d2d2d7; --shadow: 0 4px 6px rgba(0,0,0,0.05);
-}
-body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; background: var(--bg-color); color: var(--text-main); margin: 0; line-height: 1.5; }
-.page-wrapper { max-width: 1100px; margin: 0 auto; padding: 20px; }
-header { background: white; padding: 30px 0; border-bottom: 1px solid var(--border); text-align: center; }
-.gov-title h1 { margin: 0; font-size: 24px; color: var(--accent-blue); font-family: serif; }
-.gov-nav { background: white; padding: 15px 0; border-bottom: 1px solid var(--border); display: flex; gap: 20px; justify-content: center; position: sticky; top: 0; z-index: 1000; }
-.gov-nav a { color: var(--text-main); text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; opacity: 0.6; }
-.gov-nav a:hover { opacity: 1; color: var(--accent-blue); }
-.card { background: white; padding: 30px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 20px; box-shadow: var(--shadow); }
-.main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
-.submit-btn { background: var(--accent-blue); color: white; border: none; padding: 12px; border-radius: 8px; width: 100%; font-weight: bold; cursor: pointer; }
-.stat-val { font-family: monospace; font-weight: 700; float: right; }
-.decree-item { border-bottom: 1px solid var(--border); padding: 10px 0; font-size: 13px; }
-.decree-badge { background: var(--accent-red); color: white; font-size: 9px; padding: 2px 5px; border-radius: 4px; margin-right: 5px; }
-.matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13px; }
-.matrix-table th { background: var(--accent-blue); color: white; padding: 12px; text-align: left; }
-.matrix-table td { padding: 12px; border-bottom: 1px solid var(--border); }
+/* ========================================================================== 
+    SINOWA GOVERNMENT UNIFIED GRID CSS SYSTEM (.GOV.SN) - BRITISH ENGLISH CORE 
+    ========================================================================== */ 
+
+ :root { 
+     --sinowa-red: #8B0000; 
+     --sinowa-gold: #FFD700; 
+     --sinowa-blue: #1C3B6F; 
+     --sinowa-green: #1E6B38; 
+     --light-bg: #f4f6f9; 
+     --card-bg: #ffffff; 
+     --text-color: #2c3e50; 
+     --text-muted: #627d98; 
+     --border-color: #eaeef2; 
+     --quote-bg: #fffbf0; 
+     --shadow-sm: 0 2px 6px rgba(28, 59, 111, 0.04); 
+     --shadow-md: 0 10px 30px rgba(28, 59, 111, 0.08); 
+     --transition: all 0.25s cubic-bezier(0.25, 0.8, 0.25, 1); 
+ } 
+
+ [data-theme="dark"] { 
+     --light-bg: #0f1115; 
+     --card-bg: #161920; 
+     --text-color: #e2e8f0; 
+     --text-muted: #94a3b8; 
+     --border-color: #242936; 
+     --quote-bg: #222019; 
+     --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.2); 
+     --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.4); 
+ } 
+
+ body { 
+     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+     margin: 0; padding: 0; 
+     background-color: var(--light-bg); 
+     color: var(--text-color); 
+     line-height: 1.5; 
+     transition: var(--transition); 
+     -webkit-font-smoothing: antialiased; 
+ } 
+
+ .gov-header { 
+     background-color: var(--card-bg); 
+     padding: 12px 8%; 
+     display: flex; 
+     align-items: center; 
+     border-bottom: 4px solid var(--sinowa-green); 
+     box-shadow: var(--shadow-sm); 
+     transition: var(--transition); 
+ } 
+
+ .header-flag { 
+     width: 65px; 
+     height: auto; 
+     margin-right: 20px; 
+     border: 1px solid rgba(0, 0, 0, 0.08); 
+ } 
+
+ .gov-title { 
+     border-left: 2px solid var(--sinowa-blue); 
+     padding-left: 20px; 
+ } 
+
+ .gov-title h1 { 
+     margin: 0; 
+     font-size: 22px; 
+     color: var(--sinowa-blue); 
+     letter-spacing: 1px; 
+     font-family: "Times New Roman", Times, serif; 
+     font-weight: 700; 
+ } 
+
+ .gov-title p { 
+     margin: 2px 0 0 0; 
+     font-size: 11px; 
+     font-weight: 600; 
+     color: var(--text-muted); 
+     letter-spacing: 0.5px; 
+ } 
+
+ [data-theme="dark"] .gov-title h1 { color: var(--sinowa-gold); } 
+
+ .gov-nav { 
+     background-color: var(--sinowa-blue); 
+     padding: 0 8%; 
+     position: sticky; top: 0; z-index: 1000; 
+     border-bottom: 4px solid var(--sinowa-gold); 
+     display: flex; justify-content: space-between; align-items: center; 
+     box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+ } 
+
+ .nav-links { display: flex; flex-wrap: wrap; } 
+ .nav-links a { 
+     color: rgba(255, 255, 255, 0.9); text-decoration: none; 
+     padding: 14px 14px; font-size: 11.5px; font-weight: 600; 
+     text-transform: uppercase; letter-spacing: 0.5px; 
+     transition: var(--transition); border-bottom: 3px solid transparent; 
+ } 
+
+
+ .nav-links a:hover { color: var(--sinowa-gold); background-color: 
+rgba(255, 255, 255, 0.03); border-bottom: 3px solid var(--sinowa-gold); }
+ 
+
+ .theme-toggle { 
+     background: rgba(255, 255, 255, 0.08); color: white; 
+     border: 1px solid rgba(255, 255, 255, 0.2); padding: 6px 12px; 
+     font-weight: 600; cursor: pointer; border-radius: 20px; 
+     font-size: 10px; text-transform: uppercase; transition: var(--transition); 
+ } 
+ .theme-toggle:hover { background: white; color: var(--sinowa-blue); } 
+
+
+ .container { max-width: 100%; margin: 30px auto; padding: 0 20px; 
+display: grid; grid-template-columns: 2.6fr 1.1fr; gap: 30px; } 
+ .container-wide { max-width: 100%; margin: 30px auto; padding: 0 20px; } 
+
+
+ .main-content, .inner-content { background: var(--card-bg); padding: 
+30px; border-radius: 8px; box-shadow: var(--shadow-md); border: 1px 
+solid var(--border-color); transition: var(--transition); } 
+
+ h1, h2, h3, h4 { font-family: "Times New Roman", Times, serif; } 
+ h2.section-title, h2.page-title { 
+     color: var(--sinowa-blue); border-bottom: 1px solid var(--border-color); 
+     padding-bottom: 8px; margin-top: 0; margin-bottom: 20px; font-size: 24px; position: relative; 
+ } 
+
+ h2.section-title::after, h2.page-title::after { content: ''; position: 
+absolute; bottom: -1px; left: 0; width: 50px; height: 2px; 
+background-color: var(--sinowa-red); } 
+ [data-theme="dark"] h2.section-title, [data-theme="dark"] h2.page-title { color: var(--sinowa-gold); } 
+
+ .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; } 
+
+ .service-card { background: var(--card-bg); padding: 20px; 
+border-radius: 6px; box-shadow: var(--shadow-sm); border: 1px solid 
+var(--border-color); border-top: 4px solid var(--sinowa-red); 
+transition: var(--transition); } 
+ .service-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); } 
+ .service-card:nth-child(even) { border-top-color: var(--sinowa-green); } 
+ .service-card h3 { margin: 0 0 10px 0; font-size: 16px; } 
+ .service-card h3 a { color: var(--sinowa-blue); text-decoration: none; } 
+ [data-theme="dark"] .service-card h3 a { color: var(--sinowa-gold); } 
+ .service-card p { margin: 0; font-size: 13px; color: var(--text-muted); } 
+
+
+ .ticker-wrap { margin-top: 30px; border-top: 2px dashed 
+var(--border-color); padding-top: 25px; overflow: hidden; background: 
+var(--card-bg); } 
+ .ticker-container { width: 100%; overflow: hidden; white-space: nowrap; position: relative; padding: 5px 0; } 
+ .ticker-track { display: inline-flex; animation: scrollVerticalTicker 20s linear infinite; gap: 15px; } 
+ .ticker-track:hover { animation-play-state: paused; } 
+
+ .ticker-card { display: inline-flex; align-items: center; background: 
+var(--light-bg); border: 1px solid var(--border-color); border-radius: 
+6px; padding: 10px 14px; width: 380px; gap: 12px; box-shadow: 
+var(--shadow-sm); white-space: normal; } 
+
+ .ticker-card img { width: 85px; height: 60px; object-fit: cover; 
+border-radius: 4px; border: 1px solid var(--border-color); flex-shrink: 
+0; } 
+ .ticker-text-box { display: flex; flex-direction: column; } 
+ .ticker-source { font-size: 9px; font-weight: 800; color: var(--sinowa-red); text-transform: uppercase; margin-bottom: 2px; } 
+ .ticker-headline { font-size: 12px; font-weight: 600; margin: 0; line-height: 1.35; color: var(--text-color); } 
+
+
+ .law-clause, .service-block { border-left: 4px solid var(--sinowa-red);
+ background: var(--light-bg); padding: 25px; margin-bottom: 25px; 
+border-radius: 0 6px 6px 0; border: 1px solid var(--border-color); } 
+ .law-clause:nth-of-type(even), .service-block:nth-of-type(even) { border-left-color: var(--sinowa-green); } 
+
+ .highlight-box { border-left: 4px solid var(--sinowa-red); background: 
+#fff5f5; padding: 20px; margin: 20px 0; border-radius: 0 6px 6px 0; 
+border: 1px solid var(--border-color); } 
+ [data-theme="dark"] .highlight-box { background: #241b1b; } 
+
+ .matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; } 
+
+ .matrix-table th { background: var(--sinowa-blue); color: white; 
+padding: 12px; text-align: left; border-bottom: 3px solid 
+var(--sinowa-red); } 
+ .matrix-table td { padding: 12px; border-bottom: 1px solid

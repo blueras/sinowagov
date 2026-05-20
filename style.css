@@ -1,108 +1,17 @@
-/* SINOWA GOV.UK STYLE DESIGN SYSTEM */
-
 :root {
-    --gov-black: #0b0c0c;
-    --gov-blue: #1d70b8;
-    --gov-red: #d4351c;
-    --gov-green: #00703c;
-    --gov-light-grey: #f3f2f1;
-    --gov-border: #b1b4b6;
-    --text-color: #0b0c0c;
-    --sinowa-gold: #FFD700;
+    --bg-color: #f5f5f7; --card-bg: #ffffff; --text-main: #1d1d1f;
+    --accent-blue: #1c3b6f; --accent-red: #8B0000; --accent-gold: #c5a059;
+    --border: #d2d2d7;
 }
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #ffffff;
-    color: var(--text-color);
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* Fixes the Zoom and Stretching Issue */
-.container, .container-wide {
-    max-width: 1020px;
-    margin: 0 auto;
-    padding: 0 20px;
-    box-sizing: border-box;
-}
-
-/* GOV.UK Style Header */
-.gov-header {
-    background-color: var(--gov-black);
-    color: #ffffff;
-    padding: 10px 0;
-    border-bottom: 5px solid var(--gov-blue);
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.header-flag {
-    height: 44px; /* Strictly constrains the flag size */
-    width: auto;
-    margin-right: 15px;
-}
-.gov-title h1 { margin: 0; font-size: 24px; color: #ffffff; font-family: Arial, sans-serif; }
-.gov-title p { margin: 0; font-size: 14px; color: #ffffff; opacity: 0.9; }
-
-/* Navigation */
-.gov-nav {
-    background-color: #ffffff;
-    border-bottom: 1px solid var(--gov-border);
-    padding: 15px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    max-width: 1020px;
-    margin: 0 auto;
-}
-.gov-nav a {
-    color: var(--gov-blue);
-    text-decoration: underline;
-    font-size: 14px;
-    font-weight: 700;
-}
-.gov-nav a:hover { color: #003078; }
-
-/* Grid Layout */
-.main-content { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; padding: 40px 0; }
-
-/* Typography */
-h1, h2, h3, h4 { font-family: Arial, sans-serif; font-weight: 700; margin-top: 0; }
-.page-title, .section-title { font-size: 32px; margin-bottom: 20px; }
-p { font-size: 16px; margin-bottom: 15px; }
-
-/* Panels and Cards (GOV.UK Style) */
-.gov-panel, .service-card, .service-block, .law-clause {
-    background-color: var(--gov-light-grey);
-    padding: 20px;
-    border-left: 5px solid var(--gov-blue);
-    margin-bottom: 30px;
-}
-.service-card h3 a { color: var(--gov-blue); text-decoration: underline; }
-.red-accent { border-left-color: var(--gov-red); }
-.green-accent { border-left-color: var(--gov-green); }
-
-/* Tables */
-.matrix-table { width: 100%; border-collapse: collapse; margin-bottom: 30px; font-size: 16px; }
-.matrix-table th { background: #ffffff; border-bottom: 2px solid var(--gov-border); text-align: left; padding: 10px 15px 10px 0; }
-.matrix-table td { border-bottom: 1px solid var(--gov-border); padding: 10px 15px 10px 0; vertical-align: top; }
-
-/* Badges & Stats */
-.decree-badge { background: var(--gov-blue); color: white; padding: 2px 6px; font-weight: bold; font-size: 14px; margin-right: 10px; display: inline-block; }
-.stat-val { font-family: Arial, sans-serif; font-weight: 700; float: right; }
-.data-list { list-style: none; padding: 0; }
-.data-list li { border-bottom: 1px solid var(--gov-border); padding: 10px 0; }
-
-/* Forms & Buttons */
-input[type="text"], textarea { width: 100%; padding: 10px; border: 2px solid var(--gov-black); font-size: 16px; font-family: Arial, sans-serif; box-sizing: border-box; margin-bottom: 20px; }
-.form-group label { display: block; font-weight: 700; margin-bottom: 5px; font-size: 18px; }
-.submit-btn { background-color: var(--gov-green); color: white; font-size: 18px; font-weight: 700; border: none; box-shadow: 0 3px 0 #004022; padding: 10px 20px; cursor: pointer; display: inline-block; }
-.submit-btn:hover { background-color: #005a30; }
-.telegram-btn { background-color: var(--gov-blue); color: white; display: block; padding: 10px; text-align: center; text-decoration: none; font-weight: bold; margin-top: 20px; }
-
-/* Footer */
-footer { background: var(--gov-light-grey); border-top: 1px solid var(--gov-border); padding: 40px 20px; text-align: left; margin-top: 60px; font-size: 14px; }
+body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif; background: var(--bg-color); color: var(--text-main); margin: 0; }
+.page-wrapper { max-width: 1100px; margin: 0 auto; padding: 20px; }
+.gov-header { background: white; padding: 20px 0; border-bottom: 1px solid var(--border); display: flex; align-items: center; justify-content: space-between; }
+.gov-title h1 { margin: 0; font-size: 20px; color: var(--accent-blue); font-family: serif; }
+.header-flag { height: 40px; width: auto; }
+.gov-nav { background: white; padding: 15px 0; border-bottom: 1px solid var(--border); display: flex; gap: 20px; justify-content: center; position: sticky; top: 0; z-index: 1000; }
+.gov-nav a { color: var(--text-main); text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; opacity: 0.6; }
+.gov-nav a:hover { opacity: 1; color: var(--accent-blue); }
+.card { background: white; padding: 30px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 20px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+.matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 13px; }
+.matrix-table th { background: var(--accent-blue); color: white; padding: 12px; text-align: left; }
+.matrix-table td { padding: 12px; border-bottom: 1px solid var(--border); }

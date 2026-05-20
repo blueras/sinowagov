@@ -2,66 +2,80 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <title>Foreign Affairs - SINOWA.GOV.SN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministry of Foreign Affairs - Sovereign Console</title>
+    
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="gov-header">
         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>Ministry of Foreign Affairs</p></div>
+        <div class="gov-title">
+            <h1>SINOWA.GOV.SN</h1>
+            <p>The State Council • The People's Republic of Sinowa</p>
+        </div>
     </header>
 
     <nav class="gov-nav">
-        <a href="index.html">Home</a><a href="structure.html">Defence & State</a><a href="commerce.html">Commerce & Tech</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Labour & Health</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html">Statistics</a><a href="bank.html">Central Bank</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="structure.html">Government & Defence</a>
+            <a href="services.html">Public Programmes</a>
+            <a href="immigration.html">Ministry of Home Affairs</a>
+            <a href="embassy.html" style="color: var(--sinowa-gold);">Ministry of Foreign Affairs</a>
+            <a href="statistics.html">Bureau of Statistics</a>
+            <a href="bank.html">Central Bank</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
 
     <div class="container-wide">
-        <h2 class="page-title">Bilateral Relations & Global Visa Framework</h2>
-        <p>The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions.</p>
-
-        <div class="gov-panel">
-            <h3>I. Sovereign Entry & Immigration Statutes</h3>
-            <table class="matrix-table">
-                <thead>
-                    <tr><th>Immigration Rank</th><th>Application Jurisdiction</th><th>Available Visa Tiers</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><strong>Common Travel Area (CTA)</strong></td><td>No Visa Restrictions</td><td>All Classifications</td></tr>
-                    <tr><td><strong>Rank A</strong></td><td>Consular Mission / Online Terminal</td><td>Visit / Work / Study / Humanitarian / Resident</td></tr>
-                    <tr><td><strong>Rank B</strong></td><td>Consular Mission / Online Terminal</td><td>Visit / Work / Study / Humanitarian / Resident</td></tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="gov-panel green-accent">
-            <h3>III. Embassy Registry Terminal</h3>
-            <p>All formal dispatches submitted through this terminal are channelled directly to the State Council via encrypted data nodes. Please expect up to 3 business days for administrative processing.</p>
+        <div class="inner-content">
             
-            <form action="https://formspree.io/f/xwvygeae" method="POST" style="margin-top: 30px;">
-                <div class="form-group">
-                    <label>Sovereign Nation / Regional Entity:</label>
-                    <input type="text" name="Foreign Nation" required placeholder="e.g., The Republic of Allies">
+            <h2 class="page-title">Embassy Registry Terminal</h2>
+            
+            <p>All formal dispatches submitted through this terminal are channelled directly to the State Council via encrypted data nodes. Please expect up to 3 business days for administrative processing.</p>
+
+            <form class="embassy-form" action="https://formspree.io/f/xwvygeae" method="POST" style="margin-top: 25px; border-top: 4px solid var(--sinowa-blue); padding: 30px; background: var(--light-bg); border-radius: 6px;">
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Sovereign Nation / Regional Entity:</label>
+                    <input type="text" name="Foreign Nation" required placeholder="e.g., The Republic of Allies" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; box-sizing: border-box;">
                 </div>
                 
                 <div class="form-group" style="margin-bottom: 20px;">
-                    <label>Requested Diplomatic Matrix Components:</label>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px;">
-                        <label><input type="checkbox" name="Ties: Standard Embassy" value="Requested"> Standard Embassy Exchange</label>
-                        <label><input type="checkbox" name="Ties: Mutual Defence" value="Requested"> Mutual Defence Pact</label>
-                        <label><input type="checkbox" name="Ties: Free Trade Agreement" value="Requested"> Free Trade Agreement (FTA)</label>
-                        <label><input type="checkbox" name="Ties: Common Travel Area" value="Requested"> Common Travel Area (CTA)</label>
+                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Requested Diplomatic Matrix Components:</label>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; background: var(--card-bg); border-radius: 4px; border: 1px solid var(--border-color);">
+                        <div><input type="checkbox" name="Ties: Standard Embassy" value="Requested"> Standard Embassy Exchange</div>
+                        <div><input type="checkbox" name="Ties: Mutual Defence" value="Requested"> Mutual Defence Pact</div>
+                        <div><input type="checkbox" name="Ties: Free Trade Agreement" value="Requested"> Free Trade Agreement (FTA)</div>
+                        <div><input type="checkbox" name="Ties: Common Travel Area" value="Requested"> Common Travel Area (CTA)</div>
+                        <div><input type="checkbox" name="Ties: Visa Free Entry" value="Requested"> Visa-Free Visit Entry</div>
+                        <div><input type="checkbox" name="Ties: Currency Alliance" value="Requested"> e-Kwang Currency Sync</div>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label>Official Diplomatic Communiqué:</label>
-                    <textarea name="Proposal Text" rows="8" required placeholder="Input standard text format..."></textarea>
+                
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Official Diplomatic Communiqué:</label>
+                    <textarea name="Proposal Text" rows="6" required placeholder="Input standard text format..." style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; box-sizing: border-box;"></textarea>
                 </div>
                 
-                <button type="submit" class="submit-btn">Submit Proposal to Ministry</button>
+                <button type="submit" style="background: var(--sinowa-green); color: white; border: none; padding: 12px; border-radius: 6px; width: 100%; font-weight: bold; cursor: pointer;">Submit Proposal to Ministry</button>
             </form>
+
         </div>
     </div>
+
     <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+        }
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
+    </script>
 </body>
 </html>

@@ -1,17 +1,294 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head><title>Home Affairs - Sinowa</title><link rel="stylesheet" href="style.css"></head>
-<body>
-    <div class="page-wrapper">
-        <header><h1>SINOWA.GOV.SN</h1></header>
-        <nav class="gov-nav">
-            <a href="index.html">Home</a><a href="structure.html">Defence</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Labour</a><a href="immigration.html">Home</a><a href="embassy.html">Embassy</a><a href="statistics.html">Stats</a><a href="bank.html">Bank</a><a href="security.html">SIA</a><a href="sinowalink.html">SinowaLink</a>
-        </nav>
-        <div class="card">
-            <h2>Ministry of Home Affairs</h2>
-            <h3>Citizenship & Residency</h3>
-            <p>Multiple citizenships are allowed for standard citizens. <strong>However, dual nationality is strictly banned for anyone holding public office, government positions, or state security clearances to ensure undivided national loyalty.</strong></p>
-        </div>
-    </div>
-</body>
-</html>
+<!DOCTYPE html> 
+ <html lang="en-GB"> 
+ <head> 
+     <meta charset="UTF-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>Ministry of Home Affairs - Sinowa</title> 
+     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png"> 
+     <link rel="stylesheet" href="style.css"> 
+     <style> 
+         .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; } 
+          
+         /* Unified Document Matrix Flex Grid Layout */ 
+         .document-matrix-container { 
+             display: flex; 
+             flex-direction: column; 
+             gap: 25px; 
+             margin: 30px 0; 
+         } 
+
+         .document-card-row { 
+             display: grid; 
+             grid-template-columns: 150px 1fr 210px; 
+             gap: 35px; 
+             align-items: center; 
+             background: var(--light-bg); 
+             border: 1px solid var(--border-color); 
+             padding: 25px; 
+             border-radius: 6px; 
+             transition: var(--transition); 
+         } 
+
+         .document-graphic { 
+             width: 150px; 
+             height: auto; 
+             border-radius: 6px; 
+             box-shadow: 0 4px 12px rgba(0,0,0,0.12); 
+             object-fit: cover; 
+         } 
+
+         /* Specific card constraints to maintain visual ratio */ 
+         .id-card-style, .licence-style { 
+             height: 95px; 
+             border: 1px solid var(--border-color); 
+         } 
+
+         .passport-style { 
+             height: 210px; 
+             border: 2px solid var(--sinowa-gold); 
+         } 
+
+         .fee-badge-box { 
+             background: var(--sinowa-blue); 
+             color: white; 
+             border-radius: 6px; 
+             padding: 15px; 
+             text-align: center; 
+             border-bottom: 4px solid var(--sinowa-gold); 
+             box-shadow: var(--shadow-sm); 
+         } 
+         [data-theme="dark"] .fee-badge-box { background: #222530; } 
+
+         .fee-amount-text { 
+             font-size: 28px; 
+             font-weight: 700; 
+             color: var(--sinowa-gold); 
+             margin: 4px 0; 
+             font-family: "Times New Roman", Times, serif; 
+         } 
+
+         .document-details h4 { 
+             margin-top: 0; 
+             margin-bottom: 8px; 
+             font-size: 18px; 
+         } 
+
+         .document-details p { 
+             margin: 0; 
+             font-size: 13.5px; 
+             color: var(--text-color); 
+             line-height: 1.5; 
+         } 
+
+         .document-details ul { 
+             margin: 8px 0 0 0; 
+             padding-left: 20px; 
+             font-size: 13px; 
+             color: var(--text-muted); 
+         } 
+
+         .document-details li { 
+             margin-bottom: 4px; 
+         } 
+     </style> 
+ </head> 
+ <body> 
+
+     <header class="gov-header"> 
+         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"> 
+         <div class="gov-title"> 
+             <h1>SINOWA.GOV.SN</h1> 
+             <p>The State Council • The People's Republic of Sinowa</p> 
+         </div> 
+     </header> 
+
+     <nav class="gov-nav"> 
+         <div class="nav-links"> 
+             <a href="index.html">Home</a> 
+             <a href="structure.html">Government & Defence</a> 
+             <a href="services.html">Public Programmes</a> 
+             <a href="immigration.html">Ministry of Home Affairs</a> 
+             <a href="embassy.html">Ministry of Foreign Affairs</a> 
+             <a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a> 
+             <a href="bank.html">Central Bank</a> 
+         </div> 
+         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button> 
+     </nav> 
+
+     <div class="container-wide"> 
+         <div class="inner-content"> 
+             <h2 class="page-title">Sovereign Registry & Domestic Policy Framework</h2> 
+
+             <p style="color: var(--text-muted); font-size: 
+15px;">The Ministry of Home Affairs protects national documentation 
+lines, civil status registration matrix tracking, and security resident 
+records within the domestic domain.</p> 
+              
+             <div class="document-matrix-container"> 
+                  
+                 <div class="document-card-row"> 
+
+                     <img class="document-graphic passport-style" 
+src="https://i.postimg.cc/FKVWWd78/Copy-of-KATEDUCA-PASSPORT(1).png" 
+alt="Sovereign Passport Cover"> 
+                     <div class="document-details"> 
+                         <h4>Biometric E-Passport Operations</h4> 
+
+                         <p>Issued by the Home Affairs Security 
+Directorate. Integrated encrypted chips link citizens natively to secure
+ account databases, public transit authorisation points, and centralised
+ security verification checkpoints. Status parameters match the 
+following lifecycle mandates:</p> 
+                         <ul> 
+
+                             <li><strong>Child Documentation
+ (Under 18 Tiers):</strong> Mandated to renew strictly every 3 
+years to ensure biometric consistency.</li> 
+
+                             <li><strong>Adult Documentation
+ (Age 18 and Above):</strong> Permanent biometric logging active. 
+Validity extends to full 10-year cycles before renewal tracking 
+protocols engage.</li> 
+                         </ul> 
+                     </div> 
+                     <div class="fee-badge-box"> 
+
+                         <div style="font-size: 9px; text-transform: 
+uppercase; letter-spacing: 1px; font-weight: 700; opacity: 
+0.9;">Sovereign Issuance Fee</div> 
+                         <div class="fee-amount-text">50 eK</div> 
+
+                         <div style="font-size: 9px; opacity: 0.8; 
+font-weight: 600;">Global Strength Rank: 02</div> 
+                     </div> 
+                 </div> 
+
+                 <div class="document-card-row"> 
+
+                     <img class="document-graphic id-card-style" 
+src="https://i.postimg.cc/vmYCpKts/Copy-of-KATEDUCA-IDENTITY-CARD(1).png"
+ alt="Sovereign National ID Card"> 
+                     <div class="document-details"> 
+                         <h4>Centralised National Identity Card Matrix</h4> 
+
+                         <p>The baseline legal tracking document 
+for all registered domestic units inside the realm. Mandated for daily 
+verification logs, factory shift allocation scanning, regional border 
+transit clearance checkpoints, and verification authentication across 
+the state-managed internet mesh layout frame.</p> 
+                     </div> 
+                     <div class="fee-badge-box"> 
+
+                         <div style="font-size: 9px; text-transform: 
+uppercase; letter-spacing: 1px; font-weight: 700; opacity: 
+0.9;">Sovereign Registration Fee</div> 
+                         <div class="fee-amount-text">30 eK</div> 
+
+                         <div style="font-size: 9px; opacity: 0.8; 
+font-weight: 600;">Biometric Verification Node</div> 
+                     </div> 
+                 </div> 
+
+                 <div class="document-card-row"> 
+
+                     <img class="document-graphic licence-style" 
+src="https://i.postimg.cc/qMy4p8sW/Copy-of-KATEDUCA-DRIVING-LICENCE.png"
+ alt="Sovereign Driving Licence"> 
+                     <div class="document-details"> 
+                         <h4>State Automotive Transport Licence</h4> 
+
+                         <p>Authorises individuals to operate 
+heavy agricultural machinery, industrial logistical transport units, and
+ private commuter vehicles within state parameters. Qualifications and 
+validation matrices are closely monitored by transit 
+authorities:</p> 
+                         <ul> 
+
+                             <li><strong>Age Eligibility 
+Threshold:</strong> Citizens become fully eligible to register for
+ practical technical evaluations from the strict age of 16.</li> 
+
+                             <li><strong>Workforce 
+Integration:</strong> Successful logging automatically registers 
+the operator profile into the local supply-chain logistics cell 
+pool.</li> 
+                         </ul> 
+                     </div> 
+                     <div class="fee-badge-box"> 
+
+                         <div style="font-size: 9px; text-transform: 
+uppercase; letter-spacing: 1px; font-weight: 700; opacity: 
+0.9;">Sovereign Evaluation Fee</div> 
+                         <div class="fee-amount-text">20 eK</div> 
+                         <div style="font-size: 9px; opacity: 0.8; font-weight: 600;">Eligible from Age 16</div> 
+                     </div> 
+                 </div> 
+
+             </div> 
+
+             <h2 style="margin-top: 40px;">Sovereign Citizenship Statutes & Residency Regulations</h2> 
+              
+             <div class="law-clause"> 
+                 <h3>Clause I: Dual & Multiple Citizenships Sanctioned</h3> 
+
+                 <p>Following updated legislative adjustments by 
+the State Council, the People's Republic of Sinowa **fully recognises 
+and allows plural and multiple citizenships**. Naturalising foreign 
+nationals are no longer mandated to surrender their baseline external 
+passports, and native Sinowan citizens may legally acquire external 
+documentation without losing their domestic Tier-1 socialist 
+infrastructure rights.</p> 
+             </div> 
+
+             <div class="law-clause"> 
+                 <h3>Clause II: Permanent Residency (PR) & Indefinite Leave to Remain (ILR)</h3> 
+
+                 <p>For foreign nationals who do not immediately 
+seek full multi-citizenship, the state provides a secure long-term 
+settlement track administered through specialised status 
+tiers:</p> 
+                 <ul> 
+
+                     <li><strong>Permanent Residency (PR) 
+Card:</strong> Awarded to foreign industrial specialists under B-2
+ class frameworks who maintain three continuous years of faultless 
+production records on the manufacturing grid.</li> 
+
+                     <li><strong>Indefinite Leave to Remain 
+(ILR):</strong> Conferred upon passing standard security checks 
+and demonstrating five continuous years of domestic residency. ILR 
+status permanently exempts holders from foreign work permit caps and 
+provides standard local minimum wage protections.</li> 
+                 </ul> 
+             </div> 
+
+             <div class="law-clause"> 
+                 <h3>Clause III: Public Infrastructure Entitlements</h3> 
+
+                 <p>While full multiple-citizenship holders enjoy 
+total un-tariffed state health insurance and tertiary schooling access, 
+registered PR and ILR holders receive full public health coverage at 
+heavily subsidised state-controlled rates, allowing complete integration
+ into the national workforce network.</p> 
+             </div> 
+         </div> 
+     </div> 
+
+
+     <footer><p>© 2026 People's Republic of Sinowa. State 
+Council Information Office. Internal tracking data ledger 
+synchronised.</p></footer> 
+
+     <script> 
+         function toggleTheme() { 
+             const currentTheme = document.documentElement.getAttribute('data-theme'); 
+
+             if (currentTheme === 'dark') { 
+document.documentElement.removeAttribute('data-theme'); 
+localStorage.setItem('theme', 'light'); } 
+             else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); } 
+         } 
+         if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); } 
+     </script> 
+ </body> 
+ </html>

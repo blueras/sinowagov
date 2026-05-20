@@ -106,11 +106,14 @@
     <nav class="gov-nav">
         <div class="nav-links">
             <a href="index.html">Home</a>
-            <a href="structure.html">Government & Defence</a>
-            <a href="services.html">Public Programmes</a>
-            <a href="immigration.html">Ministry of Home Affairs</a>
-            <a href="embassy.html">Ministry of Foreign Affairs</a>
-            <a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
+            <a href="structure.html">Defence & State</a>
+            <a href="commerce.html">Commerce & Tech</a>
+            <a href="housing.html">Housing</a>
+            <a href="education.html">Education</a>
+            <a href="services.html">Labour & Health</a>
+            <a href="immigration.html">Home Affairs</a>
+            <a href="embassy.html" style="color: var(--sinowa-gold);">Foreign Affairs</a>
+            <a href="statistics.html">Statistics</a>
             <a href="bank.html">Central Bank</a>
         </div>
         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
@@ -412,29 +415,4 @@
                             <div class="checkbox-item"><input type="checkbox" id="fta" name="Ties: Free Trade Agreement" value="Requested"><label for="fta">Free Trade Agreement (FTA)</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="cta" name="Ties: Common Travel Area" value="Requested"><label for="cta">Common Travel Area (CTA)</label></div>
                             <div class="checkbox-item"><input type="checkbox" id="vft" name="Ties: Visa Free Entry" value="Requested"><label for="vft">Visa-Free Visit Entry</label></div>
-                            <div class="checkbox-item"><input type="checkbox" id="cur" name="Ties: Currency Alliance" value="Requested"><label for="cur">e-Kwang Currency Sync</label></div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Official Diplomatic Communiqué:</label>
-                        <textarea id="message" name="Proposal Text" rows="6" required placeholder="Input standard text format..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Submit Proposal to Ministry</button>
-                </form>
-            </div>
-
-        </div>
-    </div>
-
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking data ledger synchronised.</p></footer>
-
-    <script>
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
-            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
-        }
-        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
-    </script>
-</body>
-</html>
+                            <div class="checkbox-item"><input type="checkbox" id="cur" name="Ties: Currency Alliance" value="Requested"><label for="cur">e-Kwang Currency Sync

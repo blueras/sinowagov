@@ -2,39 +2,243 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <title>Home Affairs - SINOWA.GOV.SN</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministry of Home Affairs - Sinowa</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header class="gov-header">
         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>Ministry of Home Affairs</p></div>
+        <div class="gov-title">
+            <h1>SINOWA.GOV.SN</h1>
+            <p>The State Council • The People's Republic of Sinowa</p>
+        </div>
     </header>
 
     <nav class="gov-nav">
-        <a href="index.html">Home</a><a href="structure.html">Defence & State</a><a href="commerce.html">Commerce & Tech</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Labour & Health</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html">Statistics</a><a href="bank.html">Central Bank</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="structure.html">Government & Defence</a>
+            <a href="services.html">Public Programmes</a>
+            <a href="immigration.html" style="color: var(--sinowa-gold);">Ministry of Home Affairs</a>
+            <a href="embassy.html">Ministry of Foreign Affairs</a>
+            <a href="statistics.html">Bureau of Statistics</a>
+            <a href="bank.html">Central Bank</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
     </nav>
 
     <div class="container-wide">
-        <h2 class="page-title">Sovereign Registry & Domestic Policy Framework</h2>
-        
-        <div class="gov-panel">
-            <h3>Clause I: Dual & Multiple Citizenships Sanctioned</h3>
-            <p>The People's Republic of Sinowa fully recognises and allows plural and multiple citizenships for standard citizens and foreign nationals. Naturalising foreign nationals are no longer mandated to surrender their baseline external passports.</p>
-            <p style="background: white; border-left: 4px solid var(--gov-red); padding: 10px; margin-top: 15px;">
-                <strong>IMPORTANT EXCEPTION:</strong> Holding dual or multiple nationality is <strong>strictly prohibited</strong> for any individual seeking to hold public office, government positions, or state security clearances. Undivided national loyalty is the absolute baseline requirement for service to the State Council.
-            </p>
-        </div>
+        <div class="inner-content">
+            <h2 class="page-title">VISA INFORMATION TABLE</h2>
+            
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Immigration Rank of The Country</th>
+                        <th>Where To Apply For A Visa</th>
+                        <th>Type of Visa Available</th>
+                        <th>Method of Issue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Common Defence League (CODL)</strong></td>
+                        <td>No Visa Restrictions</td>
+                        <td>All</td>
+                        <td>No Restrictions Generally. However, A Photo ID Is Needed At The Border and Entry Can Be Denied On The Basis of Public Security or Public Health</td>
+                    </tr>
+                    <tr>
+                        <td><strong>A</strong></td>
+                        <td>At the Embassy / Embassy Website</td>
+                        <td>Visit Visa / Work Visa / Study Visa / Humanitarian Visa / Resident Visa (Spouse Visa)</td>
+                        <td>Visit Visa - On Arrival | Others - By Application</td>
+                    </tr>
+                    <tr>
+                        <td><strong>B</strong></td>
+                        <td>At the Embassy / Embassy Website</td>
+                        <td>Visit Visa / Work Visa / Study Visa / Humanitarian Visa / Resident Visa(Spouse Visa)</td>
+                        <td>Visit Visa - eVisa Application Up To 48hrs Before Arrival To Receive Upon Arrival | Others - By Application</td>
+                    </tr>
+                    <tr>
+                        <td><strong>C</strong></td>
+                        <td>At the Embassy</td>
+                        <td>Visit Visa / Work Visa / Study Visa / Humanitarian Visa / Resident Visa(Spouse Visa)</td>
+                        <td>All Visas By Application</td>
+                    </tr>
+                    <tr>
+                        <td><strong>D</strong></td>
+                        <td>At the Embassy</td>
+                        <td>Visit Visa / Work Visa / Study Visa</td>
+                        <td>All Visas By Application</td>
+                    </tr>
+                    <tr>
+                        <td><strong>E</strong></td>
+                        <td>At the Embassy (If Available In That Country)</td>
+                        <td>Special Visiting / Working Permits</td>
+                        <td>All Visas By Application</td>
+                    </tr>
+                </tbody>
+            </table>
 
-        <div class="gov-panel">
-            <h3>Clause II: Permanent Residency (PR) & Indefinite Leave to Remain (ILR)</h3>
-            <p>For foreign nationals who do not immediately seek full multi-citizenship, the state provides a secure long-term settlement track administered through specialised status tiers:</p>
-            <ul class="data-list">
-                <li><strong>Permanent Residency (PR) Card:</strong> Awarded to foreign industrial specialists who maintain three continuous years of faultless production records on the manufacturing grid.</li>
-                <li><strong>Indefinite Leave to Remain (ILR):</strong> Conferred upon passing standard security checks and demonstrating five continuous years of domestic residency. ILR status permanently exempts holders from foreign work permit caps.</li>
-            </ul>
+            <h3 class="framework-subheading">GUIDE</h3>
+            <p><strong>The immigration ranks are different from the ranks issued on travel advisory.</strong></p>
+            <p>To check for your country, head to the 'Embassies' page which would display the Immigration rank for that country.</p>
+            <p>Based on your country's immigration rank, you would be subjected to the above regulations.</p>
+
+            <h3 class="framework-subheading">ABOUT VISAS</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Type of Visa</th>
+                        <th>Tier</th>
+                        <th>Opportunity It Provides</th>
+                        <th>Leading To Indefinite Leave to Remain And / Or Citizenship</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Visit Visa</strong></td>
+                        <td>--</td>
+                        <td>Visit Up To 90 Days ONLY (Multiple Entries). No Right To: Employment, Reside And Public Funds</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Work Visa</strong></td>
+                        <td>Tier 1: Highly Skilled</td>
+                        <td>Right To: Employment (Not Business), Reside And Free Primary And Secondary Education, No Public Funds</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>--</strong></td>
+                        <td>Tier 2: Business</td>
+                        <td>Right To: Set Business (Self Employment And Not Employment), Reside And Free Primary And Secondary Education, No Public Funds</td>
+                        <td>Yes</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Student Visa</strong></td>
+                        <td>--</td>
+                        <td>Right to: Higher Education (Self Funded), Part-Time Employment Only And Reside For The Duration of The Course, No Public Funds</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Humanitarian Visa</strong></td>
+                        <td>Tier 1: Asylum Seeker</td>
+                        <td>Right To: Employment (Not Business), Reside, Free Primary And Secondary Education And Public Funds</td>
+                        <td>Individually Assessed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>--</strong></td>
+                        <td>Tier 2: Refugee</td>
+                        <td>Right To: Employment (Not Business), Reside, Free Primary And Secondary Education And Public Funds</td>
+                        <td>Individually Assessed</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Resident Visa (Spouse Visa)</strong></td>
+                        <td>--</td>
+                        <td>Right To: Indefinite Leave to Remain And Citizenship</td>
+                        <td>Individually Assessed</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3 class="framework-subheading">RULES AND RESTRICTIONS</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr>
+                        <th>Visit Visa</th>
+                        <th>Work Visa</th>
+                        <th>Student Visa</th>
+                        <th>Humanitarian Visa</th>
+                        <th>Resident Visa (Spouse Visa)</th>
+                        <th>CODL Member Countries</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong><span style="color:#228B22">Multiple Entries</span></strong></td>
+                        <td><strong><span style="color:#228B22">Multiple Entries</span></strong></td>
+                        <td><strong><span style="color:#228B22">Multiple Entries</span></strong></td>
+                        <td><strong><span style="color:#DAA520">Single Entry</span></strong></td>
+                        <td><strong><span style="color:#228B22">Multiple Entries</span></strong></td>
+                        <td><strong><span style="color:#6A5ACD">No Entry Restrictions</span></strong></td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Application Does Not Guarantee A Positive Outcome</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>5 Continuous Years To Achieve ILR + 1 Year To Citizenship (No Criminal Record)</td>
+                        <td>--</td>
+                        <td>5 Continuous Years To Achieve ILR + 1 Year To Citizenship (No Criminal Record)</td>
+                        <td>3 Years To Citizenship (In Civil Partnership with or Married to Citizen And No Criminal Record)</td>
+                        <td>5 Continuous Years To Achieve ILR + 1 Year To Citizenship (No Criminal Record)</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>Must Not be Outside The Country For 180 Days A Year To Be Eligible For Citizenship</td>
+                        <td>--</td>
+                        <td>Must Not be Outside The Country For 180 Days A Year To Be Eligible For Citizenship</td>
+                        <td>Must Not be Outside The Country For 180 Days A Year To Be Eligible For Citizenship</td>
+                        <td>Must Not be Outside The Country For 180 Days A Year To Be Eligible For Citizenship</td>
+                    </tr>
+                    <tr>
+                        <td>Need A Minimum of SC$1,000 With Them (Cash or In An Account) To Be Allowed Entry Into The Country. (Except CODL Citizens)</td>
+                        <td>--</td>
+                        <td>International Students Need A Minimum of SC$6,000 With Them (Cash or In An Account) To Be Allowed Entry Into The Country. (Except CODL Citizens)</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                    </tr>
+                    <tr>
+                        <td>inter-changeable but subject to individual assessment and no guarantee of a positive outcome.</td>
+                        <td>inter-changeable but subject to individual assessment and no guarantee of a positive outcome.</td>
+                        <td>inter-changeable but subject to individual assessment and no guarantee of a positive outcome.</td>
+                        <td>--</td>
+                        <td>inter-changeable but subject to individual assessment and no guarantee of a positive outcome.</td>
+                        <td>inter-changeable but subject to individual assessment and no guarantee of a positive outcome.</td>
+                    </tr>
+                    <tr>
+                        <td>Persons with history of deportation and / or criminal charges and / or denied entry to any <strong>MAY</strong> be denied Visa.</td>
+                        <td>Persons With History of Deportation and / or Criminal Charges and / or Denied Entry To Any Nation <strong>MAY</strong> be denied Entry.</td>
+                        <td>Persons With History of Deportation and / or Criminal Charges and / or Denied Entry To Any Nation <strong>MAY</strong> be denied Entry.</td>
+                        <td>Persons With History of Deportation and / or Criminal Charges and / or Denied Entry To Any Nation <strong>MAY</strong> be denied Entry.</td>
+                        <td>Persons With History of Deportation and / or Criminal Charges and / or Denied Entry To Any Nation <strong>MAY</strong> be denied Entry.</td>
+                        <td>Persons With History of Deportation and / or Criminal Charges and / or Denied Entry To Any Nation <strong>MAY</strong> be denied Entry.</td>
+                    </tr>
+                    <tr>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>--</td>
+                        <td>Citizens of The members of CODL (That Have Agreed To The Immigration Clause) Have The Right To Enter and Live (not work) Indefinitely.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p style="margin-top: 20px;">Public Funds and Welfare services (except for essential services) can be accessed only after gaining Indefinite Leave to Remain and / or Citizenship.</p>
+            <p style="text-align: center; font-weight: bold;"><u>Visas and Immigration are subject to periodic changes. Please keep up to date with the latest guidelines.</u></p>
+
         </div>
     </div>
+
     <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+        }
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
+    </script>
 </body>
 </html>

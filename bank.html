@@ -1,153 +1,240 @@
-<!DOCTYPE html> 
- <html lang="en-GB"> 
- <head> 
-     <meta charset="UTF-8"> 
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-     <title>Central Bank of Sinowa — Monetary Authority</title> 
-      
-     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png"> 
-     <link rel="stylesheet" href="style.css"> 
-      
-     <style> 
-         .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; } 
-          
-         /* Central Bank Specific Interface Layouts */ 
-         .bank-dashboard { 
-             display: grid; 
-             grid-template-columns: 2fr 1.2fr; 
-             gap: 30px; 
-             margin-top: 25px; 
-         } 
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Central Bank of Sinowa — Monetary Authority</title>
+    
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; }
+        
+        /* Central Bank Specific Interface Layouts */
+        .bank-dashboard {
+            display: grid;
+            grid-template-columns: 2fr 1.2fr;
+            gap: 30px;
+            margin-top: 25px;
+        }
 
-         .bank-emblem-hero { 
-             display: flex; 
-             align-items: center; 
-             background: var(--light-bg); 
-             border: 1px solid var(--border-color); 
-             padding: 24px; 
-             border-radius: 6px; 
-             gap: 25px; 
-             margin-bottom: 30px; 
-         } 
+        .bank-emblem-hero {
+            display: flex;
+            align-items: center;
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            padding: 24px;
+            border-radius: 6px;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
 
-         .bank-emblem-hero img { 
-             width: 100px; 
-             height: 100px; 
-             object-fit: contain; 
-             flex-shrink: 0; 
-         } 
+        .bank-emblem-hero img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
 
-         .bank-emblem-title h3 { 
-             margin: 0; 
-             font-size: 20px; 
-             color: var(--sinowa-blue); 
-         } 
-         [data-theme="dark"] .bank-emblem-title h3 { color: var(--sinowa-gold); } 
+        .bank-emblem-title h3 {
+            margin: 0;
+            font-size: 20px;
+            color: var(--sinowa-blue);
+        }
+        [data-theme="dark"] .bank-emblem-title h3 { color: var(--sinowa-gold); }
 
-         .bank-emblem-title p { 
-             margin: 4px 0 0 0; 
-             font-size: 13px; 
-             color: var(--text-muted); 
-             line-height: 1.4; 
-         } 
+        .bank-emblem-title p {
+            margin: 4px 0 0 0;
+            font-size: 13px;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
 
-         /* Sovereign Yield & Rate Component Boxes */ 
-         .market-rate-grid { 
-             display: grid; 
-             grid-template-columns: 1fr 1fr; 
-             gap: 15px; 
-             margin-bottom: 25px; 
-         } 
+        /* Sovereign Yield & Rate Component Boxes */
+        .market-rate-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
 
-         .rate-card-node { 
-             background: var(--card-bg); 
-             border: 1px solid var(--border-color); 
-             border-top: 4px solid var(--sinowa-blue); 
-             padding: 16px; 
-             border-radius: 4px; 
-             text-align: center; 
-             box-shadow: var(--shadow-sm); 
-         } 
-         .rate-card-node:nth-child(even) { border-top-color: var(--sinowa-red); } 
+        .rate-card-node {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-top: 4px solid var(--sinowa-blue);
+            padding: 16px;
+            border-radius: 4px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+        }
+        .rate-card-node:nth-child(even) { border-top-color: var(--sinowa-red); }
 
-         .rate-label-text { 
-             font-size: 11px; 
-             text-transform: uppercase; 
-             font-weight: 700; 
-             color: var(--text-muted); 
-             letter-spacing: 0.5px; 
-         } 
+        .rate-label-text {
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.5px;
+        }
 
-         .rate-numeric-data { 
-             font-family: monospace; 
-             font-size: 24px; 
-             font-weight: 700; 
-             margin: 6px 0; 
-             color: var(--text-color); 
-         } 
+        .rate-numeric-data {
+            font-family: monospace;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 6px 0;
+            color: var(--text-color);
+        }
 
-         .rate-status-indicator { 
-             font-size: 10px; 
-             font-weight: 600; 
-             padding: 2px 6px; 
-             border-radius: 3px; 
-             display: inline-block; 
-         } 
+        .rate-status-indicator {
+            font-size: 10px;
+            font-weight: 600;
+            padding: 2px 6px;
+            border-radius: 3px;
+            display: inline-block;
+        }
 
-         /* Ledger Style Parameter Lists */ 
-         .reserve-ledger-card { 
-             background: var(--light-bg); 
-             border: 1px solid var(--border-color); 
-             padding: 20px; 
-             border-radius: 6px; 
-             margin-bottom: 20px; 
-         } 
+        /* Ledger Style Parameter Lists */
+        .reserve-ledger-card {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
 
-         .reserve-ledger-card h4 { 
-             margin-top: 0; 
-             margin-bottom: 12px; 
-             font-size: 14px; 
-             text-transform: uppercase; 
-             letter-spacing: 0.5px; 
-             color: var(--sinowa-blue); 
-             border-bottom: 1px solid var(--border-color); 
-             padding-bottom: 6px; 
-         } 
-         [data-theme="dark"] .reserve-ledger-card h4 { color: var(--sinowa-gold); } 
+        .reserve-ledger-card h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--sinowa-blue);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+        [data-theme="dark"] .reserve-ledger-card h4 { color: var(--sinowa-gold); }
 
-         /* Unified Link Styling */ 
+        /* Unified Link Styling */
+        .inline-link { color: var(--sinowa-blue); font-weight: 600; text-decoration: none; border-bottom: 1px dotted var(--sinowa-blue); }
+        [data-theme="dark"] .inline-link { color: var(--sinowa-gold); border-bottom-color: var(--sinowa-gold); }
+        .inline-link:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
 
-         .inline-link { color: var(--sinowa-blue); font-weight: 600; 
-text-decoration: none; border-bottom: 1px dotted var(--sinowa-blue); } 
-         [data-theme="dark"] .inline-link { color: var(--sinowa-gold); border-bottom-color: var(--sinowa-gold); } 
-         .inline-link:hover { opacity: 0.8; } 
-     </style> 
- </head> 
- <body> 
+    <header class="gov-header">
+        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
+        <div class="gov-title">
+            <h1>SINOWA.GOV.SN</h1>
+            <p>The State Council • The People's Republic of Sinowa</p>
+        </div>
+    </header>
 
-     <header class="gov-header"> 
-         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"> 
-         <div class="gov-title"> 
-             <h1>SINOWA.GOV.SN</h1> 
-             <p>The State Council • The People's Republic of Sinowa</p> 
-         </div> 
-     </header> 
+    <nav class="gov-nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="structure.html">Defence & State</a>
+            <a href="commerce.html">Commerce & Tech</a>
+            <a href="housing.html">Housing</a>
+            <a href="education.html">Education</a>
+            <a href="services.html">Labour & Health</a>
+            <a href="immigration.html">Home Affairs</a>
+            <a href="embassy.html">Foreign Affairs</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="bank.html" style="color: var(--sinowa-gold);">Central Bank</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
+    </nav>
 
-     <nav class="gov-nav"> 
-         <div class="nav-links"> 
-             <a href="index.html">Home</a> 
-             <a href="structure.html">Government & Defence</a> 
-             <a href="services.html">Public Programmes</a> 
-             <a href="immigration.html">Ministry of Home Affairs</a> 
-             <a href="embassy.html">Ministry of Foreign Affairs</a> 
-             <a href="statistics.html">Bureau of Statistics</a> 
-             <a href="bank.html" style="color: var(--sinowa-gold);">Central Bank</a> 
-         </div> 
-         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button> 
-     </nav> 
+    <div class="container-wide">
+        <div class="inner-content">
+            
+            <div class="bank-emblem-hero">
+                <img src="https://i.postimg.cc/XY5GSGqJ/Central-Bank-of-Sinowa.png" alt="Central Bank of Sinowa Seal">
+                <div class="bank-emblem-title">
+                    <h3>Central Bank of Sinowa</h3>
+                    <p>Sovereign Issuing Authority • Supreme Organ of Monetary Policy and Financial Regulation. Established under direction of the State Council to maintain currency stability, secure credit distribution vectors, and supervise state-backed electronic clearings.</p>
+                </div>
+            </div>
 
-     <div class="container-wide"> 
-         <div class="inner-content"> 
-              
-             <div class="bank-emblem-hero"> 
-                 <img src="
+            <h2 class="page-title">Monetary Framework & Operational Directives</h2>
+            
+            <div class="bank-dashboard">
+                
+                <div>
+                    <div class="law-clause">
+                        <h3>I. Legal Tender & Digital e-Kwang Management</h3>
+                        <p>The Central Bank of Sinowa exercises an absolute monopoly over the issuance of legal tender within the realm. The national currency, the **e-Kwang (eK)**, operates as a fully sovereign, centrally audited digital instrument. All ledger updates, transactional clearings, and liquidity adjustments route natively through the bank's terminal networks, bypassing private commercial clearing risk parameters.</p>
+                    </div>
+
+                    <div class="law-clause">
+                        <h3>II. Capital Allocation & Planned Industrial Credit</h3>
+                        <p>Unlike banking models in deregulated market economies, credit allocation in Sinowa is strictly tied to real-sector production quotas. Capital distribution pathways prioritize key state industrial cells, infrastructural automation paths, and the domestic basket-weaving manufacturing core. Speculative asset leveraging or unsanctioned secondary financial trading structures are permanently prohibited.</p>
+                    </div>
+
+                    <div class="law-clause">
+                        <h3>III. National Clearing Mesh Supervision</h3>
+                        <p>The institutional framework maintains direct real-time oversight over all transactional interfaces deployed across the state-managed internet grid. Biometric identification logs and National Identity Card data matrices integrate securely with banking nodes, completely eliminating hidden capital flights, tax evasions, or unsanctioned foreign exchange leakage paths.</p>
+                    </div>
+
+                    <div class="law-clause">
+                        <h3>IV. Sovereign Currency Synchronisation (e-Kwang Sync)</h3>
+                        <p>To insulate the domestic economy from hostile external financial architectures, the Central Bank executes bilateral <strong>e-Kwang Currency Sync</strong> agreements with allied sovereign states. This deep financial integration bypasses standard international clearance networks, facilitating instant, sanction-proof capital flows via direct digital ledger swaps. Furthermore, it permanently enables Sinowan citizens to utilise the <em>SinowaLink</em> super-app natively within allied territories for seamless cross-border retail and transit payments.</p>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column;">
+                    
+                    <div class="market-rate-grid">
+                        <div class="rate-card-node">
+                            <span class="rate-label-text">Central Bank Rate</span>
+                            <div class="rate-numeric-data">1.50%</div>
+                            <span class="rate-status-indicator" style="background: #e6f4ea; color: #137333;">FIXED STABLE</span>
+                        </div>
+                        <div class="rate-card-node">
+                            <span class="rate-label-text">Statutory Reserve</span>
+                            <div class="rate-numeric-data">100%</div>
+                            <span class="rate-status-indicator" style="background: #f0f7ff; color: #0066cc;">TOTAL SECURITY</span>
+                        </div>
+                    </div>
+
+                    <div class="reserve-ledger-card">
+                        <h4>Foreign Exchange & Parity Matrix</h4>
+                        <p style="font-size: 13px; margin: 0; color: var(--text-color); line-height: 1.5;">Live fiat conversion tracking and digital currency pegging matrices are maintained off-ledger for security auditing. To view the current sovereign e-Kwang (eK) market parity coefficients and exchange rates, please access the <a href="statistics.html" class="inline-link">Bureau of Statistics Live Matrix</a>.</p>
+                    </div>
+
+                    <div class="reserve-ledger-card">
+                        <h4>Sovereign Reserve Registry</h4>
+                        <ul class="data-list">
+                            <li><strong>Central Gold Reserves:</strong> <span class="stat-val">415.2 Metric Tonnes</span></li>
+                            <li><strong>Foreign Exchange Basket:</strong> <span class="stat-val">37% Allied / 63% Sovereign</span></li>
+                            <li><strong>Liquidity Coverage Ratio:</strong> <span class="stat-val stat-pos">Absolute Pool</span></li>
+                            <li><strong>Clearing Latency Quotient:</strong> <span class="stat-val">0.00ms (Instant)</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="reserve-ledger-card">
+                        <h4>Regulatory Notices</h4>
+                        <p style="font-size: 12px; margin: 0; color: var(--text-muted); line-height: 1.45;">Following State Council Decree 911, all international capital movements, foreign treaty visa funding validations, and external trade payments under C-3 merchant classes must secure automated Central Bank export clearances prior to border transit execution.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <footer><p>© 2026 People's Republic of Sinowa. Central Banking & Monetary Authority. Financial tracking logs synchronised.</p></footer>
+
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+        }
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
+    </script>
+</body>
+</html>

@@ -2,60 +2,35 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ministry of Education - Sinowa</title>
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="gov-header">
-        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council • The People's Republic of Sinowa</p></div>
-    </header>
-    
-    <nav class="gov-nav">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="structure.html">Defence & State</a>
-            <a href="commerce.html">Commerce & Tech</a>
-            <a href="housing.html">Housing</a>
-            <a href="education.html" style="color: var(--sinowa-gold);">Education</a>
-            <a href="services.html">Labour & Health</a>
-            <a href="immigration.html">Home Affairs</a>
-            <a href="embassy.html">Foreign Affairs</a>
-            <a href="statistics.html">Statistics</a>
-            <a href="bank.html">Central Bank</a>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
-    </nav>
+    <div class="page-container">
+        <main>
+            <div class="card hero-card">
+                <h2>Sovereign Education Matrix</h2>
+                <p>The Ministry cultivates the nation’s human capital. Our system is designed to produce the world’s most adaptable, highly skilled workforce.</p>
+                
+                <h3>The Curriculum Structure</h3>
+                <p>We synthesise the advanced STEM and Humanities rigour of East Asian methodology with global critical-thinking standards. Our students are taught foundational discipline, but we prioritise application over memorisation.</p>
 
-    <div class="container-wide">
-        <div class="inner-content">
-            <h2 class="page-title">Ministry of Education & Academic Excellence</h2>
-            <p style="color: var(--text-muted); font-size: 15px;">The Ministry of Education coordinates the cultivation of human capital. Our academic framework is engineered to be the premier educational system worldwide, blending absolute academic rigour with innovative, holistic assessment.</p>
-
-            <div class="law-clause" style="margin-top: 30px;">
-                <h3>I. Free & World-Class State Schooling</h3>
-                <p>The backbone of Sinowan prosperity is the universal state education grid. All state schools are entirely free at the point of access and are funded aggressively by the sovereign treasury to ensure world-class facilities. The curriculum content mirrors the intense, high-level STEM and humanities depth found in the top-tier schools of real-world East Asia, guaranteeing unparalleled technical proficiency in all graduating students.</p>
+                <h3>Sovereign Assessment Matrix (SAM)</h3>
+                <p>We have permanently retired the high-stress rote-exam models of the past. The SAM utilizes:</p>
+                <ul>
+                    <li><strong>Continuous Data Logging:</strong> Coursework tracked throughout the semester via secure digital nodes.</li>
+                    <li><strong>Practical Vivas:</strong> Oral defenses of projects to prove mastery of complex concepts.</li>
+                    <li><strong>Collaborative Labs:</strong> Team-based problem solving to assess real-world workplace adaptability.</li>
+                </ul>
             </div>
-
-            <div class="law-clause" style="border-left-color: var(--sinowa-blue);">
-                <h3>II. Fee-Paying International Academies</h3>
-                <p>To support foreign diplomatic missions, industrial expatriates, and specialised economic zones, the State Council explicitly permits the operation of private International Schools. These institutions operate as fee-paying entities outside the free state network. They maintain their own global curricula (such as the IB or A-Levels) whilst adhering strictly to Sinowan security and cultural harmony guidelines.</p>
+        </main>
+        <aside>
+            <div class="card">
+                <h3>System Status</h3>
+                <p><strong>State Schools:</strong> Free, world-class, integrated grid.</p>
+                <p><strong>International Schools:</strong> Private, fee-paying, compliant.</p>
             </div>
-
-            <div class="highlight-box" style="border-left-color: var(--sinowa-gold); background: var(--quote-bg);">
-                <h3 style="color: var(--sinowa-blue); margin-top: 0;">III. The Sovereign Assessment Matrix (The Anti-Gaokao)</h3>
-                <p>Unlike outdated, highly dystopian, and intensely stressful rote-memorisation exams, Sinowa has abolished the traditional "Gaokao" model. In its place, the Ministry has developed the <strong>Sovereign Assessment Matrix</strong>.</p>
-                <p style="margin-bottom: 0;">This unique testing framework combines the best pedagogical practices from around the world. It replaces singular, high-stakes exams with continuous, algorithmically weighted coursework, practical technological demonstrations, and critical-thinking viva voces. The result is a testing method that produces highly adaptable, brilliant workers without sacrificing the mental health of the youth.</p>
-            </div>
-        </div>
+        </aside>
     </div>
-
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
-    <script>
-        function toggleTheme() { const currentTheme = document.documentElement.getAttribute('data-theme'); if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); } else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); } }
-        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
-    </script>
 </body>
 </html>

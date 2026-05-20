@@ -1,131 +1,28 @@
-/* ==========================================================================
-   SINOWA GOVERNMENT UNIFIED GRID CSS SYSTEM (.GOV.SN) - BRITISH ENGLISH CORE
-   ========================================================================== */
-
 :root {
-    --sinowa-red: #8B0000;
-    --sinowa-gold: #FFD700;
-    --sinowa-blue: #1C3B6F;
-    --sinowa-green: #1E6B38;
-    --light-bg: #f5f5f7; /* Modern crisp grey */
+    --sinowa-blue: #003366;
+    --sinowa-red: #cc0000;
+    --sinowa-gold: #c5a059;
+    --bg-color: #f5f5f7;
     --card-bg: #ffffff;
-    --text-color: #1d1d1f;
+    --text-main: #1d1d1f;
     --text-muted: #86868b;
-    --border-color: #d2d2d7;
-    --quote-bg: #fffbf0;
-    --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.04);
-    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
-    --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    --border: #d2d2d7;
 }
 
-[data-theme="dark"] {
-    --light-bg: #000000;
-    --card-bg: #1c1c1e;
-    --text-color: #f5f5f7;
-    --text-muted: #86868b;
-    --border-color: #333336;
-    --quote-bg: #222019;
-    --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
+body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; background: var(--bg-color); color: var(--text-main); margin: 0; line-height: 1.5; }
 
-html { scroll-behavior: smooth; }
+.gov-header { background: white; padding: 20px 8%; border-bottom: 1px solid var(--border); display: flex; align-items: center; }
+.gov-title h1 { margin: 0; font-size: 24px; color: var(--sinowa-blue); }
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    margin: 0; padding: 0;
-    background-color: var(--light-bg);
-    color: var(--text-color);
-    line-height: 1.5;
-    transition: background-color 0.4s ease, color 0.4s ease;
-    -webkit-font-smoothing: antialiased;
-    opacity: 0;
-    animation: fadeBodyIn 0.8s ease-out forwards;
-}
+.gov-nav { background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); position: sticky; top: 0; padding: 10px 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+.nav-links a { color: var(--text-main); font-size: 11px; font-weight: 600; text-transform: uppercase; text-decoration: none; padding: 10px; transition: 0.3s; }
+.nav-links a:hover { color: var(--sinowa-red); }
 
-@keyframes fadeBodyIn { to { opacity: 1; } }
+.page-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
 
-.gov-header {
-    background-color: var(--card-bg);
-    padding: 16px 8%;
-    display: flex;
-    align-items: center;
-    border-bottom: 4px solid var(--sinowa-green);
-    box-shadow: var(--shadow-sm);
-    z-index: 1001;
-    position: relative;
-}
+.card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid var(--border); margin-bottom: 20px; }
+.hero-card { border-top: 6px solid var(--sinowa-blue); }
 
-.header-flag { width: 65px; height: auto; margin-right: 20px; border: 1px solid rgba(0, 0, 0, 0.08); border-radius: 3px; }
-.gov-title { border-left: 2px solid var(--sinowa-blue); padding-left: 20px; }
-.gov-title h1 { margin: 0; font-size: 22px; color: var(--sinowa-blue); letter-spacing: 0.5px; font-family: "Times New Roman", Times, serif; font-weight: 700; }
-.gov-title p { margin: 2px 0 0 0; font-size: 11px; font-weight: 600; color: var(--text-muted); letter-spacing: 0.5px; }
-[data-theme="dark"] .gov-title h1 { color: var(--sinowa-gold); }
+img { max-width: 100%; height: auto; border-radius: 8px; }
 
-/* Glassmorphic Navigation */
-.gov-nav {
-    background-color: rgba(28, 59, 111, 0.85);
-    backdrop-filter: saturate(180%) blur(20px);
-    -webkit-backdrop-filter: saturate(180%) blur(20px);
-    padding: 0 8%;
-    position: sticky; top: 0; z-index: 1000;
-    border-bottom: 3px solid var(--sinowa-gold);
-    display: flex; justify-content: space-between; align-items: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.nav-links { display: flex; flex-wrap: wrap; gap: 4px; padding: 6px 0; }
-.nav-links a {
-    color: rgba(255, 255, 255, 0.9); text-decoration: none;
-    padding: 10px 12px; font-size: 11.5px; font-weight: 600;
-    text-transform: uppercase; letter-spacing: 0.5px;
-    transition: var(--transition); border-radius: 6px;
-}
-.nav-links a:hover { color: var(--sinowa-gold); background-color: rgba(255, 255, 255, 0.1); transform: scale(1.03); }
-
-.theme-toggle {
-    background: rgba(255, 255, 255, 0.1); color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2); padding: 8px 14px;
-    font-weight: 600; cursor: pointer; border-radius: 20px;
-    font-size: 10px; text-transform: uppercase; transition: var(--transition);
-}
-.theme-toggle:hover { background: white; color: var(--sinowa-blue); transform: scale(1.05); }
-
-.container { max-width: 1200px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2.6fr 1.1fr; gap: 40px; }
-.container-wide { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-
-.main-content, .inner-content { background: var(--card-bg); padding: 40px; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); }
-
-h1, h2, h3, h4 { font-family: "Times New Roman", Times, serif; }
-h2.section-title, h2.page-title { color: var(--sinowa-blue); border-bottom: 1px solid var(--border-color); padding-bottom: 12px; margin-top: 0; margin-bottom: 24px; font-size: 26px; position: relative; }
-h2.section-title::after, h2.page-title::after { content: ''; position: absolute; bottom: -1px; left: 0; width: 60px; height: 3px; background-color: var(--sinowa-red); border-radius: 3px; }
-[data-theme="dark"] h2.section-title, [data-theme="dark"] h2.page-title { color: var(--sinowa-gold); }
-
-/* Sleek Cards */
-.services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
-.service-card { background: var(--card-bg); padding: 24px; border-radius: 10px; box-shadow: var(--shadow-sm); border: 1px solid var(--border-color); border-top: 4px solid var(--sinowa-red); transition: var(--transition); cursor: pointer; }
-.service-card:hover { transform: translateY(-4px) scale(1.01); box-shadow: var(--shadow-md); }
-.service-card:nth-child(even) { border-top-color: var(--sinowa-green); }
-.service-card h3 { margin: 0 0 10px 0; font-size: 17px; }
-.service-card h3 a { color: var(--sinowa-blue); text-decoration: none; transition: var(--transition); }
-[data-theme="dark"] .service-card h3 a { color: var(--sinowa-gold); }
-.service-card p { margin: 0; font-size: 13.5px; color: var(--text-muted); line-height: 1.5; }
-
-/* Ticker & Sidebars */
-.ticker-wrap { margin-top: 40px; border-top: 1px solid var(--border-color); padding-top: 30px; background: transparent; }
-.law-clause, .service-block { border-left: 4px solid var(--sinowa-red); background: var(--light-bg); padding: 25px; margin-bottom: 25px; border-radius: 0 10px 10px 0; border: 1px solid var(--border-color); }
-.law-clause:nth-of-type(even), .service-block:nth-of-type(even) { border-left-color: var(--sinowa-green); }
-
-.matrix-table { width: 100%; border-collapse: collapse; margin-top: 20px; font-size: 14px; border-radius: 8px; overflow: hidden; }
-.matrix-table th { background: var(--sinowa-blue); color: white; padding: 14px; text-align: left; border-bottom: 3px solid var(--sinowa-red); }
-.matrix-table td { padding: 14px; border-bottom: 1px solid var(--border-color); }
-.matrix-table tr { transition: var(--transition); }
-.matrix-table tr:hover { background: var(--light-bg); }
-
-.sidebar { background: var(--card-bg); padding: 30px; border-radius: 12px; box-shadow: var(--shadow-md); border: 1px solid var(--border-color); text-align: center; }
-.decree-log { background: var(--light-bg); border: 1px solid var(--border-color); padding: 25px; border-radius: 12px; text-align: left; }
-.decree-item { border-bottom: 1px solid var(--border-color); padding: 12px 0; font-size: 13.5px; transition: var(--transition); }
-.decree-item:hover { transform: translateX(4px); }
-.decree-badge { background: var(--sinowa-red); color: white; font-size: 9px; font-weight: bold; padding: 4px 6px; border-radius: 4px; text-transform: uppercase; margin-right: 8px; }
-
-footer { background-color: #1c1c1e; color: #86868b; text-align: center; padding: 30px; font-size: 12px; margin-top: 60px; border-top: 4px solid var(--sinowa-red); }
+h1, h2, h3 { font-family: "SF Pro Display", sans-serif; color: var(--sinowa-blue); }

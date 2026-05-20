@@ -1,28 +1,29 @@
 :root {
-    --sinowa-blue: #003366;
-    --sinowa-red: #cc0000;
-    --sinowa-gold: #c5a059;
     --bg-color: #f5f5f7;
     --card-bg: #ffffff;
-    --text-main: #1d1d1f;
-    --text-muted: #86868b;
+    --text: #1d1d1f;
+    --muted: #86868b;
+    --accent-blue: #0066cc;
+    --accent-red: #cc0000;
     --border: #d2d2d7;
 }
 
-body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; background: var(--bg-color); color: var(--text-main); margin: 0; line-height: 1.5; }
+body { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif; background: var(--bg-color); color: var(--text); margin: 0; line-height: 1.5; }
 
-.gov-header { background: white; padding: 20px 8%; border-bottom: 1px solid var(--border); display: flex; align-items: center; }
-.gov-title h1 { margin: 0; font-size: 24px; color: var(--sinowa-blue); }
+/* The "Apple-Style" Container */
+.page-wrapper { max-width: 1100px; margin: 0 auto; padding: 20px; }
 
-.gov-nav { background: rgba(255,255,255,0.8); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); position: sticky; top: 0; padding: 10px 8%; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
-.nav-links a { color: var(--text-main); font-size: 11px; font-weight: 600; text-transform: uppercase; text-decoration: none; padding: 10px; transition: 0.3s; }
-.nav-links a:hover { color: var(--sinowa-red); }
+header { background: white; padding: 20px 0; border-bottom: 1px solid var(--border); margin-bottom: 30px; display: flex; align-items: center; justify-content: space-between; }
+header h1 { margin: 0; font-size: 20px; color: var(--accent-blue); }
 
-.page-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+nav { display: flex; gap: 20px; padding: 15px 0; border-bottom: 1px solid var(--border); margin-bottom: 40px; overflow-x: auto; }
+nav a { color: var(--text); text-decoration: none; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.7; }
+nav a:hover, nav a.active { opacity: 1; color: var(--accent-blue); }
 
-.card { background: white; border-radius: 16px; padding: 30px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border: 1px solid var(--border); margin-bottom: 20px; }
-.hero-card { border-top: 6px solid var(--sinowa-blue); }
+.grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; }
+.card { background: white; padding: 40px; border-radius: 20px; border: 1px solid var(--border); margin-bottom: 20px; }
+img { max-width: 100%; height: auto; border-radius: 12px; }
 
-img { max-width: 100%; height: auto; border-radius: 8px; }
-
-h1, h2, h3 { font-family: "SF Pro Display", sans-serif; color: var(--sinowa-blue); }
+/* Fixes the "Half-eaten" form */
+form { width: 100%; box-sizing: border-box; }
+textarea, input { width: 100%; padding: 12px; border: 1px solid var(--border); border-radius: 8px; box-sizing: border-box; margin-bottom: 15px; }

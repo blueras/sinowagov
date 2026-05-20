@@ -2,59 +2,23 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ministry of Housing - Sinowa</title>
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="gov-header">
-        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council • The People's Republic of Sinowa</p></div>
-    </header>
-    
-    <nav class="gov-nav">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="structure.html">Defence & State</a>
-            <a href="commerce.html">Commerce & Tech</a>
-            <a href="housing.html" style="color: var(--sinowa-gold);">Housing</a>
-            <a href="education.html">Education</a>
-            <a href="services.html">Labour & Health</a>
-            <a href="immigration.html">Home Affairs</a>
-            <a href="embassy.html">Foreign Affairs</a>
-            <a href="statistics.html">Statistics</a>
-            <a href="bank.html">Central Bank</a>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
-    </nav>
-
-    <div class="container-wide">
-        <div class="inner-content">
-            <h2 class="page-title">Ministry of Housing & Urban-Rural Development</h2>
-            <p style="color: var(--text-muted); font-size: 15px;">The Ministry manages the physical footprint of the nation. We ensure that modern urban development aligns with sustainable ecological practices and high-speed infrastructure, completely eradicating urban decay and nomadic living.</p>
-
-            <div class="law-clause" style="margin-top: 30px;">
-                <h3>I. The Sovereign Land Monopoly & 70-Year Leaseholds</h3>
-                <p>In accordance with socialist constitutional parameters, <strong>the State retains absolute ownership of 100% of all land</strong> within the People's Republic of Sinowa. However, to foster personal prosperity and wealth generation, citizens are permitted to purchase and trade <strong>70-year residential leaseholds</strong> on state land. This creates a booming, highly lucrative property market while ensuring the government retains ultimate territorial sovereignty.</p>
+    <div class="page-container">
+        <main>
+            <div class="card hero-card">
+                <h2>Urban Planning & Residential Allocation</h2>
+                <p>Sinowa manages all land through a state-monopoly framework. Residential development is driven by efficient, high-density smart-city planning.</p>
+                
+                <h3>Property Leasehold Model</h3>
+                <p>While the state retains land ownership, citizens possess 70-year transferable leaseholds. This system encourages robust property investment, personal wealth generation, and modern urban maintenance, ensuring cities remain clean, safe, and technologically advanced.</p>
+                
+                <h3>Civic Mobility & Hukou</h3>
+                <p>The Municipal Residency framework manages urban infrastructure capacity. Your residency status (Hukou) determines your immediate access to local medical and educational nodes. Residency transitions are managed by the Home Affairs algorithm to prevent urban over-saturation.</p>
             </div>
-
-            <div class="law-clause" style="border-left-color: var(--sinowa-blue);">
-                <h3>II. Municipal Integration (Hukou System)</h3>
-                <p>To prevent unbalanced population density and ensure social services are perfectly allocated, all citizens are registered under a strict municipal residency framework. Access to local top-tier medical facilities and elite public schools is seamlessly linked to an individual's registered geographic node. Transferring residency to a Tier-1 megacity requires a high Social Credit score and targeted industrial sector approval.</p>
-            </div>
-
-            <div class="highlight-box" style="border-left-color: var(--sinowa-green); background: var(--light-bg);">
-                <h3 style="color: var(--sinowa-green); margin-top: 0;">III. Modern Urban Consolidation</h3>
-                <p style="margin-bottom: 0;">As per Decree 925, all unregulated and nomadic off-grid living has been abolished. The Ministry aggressively develops stunning, high-density smart cities interconnected by the High-Speed Rail (HSR) matrix. These state-planned urban centres feature integrated green spaces, thorium-powered residential energy grids, and fully digitised retail zones.</p>
-            </div>
-        </div>
+        </main>
     </div>
-
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
-    <script>
-        function toggleTheme() { const currentTheme = document.documentElement.getAttribute('data-theme'); if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); } else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); } }
-        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
-    </script>
 </body>
 </html>

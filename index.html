@@ -5,22 +5,20 @@
     <div class="page-wrapper">
         <header><h1>SINOWA.GOV.SN</h1><p>The State Council • People's Republic of Sinowa</p></header>
         <nav class="gov-nav">
-            <a href="index.html">Home</a><a href="structure.html">Defence</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Labour</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Embassy</a><a href="statistics.html">Stats</a><a href="bank.html">Bank</a><a href="security.html">SIA</a><a href="sinowalink.html">SinowaLink</a>
+            <a href="index.html">Home</a><a href="structure.html">Defence</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Labour</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Embassy</a><a href="statistics.html">Stats</a><a href="bank.html">Bank</a>
         </nav>
         <div class="main-grid">
             <main>
-                <div class="card"><h2>Central Executive Overview</h2><p>Welcome to the administrative nexus of the People's Republic of Sinowa. We focus on industrial modernisation and collective prosperity.</p></div>
+                <div class="card"><h2>Central Executive Overview</h2><p>Welcome to the primary administrative nexus of the People's Republic of Sinowa...</p></div>
                 <div class="card"><h2>Recent Decrees</h2>
                     <div class="decree-item"><span class="decree-badge">915</span> Social Credit Synchronisation active.</div>
-                    <div class="decree-item"><span class="decree-badge">911</span> Intellectual Property Nationalisation active.</div>
-                    <div class="decree-item"><span class="decree-badge">904</span> Dual Citizenship ratified.</div>
+                    <div class="decree-item"><span class="decree-badge">911</span> IP Nationalisation active.</div>
                 </div>
             </main>
             <aside>
-                <div class="card"><h4>Economic Matrix</h4><p>GDP: <span id="gdp-val" class="stat-val">Syncing...</span></p><p>Pop: <span id="pop-val" class="stat-val">Syncing...</span></p></div>
+                <div class="card"><h4>Economic Matrix</h4><p>GDP: <span id="gdp-val" class="stat-val">Syncing...</span></p></div>
             </aside>
         </div>
     </div>
-    <script>async function f(){try{const r=await fetch('https://corsproxy.io/?'+encodeURIComponent('https://www.nationstates.net/cgi-bin/api.cgi?nation=sinowa&q=gdp+population'));const x=new DOMParser().parseFromString(await r.text(),"text/xml");document.getElementById("pop-val").innerText=Math.round(parseFloat(x.getElementsByTagName("POPULATION")[0].textContent)*1000000).toLocaleString();document.getElementById("gdp-val").innerText="eK "+(parseFloat(x.getElementsByTagName("GDP")[0].textContent)*1000000).toLocaleString();}catch(e){}}f();</script>
 </body>
 </html>

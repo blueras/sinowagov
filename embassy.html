@@ -2,80 +2,171 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministry of Foreign Affairs - Sovereign Console</title>
-    
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
+    <title>Foreign Affairs - SINOWA.GOV.SN</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .disclaimer-box { background: #fff8f8; border-left: 5px solid var(--accent-red); padding: 18px 24px; margin: 25px 0; border-radius: 0 6px 6px 0; font-size: 13px; }
+        .disclaimer-box h4 { color: var(--accent-red); margin-top: 0; margin-bottom: 8px; text-transform: uppercase; }
+        .checkbox-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #f9f9f9; padding: 15px; border-radius: 8px; border: 1px solid var(--border); }
+        .checkbox-grid label { font-size: 13px; font-weight: normal; }
+    </style>
 </head>
 <body>
+    <div class="page-wrapper">
+        <header>
+            <div style="display: flex; align-items: center;">
+                <img class="header-img" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag" style="margin-right: 15px; border: 1px solid #ccc; border-radius: 4px;">
+                <div class="gov-title">
+                    <h1>SINOWA.GOV.SN</h1>
+                    <p style="margin: 0; font-size: 12px; color: #666; font-weight: bold; text-transform: uppercase;">Ministry of Foreign Affairs</p>
+                </div>
+            </div>
+        </header>
 
-    <header class="gov-header">
-        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title">
-            <h1>SINOWA.GOV.SN</h1>
-            <p>The State Council • The People's Republic of Sinowa</p>
+        <nav class="gov-nav">
+            <a href="index.html">Home</a><a href="structure.html">Defence</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Labour</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Embassy</a><a href="statistics.html">Stats</a><a href="bank.html">Bank</a><a href="security.html">SIA</a><a href="sinowalink.html">SinowaLink</a>
+        </nav>
+
+        <div class="card" style="border-top: 4px solid var(--accent-blue);">
+            <h2>Bilateral Relations & Global Visa Framework</h2>
+            <p>The Ministry of Foreign Affairs regulates sovereign diplomatic channels, economic treaties, and international entry permissions.</p>
+
+            <h3 style="margin-top: 30px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">VISA INFORMATION TABLE</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr><th>Immigration Rank</th><th>Where To Apply</th><th>Available Visas</th><th>Method of Issue</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Common Defence League (CODL)</strong></td><td>No Restrictions</td><td>All</td><td>Photo ID Needed At Border. Entry Can Be Denied On Basis of Security/Health</td></tr>
+                    <tr><td><strong>Rank A</strong></td><td>Embassy / Online</td><td>Visit / Work / Study / Humanitarian / Resident</td><td>Visit Visa - On Arrival | Others - By Application</td></tr>
+                    <tr><td><strong>Rank B</strong></td><td>Embassy / Online</td><td>Visit / Work / Study / Humanitarian / Resident</td><td>Visit Visa - eVisa App Up To 48hrs Before Arrival | Others - By Application</td></tr>
+                    <tr><td><strong>Rank C</strong></td><td>At the Embassy</td><td>Visit / Work / Study / Humanitarian / Resident</td><td>All Visas By Application</td></tr>
+                    <tr><td><strong>Rank D</strong></td><td>At the Embassy</td><td>Visit / Work / Study</td><td>All Visas By Application</td></tr>
+                    <tr><td><strong>Rank E</strong></td><td>At the Embassy (If Available)</td><td>Special Visiting / Working Permits</td><td>All Visas By Application</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size: 12px; color: var(--text-muted);"><strong>Note:</strong> Immigration ranks differ from travel advisory ranks. Check the active diplomatic treaty matrix below for specific alignments.</p>
+
+            <h3 style="margin-top: 40px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">ABOUT VISAS (Entitlements)</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr><th>Type of Visa</th><th>Tier</th><th>Opportunity Provided</th><th>Path to ILR / Citizenship</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Visit Visa</strong></td><td>--</td><td>Visit Up To 90 Days ONLY (Multiple Entries). No Right To: Employment, Reside, Public Funds</td><td>No</td></tr>
+                    <tr><td><strong>Work Visa</strong></td><td>Tier 1: Highly Skilled</td><td>Right To: Employment (Not Business), Reside, Free Education. No Public Funds.</td><td>Yes</td></tr>
+                    <tr><td><strong>Work Visa</strong></td><td>Tier 2: Business</td><td>Right To: Set Business (Self Employment), Reside, Free Education. No Public Funds.</td><td>Yes</td></tr>
+                    <tr><td><strong>Student Visa</strong></td><td>--</td><td>Right to: Higher Education, Part-Time Employment, Reside. No Public Funds.</td><td>No</td></tr>
+                    <tr><td><strong>Humanitarian Visa</strong></td><td>Tier 1: Asylum</td><td>Right To: Employment, Reside, Free Education, Public Funds.</td><td>Individually Assessed</td></tr>
+                    <tr><td><strong>Humanitarian Visa</strong></td><td>Tier 2: Refugee</td><td>Right To: Employment, Reside, Free Education, Public Funds.</td><td>Individually Assessed</td></tr>
+                    <tr><td><strong>Resident Visa</strong></td><td>Spouse Visa</td><td>Right To: Indefinite Leave to Remain And Citizenship.</td><td>Individually Assessed</td></tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px; border-bottom: 2px solid var(--border); padding-bottom: 10px;">RULES AND RESTRICTIONS</h3>
+            <table class="matrix-table">
+                <thead>
+                    <tr><th>Visit Visa</th><th>Work Visa</th><th>Student Visa</th><th>Humanitarian</th><th>Resident (Spouse)</th><th>CODL Members</th></tr>
+                </thead>
+                <tbody>
+                    <tr style="font-weight: bold;">
+                        <td style="color: #137333;">Multiple Entries</td>
+                        <td style="color: #137333;">Multiple Entries</td>
+                        <td style="color: #137333;">Multiple Entries</td>
+                        <td style="color: #b06000;">Single Entry</td>
+                        <td style="color: #137333;">Multiple Entries</td>
+                        <td style="color: var(--accent-blue);">No Entry Restrictions</td>
+                    </tr>
+                    <tr style="font-size: 11px;">
+                        <td>Need Min SC$1,000 to enter.</td>
+                        <td>5 Continuous Years to ILR + 1 Year to Citizenship.</td>
+                        <td>Intl Students need SC$6,000 to enter.</td>
+                        <td>5 Continuous Years to ILR + 1 Year to Citizenship.</td>
+                        <td>3 Years to Citizenship.</td>
+                        <td>5 Continuous Years to ILR + 1 Year to Citizenship.</td>
+                    </tr>
+                    <tr style="font-size: 11px;">
+                        <td>--</td>
+                        <td>Must not be outside the country for 180 days/year to maintain eligibility.</td>
+                        <td>--</td>
+                        <td>Must not be outside the country for 180 days/year to maintain eligibility.</td>
+                        <td>Must not be outside the country for 180 days/year to maintain eligibility.</td>
+                        <td>Must not be outside the country for 180 days/year to maintain eligibility.</td>
+                    </tr>
+                    <tr style="font-size: 11px;">
+                        <td colspan="6" style="text-align: center; color: var(--accent-red);">Persons with history of deportation and/or criminal charges MAY be denied entry across all visa classes.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="disclaimer-box">
+                <h4>Border Control & Public Funds Notice</h4>
+                <p>Public Funds and Welfare services (except for essential services) can be accessed only after gaining Indefinite Leave to Remain and / or Citizenship. Visas and Immigration are subject to periodic changes. All applications are subject to individual assessment with no guarantee of a positive outcome.</p>
+            </div>
         </div>
-    </header>
 
-    <nav class="gov-nav">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="structure.html">Government & Defence</a>
-            <a href="services.html">Public Programmes</a>
-            <a href="immigration.html">Ministry of Home Affairs</a>
-            <a href="embassy.html" style="color: var(--sinowa-gold);">Ministry of Foreign Affairs</a>
-            <a href="statistics.html">Bureau of Statistics</a>
-            <a href="bank.html">Central Bank</a>
+        <div class="card" style="border-top: 4px solid var(--accent-red);">
+            <h2>Global Diplomacy & Travel Advisory Ledgers</h2>
+            <table class="matrix-table">
+                <thead>
+                    <tr><th>Target Sector / Region Category</th><th>Threat Profile Vectors</th><th>Border Protocol Directive</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Socialist Compact Partners</td><td>Sovereign networks secure; linked auditing grids active.</td><td><span style="background: #e6f4ea; color: #137333; padding: 2px 6px; border-radius: 4px; font-weight: bold;">LEVEL 1: NORMAL ASSISTANCE</span></td></tr>
+                    <tr><td>Unregulated Corporate Alliances</td><td>Fluctuating financial asset stability; corporate surveillance.</td><td><span style="background: #fef7e0; color: #b06000; padding: 2px 6px; border-radius: 4px; font-weight: bold;">LEVEL 2: INCREASE VIGILANCE</span></td></tr>
+                    <tr><td>Hostile Blocs</td><td>Active espionage risk; unsanctioned security profiling.</td><td><span style="background: #fce8e6; color: #c5221f; padding: 2px 6px; border-radius: 4px; font-weight: bold;">LEVEL 3: TRAVEL PROHIBITED</span></td></tr>
+                </tbody>
+            </table>
+
+            <h3 style="margin-top: 40px;">Active Bilateral Treaty Registry</h3>
+            <table class="matrix-table" style="font-size: 11px;">
+                <thead>
+                    <tr><th>Sovereign Foreign Entity</th><th>Advisory Vector</th><th>Active Diplomatic Treaty Frameworks</th></tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>The Protectorate of Gotland and Oland</strong></td>
+                        <td>LEVEL 1</td>
+                        <td>☑ Embassy | ☐ Defence | ☐ FTA | ☑ CTA | ☐ Visa-Free | ☐ Currency Sync</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The Republic of Metallisia and the Community of Motollisia</strong></td>
+                        <td>LEVEL 1</td>
+                        <td>☑ Embassy | ☐ Defence | ☐ FTA | ☐ CTA | ☐ Visa-Free | ☐ Currency Sync</td>
+                    </tr>
+                    <tr>
+                        <td><strong>The Devorist State of Darkening Empire</strong></td>
+                        <td>LEVEL 1</td>
+                        <td>☑ Embassy | ☑ Defence | ☑ FTA | ☑ CTA | ☐ Visa-Free | ☑ Currency Sync</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
-    </nav>
 
-    <div class="container-wide">
-        <div class="inner-content">
-            
-            <h2 class="page-title">Embassy Registry Terminal</h2>
-            
+        <div class="card" style="border-top: 4px solid var(--accent-gold);">
+            <h2>Embassy Registry Terminal</h2>
             <p>All formal dispatches submitted through this terminal are channelled directly to the State Council via encrypted data nodes. Please expect up to 3 business days for administrative processing.</p>
-
-            <form class="embassy-form" action="https://formspree.io/f/xwvygeae" method="POST" style="margin-top: 25px; border-top: 4px solid var(--sinowa-blue); padding: 30px; background: var(--light-bg); border-radius: 6px;">
-                <div class="form-group" style="margin-bottom: 20px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Sovereign Nation / Regional Entity:</label>
-                    <input type="text" name="Foreign Nation" required placeholder="e.g., The Republic of Allies" style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; box-sizing: border-box;">
+            
+            <form action="https://formspree.io/f/xwvygeae" method="POST" style="margin-top: 25px;">
+                <label style="font-weight: bold; font-size: 14px;">Sovereign Nation / Regional Entity:</label>
+                <input type="text" name="Foreign Nation" required placeholder="e.g., The Republic of Allies">
+                
+                <label style="font-weight: bold; font-size: 14px;">Requested Diplomatic Matrix Components:</label>
+                <div class="checkbox-grid" style="margin-bottom: 15px;">
+                    <label><input type="checkbox" name="Ties: Standard Embassy" value="Requested"> Standard Embassy Exchange</label>
+                    <label><input type="checkbox" name="Ties: Mutual Defence" value="Requested"> Mutual Defence Pact</label>
+                    <label><input type="checkbox" name="Ties: Free Trade Agreement" value="Requested"> Free Trade Agreement (FTA)</label>
+                    <label><input type="checkbox" name="Ties: Common Travel Area" value="Requested"> Common Travel Area (CTA)</label>
+                    <label><input type="checkbox" name="Ties: Visa Free Entry" value="Requested"> Visa-Free Visit Entry</label>
+                    <label><input type="checkbox" name="Ties: Currency Alliance" value="Requested"> e-Kwang Currency Sync</label>
                 </div>
                 
-                <div class="form-group" style="margin-bottom: 20px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Requested Diplomatic Matrix Components:</label>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px; background: var(--card-bg); border-radius: 4px; border: 1px solid var(--border-color);">
-                        <div><input type="checkbox" name="Ties: Standard Embassy" value="Requested"> Standard Embassy Exchange</div>
-                        <div><input type="checkbox" name="Ties: Mutual Defence" value="Requested"> Mutual Defence Pact</div>
-                        <div><input type="checkbox" name="Ties: Free Trade Agreement" value="Requested"> Free Trade Agreement (FTA)</div>
-                        <div><input type="checkbox" name="Ties: Common Travel Area" value="Requested"> Common Travel Area (CTA)</div>
-                        <div><input type="checkbox" name="Ties: Visa Free Entry" value="Requested"> Visa-Free Visit Entry</div>
-                        <div><input type="checkbox" name="Ties: Currency Alliance" value="Requested"> e-Kwang Currency Sync</div>
-                    </div>
-                </div>
+                <label style="font-weight: bold; font-size: 14px;">Official Diplomatic Communiqué:</label>
+                <textarea name="Proposal Text" rows="6" required placeholder="Input standard text format..."></textarea>
                 
-                <div class="form-group" style="margin-bottom: 20px;">
-                    <label style="display: block; font-weight: bold; margin-bottom: 8px;">Official Diplomatic Communiqué:</label>
-                    <textarea name="Proposal Text" rows="6" required placeholder="Input standard text format..." style="width: 100%; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; box-sizing: border-box;"></textarea>
-                </div>
-                
-                <button type="submit" style="background: var(--sinowa-green); color: white; border: none; padding: 12px; border-radius: 6px; width: 100%; font-weight: bold; cursor: pointer;">Submit Proposal to Ministry</button>
+                <button type="submit" class="submit-btn">Submit Proposal to Ministry</button>
             </form>
-
         </div>
     </div>
-
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
-
-    <script>
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
-            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
-        }
-        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
-    </script>
 </body>
 </html>

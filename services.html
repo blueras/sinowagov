@@ -1,273 +1,184 @@
-<!DOCTYPE html> 
- <html lang="en-GB"> 
- <head> 
-     <meta charset="UTF-8"> 
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-     <title>Public Programmes & Central Infrastructure Matrix</title> 
-      
-     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png"> 
-     <link rel="stylesheet" href="style.css"> 
-     <style> 
-         .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; } 
-          
-         /* Two-Column Strategic Layout Split */ 
-         .programmes-grid { 
-             display: grid; 
-             grid-template-columns: 2fr 1.1fr; 
-             gap: 30px; 
-             margin-top: 25px; 
-         } 
-          
-         .allocation-sidebar { 
-             background: var(--light-bg); 
-             border: 1px solid var(--border-color); 
-             padding: 20px; 
-             border-radius: 6px; 
-             align-self: start; 
-         } 
-          
-         .allocation-sidebar h4 { 
-             margin-top: 0; 
-             margin-bottom: 12px; 
-             font-size: 14px; 
-             text-transform: uppercase; 
-             letter-spacing: 0.5px; 
-             color: var(--sinowa-blue); 
-             border-bottom: 1px solid var(--border-color); 
-             padding-bottom: 6px; 
-         } 
-         [data-theme="dark"] .allocation-sidebar h4 { color: var(--sinowa-gold); } 
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Public Programmes & Central Infrastructure Matrix</title>
+    
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; }
+        
+        /* Two-Column Strategic Layout Split */
+        .programmes-grid {
+            display: grid;
+            grid-template-columns: 2fr 1.1fr;
+            gap: 30px;
+            margin-top: 25px;
+        }
+        
+        .allocation-sidebar {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            border-radius: 6px;
+            align-self: start;
+        }
+        
+        .allocation-sidebar h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--sinowa-blue);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 6px;
+        }
+        [data-theme="dark"] .allocation-sidebar h4 { color: var(--sinowa-gold); }
 
-         .app-features-badge-container { 
-             display: flex; 
-             flex-wrap: wrap; 
-             gap: 6px; 
-             margin-top: 10px; 
-         } 
+        .app-features-badge-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 10px;
+        }
 
-         .app-badge { 
-             background: var(--sinowa-blue); 
-             color: white; 
-             font-size: 10.5px; 
-             padding: 4px 8px; 
-             border-radius: 4px; 
-             font-weight: 600; 
-         } 
-         [data-theme="dark"] .app-badge { background: #1a2333; color: var(--sinowa-gold); border: 1px solid #2d384c; } 
-     </style> 
- </head> 
- <body> 
+        .app-badge {
+            background: var(--sinowa-blue);
+            color: white;
+            font-size: 10.5px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        [data-theme="dark"] .app-badge { background: #1a2333; color: var(--sinowa-gold); border: 1px solid #2d384c; }
+    </style>
+</head>
+<body>
 
-     <header class="gov-header"> 
-         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"> 
-         <div class="gov-title"> 
-             <h1>SINOWA.GOV.SN</h1> 
-             <p>The State Council • The People's Republic of Sinowa</p> 
-         </div> 
-     </header> 
+    <header class="gov-header">
+        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
+        <div class="gov-title">
+            <h1>SINOWA.GOV.SN</h1>
+            <p>The State Council • The People's Republic of Sinowa</p>
+        </div>
+    </header>
 
-     <nav class="gov-nav"> 
-         <div class="nav-links"> 
-             <a href="index.html">Home</a> 
-             <a href="structure.html">Government & Defence</a> 
-             <a href="services.html">Public Programmes</a> 
-             <a href="immigration.html">Ministry of Home Affairs</a> 
-             <a href="embassy.html">Ministry of Foreign Affairs</a> 
-             <a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a> 
-             <a href="bank.html">Central Bank</a> 
-         </div> 
-         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button> 
-     </nav> 
+    <nav class="gov-nav">
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="structure.html">Defence & State</a>
+            <a href="commerce.html">Commerce & Tech</a>
+            <a href="housing.html">Housing</a>
+            <a href="education.html">Education</a>
+            <a href="services.html" style="color: var(--sinowa-gold);">Labour & Health</a>
+            <a href="immigration.html">Home Affairs</a>
+            <a href="embassy.html">Foreign Affairs</a>
+            <a href="statistics.html">Statistics</a>
+            <a href="bank.html">Central Bank</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
+    </nav>
 
-     <div class="container-wide"> 
-         <div class="inner-content"> 
-             <h2 class="page-title">Sovereign Resource Allocation & Public Programmes</h2> 
+    <div class="container-wide">
+        <div class="inner-content">
+            <h2 class="page-title">Sovereign Resource Allocation & Public Programmes</h2>
+            <p style="color: var(--text-muted); font-size: 15px;">The Department of Labour & Public Health coordinates national workforce deployment, infrastructure synchronisation, municipal planning matrices, and unified civic ledger registries.</p>
+            
+            <div class="programmes-grid">
+                
+                <div>
+                    
+                    <div class="service-block" style="border-left-color: var(--sinowa-blue); background: rgba(28, 59, 111, 0.02);">
+                        <h3>I. State Super-App Infrastructure: SinowaLink</h3>
+                        <p>The unified digital nexus linking all citizens natively to the sovereign grid. Operates securely via National ID biometric validation strings to consolidate all domestic communication, consumption, and monitoring interfaces into a singular state-managed framework:</p>
+                        <div class="app-features-badge-container">
+                            <span class="app-badge">Unified Messenger & Social Media</span>
+                            <span class="app-badge">Sovereign Content & Show Streaming</span>
+                            <span class="app-badge">In-Person QR Code Retail Point-of-Sale</span>
+                            <span class="app-badge">Transport & Hotel Bookings</span>
+                            <span class="app-badge">E-Kwang Mobile Banking Matrix</span>
+                            <span class="app-badge">Real-Time Health & Vitality Monitor</span>
+                            <span class="app-badge">Live Social Credit Tracking Node</span>
+                            <span class="app-badge">Educational Skilling & Learning Platform</span>
+                        </div>
+                    </div>
 
-             <p style="color: var(--text-muted); font-size: 
-15px;">The Department of Labour & Public Health coordinates 
-national workforce deployment, infrastructure synchronisation, municipal
- planning matrices, and unified civic ledger registries.</p> 
-              
-             <div class="programmes-grid"> 
-                  
-                 <div> 
-                      
+                    <div class="service-block" style="border-left-color: var(--sinowa-green);">
+                        <h3>II. Integrated Transport Planning & High-Speed Rail (HSR) Matrix</h3>
+                        <p>National transport infrastructure coordinates directly with the Ministry of Home Affairs biometric registry network. Physical ticketing architectures are entirely obsolete across the realm:</p>
+                        <ul>
+                            <li><strong>Nationwide Bus Network Sync:</strong> The standard National Identity Card functions natively as a contactless transit token across all municipal bus networks nationwide.</li>
+                            <li><strong>High-Speed Rail (HSR) Framework:</strong> Future engineering paths outline a complete, high-capacity continental rail grid. Passenger allocations and train cabin manifests register instantly upon scanning a valid National ID chip at transit terminals.</li>
+                        </ul>
+                    </div>
 
-                     <div class="service-block" 
-style="border-left-color: var(--sinowa-blue); background: rgba(28, 59, 
-111, 0.02);"> 
-                         <h3>I. State Super-App Infrastructure: SinowaLink</h3> 
+                    <div class="service-block">
+                        <h3>III. Universal Social Credit Integration Node</h3>
+                        <p>Following State Council Directive 915, civic behaviors translate directly into an algorithmic scoring matrix. Positive contributions (e.g., exceeding industrial production targets, completing volunteer labor shifts) systematically improve scores. Anti-social infractions yield immediate administrative consequences, including restricted infrastructure transit authorization and lower public service priorities.</p>
+                    </div>
 
-                         <p>The unified digital nexus linking all 
-citizens natively to the sovereign grid. Operates securely via National 
-ID biometric validation strings to consolidate all domestic 
-communication, consumption, and monitoring interfaces into a singular 
-state-managed framework:</p> 
-                         <div class="app-features-badge-container"> 
-                             <span class="app-badge">Unified Messenger & Social Media</span> 
-                             <span class="app-badge">Sovereign Content & Show Streaming</span> 
-                             <span class="app-badge">In-Person QR Code Retail Point-of-Sale</span> 
-                             <span class="app-badge">Transport & Hotel Bookings</span> 
-                             <span class="app-badge">E-Kwang Mobile Banking Matrix</span> 
-                             <span class="app-badge">Real-Time Health & Vitality Monitor</span> 
-                             <span class="app-badge">Live Social Credit Tracking Node</span> 
-                             <span class="app-badge">Educational Skilling & Learning Platform</span> 
-                         </div> 
-                     </div> 
+                    <div class="service-block" style="border-left-color: var(--sinowa-blue);">
+                        <h3>IV. State Land Monopoly & Municipal Allocation Ledger</h3>
+                        <p>Under absolute socialist property mandates, **the State retains exclusive ownership over 100% of the land within the country**. Private land ownership, real-estate speculation, and bourgeois rent-extraction vectors are permanently prohibited. Residential quarters and manufacturing sites are allocated strictly on a collective utility framework baseline, monitored via centralized household registries.</p>
+                    </div>
 
-                     <div class="service-block" style="border-left-color: var(--sinowa-green);"> 
-                         <h3>II. Integrated Transport Planning & High-Speed Rail (HSR) Matrix</h3> 
+                    <div class="service-block" style="border-left-color: var(--sinowa-green);">
+                        <h3>V. Sovereign Public Health & Vitality Register</h3>
+                        <p>The central medical framework acts as a baseline workforce preservation engine. Health diagnostics integrate directly with the *SinowaLink* app mesh to track environmental exposures and physical capacities, guaranteeing that pharmaceutical distribution and preventative medical countermeasures scale flawlessly alongside regional factory shifts.</p>
+                    </div>
 
-                         <p>National transport infrastructure 
-coordinates directly with the Ministry of Home Affairs biometric 
-registry network. Physical ticketing architectures are entirely obsolete
- across the realm:</p> 
-                         <ul> 
+                </div>
 
-                             <li><strong>Nationwide Bus 
-Network Sync:</strong> The standard National Identity Card 
-functions natively as a contactless transit token across all municipal 
-bus networks nationwide.</li> 
+                <div style="display: flex; flex-direction: column; gap: 20px;">
+                    
+                    <div class="allocation-sidebar">
+                        <h4>Social Credit Distribution Curve</h4>
+                        <table style="width: 100%; border-collapse: collapse; font-size: 12.5px;">
+                            <tr><td style="padding: 6px 0; border-bottom: 1px solid var(--border-color);"><strong>Tier A (Optimised):</strong></td><td style="text-align: right; font-family: monospace; font-weight: bold; color: #137333;">14.2%</td></tr>
+                            <tr><td style="padding: 6px 0; border-bottom: 1px solid var(--border-color);"><strong>Tier B (Stable Baseline):</strong></td><td style="text-align: right; font-family: monospace;">79.5%</td></tr>
+                            <tr><td style="padding: 6px 0; border-bottom: 1px solid var(--border-color);"><strong>Tier C (Monitored):</strong></td><td style="text-align: right; font-family: monospace; color: #b06000;">5.1%</td></tr>
+                            <tr><td style="padding: 6px 0;"><strong>Tier D (Restricted Matrix):</strong></td><td style="text-align: right; font-family: monospace; font-weight: bold; color: #c5221f;">1.2%</td></tr>
+                        </table>
+                    </div>
 
-                             <li><strong>High-Speed Rail 
-(HSR) Framework:</strong> Future engineering paths outline a 
-complete, high-capacity continental rail grid. Passenger allocations and
- train cabin manifests register instantly upon scanning a valid National
- ID chip at transit terminals.</li> 
-                         </ul> 
-                     </div> 
+                    <div class="allocation-sidebar">
+                        <h4>System Synchronisation Indicators</h4>
+                        <ul class="data-list">
+                            <li><strong>Super-App Activation:</strong> <span class="stat-val stat-pos">100% Sync</span></li>
+                            <li><strong>Land Lease Allocations:</strong> <span class="stat-val">100% State Held</span></li>
+                            <li><strong>HSR Corridor Engineering:</strong> <span class="stat-val">Phase II Active</span></li>
+                            <li><strong>Transit Card Tokenisation:</strong> <span class="stat-val">Contactless Active</span></li>
+                        </ul>
+                    </div>
 
-                     <div class="service-block"> 
-                         <h3>III. Universal Social Credit Integration Node</h3> 
+                    <div class="directive-box">
+                        "Through unified technology, absolute discipline, and state planning, the collective grid ensures progress for all workers."
+                    </div>
 
-                         <p>Following State Council Directive 915,
- civic behaviors translate directly into an algorithmic scoring matrix. 
-Positive contributions (e.g., exceeding industrial production targets, 
-completing volunteer labor shifts) systematically improve scores. 
-Anti-social infractions yield immediate administrative consequences, 
-including restricted infrastructure transit authorization and lower 
-public service priorities.</p> 
-                     </div> 
+                    <div class="allocation-sidebar" style="background: var(--card-bg);">
+                        <h4 style="font-size: 11px; border-bottom-color: var(--sinowa-red);">Administrative Directive Notice</h4>
+                        <p style="font-size: 12px; margin: 0; color: var(--text-muted); line-height: 1.45;">All citizens are legally required to keep their biometric profiles updated within the *SinowaLink* app to avoid temporary infrastructure transit and retail payment card suspension protocols.</p>
+                    </div>
 
-                     <div class="service-block" style="border-left-color: var(--sinowa-blue);"> 
-                         <h3>IV. State Land Monopoly & Municipal Allocation Ledger</h3> 
+                </div>
 
-                         <p>Under absolute socialist property 
-mandates, **the State retains exclusive ownership over 100% of the land 
-within the country**. Private land ownership, real-estate speculation, 
-and bourgeois rent-extraction vectors are permanently prohibited. 
-Residential quarters and manufacturing sites are allocated strictly on a
- collective utility framework baseline, monitored via centralized 
-household registries.</p> 
-                     </div> 
+            </div>
 
-                     <div class="service-block" style="border-left-color: var(--sinowa-green);"> 
-                         <h3>V. Sovereign Public Health & Vitality Register</h3> 
+        </div>
+    </div>
 
-                         <p>The central medical framework acts as a
- baseline workforce preservation engine. Health diagnostics integrate 
-directly with the *SinowaLink* app mesh to track environmental exposures
- and physical capacities, guaranteeing that pharmaceutical distribution 
-and preventative medical countermeasures scale flawlessly alongside 
-regional factory shifts.</p> 
-                     </div> 
+    <footer><p>© 2026 People's Republic of Sinowa. Department of Labour & Public Health. Central registration ledgers synchronised.</p></footer>
 
-                 </div> 
-
-                 <div style="display: flex; flex-direction: column; gap: 20px;"> 
-                      
-                     <div class="allocation-sidebar"> 
-                         <h4>Social Credit Distribution Curve</h4> 
-                         <table style="width: 100%; border-collapse: collapse; font-size: 12.5px;"> 
-
-                             <tr><td style="padding: 6px 0; 
-border-bottom: 1px solid var(--border-color);"><strong>Tier A 
-(Optimised):</strong></td><td style="text-align: right; 
-font-family: monospace; font-weight: bold; color: 
-#137333;">14.2%</td></tr> 
-
-                             <tr><td style="padding: 6px 0; 
-border-bottom: 1px solid var(--border-color);"><strong>Tier B 
-(Stable Baseline):</strong></td><td style="text-align: 
-right; font-family: monospace;">79.5%</td></tr> 
-
-                             <tr><td style="padding: 6px 0; 
-border-bottom: 1px solid var(--border-color);"><strong>Tier C 
-(Monitored):</strong></td><td style="text-align: right; 
-font-family: monospace; color: #b06000;">5.1%</td></tr> 
-
-                             <tr><td style="padding: 6px 
-0;"><strong>Tier D (Restricted 
-Matrix):</strong></td><td style="text-align: right; 
-font-family: monospace; font-weight: bold; color: 
-#c5221f;">1.2%</td></tr> 
-                         </table> 
-                     </div> 
-
-                     <div class="allocation-sidebar"> 
-                         <h4>System Synchronisation Indicators</h4> 
-                         <ul class="data-list"> 
-
-                             <li><strong>Super-App 
-Activation:</strong> <span class="stat-val stat-pos">100% 
-Sync</span></li> 
-
-                             <li><strong>Land Lease 
-Allocations:</strong> <span class="stat-val">100% State 
-Held</span></li> 
-
-                             <li><strong>HSR Corridor 
-Engineering:</strong> <span class="stat-val">Phase II 
-Active</span></li> 
-
-                             <li><strong>Transit Card 
-Tokenisation:</strong> <span class="stat-val">Contactless 
-Active</span></li> 
-                         </ul> 
-                     </div> 
-
-                     <div class="directive-box"> 
-
-                         "Through unified technology, absolute 
-discipline, and state planning, the collective grid ensures progress for
- all workers." 
-                     </div> 
-
-                     <div class="allocation-sidebar" style="background: var(--card-bg);"> 
-
-                         <h4 style="font-size: 11px; 
-border-bottom-color: var(--sinowa-red);">Administrative Directive 
-Notice</h4> 
-
-                         <p style="font-size: 12px; margin: 0; color:
- var(--text-muted); line-height: 1.45;">All citizens are legally 
-required to keep their biometric profiles updated within the 
-*SinowaLink* app to avoid temporary infrastructure transit and retail 
-payment card suspension protocols.</p> 
-                     </div> 
-
-                 </div> 
-
-             </div> 
-
-         </div> 
-     </div> 
-
-
-     <footer><p>© 2026 People's Republic of Sinowa. 
-Department of Labour & Public Health. Central registration ledgers 
-synchronised.</p></footer> 
-
-     <script> 
-         function toggleTheme() { 
-             const currentTheme = document.documentElement.getAttribute('data-theme'); 
-
-             if (currentTheme === 'dark') { 
-document.documentElement.removeAttribute('data-theme'); 
-localStorage.setItem('theme', 'light'); } 
-             else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); } 
-         } 
-         if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); } 
-     </script> 
- </body> 
- </html>
+    <script>
+        function toggleTheme() {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+        }
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
+    </script>
+</body>
+</html>

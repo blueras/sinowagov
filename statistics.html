@@ -1,186 +1,304 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>National Bureau of Statistics - Sinowa</title>
-    
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; }
-        .matrix-table { margin-bottom: 30px; width: 100%; border-collapse: collapse; }
-        
-        h3.sector-heading { 
-            font-family: "Times New Roman", Times, serif; 
-            color: var(--sinowa-blue); 
-            border-left: 3px solid var(--sinowa-red); 
-            padding-left: 12px; 
-            margin-top: 30px; 
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-        [data-theme="dark"] .sector-heading { color: var(--sinowa-gold); }
-        
-        .metric-value-box {
-            font-family: monospace;
-            font-weight: 700;
-            color: var(--text-color);
-        }
-        .loading-text {
-            color: var(--text-muted);
-            font-style: italic;
-        }
-    </style>
-</head>
-<body>
+<!DOCTYPE html> 
+ <html lang="en-GB"> 
+ <head> 
+     <meta charset="UTF-8"> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+     <title>National Bureau of Statistics - Sinowa</title> 
+      
+     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png"> 
+     <link rel="stylesheet" href="style.css"> 
+     <style> 
+         .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; } 
+         .matrix-table { margin-bottom: 30px; width: 100%; border-collapse: collapse; } 
+          
+         h3.sector-heading {  
+             font-family: "Times New Roman", Times, serif;  
+             color: var(--sinowa-blue);  
+             border-left: 3px solid var(--sinowa-red);  
+             padding-left: 12px;  
+             margin-top: 30px;  
+             margin-bottom: 15px; 
+             font-size: 18px; 
+         } 
+         [data-theme="dark"] .sector-heading { color: var(--sinowa-gold); } 
+          
+         .metric-value-box { 
+             font-family: monospace; 
+             font-weight: 700; 
+             color: var(--text-color); 
+         } 
+         .loading-text { 
+             color: var(--text-muted); 
+             font-style: italic; 
+         } 
+     </style> 
+ </head> 
+ <body> 
 
-    <header class="gov-header">
-        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title">
-            <h1>SINOWA.GOV.SN</h1>
-            <p>The State Council • The People's Republic of Sinowa</p>
-        </div>
-    </header>
+     <header class="gov-header"> 
+         <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"> 
+         <div class="gov-title"> 
+             <h1>SINOWA.GOV.SN</h1> 
+             <p>The State Council • The People's Republic of Sinowa</p> 
+         </div> 
+     </header> 
 
-    <nav class="gov-nav">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="structure.html">Government & Defence</a>
-            <a href="services.html">Public Programmes</a>
-            <a href="immigration.html">Ministry of Home Affairs</a>
-            <a href="embassy.html">Ministry of Foreign Affairs</a>
-            <a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a>
-            <a href="bank.html">Central Bank</a>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
-    </nav>
+     <nav class="gov-nav"> 
+         <div class="nav-links"> 
+             <a href="index.html">Home</a> 
+             <a href="structure.html">Government & Defence</a> 
+             <a href="services.html">Public Programmes</a> 
+             <a href="immigration.html">Ministry of Home Affairs</a> 
+             <a href="embassy.html">Ministry of Foreign Affairs</a> 
+             <a href="statistics.html" style="color: var(--sinowa-gold);">Bureau of Statistics</a> 
+             <a href="bank.html">Central Bank</a> 
+         </div> 
+         <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button> 
+     </nav> 
 
-    <div class="container-wide">
-        <div class="inner-content">
-            <h2 class="page-title">Sovereign Macroeconomic Ledger Matrix</h2>
-            <div class="matrix-info-alert">
-                <strong>AUTOMATED BACKGROUND INTERCEPT ACTIVE:</strong> This secure console runs a background XML API data-parsing script. Every time this ledger page is loaded, it securely queries your nation's statistics from the central servers, dynamically populating your live GDP, demographic shifts, crime quotients, and monetary exchange parameters completely automatically.
-            </div>
-            
-            <div style="margin-bottom: 25px;">
-                <a href="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" target="_blank" class="launch-btn">📊 Open Raw External Database Terminal</a>
-            </div>
+     <div class="container-wide"> 
+         <div class="inner-content"> 
+             <h2 class="page-title">Sovereign Macroeconomic Ledger Matrix</h2> 
+             <div class="matrix-info-alert"> 
 
-            <h3 class="sector-heading">Core Macroeconomic Metrics</h3>
-            <table class="matrix-table">
-                <thead>
-                    <tr><th>Sovereign Metric Sector Matrix</th><th>Registered Ledger Value</th><th>Auditing Security Protocol Status</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><span class="metric-label">Gross Domestic Product (GDP)</span></td><td><span id="gdp-val" class="metric-value-box loading-text">Synchronising data...</span></td><td><span class="status-badge">AUTO AUDITED</span></td></tr>
-                    <tr><td><span class="metric-label">GDP Per Capita Baseline</span></td><td><span id="gdp-capita" class="metric-value-box loading-text">Calculating...</span></td><td><span class="status-badge">AUTO AUDITED</span></td></tr>
-                    <tr><td><span class="metric-label">Average Annual Worker Salary</span></td><td><span id="avg-salary" class="metric-value-box loading-text">Calculating...</span></td><td><span class="status-badge">SOCIALIST STANDARD</span></td></tr>
-                    <tr><td><span class="metric-label">Income Tax Baseline Rate</span></td><td><span id="tax-rate" class="metric-value-box loading-text">Synchronising...</span></td><td><span class="status-badge">FIXED DIRECTIVE</span></td></tr>
-                </tbody>
-            </table>
+                 <strong>AUTOMATED BACKGROUND INTERCEPT 
+ACTIVE:</strong> This secure console runs a background XML API 
+data-parsing script. Every time this ledger page is loaded, it securely 
+queries your nation's statistics from the central servers, dynamically 
+populating your live GDP, demographic shifts, crime quotients, and 
+monetary exchange parameters completely automatically. 
+             </div> 
+              
+             <div style="margin-bottom: 25px;"> 
 
-            <h3 class="sector-heading">Sovereign Demographics & Workforce Registries</h3>
-            <table class="matrix-table">
-                <thead>
-                    <tr><th>Demographic Parameter Node</th><th>Registered Value Data</th><th>Statistical Validation Category</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><span class="metric-label">Total National Population Index</span></td><td><span id="pop-val" class="metric-value-box loading-text">Reading census records...</span></td><td><span class="status-badge">LIVE CENSUS SYNC</span></td></tr>
-                    <tr><td><span class="metric-label">Primary Industrial Specialisation</span></td><td><span id="industry-val" class="metric-value-box loading-text">Synchronising...</span></td><td><span class="status-badge">PRODUCTION CORE</span></td></tr>
-                    <tr><td><span class="metric-label">Civil System Classification</span></td><td><span id="gov-type" class="metric-value-box loading-text">Synchronising...</span></td><td><span class="status-badge">SYSTEM STABILITY</span></td></tr>
-                </tbody>
-            </table>
+                 <a 
+href="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" 
+target="_blank" class="launch-btn">📊 Open Raw External Database 
+Terminal</a> 
+             </div> 
 
-            <h3 class="sector-heading">Domestic Security & Crime Analytics</h3>
-            <table class="matrix-table">
-                <thead>
-                    <tr><th>Security Threat Metric</th><th>Sovereign Coefficient Rating</th><th>Operational Protocol Assessment</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><span class="metric-label">General Public Crime Index Score</span></td><td><span id="crime-val" class="metric-value-box loading-text">Auditing local nodes...</span></td><td><span class="status-badge">MONITORED PROFILE</span></td></tr>
-                    <tr><td><span class="metric-label">Sovereign Law Enforcement Level</span></td><td><span id="law-val" class="metric-value-box loading-text">Synchronising...</span></td><td><span class="status-badge">VANGUARD PATROLS</span></td></tr>
-                </tbody>
-            </table>
+             <h3 class="sector-heading">Core Macroeconomic Metrics</h3> 
+             <table class="matrix-table"> 
+                 <thead> 
 
-            <h3 class="sector-heading">Sovereign Monetary Exchange System</h3>
-            <table class="matrix-table">
-                <thead>
-                    <tr><th>International Currency Pairing</th><th>Exchange Rate Coefficient</th><th>Central Reserve Protocol Status</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td><span class="metric-label">e-Kwang (eK) to NationStates Dollar ($)</span></td><td><span id="exchange-val" class="metric-value-box loading-text">Computing bank clearance...</span></td><td><span class="status-badge">SOVEREIGN PEG ACTIVE</span></td></tr>
-                    <tr><td><span class="metric-label">Central Bank Liquidity Clearing Velocity</span></td><td>Real-Time Automated Node</td><td><span class="status-badge">ELECTRONIC EXCHANGE</span></td></tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+                     <tr><th>Sovereign Metric Sector 
+Matrix</th><th>Registered Ledger 
+Value</th><th>Auditing Security Protocol 
+Status</th></tr> 
+                 </thead> 
+                 <tbody> 
 
-    <footer><p>© 2026 People's Republic of Sinowa. Bureau of Statistics Portal. Internal tracking data ledger synchronised.</p></footer>
+                     <tr><td><span 
+class="metric-label">Gross Domestic Product 
+(GDP)</span></td><td><span id="gdp-val" 
+class="metric-value-box loading-text">Synchronising 
+data...</span></td><td><span 
+class="status-badge">AUTO AUDITED</span></td></tr> 
 
-    <script>
-        async function fetchLiveSovereignData() {
-            const nationName = "sinowa";
-            // Encoded using a standard global cors tunnel endpoint to fix Cross-Origin request blocking
-            const rawApiUrl = `https://www.nationstates.net/cgi-bin/api.cgi?nation=${nationName}&q=gdp+population+majorindustry+govt+crime+freedom+currency`;
-            const secureGatewayUrl = `https://corsproxy.io/?${encodeURIComponent(rawApiUrl)}`;
-            
-            try {
-                const response = await fetch(secureGatewayUrl);
-                if (!response.ok) throw new Error("Network intercept broken");
-                
-                const xmlText = await response.text();
-                const parser = new DOMParser();
-                const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-                
-                const population = parseFloat(xmlDoc.getElementsByTagName("POPULATION")[0].textContent);
-                const gdpValue = parseFloat(xmlDoc.getElementsByTagName("GDP")[0].textContent);
-                const industry = xmlDoc.getElementsByTagName("MAJORINDUSTRY")[0].textContent;
-                const govType = xmlDoc.getElementsByTagName("GOVT")[0].textContent;
-                
-                const civilFreedom = xmlDoc.getElementsByTagName("FREEDOM")[0];
-                const crimeScore = civilFreedom.getElementsByTagName("LAWANDORDER")[0].textContent;
-                
-                const rawPopulationTotal = Math.round(population * 1000000);
-                const absoluteGDP = gdpValue * 1000000;
-                const gdpPerCapita = absoluteGDP / rawPopulationTotal;
-                
-                document.getElementById("pop-val").innerText = rawPopulationTotal.toLocaleString('en-GB') + " Citizens";
-                document.getElementById("gdp-val").innerText = "eK " + absoluteGDP.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                document.getElementById("gdp-capita").innerText = "eK " + gdpPerCapita.toLocaleString('en-GB', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                document.getElementById("industry-val").innerText = industry;
-                document.getElementById("gov-type").innerText = govType;
-                document.getElementById("crime-val").innerText = crimeScore + " Coefficient";
-                document.getElementById("law-val").innerText = "Optimised Execution Modality";
-                document.getElementById("tax-rate").innerText = "37.00% Baseline";
-                document.getElementById("avg-salary").innerText = "eK " + (gdpPerCapita * 1.55).toLocaleString('en-GB', { maximumFractionDigits: 2 }) + ".13";
-                
-                const baselineExchange = (1.20 + (gdpPerCapita / 4000)).toFixed(2);
-                document.getElementById("exchange-val").innerText = `1.00 eK = $${baselineExchange} USD`;
+                     <tr><td><span 
+class="metric-label">GDP Per Capita 
+Baseline</span></td><td><span id="gdp-capita" 
+class="metric-value-box 
+loading-text">Calculating...</span></td><td><span
+ class="status-badge">AUTO AUDITED</span></td></tr>
+ 
 
-            } catch (error) {
-                console.log("CORS block or network issue. Dropping to secure fallback ledger...");
-                document.getElementById("pop-val").innerText = "12,000,000 Citizens";
-                document.getElementById("gdp-val").innerText = "eK 7,848,840,000.00";
-                document.getElementById("gdp-capita").innerText = "eK 1,308.14";
-                document.getElementById("industry-val").innerText = "Basket Weaving";
-                document.getElementById("gov-type").innerText = "Single-Party Socialist State";
-                document.getElementById("crime-val").innerText = "Low Coefficient Baseline";
-                document.getElementById("law-val").innerText = "Vanguard Patrol Enforced";
-                document.getElementById("tax-rate").innerText = "37.00% Fixed Rate";
-                document.getElementById("avg-salary").innerText = "eK 2,026.13";
-                document.getElementById("exchange-val").innerText = "1.00 eK = $1.42 USD";
-            }
-        }
+                     <tr><td><span 
+class="metric-label">Average Annual Worker 
+Salary</span></td><td><span id="avg-salary" 
+class="metric-value-box 
+loading-text">Calculating...</span></td><td><span
+ class="status-badge">SOCIALIST 
+STANDARD</span></td></tr> 
 
-        window.addEventListener('DOMContentLoaded', fetchLiveSovereignData);
+                     <tr><td><span 
+class="metric-label">Income Tax Baseline 
+Rate</span></td><td><span id="tax-rate" 
+class="metric-value-box 
+loading-text">Synchronising...</span></td><td><span
+ class="status-badge">FIXED 
+DIRECTIVE</span></td></tr> 
+                 </tbody> 
+             </table> 
 
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
-            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
-        }
-        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
-    </script>
-</body>
-</html>
+             <h3 class="sector-heading">Sovereign Demographics & Workforce Registries</h3> 
+             <table class="matrix-table"> 
+                 <thead> 
+
+                     <tr><th>Demographic Parameter 
+Node</th><th>Registered Value 
+Data</th><th>Statistical Validation 
+Category</th></tr> 
+                 </thead> 
+                 <tbody> 
+
+                     <tr><td><span 
+class="metric-label">Total National Population 
+Index</span></td><td><span id="pop-val" 
+class="metric-value-box loading-text">Reading census 
+records...</span></td><td><span 
+class="status-badge">LIVE CENSUS 
+SYNC</span></td></tr> 
+
+                     <tr><td><span 
+class="metric-label">Primary Industrial 
+Specialisation</span></td><td><span 
+id="industry-val" class="metric-value-box 
+loading-text">Synchronising...</span></td><td><span
+ class="status-badge">PRODUCTION 
+CORE</span></td></tr> 
+
+                     <tr><td><span 
+class="metric-label">Civil System 
+Classification</span></td><td><span id="gov-type" 
+class="metric-value-box 
+loading-text">Synchronising...</span></td><td><span
+ class="status-badge">SYSTEM 
+STABILITY</span></td></tr> 
+                 </tbody> 
+             </table> 
+
+             <h3 class="sector-heading">Domestic Security & Crime Analytics</h3> 
+             <table class="matrix-table"> 
+                 <thead> 
+
+                     <tr><th>Security Threat 
+Metric</th><th>Sovereign Coefficient 
+Rating</th><th>Operational Protocol 
+Assessment</th></tr> 
+                 </thead> 
+                 <tbody> 
+
+                     <tr><td><span 
+class="metric-label">General Public Crime Index 
+Score</span></td><td><span id="crime-val" 
+class="metric-value-box loading-text">Auditing local 
+nodes...</span></td><td><span 
+class="status-badge">MONITORED 
+PROFILE</span></td></tr> 
+
+                     <tr><td><span 
+class="metric-label">Sovereign Law Enforcement 
+Level</span></td><td><span id="law-val" 
+class="metric-value-box 
+loading-text">Synchronising...</span></td><td><span
+ class="status-badge">VANGUARD 
+PATROLS</span></td></tr> 
+                 </tbody> 
+             </table> 
+
+             <h3 class="sector-heading">Sovereign Monetary Exchange System</h3> 
+             <table class="matrix-table"> 
+                 <thead> 
+
+                     <tr><th>International Currency 
+Pairing</th><th>Exchange Rate 
+Coefficient</th><th>Central Reserve Protocol 
+Status</th></tr> 
+                 </thead> 
+                 <tbody> 
+
+                     <tr><td><span 
+class="metric-label">e-Kwang (eK) to NationStates Dollar 
+($)</span></td><td><span id="exchange-val" 
+class="metric-value-box loading-text">Computing bank 
+clearance...</span></td><td><span 
+class="status-badge">SOVEREIGN PEG 
+ACTIVE</span></td></tr> 
+
+                     <tr><td><span 
+class="metric-label">Central Bank Liquidity Clearing 
+Velocity</span></td><td>Real-Time Automated 
+Node</td><td><span class="status-badge">ELECTRONIC 
+EXCHANGE</span></td></tr> 
+                 </tbody> 
+             </table> 
+         </div> 
+     </div> 
+
+
+     <footer><p>© 2026 People's Republic of Sinowa. Bureau 
+of Statistics Portal. Internal tracking data ledger 
+synchronised.</p></footer> 
+
+     <script> 
+         async function fetchLiveSovereignData() { 
+             const nationName = "sinowa"; 
+             // Encoded using a standard global cors tunnel endpoint to fix Cross-Origin request blocking 
+
+             const rawApiUrl = 
+`https://www.nationstates.net/cgi-bin/api.cgi?nation=${nationName}&q=gdp+population+majorindustry+govt+crime+freedom+currency`;
+ 
+             const secureGatewayUrl = `https://corsproxy.io/?${encodeURIComponent(rawApiUrl)}`; 
+              
+             try { 
+                 const response = await fetch(secureGatewayUrl); 
+                 if (!response.ok) throw new Error("Network intercept broken"); 
+                  
+                 const xmlText = await response.text(); 
+                 const parser = new DOMParser(); 
+                 const xmlDoc = parser.parseFromString(xmlText, "text/xml"); 
+                  
+                 const population = parseFloat(xmlDoc.getElementsByTagName("POPULATION")[0].textContent); 
+                 const gdpValue = parseFloat(xmlDoc.getElementsByTagName("GDP")[0].textContent); 
+                 const industry = xmlDoc.getElementsByTagName("MAJORINDUSTRY")[0].textContent; 
+                 const govType = xmlDoc.getElementsByTagName("GOVT")[0].textContent; 
+                  
+                 const civilFreedom = xmlDoc.getElementsByTagName("FREEDOM")[0]; 
+                 const crimeScore = civilFreedom.getElementsByTagName("LAWANDORDER")[0].textContent; 
+                  
+                 const rawPopulationTotal = Math.round(population * 1000000); 
+                 const absoluteGDP = gdpValue * 1000000; 
+                 const gdpPerCapita = absoluteGDP / rawPopulationTotal; 
+                  
+                 document.getElementById("pop-val").innerText = rawPopulationTotal.toLocaleString('en-GB') + " Citizens"; 
+
+                 document.getElementById("gdp-val").innerText = "eK " + 
+absoluteGDP.toLocaleString('en-GB', { minimumFractionDigits: 2, 
+maximumFractionDigits: 2 }); 
+
+                 document.getElementById("gdp-capita").innerText = "eK "
+ + gdpPerCapita.toLocaleString('en-GB', { minimumFractionDigits: 2, 
+maximumFractionDigits: 2 }); 
+                 document.getElementById("industry-val").innerText = industry; 
+                 document.getElementById("gov-type").innerText = govType; 
+                 document.getElementById("crime-val").innerText = crimeScore + " Coefficient"; 
+                 document.getElementById("law-val").innerText = "Optimised Execution Modality"; 
+                 document.getElementById("tax-rate").innerText = "37.00% Baseline"; 
+
+                 document.getElementById("avg-salary").innerText = "eK "
+ + (gdpPerCapita * 1.55).toLocaleString('en-GB', { 
+maximumFractionDigits: 2 }) + ".13"; 
+                  
+                 const baselineExchange = (1.20 + (gdpPerCapita / 4000)).toFixed(2); 
+                 document.getElementById("exchange-val").innerText = `1.00 eK = $${baselineExchange} USD`; 
+
+             } catch (error) { 
+                 console.log("CORS block or network issue. Dropping to secure fallback ledger..."); 
+                 document.getElementById("pop-val").innerText = "12,000,000 Citizens"; 
+                 document.getElementById("gdp-val").innerText = "eK 7,848,840,000.00"; 
+                 document.getElementById("gdp-capita").innerText = "eK 1,308.14"; 
+                 document.getElementById("industry-val").innerText = "Basket Weaving"; 
+                 document.getElementById("gov-type").innerText = "Single-Party Socialist State"; 
+                 document.getElementById("crime-val").innerText = "Low Coefficient Baseline"; 
+                 document.getElementById("law-val").innerText = "Vanguard Patrol Enforced"; 
+                 document.getElementById("tax-rate").innerText = "37.00% Fixed Rate"; 
+                 document.getElementById("avg-salary").innerText = "eK 2,026.13"; 
+                 document.getElementById("exchange-val").innerText = "1.00 eK = $1.42 USD"; 
+             } 
+         } 
+
+         window.addEventListener('DOMContentLoaded', fetchLiveSovereignData); 
+
+         function toggleTheme() { 
+             const currentTheme = document.documentElement.getAttribute('data-theme'); 
+
+             if (currentTheme === 'dark') { 
+document.documentElement.removeAttribute('data-theme'); 
+localStorage.setItem('theme', 'light'); } 
+             else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); } 
+         } 
+         if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); } 
+     </script> 
+ </body> 
+ </html>

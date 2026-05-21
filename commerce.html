@@ -8,20 +8,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
-    <header class="gov-header"><div class="header-container"><div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div><button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button></div></header>
+    <header class="gov-header">
+        <div class="header-container">
+            <div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div>
+            <button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button>
+        </div>
+    </header>
     <nav class="gov-nav"><div class="nav-container"><div class="nav-links"><a href="index.html">Home</a><a href="structure.html">Defence & Structure</a><a href="commerce.html" class="active">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Public Programmes</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html">Statistics</a><a href="bank.html">Central Bank</a><a href="sinowalink.html">SinowaLink App</a></div></div></nav>
     <main class="main-content">
         <div class="image-grid">
-            <div class="image-card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" alt="Financial District"><div class="caption">🏙️ Sinowa Financial District</div></div>
-            <div class="image-card"><img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800" alt="Tech Hub"><div class="caption">💻 Pearl River Tech Hub</div></div>
-            <div class="image-card"><img src="https://images.unsplash.com/photo-1497366811353-2a2cf4a4f57c?w=800" alt="Industrial Zone"><div class="caption">🏭 Northern Industrial Corridor</div></div>
+            <div class="image-card"><img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600&h=400&fit=crop" alt="Financial District" onerror="this.src='https://placehold.co/600x400/0a4b8a/white?text=Sinowa+Financial+District'"><div class="caption">🏙️ Sinowa Financial District</div></div>
+            <div class="image-card"><img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=600&h=400&fit=crop" alt="Tech Hub" onerror="this.src='https://placehold.co/600x400/0a4b8a/white?text=Pearl+River+Tech+Hub'"><div class="caption">💻 Pearl River Tech Hub</div></div>
+            <div class="image-card"><img src="https://images.unsplash.com/photo-1497366811353-2a2cf4a4f57c?w=600&h=400&fit=crop" alt="Industrial Zone" onerror="this.src='https://placehold.co/600x400/0a4b8a/white?text=Northern+Industrial+Corridor'"><div class="caption">🏭 Northern Industrial Corridor</div></div>
         </div>
-        <div class="gov-panel"><h2 class="panel-header">Ministry of Commerce & Technological Innovation</h2><p>Regulating the private sector, managing Special Economic Zones (SEZs), and driving industrial growth under state guidance. Our economy combines dynamic private enterprise with strategic state oversight — a model we call State-Guided Capitalism.</p></div>
-        <div class="gov-panel"><h2 class="panel-header">State-Guided Capitalism & Corporate Oversight</h2><p>The State Council retains a <strong>"Golden Share" (1%) and a mandatory board seat</strong> in all major corporations. This ensures private profit generation never diverges from collective national interest.</p><div class="inset-text"><strong>2025 Performance:</strong> GDP growth 6.8% · Export growth 12.3% · 47 new factories · 12,000 jobs created</div></div>
-        <div class="gov-panel"><h2 class="panel-header">Special Economic Zones (SEZs)</h2><p>Three SEZs operate with streamlined regulations and tax incentives: Pearl River Delta Tech Hub (Tier 1), Northern Industrial Corridor (Tier 2), Western Development Zone (emerging). Foreign investment in SEZs reached eK 2.3B in 2025.</p></div>
+        <div class="gov-panel"><h2 class="panel-header">Ministry of Commerce & Technological Innovation</h2><p>Regulating the private sector, managing Special Economic Zones (SEZs), and driving industrial growth under state guidance.</p></div>
+        <div class="gov-panel"><h2 class="panel-header">State-Guided Capitalism</h2><p>The State Council retains a <strong>"Golden Share" (1%) and a mandatory board seat</strong> in all major corporations. This ensures private profit never diverges from collective national interest.</p><div class="inset-text"><strong>2025 Performance:</strong> GDP growth 6.8% · Export growth 12.3% · 12,000 jobs created</div></div>
+        <div class="gov-panel"><h2 class="panel-header">Special Economic Zones</h2><p>Three SEZs operate with streamlined regulations: Pearl River Delta Tech Hub (Tier 1), Northern Industrial Corridor (Tier 2), Western Development Zone (emerging). Foreign investment reached eK 2.3B in 2025.</p></div>
     </main>
     <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · Ministry of Commerce</p></div></div></footer>
-    <script>function toggleTheme(){let t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}document.getElementById('themeToggle').addEventListener('click',toggleTheme);if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+    <script>function toggleTheme(){const t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}document.getElementById('themeToggle').addEventListener('click',toggleTheme);if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 </body>
 </html>

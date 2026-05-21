@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
-    <header class="gov-header"><div class="header-container"><div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div><button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button></div></header>
+    <header class="gov-header">
+        <div class="header-container">
+            <div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div>
+            <button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button>
+        </div>
+    </header>
     <nav class="gov-nav"><div class="nav-container"><div class="nav-links"><a href="index.html">Home</a><a href="structure.html">Defence & Structure</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Public Programmes</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html" class="active">Statistics</a><a href="bank.html">Central Bank</a><a href="sinowalink.html">SinowaLink App</a></div></div></nav>
     <main class="main-content">
-        <div class="gov-panel"><h2 class="panel-header">National Bureau of Statistics · Live Economic Ledger</h2><p>This page securely queries live data from NationStates via the NSEconomy API. All figures update automatically on each page load.</p><a href="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" target="_blank" class="gov-button">📊 View Raw Data on NSEconomy</a></div>
-        <div class="gov-panel"><h2 class="panel-header">Core Macroeconomic Metrics</h2><table class="gov-table"><thead><tr><th>Metric</th><th>Current Value</th><th>Status</th></tr></thead><tbody><tr><td>GDP</td><td id="gdp-val">Loading...</td><td>Live Sync</td></tr><tr><td>GDP Per Capita</td><td id="gdp-capita">Loading...</td><td>Live Sync</td></tr><tr><td>Population</td><td id="pop-val">Loading...</td><td>Live Census</td></tr><tr><td>Average Salary</td><td id="avg-salary">Loading...</td><td>Calculated</td></tr><tr><td>Tax Rate</td><td id="tax-rate">Loading...</td><td>Fixed</td></tr><tr><td>e-Kwang Exchange</td><td id="exchange-val">Loading...</td><td>Managed Float</td></tr></tbody></table></div>
-        <div class="gov-panel"><h2 class="panel-header">Social Credit Distribution</h2><table class="gov-table"><thead><tr><th>Tier</th><th>Population %</th><th>Score Range</th></tr></thead><tbody><tr><td>A (Optimised)</td><td>14.2%</td><td>800-950</td></tr><tr><td>B (Stable)</td><td>79.5%</td><td>600-799</td></tr><tr><td>C (Monitored)</td><td>5.1%</td><td>400-599</td></tr><tr><td>D (Restricted)</td><td>1.2%</td><td>Below 400</td></tr></tbody></table></div>
+        <div class="gov-panel"><h2 class="panel-header">National Bureau of Statistics · Live Data</h2><p>This page pulls live data from NationStates via NSEconomy API.</p><a href="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" target="_blank" class="gov-button">📊 View on NSEconomy</a></div>
+        <div class="gov-panel"><h2 class="panel-header">Core Macroeconomic Metrics</h2><table class="gov-table"><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>GDP</td><td id="gdp-val">Loading...</td></tr><tr><td>GDP Per Capita</td><td id="gdp-capita">Loading...</td></tr><tr><td>Population</td><td id="pop-val">Loading...</td></tr><tr><td>Average Salary</td><td id="avg-salary">Loading...</td></tr><tr><td>Tax Rate</td><td id="tax-rate">Loading...</td></tr><tr><td>e-Kwang Exchange</td><td id="exchange-val">Loading...</td></tr></tbody></table></div>
     </main>
     <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · Bureau of Statistics</p></div></div></footer>
     <script>
         async function fetchLiveData() {
-            const nation = "sinowa";
-            const apiUrl = `https://corsproxy.io/?https://www.nationstates.net/cgi-bin/api.cgi?nation=${nation}&q=gdp+population+majorindustry+govt+crime+freedom+currency`;
             try {
-                const resp = await fetch(apiUrl);
+                const resp = await fetch(`https://corsproxy.io/?https://www.nationstates.net/cgi-bin/api.cgi?nation=sinowa&q=gdp+population`);
                 const text = await resp.text();
                 const parser = new DOMParser();
                 const xml = parser.parseFromString(text, "text/xml");
@@ -44,7 +45,7 @@
             }
         }
         fetchLiveData();
-        function toggleTheme(){let t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}
+        function toggleTheme(){const t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}
         document.getElementById('themeToggle').addEventListener('click',toggleTheme);
         if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
     </script>

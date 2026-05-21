@@ -16,38 +16,12 @@
     </header>
     <nav class="gov-nav"><div class="nav-container"><div class="nav-links"><a href="index.html">Home</a><a href="structure.html">Defence & Structure</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Public Programmes</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html" class="active">Statistics</a><a href="bank.html">Central Bank</a><a href="sinowalink.html">SinowaLink App</a></div></div></nav>
     <main class="main-content">
-        <div class="gov-panel"><h2 class="panel-header">National Bureau of Statistics · Live Data</h2><p>This page pulls live data from NationStates via NSEconomy API.</p><a href="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" target="_blank" class="gov-button">📊 View on NSEconomy</a></div>
-        <div class="gov-panel"><h2 class="panel-header">Core Macroeconomic Metrics</h2><table class="gov-table"><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>GDP</td><td id="gdp-val">Loading...</td></tr><tr><td>GDP Per Capita</td><td id="gdp-capita">Loading...</td></tr><tr><td>Population</td><td id="pop-val">Loading...</td></tr><tr><td>Average Salary</td><td id="avg-salary">Loading...</td></tr><tr><td>Tax Rate</td><td id="tax-rate">Loading...</td></tr><tr><td>e-Kwang Exchange</td><td id="exchange-val">Loading...</td></tr></tbody></table></div>
+        <div class="gov-panel"><h2 class="panel-header">National Bureau of Statistics · Live Economic Ledger</h2><p>This page securely queries live data from the NationStates API. All figures update automatically on each page load.</p><a href="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" target="_blank" class="gov-button">📊 View Raw Data on NSEconomy</a></div>
+
+        <div class="gov-panel"><h2 class="panel-header">Core Macroeconomic Metrics</h2><table class="gov-table"><thead><tr><th>Metric</th><th>Current Value</th><th>Status</th></tr></thead><tbody><tr><td>Gross Domestic Product (GDP)</span></td><td id="gdp-val">Loading...</span><td><span style="color:#2e7d32;">Live Sync</span></td></tr><tr><td>GDP Per Capita</span></td><td id="gdp-capita">Loading...</span><td><span style="color:#2e7d32;">Live Sync</span></td></tr><tr><td>Total Population</span></td><td id="pop-val">Loading...</span><td><span style="color:#2e7d32;">Live Census</span></td></tr><tr><td>Average Annual Worker Salary</span></td><td id="avg-salary">Loading...</span><td>Calculated</td></tr><tr><td>Income Tax Rate</span></td><td id="tax-rate">Loading...</span><td>Fixed Directive</td></tr><tr><td>e-Kwang Exchange Rate (to USD)</span></td><td id="exchange-val">Loading...</span><td>Managed Float</td></tr></tbody></table></div>
+
+        <div class="gov-panel"><h2 class="panel-header">Demographics & Governance</h2><table class="gov-table"><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>Major Industry</span></td><td id="industry-val">Loading...</span></td></tr><tr><td>Government Type</span></td><td id="gov-type">Loading...</span></td></tr><tr><td>Crime Index</span></td><td id="crime-val">Loading...</span></td></tr><tr><td>Law Enforcement Level</span></td><td id="law-val">Loading...</span></td></tr><tr><td>Global Passport Rank</span></td><td><strong>#02</strong> (Vanguard Tier)</span></td></tr></tbody></table></div>
+
+        <div class="gov-panel"><h2 class="panel-header">Social Credit Distribution Curve</h2><table class="gov-table"><thead><tr><th>Tier</th><th>Population %</th><th>Score Range</th><th>Description</th></tr></thead><tbody><tr><td><strong>Tier A (Optimised)</strong></span><td>14.2%</span><td>800-950</span><td>Priority access, travel perks, lower loan rates</td></tr><tr><td><strong>Tier B (Stable Baseline)</strong></span><td>79.5%</span><td>600-799</span><td>Standard access, full rights</td></tr><tr><td><strong>Tier C (Monitored)</strong></span><td>5.1%</span><td>400-599</span><td>Restricted transit, mandatory education courses</td></tr><tr><td><strong>Tier D (Restricted)</strong></span><td>1.2%</span><td>Below 400</span><td>Travel bans, service penalties, enhanced monitoring</td></tr></tbody></table><div class="inset-text"><strong>System Synchronisation Indicators:</strong> SinowaLink Activation: 100% · Land Lease Allocations: 100% State Held · HSR Corridor Engineering: Phase II Active · Transit Tokenisation: Contactless Active</div></div>
     </main>
-    <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · Bureau of Statistics</p></div></div></footer>
-    <script>
-        async function fetchLiveData() {
-            try {
-                const resp = await fetch(`https://corsproxy.io/?https://www.nationstates.net/cgi-bin/api.cgi?nation=sinowa&q=gdp+population`);
-                const text = await resp.text();
-                const parser = new DOMParser();
-                const xml = parser.parseFromString(text, "text/xml");
-                const pop = parseFloat(xml.getElementsByTagName("POPULATION")[0]?.textContent || 12) * 1000000;
-                const gdp = parseFloat(xml.getElementsByTagName("GDP")[0]?.textContent || 7.848) * 1000000;
-                document.getElementById("pop-val").innerHTML = Math.round(pop).toLocaleString() + " citizens";
-                document.getElementById("gdp-val").innerHTML = "eK " + gdp.toLocaleString('en-GB', {minimumFractionDigits:2});
-                document.getElementById("gdp-capita").innerHTML = "eK " + (gdp/pop).toLocaleString('en-GB', {minimumFractionDigits:2});
-                document.getElementById("tax-rate").innerHTML = "37.00%";
-                document.getElementById("avg-salary").innerHTML = "eK " + ((gdp/pop)*1.55).toLocaleString('en-GB', {minimumFractionDigits:2});
-                document.getElementById("exchange-val").innerHTML = "1 eK = $" + (1.20 + (gdp/pop/4000)).toFixed(2) + " USD";
-            } catch(e) {
-                document.getElementById("pop-val").innerHTML = "12,000,000 citizens";
-                document.getElementById("gdp-val").innerHTML = "eK 7,848,840,000";
-                document.getElementById("gdp-capita").innerHTML = "eK 1,308.14";
-                document.getElementById("tax-rate").innerHTML = "37.00%";
-                document.getElementById("avg-salary").innerHTML = "eK 2,026.13";
-                document.getElementById("exchange-val").innerHTML = "1 eK = $1.42 USD";
-            }
-        }
-        fetchLiveData();
-        function toggleTheme(){const t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}
-        document.getElementById('themeToggle').addEventListener('click',toggleTheme);
-        if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
-    </script>
-</body>
-</html>
+    <footer class="gov-footer"><div class="footer-container"><div class="footer-meta

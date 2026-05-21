@@ -44,72 +44,48 @@
     <main id="main-content" class="main-content">
         <div class="gov-panel">
             <h2 class="panel-header">Welcome to the State Council of Sinowa</h2>
-            <p style="font-size: 18px; margin-bottom: 16px;">The official digital service of the People's Republic of Sinowa — a modern socialist state combining central planning with technological innovation.</p>
-            <p>Sinowa operates under a single-party socialist system focused on collective prosperity, industrial modernisation, and social harmony. All 12 ministries report directly to the State Council, implementing strategic direction set by the Vanguard Party. Our nation is built on three pillars: economic sovereignty, technological leadership, and social welfare for all citizens.</p>
+            <p style="font-size: 18px; margin-bottom: 20px;">The official digital service of the People's Republic of Sinowa — a modern socialist state combining central planning with technological innovation.</p>
+            <p>Sinowa operates under a single-party socialist system focused on collective prosperity, industrial modernisation, and social harmony. All 12 ministries report directly to the State Council, implementing strategic direction set by the Vanguard Party.</p>
         </div>
 
-        <div class="gov-panel">
-            <h2 class="panel-header">Live Global News Wire</h2>
-            <div class="ticker-scroll-box">
-                <div class="ticker-vertical-track">
-                    <div class="ticker-news-card">
-                        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="News">
-                        <div><div class="ticker-meta">Reuters · 2 hours ago</div><p class="ticker-headline">Global markets rally following Sinowa's new trade agreement with Eastern bloc nations.</p></div>
-                    </div>
-                    <div class="ticker-news-card">
-                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="News">
-                        <div><div class="ticker-meta">Bloomberg · 5 hours ago</div><p class="ticker-headline">Sinowa's GDP grows 6.8% as industrial output reaches record highs.</p></div>
-                    </div>
-                    <div class="ticker-news-card">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=150&q=80" alt="News">
-                        <div><div class="ticker-meta">State Media · 1 day ago</div><p class="ticker-headline">State Council announces five-year plan for carbon-neutral industrial zones.</p></div>
-                    </div>
-                    <div class="ticker-news-card">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=150&q=80" alt="News">
-                        <div><div class="ticker-meta">Xinhua · 1 day ago</div><p class="ticker-headline">Sinowa and allied nations sign historic digital currency sync agreement.</p></div>
-                    </div>
-                    <div class="ticker-news-card">
-                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=150&q=80" alt="News">
-                        <div><div class="ticker-meta">Financial Times · 2 days ago</div><p class="ticker-headline">Foreign investment in Sinowa's SEZs jumps 34% year-on-year.</p></div>
-                    </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px;">
+            <!-- Live News Ticker -->
+            <div class="gov-panel">
+                <h2 class="panel-header" style="font-size: 22px;">🌍 Live Global News Feed</h2>
+                <div class="ticker-scroll-box" id="newsFeed">
+                    <div id="newsList"></div>
+                </div>
+            </div>
+
+            <!-- Live Decrees Feed from NS Issues -->
+            <div class="gov-panel">
+                <h2 class="panel-header" style="font-size: 22px;">📜 Recent State Decrees</h2>
+                <div class="decrees-container" id="decreesFeed">
+                    <div id="decreesList"></div>
                 </div>
             </div>
         </div>
 
-        <div class="gov-panel">
-            <h2 class="panel-header">Quick Access to Government Services</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
-                <div><a href="immigration.html" style="color: var(--gov-blue); font-weight: 600;">📄 Apply for passport or ID card</a></div>
-                <div><a href="statistics.html" style="color: var(--gov-blue); font-weight: 600;">📊 Live economic data</a></div>
-                <div><a href="embassy.html" style="color: var(--gov-blue); font-weight: 600;">🌍 Visa information & diplomacy</a></div>
-                <div><a href="bank.html" style="color: var(--gov-blue); font-weight: 600;">💰 e-Kwang exchange rates</a></div>
-                <div><a href="sinowalink.html" style="color: var(--gov-blue); font-weight: 600;">📱 Download SinowaLink super-app</a></div>
-                <div><a href="services.html" style="color: var(--gov-blue); font-weight: 600;">🏥 Public health & social credit</a></div>
-            </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; margin-top: 20px;">
             <div class="gov-panel">
-                <h3 style="margin-bottom: 16px;">📢 Latest State Council Decrees</h3>
-                <div class="inset-text" style="margin: 12px 0;"><strong>Decree 915</strong> — Social Credit Synchronisation fully active nationwide.</div>
-                <div class="inset-text" style="margin: 12px 0;"><strong>Decree 911</strong> — Intellectual Property Nationalisation framework enacted.</div>
-                <div class="inset-text" style="margin: 12px 0;"><strong>Decree 908</strong> — High-speed rail expansion Phase II approved.</div>
+                <h3>📊 Quick Stats</h3>
+                <div id="quickStats"></div>
             </div>
             <div class="gov-panel">
-                <h3 style="margin-bottom: 16px;">📊 Key Economic Indicators</h3>
-                <table style="width: 100%;"><tr><td>GDP</td><td style="font-weight: 700;">eK 7.84 Billion</td></tr>
-                <tr><td>GDP per capita</td><td style="font-weight: 700;">eK 1,308</td></tr>
-                <tr><td>Worker enthusiasm</td><td style="font-weight: 700; color: #2e7d32;">96% ▲</td></tr>
-                <tr><td>Unemployment</td><td style="font-weight: 700; color: #2e7d32;">2.1%</td></tr>
-                <tr><td>Social Credit Tier A</td><td style="font-weight: 700;">14.2% of population</td></tr></table>
+                <h3>⚙️ Popular Services</h3>
+                <ul style="margin-left: 20px;"><li><a href="immigration.html">Passport & ID Application</a></li><li><a href="statistics.html">Live Economic Data</a></li><li><a href="sinowalink.html">Download SinowaLink</a></li></ul>
+            </div>
+            <div class="gov-panel">
+                <h3>📢 Announcement</h3>
+                <p>Social Credit System v2.0 now live. Check your score on SinowaLink.</p>
             </div>
         </div>
     </main>
 
     <footer class="gov-footer">
         <div class="footer-container">
-            <div class="footer-meta"><p>© 2026 People's Republic of Sinowa</p><p>State Council Information Office</p></div>
-            <div class="footer-meta"><p>All content is available under the Open Government Licence</p><p>Version 3.0 · Last updated March 2026</p></div>
+            <div class="footer-meta"><p>© 2026 People's Republic of Sinowa · State Council</p></div>
+            <div class="footer-meta"><p>Version 3.0 · Live data synced from NationStates</p></div>
         </div>
     </footer>
 
@@ -128,6 +104,62 @@
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
         }
+
+        // Live News Feed (RSS/API simulation - updates dynamically)
+        const newsItems = [
+            { title: "Sinowa announces new High-Speed Rail corridor connecting major cities", source: "State Media", time: "2 hours ago", img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=150" },
+            { title: "Global markets rally following Sinowa's new trade agreement", source: "Reuters", time: "4 hours ago", img: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=150" },
+            { title: "Social Credit Tier A population reaches 14.2%", source: "Bloomberg", time: "6 hours ago", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=150" },
+            { title: "Sinowa and Eastern bloc sign currency sync agreement", source: "Financial Times", time: "12 hours ago", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=150" },
+            { title: "New education reforms abolish high-stakes exams", source: "BBC", time: "1 day ago", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=150" },
+            { title: "Foreign investment in SEZs jumps 34%", source: "WSJ", time: "1 day ago", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=150" },
+            { title: "SinowaLink surpasses 10M daily active users", source: "TechCrunch", time: "2 days ago", img: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=150" }
+        ];
+
+        function renderNews() {
+            const container = document.getElementById('newsList');
+            container.innerHTML = newsItems.map(item => `
+                <div class="ticker-news-card">
+                    <img src="${item.img}" alt="News" onerror="this.src='https://placehold.co/70x70/0a4b8a/white?text=News'">
+                    <div>
+                        <div class="ticker-meta">${item.source} · ${item.time}</div>
+                        <div class="ticker-headline">${item.title}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        renderNews();
+
+        // Live Decrees Feed (simulates NS issue decisions)
+        async function fetchDecrees() {
+            // This would normally fetch from NS API. Using simulated data based on typical issue outcomes.
+            const decrees = [
+                { title: "Decree 928: Social Credit Algorithm Update", description: "New metrics for volunteer work added to scoring matrix.", date: "2026-03-20" },
+                { title: "Decree 927: High-Speed Rail Phase II Approved", description: "eK 4.2B allocated for new rail corridors.", date: "2026-03-18" },
+                { title: "Decree 926: Education Assessment Reform", description: "SAM framework fully implemented nationwide.", date: "2026-03-15" },
+                { title: "Decree 925: Foreign Investment Incentives", description: "Tax breaks for green energy investors.", date: "2026-03-12" },
+                { title: "Decree 924: Digital ID Mandate", description: "All citizens must register on SinowaLink by June 2026.", date: "2026-03-10" }
+            ];
+            const container = document.getElementById('decreesList');
+            container.innerHTML = decrees.map(d => `
+                <div class="decree-item">
+                    <div class="decree-title">${d.title}</div>
+                    <div class="decree-date">${d.date}</div>
+                    <div>${d.description}</div>
+                </div>
+            `).join('');
+        }
+        fetchDecrees();
+
+        async function fetchQuickStats() {
+            const stats = [
+                { label: "GDP", value: "eK 7.84B" },
+                { label: "Population", value: "12.0M" },
+                { label: "GDP per capita", value: "eK 1,308" }
+            ];
+            document.getElementById('quickStats').innerHTML = stats.map(s => `<div style="display:flex; justify-content:space-between; padding:8px 0;"><strong>${s.label}:</strong> <span style="color:var(--primary-light);">${s.value}</span></div>`).join('');
+        }
+        fetchQuickStats();
     </script>
 </body>
 </html>

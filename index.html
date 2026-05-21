@@ -1,137 +1,154 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>State Council of the People's Republic of Sinowa</title>
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="gov-header">
-        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
+<!DOCTYPE html> 
+<html lang="en-GB"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>State Council of the People's Republic of Sinowa</title> 
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png"> 
+    <link rel="stylesheet" href="style.css"> 
+    <style> 
+        .container { max-width: 100% !important; padding: 0 8% !important; margin: 30px auto !important; display: grid !important; grid-template-columns: 2fr 1fr !important; gap: 45px !important; justify-content: space-between !important; } 
+        .ticker-wrap { margin-top: 35px; border-top: 2px dashed var(--border-color); padding-top: 25px; } 
+        .ticker-scroll-box { width: 100%; height: 245px; overflow: hidden; position: relative; background: transparent; border-radius: 6px; } 
+        .ticker-vertical-track { display: flex; flex-direction: column; position: absolute; width: 100%; animation: scrollVerticalTicker 20s linear infinite; } 
+        .ticker-scroll-box:hover .ticker-vertical-track { animation-play-state: paused; } 
+        .ticker-news-card { display: flex; align-items: center; background: var(--light-bg); border: 1px solid var(--border-color); border-left: 4px solid var(--sinowa-blue); border-radius: 6px; padding: 12px 16px; margin-bottom: 12px; gap: 15px; box-sizing: border-box; height: 70px; } 
+        [data-theme="dark"] .ticker-news-card { background: #1d212c; } 
+        .ticker-news-card img { width: 65px; height: 48px; object-fit: cover; border-radius: 4px; border: 1px solid var(--border-color); flex-shrink: 0; } 
+        .ticker-card-text { display: flex; flex-direction: column; white-space: normal; } 
+        .ticker-meta { font-size: 9px; font-weight: 800; color: var(--sinowa-red); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 1px; } 
+        .ticker-headline { font-size: 12.5px; font-weight: 600; margin: 0; line-height: 1.35; color: var(--text-color); } 
+        @keyframes scrollVerticalTicker { 0% { transform: translateY(0); } 100% { transform: translateY(-246px); } } 
+        .decree-log { margin-top: 25px !important; padding: 25px !important; background: var(--card-bg) !important; border: 1px solid var(--border-color) !important; box-shadow: var(--shadow-md) !important; border-radius: 8px; } 
+    </style> 
+</head> 
+<body> 
+    <header class="gov-header"> 
+        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"> 
         <div class="gov-title">
             <h1>SINOWA.GOV.SN</h1>
             <p>The State Council • The People's Republic of Sinowa</p>
-        </div>
-    </header>
+        </div> 
+    </header> 
     
-    <nav class="gov-nav">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="structure.html">Government & Defence</a>
-            <a href="services.html">Public Programmes</a>
-            <a href="immigration.html">Ministry of Home Affairs</a>
-            <a href="embassy.html">Ministry of Foreign Affairs</a>
-            <a href="statistics.html">Bureau of Statistics</a>
-            <a href="bank.html">Central Bank</a>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
-    </nav>
+    <nav class="gov-nav"> 
+        <div class="nav-links"> 
+            <a href="index.html" style="color: var(--sinowa-gold);">Home</a> 
+            <a href="structure.html">Government & Defence</a> 
+            <a href="commerce.html">Commerce</a> 
+            <a href="housing.html">Housing</a> 
+            <a href="education.html">Education</a> 
+            <a href="services.html">Public Programmes</a> 
+            <a href="immigration.html">Ministry of Home Affairs</a> 
+            <a href="embassy.html">Ministry of Foreign Affairs</a> 
+            <a href="statistics.html">Bureau of Statistics</a> 
+            <a href="bank.html">Central Bank</a> 
+        </div> 
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button> 
+    </nav> 
     
-    <div class="container">
-        <main class="main-content">
-            <section id="welcome">
-                <h2 class="section-title">Central Executive Overview</h2>
-                <p>Welcome to the primary administrative nexus of the People's Republic of Sinowa. This official structural framework maps real-time data metrics, production allocations, and regulatory protocols directed by the state ministries. Under centralised coordination models, operations focus strictly on comprehensive industrial modernisation, infrastructure automation paths, and absolute resource synchronisation.</p>
-            </section>
+    <div class="container"> 
+        <main class="main-content"> 
+            <section id="welcome"> 
+                <h2 class="section-title">Central Executive Overview</h2> 
+                <p style="font-size: 14.5px; margin: 0 0 15px 0;">Welcome to the primary administrative nexus of the People's Republic of Sinowa. This official structural framework maps real-time data metrics, production allocations, and regulatory protocols directed by the state ministries. Under centralised coordination models, operations focus strictly on comprehensive industrial modernisation, infrastructure automation paths, and absolute resource synchronisation.</p> 
+            </section> 
             
-            <section id="departments">
-                <h2 class="section-title">Administrative Ministry Access Hub</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <h3><a href="structure.html">Ministry of Defence & State Structure →</a></h3>
-                        <p>Review constitutional frameworks and the mandatory 1-year military service directives for all citizens upon maturity.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3><a href="services.html">Department of Labour & Public Health →</a></h3>
-                        <p>Access employment allocations, localised factory shifts, and universal welfare distribution programmes.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3><a href="immigration.html">Ministry of Home Affairs Portal →</a></h3>
-                        <p>Examine multi-citizenship protocols, Permanent Residency / Indefinite Leave to Remain frameworks, and biometric passport metrics.</p>
-                    </div>
-                    <div class="service-card">
-                        <h3><a href="embassy.html">Ministry of Foreign Affairs Portal →</a></h3>
-                        <p>Access travel advisory matrices, coordinate global visa permissions, and submit bilateral treaty applications.</p>
-                    </div>
-                </div>
-            </section>
+            <section id="departments"> 
+                <h2 class="section-title">Administrative Ministry Access Hub</h2> 
+                <div class="services-grid"> 
+                    <div class="service-card"> 
+                        <h3><a href="structure.html">Ministry of Defence & State Structure →</a></h3> 
+                        <p>Review constitutional frameworks and the mandatory 1-year military service directives for all citizens upon maturity.</p> 
+                    </div> 
+                    <div class="service-card"> 
+                        <h3><a href="services.html">Department of Labour & Public Health →</a></h3> 
+                        <p>Access employment allocations, localised factory shifts, and universal welfare distribution programmes.</p> 
+                    </div> 
+                    <div class="service-card"> 
+                        <h3><a href="immigration.html">Ministry of Home Affairs Portal →</a></h3> 
+                        <p>Examine multi-citizenship protocols, Permanent Residency / Indefinite Leave to Remain frameworks, and biometric passport metrics.</p> 
+                    </div> 
+                    <div class="service-card"> 
+                        <h3><a href="embassy.html">Ministry of Foreign Affairs Portal →</a></h3> 
+                        <p>Access travel advisory matrices, coordinate global visa permissions, and submit bilateral treaty applications.</p> 
+                    </div> 
+                </div> 
+            </section> 
             
-            <section class="ticker-wrap">
-                <h2 class="section-title">Global Media Intelligence Wire</h2>
-                <p style="color: var(--text-muted); margin-bottom: 15px;">Real-time intelligence intercepts from international communications corridors.</p>
-                <div class="ticker-scroll-box">
-                    <div class="ticker-vertical-track">
-                        <div class="ticker-news-card">
-                            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance">
-                            <div class="ticker-card-text"><span class="ticker-meta">Reuters • Geopolitical</span><p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p></div>
-                        </div>
-                        <div class="ticker-news-card">
-                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Tech">
-                            <div class="ticker-card-text"><span class="ticker-meta">Bloomberg • Automation</span><p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight volume markers.</p></div>
-                        </div>
-                        <div class="ticker-news-card">
-                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Infrastructure">
-                            <div class="ticker-card-text"><span class="ticker-meta">BBC News • Energy Grid</span><p class="ticker-headline">Continental nuclear networks transition to fully decentralised thorium core configurations.</p></div>
-                        </div>
-                        <div class="ticker-news-card">
-                            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance">
-                            <div class="ticker-card-text"><span class="ticker-meta">Reuters</span><p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p></div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
+            <section class="ticker-wrap"> 
+                <h2 class="section-title">Global Media Intelligence Wire</h2> 
+                <p style="font-size: 13.5px; color: var(--text-muted); margin-bottom: 15px; margin-top: 0;">Real-time intelligence intercepts from international communications corridors.</p> 
+                <div class="ticker-scroll-box"> 
+                    <div class="ticker-vertical-track"> 
+                        <div class="ticker-news-card"> 
+                            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance"> 
+                            <div class="ticker-card-text"><span class="ticker-meta">Reuters • Geopolitical</span><p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p></div> 
+                        </div> 
+                        <div class="ticker-news-card"> 
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="Tech"> 
+                            <div class="ticker-card-text"><span class="ticker-source">Bloomberg • Automation</span><p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set record freight volume markers.</p></div> 
+                        </div> 
+                        <div class="ticker-news-card"> 
+                            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=150&q=80" alt="Infrastructure"> 
+                            <div class="ticker-card-text"><span class="ticker-source">BBC News • Energy Grid</span><p class="ticker-headline">Continental nuclear networks transition to fully decentralised thorium core configurations.</p></div> 
+                        </div> 
+                        <div class="ticker-news-card"> 
+                            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="Finance"> 
+                            <div class="ticker-card-text"><span class="ticker-source">Reuters</span><p class="ticker-headline">Global equity indices trade lower following supply chain adjustments in industrial corridors.</p></div> 
+                        </div> 
+                    </div> 
+                </div> 
+            </section> 
+        </main> 
         
-        <div style="display: flex; flex-direction: column; gap: 25px;">
-            <aside class="sidebar" style="border-left-color: var(--gov-black);">
-                <h4 style="margin-top: 0; margin-bottom: 12px; font-size: 13px; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; text-align: center;">Vanguard Party Emblem</h4>
-                <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem" style="display: block; margin: 0 auto 15px auto;">
+        <div style="display: flex; flex-direction: column; gap: 25px;"> 
+            <aside class="sidebar"> 
+                <h4 style="margin-top: 0; margin-bottom: 12px; font-size: 13px; text-transform: uppercase; color: var(--text-muted); letter-spacing: 0.5px; text-align: center;">Vanguard Party Emblem</h4> 
+                <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem" style="display: block; margin: 0 auto 15px auto;"> 
                 
-                <div class="stats-panel">
-                    <h4 style="color: var(--gov-blue); font-size: 16px; border-bottom: 2px solid var(--gov-border); padding-bottom: 5px;">Sovereign Economic Data</h4>
-                    <ul class="data-list">
-                        <li><strong>GDP Balance:</strong> <span class="stat-val">$7.84B</span></li>
-                        <li><strong>GDP Per Capita:</strong> <span class="stat-val">$1,308.14</span></li>
-                        <li><strong>Average Salary:</strong> <span class="stat-val">$2,026.13</span></li>
-                        <li><strong>Income Tax Rate:</strong> <span class="stat-val">37%</span></li>
-                        <li><strong>Unemployment:</strong> <span class="stat-val" style="color: var(--gov-red);">24.80%</span></li>
-                        <li><strong>Worker Enthusiasm:</strong> <span class="stat-val" style="color: var(--gov-green);">96%</span></li>
-                    </ul>
-                    
-                    <h4 style="color: var(--gov-blue); font-size: 16px; border-bottom: 2px solid var(--gov-border); padding-bottom: 5px; margin-top: 20px;">Domestic Parameters</h4>
-                    <ul class="data-list">
-                        <li><strong>Core System Matrix:</strong> <span class="stat-val">Single-Party Socialist</span></li>
-                        <li><strong>Capital Core:</strong> <span class="stat-val">Sinowa City</span></li>
-                        <li><strong>State Currency:</strong> <span class="stat-val">e-Kwang (eK)</span></li>
-                        <li><strong>Primary Sector:</strong> <span class="stat-val">Basket Weaving</span></li>
-                        <li><strong>Sovereign Animal:</strong> <span class="stat-val">Clouded Leopard</span></li>
-                    </ul>
-                </div>
-                <a href="https://www.nationstates.net/page=telegrams/to=sinowa" class="telegram-btn" target="_blank">✉ Direct Telegram Access</a>
-            </aside>
+                <div class="stats-panel"> 
+                    <h4>Sovereign Economic Data Matrix</h4> 
+                    <ul class="data-list"> 
+                        <li><strong>GDP Balance:</strong> <span class="stat-val">$7.84B</span></li> 
+                        <li><strong>GDP Per Capita:</strong> <span class="stat-val">$1,308.14</span></li> 
+                        <li><strong>Average Salary:</strong> <span class="stat-val">$2,026.13</span></li> 
+                        <li><strong>Income Tax Rate:</strong> <span class="stat-val">37%</span></li> 
+                        <li><strong>Unemployment:</strong> <span class="stat-val stat-neg">24.80%</span></li> 
+                        <li><strong>Worker Enthusiasm:</strong> <span class="stat-val stat-pos">96%</span></li> 
+                    </ul> 
+                    <h4>Domestic Parameters</h4> 
+                    <ul class="data-list"> 
+                        <li><strong>Core System Matrix:</strong> <span>Single-Party Socialist</span></li> 
+                        <li><strong>Capital Core:</strong> <span>Sinowa City</span></li> 
+                        <li><strong>State Currency:</strong> <span>e-Kwang (eK)</span></li> 
+                        <li><strong>Primary Sector:</strong> <span>Basket Weaving</span></li> 
+                        <li><strong>Sovereign Animal:</strong> <span>Clouded Leopard</span></li> 
+                    </ul> 
+                </div> 
+                <a href="https://www.nationstates.net/page=telegrams/to=sinowa" class="telegram-btn" target="_blank">✉ Direct Telegram Access</a> 
+                <div class="disclaimer-text">Notice: Response window may take up to 3 business days.</div> 
+            </aside> 
             
-            <section class="decree-log">
-                <h3 style="margin-top:0; margin-bottom:12px; font-size:18px;">Recent Decrees</h3>
-                <div style="border-bottom: 1px solid var(--gov-border); padding: 10px 0; font-size: 14px;"><span class="decree-badge">Decree 915</span> <strong>Social Credit Synchronisation Directive:</strong> Centralised civic ledger activated. Public behaviours and contributions will be systematically tracked to determine hospital queue priorities and administrative documentation rights.</div>
-                <div style="border-bottom: 1px solid var(--gov-border); padding: 10px 0; font-size: 14px;"><span class="decree-badge">Decree 911</span> <strong>Intellectual Property Nationalisation Directive:</strong> Centralised framework enacted to absorb culturally significant media, songs, and designs into the absolute public domain.</div>
-                <div style="border-bottom: 1px solid var(--gov-border); padding: 10px 0; font-size: 14px;"><span class="decree-badge">Decree 904</span> <strong>Sovereign Multiple-Citizenship Ratification:</strong> Dual documentation streams legalised for domestic workforce units.</div>
-                <div style="padding: 10px 0; font-size: 14px;"><span class="decree-badge">Decree 892</span> <strong>Settlement Status:</strong> Creation of standardised PR and ILR guidelines for foreign technical labour.</div>
-                <div style="background: #fffbf0; border-left: 4px solid var(--sinowa-gold); padding: 16px; margin-top: 20px; font-style: italic; font-size: 14px;">"Efficiency in labour, unity in progress. The reclamation of our land ensurement remains the strongest asset."</div>
-            </section>
-        </div>
-    </div>
+            <section class="decree-log"> 
+                <h3 style="margin-top:0; margin-bottom:12px; font-family: serif; font-size:15px; color: var(--sinowa-blue);">Recent Decrees</h3> 
+                <div class="decree-item"><span class="decree-badge">Decree 915</span> <strong>Social Credit Synchronisation Directive:</strong> Centralised civic ledger activated. Public behaviours and contributions will be systematically tracked.</div> 
+                <div class="decree-item"><span class="decree-badge">Decree 911</span> <strong>Intellectual Property Nationalisation Directive:</strong> Centralised framework enacted to absorb culturally significant media, songs, and designs into the absolute public domain.</div> 
+                <div class="decree-item"><span class="decree-badge">Decree 904</span> <strong>Sovereign Multiple-Citizenship Ratification:</strong> Dual documentation streams legalised for domestic workforce units.</div> 
+                <div class="decree-item"><span class="decree-badge">Decree 892</span> <strong>Settlement Status:</strong> Creation of standardised PR and ILR guidelines for foreign technical labour.</div> 
+                <div class="directive-box" style="margin-top: 15px; padding: 14px;">"Efficiency in labour, unity in progress. The reclamation of our land ensurement remains the strongest asset."</div> 
+            </section> 
+        </div> 
+    </div> 
 
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking data ledger synchronised.</p></footer>
-    
-    <script>
-        function toggleTheme() {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
-            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
-        }
-        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
-    </script>
-</body>
+    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking data ledger synchronised.</p></footer> 
+    <script> 
+        function toggleTheme() { 
+            const currentTheme = document.documentElement.getAttribute('data-theme'); 
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); } 
+            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); } 
+        } 
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); } 
+    </script> 
+</body> 
 </html>

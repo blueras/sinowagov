@@ -19,7 +19,7 @@
                     <p>The State Council · People's Republic of Sinowa</p>
                 </div>
             </div>
-            <button class="theme-toggle-btn" onclick="toggleTheme()">🌓 Dark/Light mode</button>
+            <button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button>
         </div>
     </header>
 
@@ -36,50 +36,80 @@
                 <a href="embassy.html">Foreign Affairs</a>
                 <a href="statistics.html">Statistics</a>
                 <a href="bank.html">Central Bank</a>
+                <a href="sinowalink.html">SinowaLink App</a>
             </div>
         </div>
     </nav>
 
     <main id="main-content" class="main-content">
         <div class="gov-panel">
-            <h2 class="panel-header">Welcome to the State Council</h2>
-            <p>This is the official digital service of the People's Republic of Sinowa. Our socialist state combines central planning with technological innovation to serve all citizens. Here you can access government services, understand our policies, and engage with the nation's administration.</p>
-            <p style="margin-top: 15px;">Sinowa operates under a single-party socialist system with a focus on collective prosperity, industrial modernisation, and social harmony. All ministries report directly to the State Council, which implements the strategic direction set by the Vanguard Party.</p>
+            <h2 class="panel-header">Welcome to the State Council of Sinowa</h2>
+            <p style="font-size: 18px; margin-bottom: 16px;">The official digital service of the People's Republic of Sinowa — a modern socialist state combining central planning with technological innovation.</p>
+            <p>Sinowa operates under a single-party socialist system focused on collective prosperity, industrial modernisation, and social harmony. All 12 ministries report directly to the State Council, implementing strategic direction set by the Vanguard Party. Our nation is built on three pillars: economic sovereignty, technological leadership, and social welfare for all citizens.</p>
         </div>
 
         <div class="gov-panel">
-            <h2 class="panel-header">Quick access to services</h2>
-            <ul style="margin-left: 20px; line-height: 1.8;">
-                <li><a href="immigration.html" style="color: var(--gov-blue);">Apply for documents (passport, ID card, driving licence)</a></li>
-                <li><a href="statistics.html" style="color: var(--gov-blue);">View live economic and demographic data</a></li>
-                <li><a href="embassy.html" style="color: var(--gov-blue);">Submit diplomatic proposals or check visa rules</a></li>
-                <li><a href="bank.html" style="color: var(--gov-blue);">Understand the e-Kwang monetary system</a></li>
-            </ul>
-        </div>
-
-        <div class="gov-panel">
-            <h2 class="panel-header">Latest from the State Council</h2>
-            <div class="inset-text">
-                <h3 style="margin-bottom: 8px;">📢 Social Credit Framework Update (Decree 915)</h3>
-                <p>The Ministry of Home Affairs has activated the new algorithmic scoring matrix. Citizens can now check their standing via the SinowaLink app. Positive contributions improve access to public services.</p>
+            <h2 class="panel-header">Live Global News Wire</h2>
+            <div class="ticker-scroll-box">
+                <div class="ticker-vertical-track">
+                    <div class="ticker-news-card">
+                        <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="News">
+                        <div><div class="ticker-meta">Reuters · 2 hours ago</div><p class="ticker-headline">Global markets rally following Sinowa's new trade agreement with Eastern bloc nations.</p></div>
+                    </div>
+                    <div class="ticker-news-card">
+                        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="News">
+                        <div><div class="ticker-meta">Bloomberg · 5 hours ago</div><p class="ticker-headline">Sinowa's GDP grows 6.8% as industrial output reaches record highs.</p></div>
+                    </div>
+                    <div class="ticker-news-card">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=150&q=80" alt="News">
+                        <div><div class="ticker-meta">State Media · 1 day ago</div><p class="ticker-headline">State Council announces five-year plan for carbon-neutral industrial zones.</p></div>
+                    </div>
+                    <div class="ticker-news-card">
+                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=150&q=80" alt="News">
+                        <div><div class="ticker-meta">Xinhua · 1 day ago</div><p class="ticker-headline">Sinowa and allied nations sign historic digital currency sync agreement.</p></div>
+                    </div>
+                    <div class="ticker-news-card">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=150&q=80" alt="News">
+                        <div><div class="ticker-meta">Financial Times · 2 days ago</div><p class="ticker-headline">Foreign investment in Sinowa's SEZs jumps 34% year-on-year.</p></div>
+                    </div>
+                </div>
             </div>
-            <div class="inset-text">
-                <h3 style="margin-bottom: 8px;">🏗️ High-Speed Rail Phase II begins</h3>
-                <p>Construction on the continental rail grid has started. National ID cards will serve as contactless transit tokens across all new lines.</p>
+        </div>
+
+        <div class="gov-panel">
+            <h2 class="panel-header">Quick Access to Government Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div><a href="immigration.html" style="color: var(--gov-blue); font-weight: 600;">📄 Apply for passport or ID card</a></div>
+                <div><a href="statistics.html" style="color: var(--gov-blue); font-weight: 600;">📊 Live economic data</a></div>
+                <div><a href="embassy.html" style="color: var(--gov-blue); font-weight: 600;">🌍 Visa information & diplomacy</a></div>
+                <div><a href="bank.html" style="color: var(--gov-blue); font-weight: 600;">💰 e-Kwang exchange rates</a></div>
+                <div><a href="sinowalink.html" style="color: var(--gov-blue); font-weight: 600;">📱 Download SinowaLink super-app</a></div>
+                <div><a href="services.html" style="color: var(--gov-blue); font-weight: 600;">🏥 Public health & social credit</a></div>
+            </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+            <div class="gov-panel">
+                <h3 style="margin-bottom: 16px;">📢 Latest State Council Decrees</h3>
+                <div class="inset-text" style="margin: 12px 0;"><strong>Decree 915</strong> — Social Credit Synchronisation fully active nationwide.</div>
+                <div class="inset-text" style="margin: 12px 0;"><strong>Decree 911</strong> — Intellectual Property Nationalisation framework enacted.</div>
+                <div class="inset-text" style="margin: 12px 0;"><strong>Decree 908</strong> — High-speed rail expansion Phase II approved.</div>
+            </div>
+            <div class="gov-panel">
+                <h3 style="margin-bottom: 16px;">📊 Key Economic Indicators</h3>
+                <table style="width: 100%;"><tr><td>GDP</td><td style="font-weight: 700;">eK 7.84 Billion</td></tr>
+                <tr><td>GDP per capita</td><td style="font-weight: 700;">eK 1,308</td></tr>
+                <tr><td>Worker enthusiasm</td><td style="font-weight: 700; color: #2e7d32;">96% ▲</td></tr>
+                <tr><td>Unemployment</td><td style="font-weight: 700; color: #2e7d32;">2.1%</td></tr>
+                <tr><td>Social Credit Tier A</td><td style="font-weight: 700;">14.2% of population</td></tr></table>
             </div>
         </div>
     </main>
 
     <footer class="gov-footer">
         <div class="footer-container">
-            <div class="footer-meta">
-                <p>© 2026 People's Republic of Sinowa</p>
-                <p>State Council Information Office</p>
-            </div>
-            <div class="footer-meta">
-                <p>All content is available under the Open Government Licence</p>
-                <p>Built for NationStates · Version 2.0</p>
-            </div>
+            <div class="footer-meta"><p>© 2026 People's Republic of Sinowa</p><p>State Council Information Office</p></div>
+            <div class="footer-meta"><p>All content is available under the Open Government Licence</p><p>Version 3.0 · Last updated March 2026</p></div>
         </div>
     </footer>
 
@@ -94,6 +124,7 @@
                 localStorage.setItem('theme', 'dark');
             }
         }
+        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
         if (localStorage.getItem('theme') === 'dark') {
             document.documentElement.setAttribute('data-theme', 'dark');
         }

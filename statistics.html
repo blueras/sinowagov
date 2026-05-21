@@ -24,4 +24,46 @@
 
         <div class="gov-panel"><h2 class="panel-header">Social Credit Distribution Curve</h2><table class="gov-table"><thead><tr><th>Tier</th><th>Population %</th><th>Score Range</th><th>Description</th></tr></thead><tbody><tr><td><strong>Tier A (Optimised)</strong></span><td>14.2%</span><td>800-950</span><td>Priority access, travel perks, lower loan rates</td></tr><tr><td><strong>Tier B (Stable Baseline)</strong></span><td>79.5%</span><td>600-799</span><td>Standard access, full rights</td></tr><tr><td><strong>Tier C (Monitored)</strong></span><td>5.1%</span><td>400-599</span><td>Restricted transit, mandatory education courses</td></tr><tr><td><strong>Tier D (Restricted)</strong></span><td>1.2%</span><td>Below 400</span><td>Travel bans, service penalties, enhanced monitoring</td></tr></tbody></table><div class="inset-text"><strong>System Synchronisation Indicators:</strong> SinowaLink Activation: 100% · Land Lease Allocations: 100% State Held · HSR Corridor Engineering: Phase II Active · Transit Tokenisation: Contactless Active</div></div>
     </main>
-    <footer class="gov-footer"><div class="footer-container"><div class="footer-meta
+    <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · Bureau of Statistics</p></div></div></footer>
+    <script>
+        async function fetchLiveData() {
+            try {
+                const resp = await fetch(`https://corsproxy.io/?https://www.nationstates.net/cgi-bin/api.cgi?nation=sinowa&q=gdp+population+majorindustry+govt+crime`);
+                const text = await resp.text();
+                const parser = new DOMParser();
+                const xml = parser.parseFromString(text, "text/xml");
+                const pop = parseFloat(xml.getElementsByTagName("POPULATION")[0]?.textContent || 12) * 1000000;
+                const gdp = parseFloat(xml.getElementsByTagName("GDP")[0]?.textContent || 7.848) * 1000000;
+                const industry = xml.getElementsByTagName("MAJORINDUSTRY")[0]?.textContent || "Basket Weaving";
+                const gov = xml.getElementsByTagName("GOVT")[0]?.textContent || "Single-Party Socialist State";
+                const crime = xml.getElementsByTagName("LAWANDORDER")[0]?.textContent || "Low";
+                document.getElementById("pop-val").innerHTML = Math.round(pop).toLocaleString() + " citizens";
+                document.getElementById("gdp-val").innerHTML = "eK " + gdp.toLocaleString('en-GB', {minimumFractionDigits:2});
+                document.getElementById("gdp-capita").innerHTML = "eK " + (gdp/pop).toLocaleString('en-GB', {minimumFractionDigits:2});
+                document.getElementById("industry-val").innerHTML = industry;
+                document.getElementById("gov-type").innerHTML = gov;
+                document.getElementById("crime-val").innerHTML = crime + " coefficient";
+                document.getElementById("law-val").innerHTML = "Vanguard Patrol Active";
+                document.getElementById("tax-rate").innerHTML = "37.00%";
+                document.getElementById("avg-salary").innerHTML = "eK " + ((gdp/pop)*1.55).toLocaleString('en-GB', {minimumFractionDigits:2});
+                document.getElementById("exchange-val").innerHTML = "1 eK = $" + (1.20 + (gdp/pop/4000)).toFixed(2) + " USD";
+            } catch(e) {
+                document.getElementById("pop-val").innerHTML = "12,000,000 citizens";
+                document.getElementById("gdp-val").innerHTML = "eK 7,848,840,000";
+                document.getElementById("gdp-capita").innerHTML = "eK 1,308.14";
+                document.getElementById("industry-val").innerHTML = "Basket Weaving";
+                document.getElementById("gov-type").innerHTML = "Single-Party Socialist State";
+                document.getElementById("crime-val").innerHTML = "Low coefficient";
+                document.getElementById("law-val").innerHTML = "Vanguard Patrol Active";
+                document.getElementById("tax-rate").innerHTML = "37.00%";
+                document.getElementById("avg-salary").innerHTML = "eK 2,026.13";
+                document.getElementById("exchange-val").innerHTML = "1 eK = $1.42 USD";
+            }
+        }
+        fetchLiveData();
+        function toggleTheme(){const t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}
+        document.getElementById('themeToggle').addEventListener('click',toggleTheme);
+        if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
+    </script>
+</body>
+</html>

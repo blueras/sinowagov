@@ -10,47 +10,18 @@
 <body>
     <header class="gov-header">
         <div class="header-container">
-            <div class="header-left">
-                <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-                <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div>
-            </div>
+            <div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div>
             <button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button>
         </div>
     </header>
-    <nav class="gov-nav">
-        <div class="nav-container">
-            <div class="nav-links">
-                <a href="index.html">Home</a><a href="structure.html" class="active">Defence & Structure</a>
-                <a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a>
-                <a href="services.html">Public Programmes</a><a href="immigration.html">Home Affairs</a>
-                <a href="embassy.html">Foreign Affairs</a><a href="statistics.html">Statistics</a>
-                <a href="bank.html">Central Bank</a><a href="sinowalink.html">SinowaLink App</a>
-            </div>
-        </div>
-    </nav>
+    <nav class="gov-nav"><div class="nav-container"><div class="nav-links"><a href="index.html">Home</a><a href="structure.html" class="active">Defence & Structure</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Public Programmes</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html">Statistics</a><a href="bank.html">Central Bank</a><a href="sinowalink.html">SinowaLink App</a></div></div></nav>
     <main class="main-content">
-        <div class="gov-panel">
-            <h2 class="panel-header">Ministry of Defence & State Structure</h2>
-            <p>The People's Republic of Sinowa operates under a dual-power administrative matrix, ensuring strategic ideological planning remains harmonised with daily state execution.</p>
-        </div>
-        <div class="inset-text" style="border-left-color: var(--red);">
-            <h4 style="margin-bottom: 8px; color: var(--red);">⚔️ Conventional State Defence Mandate — Chapter 4</h4>
-            <p>All citizens upon reaching the age of maturity (18 years) are legally conscripted into the Armed Forces of Sinowa for a strict 1-year mandatory service period. No exemptions are granted outside of prioritised medical infrastructure or industrial logistics assignments. Reserve obligations continue until age 45.</p>
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 28px 0;">
-            <div class="gov-panel"><h3 style="color: var(--primary);">🏛️ The Vanguard Party</h3><p style="margin-top: 12px;">The central governing core responsible for national policy, ratification of sovereign decrees, and five-year economic goals.</p></div>
-            <div class="gov-panel"><h3 style="color: var(--primary);">⚙️ The State Council</h3><p style="margin-top: 12px;">The supreme executive secretariat coordinating daily administrative functions of all state ministries.</p></div>
-        </div>
+        <div class="gov-panel"><h2 class="panel-header">Ministry of Defence & State Structure</h2><p>The People's Republic of Sinowa operates under a dual-power administrative matrix, ensuring strategic ideological planning remains harmonised with daily state execution.</p></div>
+        <div class="inset-text" style="border-left-color: var(--red);"><h4 style="margin-bottom: 8px; color: var(--red);">⚔️ Conventional State Defence Mandate — Chapter 4</h4><p>All citizens upon reaching the age of maturity (18 years) are legally conscripted into the Armed Forces of Sinowa for a strict 1-year mandatory service period. Reserve obligations continue until age 45.</p></div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin: 28px 0;"><div class="gov-panel"><h3 style="color: var(--primary);">🏛️ The Vanguard Party</h3><p style="margin-top: 12px;">The central governing core responsible for national policy, ratification of sovereign decrees, and five-year economic goals.</p></div><div class="gov-panel"><h3 style="color: var(--primary);">⚙️ The State Council</h3><p style="margin-top: 12px;">The supreme executive secretariat coordinating daily administrative functions of all state ministries.</p></div></div>
+        <div class="gov-panel"><h2 class="panel-header">Defence Asset Classification</h2><table class="gov-table"><thead><tr><th>Branch</th><th>Responsibility</th><th>Status</th></tr></thead><tbody><tr><td><strong>Central Strategic Command</strong></td><td>Military asset allocations, defensive planning</td><td style="color:#2e7d32;">ACTIVE</td></tr><tr><td><strong>People's Strategic Logistics</strong></td><td>Supply synchronisation, transport protection</td><td style="color:#2e7d32;">SYNCHRONISED</td></tr></tbody></table></div>
     </main>
     <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · Defence Command</p></div></div></footer>
-    <script>
-        function toggleTheme() {
-            const current = document.documentElement.getAttribute('data-theme');
-            if (current === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
-            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
-        }
-        document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-        if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
-    </script>
+    <script>function toggleTheme(){const t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}document.getElementById('themeToggle').addEventListener('click',toggleTheme);if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
 </body>
 </html>

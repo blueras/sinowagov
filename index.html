@@ -2,95 +2,101 @@
 <html lang="en-GB">
 <head>
     <meta charset="UTF-8">
-    <title>State Council of the People's Republic of Sinowa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOV.SN - People's Republic of Sinowa</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
+
     <header class="gov-header">
-        <div class="page-container" style="display: flex; align-items: center;">
-            <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-            <div class="gov-title">
-                <h1>SINOWA.GOV.SN</h1>
-                <p>The State Council • The People's Republic of Sinowa</p>
+        <div class="header-container">
+            <div class="header-left">
+                <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag of Sinowa">
+                <div class="gov-title">
+                    <h1>SINOWA.GOV.SN</h1>
+                    <p>The State Council · People's Republic of Sinowa</p>
+                </div>
             </div>
+            <button class="theme-toggle-btn" onclick="toggleTheme()">🌓 Dark/Light mode</button>
         </div>
     </header>
 
     <nav class="gov-nav">
-        <div class="page-container">
-            <a href="index.html">Home</a>
-            <a href="structure.html">Government & Defence</a>
-            <a href="commerce.html">Commerce</a>
-            <a href="housing.html">Housing</a>
-            <a href="education.html">Education</a>
-            <a href="services.html">Public Programmes</a>
-            <a href="immigration.html">Ministry of Home Affairs</a>
-            <a href="embassy.html">Ministry of Foreign Affairs</a>
-            <a href="statistics.html">Bureau of Statistics</a>
-            <a href="bank.html">Central Bank</a>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="structure.html">Defence & Structure</a>
+                <a href="commerce.html">Commerce</a>
+                <a href="housing.html">Housing</a>
+                <a href="education.html">Education</a>
+                <a href="services.html">Public Programmes</a>
+                <a href="immigration.html">Home Affairs</a>
+                <a href="embassy.html">Foreign Affairs</a>
+                <a href="statistics.html">Statistics</a>
+                <a href="bank.html">Central Bank</a>
+            </div>
         </div>
     </nav>
 
-    <div class="page-container">
-        <div class="main-layout">
-            <main>
-                <div class="card">
-                    <h2>Central Executive Overview</h2>
-                    <p>Welcome to the primary administrative nexus of the People's Republic of Sinowa. This official structural framework maps real-time data metrics, production allocations, and regulatory protocols directed by the state ministries. Under centralised coordination models, operations focus strictly on comprehensive industrial modernisation, infrastructure automation paths, and absolute resource synchronisation.</p>
-                </div>
-
-                <div class="card">
-                    <h2>Administrative Ministry Access Hub</h2>
-                    <ul>
-                        <li><a href="structure.html">Ministry of Defence & State Structure</a></li>
-                        <li><a href="services.html">Department of Labour & Public Health</a></li>
-                        <li><a href="immigration.html">Ministry of Home Affairs</a></li>
-                        <li><a href="embassy.html">Ministry of Foreign Affairs</a></li>
-                    </ul>
-                </div>
-
-                <div class="card ticker-wrap">
-                    <h2>Global Media Intelligence Wire</h2>
-                    <div class="ticker-scroll-box">
-                        <div class="ticker-vertical-track">
-                            <div class="ticker-news-card">
-                                <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=150&q=80" alt="News">
-                                <div><div class="ticker-meta">Reuters</div><p class="ticker-headline">Global equity indices trade lower following supply chain adjustments.</p></div>
-                            </div>
-                            <div class="ticker-news-card">
-                                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=150&q=80" alt="News">
-                                <div><div class="ticker-meta">Bloomberg</div><p class="ticker-headline">Artificial intelligence systems in deep-sea cargo docks set records.</p></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-
-            <aside>
-                <div class="card">
-                    <img src="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png" alt="Party Emblem" style="width: 60px; display: block; margin: 0 auto 15px;">
-                    <h4>Sovereign Economic Data Matrix</h4>
-                    <ul class="data-list">
-                        <li>GDP Balance: <span class="stat-val">$7.84B</span></li>
-                        <li>GDP Per Capita: <span class="stat-val">$1,308.14</span></li>
-                        <li>Worker Enthusiasm: <span class="stat-val">96%</span></li>
-                    </ul>
-                    <h4>Domestic Parameters</h4>
-                    <ul class="data-list">
-                        <li>System: <span class="stat-val">Single-Party Socialist</span></li>
-                        <li>Currency: <span class="stat-val">e-Kwang (eK)</span></li>
-                    </ul>
-                    <a href="#" class="telegram-btn">✉ Direct Telegram Access</a>
-                </div>
-
-                <div class="card decree-log">
-                    <h3>Recent Decrees</h3>
-                    <div class="decree-item"><span class="decree-badge">915</span> Social Credit Synchronisation active.</div>
-                    <div class="decree-item"><span class="decree-badge">911</span> Intellectual Property Nationalisation active.</div>
-                </div>
-            </aside>
+    <main id="main-content" class="main-content">
+        <div class="gov-panel">
+            <h2 class="panel-header">Welcome to the State Council</h2>
+            <p>This is the official digital service of the People's Republic of Sinowa. Our socialist state combines central planning with technological innovation to serve all citizens. Here you can access government services, understand our policies, and engage with the nation's administration.</p>
+            <p style="margin-top: 15px;">Sinowa operates under a single-party socialist system with a focus on collective prosperity, industrial modernisation, and social harmony. All ministries report directly to the State Council, which implements the strategic direction set by the Vanguard Party.</p>
         </div>
-    </div>
+
+        <div class="gov-panel">
+            <h2 class="panel-header">Quick access to services</h2>
+            <ul style="margin-left: 20px; line-height: 1.8;">
+                <li><a href="immigration.html" style="color: var(--gov-blue);">Apply for documents (passport, ID card, driving licence)</a></li>
+                <li><a href="statistics.html" style="color: var(--gov-blue);">View live economic and demographic data</a></li>
+                <li><a href="embassy.html" style="color: var(--gov-blue);">Submit diplomatic proposals or check visa rules</a></li>
+                <li><a href="bank.html" style="color: var(--gov-blue);">Understand the e-Kwang monetary system</a></li>
+            </ul>
+        </div>
+
+        <div class="gov-panel">
+            <h2 class="panel-header">Latest from the State Council</h2>
+            <div class="inset-text">
+                <h3 style="margin-bottom: 8px;">📢 Social Credit Framework Update (Decree 915)</h3>
+                <p>The Ministry of Home Affairs has activated the new algorithmic scoring matrix. Citizens can now check their standing via the SinowaLink app. Positive contributions improve access to public services.</p>
+            </div>
+            <div class="inset-text">
+                <h3 style="margin-bottom: 8px;">🏗️ High-Speed Rail Phase II begins</h3>
+                <p>Construction on the continental rail grid has started. National ID cards will serve as contactless transit tokens across all new lines.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="gov-footer">
+        <div class="footer-container">
+            <div class="footer-meta">
+                <p>© 2026 People's Republic of Sinowa</p>
+                <p>State Council Information Office</p>
+            </div>
+            <div class="footer-meta">
+                <p>All content is available under the Open Government Licence</p>
+                <p>Built for NationStates · Version 2.0</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const current = document.documentElement.getAttribute('data-theme');
+            if (current === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
 </body>
 </html>

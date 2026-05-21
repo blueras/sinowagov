@@ -10,25 +10,83 @@
 <body>
     <header class="gov-header">
         <div class="header-container">
-            <div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div>
+            <div class="header-left">
+                <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
+                <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div>
+            </div>
             <button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button>
         </div>
     </header>
-    <nav class="gov-nav"><div class="nav-container"><div class="nav-links"><a href="index.html">Home</a><a href="structure.html">Defence & Structure</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Public Programmes</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html">Statistics</a><a href="bank.html" class="active">Central Bank</a><a href="sinowalink.html">SinowaLink App</a></div></div></nav>
+    <nav class="gov-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a><a href="structure.html">Defence & Structure</a>
+                <a href="commerce.html">Commerce</a><a href="housing.html">Housing</a>
+                <a href="education.html">Education</a><a href="services.html">Public Programmes</a>
+                <a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a>
+                <a href="statistics.html">Statistics</a><a href="bank.html" class="active">Central Bank</a>
+                <a href="sinowalink.html">SinowaLink App</a>
+            </div>
+        </div>
+    </nav>
     <main class="main-content">
-        <div style="text-align: center; margin-bottom: 24px;"><img src="https://i.postimg.cc/XY5GSGqJ/Central-Bank-of-Sinowa.png" style="max-width: 180px;" alt="Central Bank Logo"></div>
+        <div style="text-align: center; margin-bottom: 24px;">
+            <img src="https://i.postimg.cc/XY5GSGqJ/Central-Bank-of-Sinowa.png" style="max-width: 180px;" alt="Central Bank Logo">
+        </div>
 
-        <div class="gov-panel"><h2 class="panel-header">Central Bank of Sinowa</h2><p><strong>Sovereign Issuing Authority · Supreme Organ of Monetary Policy</strong></p><p>The Central Bank of Sinowa exercises an absolute monopoly over the issuance of legal tender. All e-Kwang (eK) currency is fully digital, backed by state production metrics and managed through a secure blockchain ledger. The bank was established in 2018 and maintains headquarters in the Capital District.</p></div>
+        <div class="gov-panel">
+            <h2 class="panel-header">Central Bank of Sinowa</h2>
+            <p><strong>Sovereign Issuing Authority · Supreme Organ of Monetary Policy</strong></p>
+            <p>The Central Bank of Sinowa exercises an absolute monopoly over the issuance of legal tender. All e-Kwang (eK) currency is fully digital, backed by state production metrics and managed through a secure blockchain ledger. The bank was established in 2018 and maintains headquarters in the Capital District.</p>
+        </div>
 
-        <div class="gov-panel"><h2 class="panel-header">I. Legal Tender & Digital e-Kwang Management</h2><p>The e-Kwang is the sole legal tender. It is a stable, algorithmically managed digital currency. Every transaction is recorded on the state ledger to prevent fraud, money laundering, and capital flight. The Central Bank adjusts liquidity in real time to match industrial output and inflation targets (2-3% annual).</p><div class="inset-text"><strong>Currency specifications:</strong> Code: eK · Subunit: 1 eK = 100 fen · Total supply: Algorithmically capped at eK 50B · Inflation rate (2025): 2.4%</div></div>
+        <div class="gov-panel">
+            <h2 class="panel-header">I. Legal Tender & Digital e-Kwang Management</h2>
+            <p>The e-Kwang is the sole legal tender. It is a stable, algorithmically managed digital currency. Every transaction is recorded on the state ledger to prevent fraud, money laundering, and capital flight. The Central Bank adjusts liquidity in real time to match industrial output and inflation targets (2-3% annual).</p>
+            <div class="inset-text"><strong>Currency specifications:</strong> Code: eK · Subunit: 1 eK = 100 fen · Total supply: Algorithmically capped at eK 50B · Inflation rate (2025): 2.4%</div>
+        </div>
 
-        <div class="gov-panel"><h2 class="panel-header">II. Exchange Rate Policy & Live Rates</h2><p>Sinowa maintains a managed float against major foreign currencies. The exchange rate is published daily at 09:00 local time by the Bureau of Statistics. Currency sync agreements with allied nations allow for seamless trade settlements with zero conversion fees.</p><table class="gov-table"><thead><tr><th>Currency Pair</th><th>Rate</th><th>Last Updated</th></tr></thead><tbody><tr><td><strong>eK → US Dollar (USD)</strong></span><td><td id="ek-usd">Loading...</span><td>Live</td></tr><tr><td><strong>eK → Euro (EUR)</strong></span><td><td id="ek-eur">Loading...</span><td>Live</td></tr><tr><td><strong>eK → British Pound (GBP)</strong></span><td><td id="ek-gbp">Loading...</span><td>Live</td></tr><tr><td><strong>eK → Japanese Yen (JPY)</strong></span><td><td id="ek-jpy">Loading...</span><td>Live</td></tr><table><td><strong>eK → Chinese Yuan (CNY)</strong></span><td><td id="ek-cny">Loading...</span><td>Live</td></tr></tbody></table></div>
+        <div class="gov-panel">
+            <h2 class="panel-header">II. Exchange Rate Policy & Live Rates</h2>
+            <p>Sinowa maintains a managed float against major foreign currencies. The exchange rate is published daily at 09:00 local time by the Bureau of Statistics. Currency sync agreements with allied nations allow for seamless trade settlements with zero conversion fees.</p>
+            <table class="gov-table">
+                <thead><tr><th>Currency Pair</th><th>Rate</th><th>Last Updated</th></tr></thead>
+                <tbody>
+                    <tr><td><strong>eK → US Dollar (USD)</strong></td><td id="ek-usd">Loading...</span><td>Live</span></tr>
+                    <tr><td><strong>eK → Euro (EUR)</strong></td><td id="ek-eur">Loading...</span><td>Live</span></tr>
+                    <tr>}<strong>eK → British Pound (GBP)</strong></td><td id="ek-gbp">Loading...</span><td>Live</span></tr>
+                    <tr>}<strong>eK → Japanese Yen (JPY)</strong></span><td><td id="ek-jpy">Loading...</span><td>Live</span></tr>
+                    <tr>}<strong>eK → Chinese Yuan (CNY)</strong></span><td><td id="ek-cny">Loading...</span><td>Live</span></tr>
+                </tbody>
+            </table>
+        </div>
 
-        <div class="gov-panel"><h2 class="panel-header">III. Monetary Tools & Reserves</h2><p>The Central Bank maintains foreign exchange reserves totalling approximately eK 12.8B. Key tools include: reserve requirements (currently 12%), open market operations, and the e-Kwang Liquidity Facility for state-owned enterprises.</p><table class="gov-table"><thead><tr><th>Indicator</th><th>Value</th></tr></thead><tbody><tr><td>Foreign Exchange Reserves</span><td>eK 12.84B</span></tr><tr><td>Reserve Requirement Ratio</span><td>12.00%</span></td><tr><td>Policy Interest Rate</span><td>3.75%</span></td><tr><td>Interbank Lending Rate</span><td>4.10%</span></td></tr><td>Consumer Price Index (CPI)</span><td>102.4 (base 2020)</span></tr></tbody></tr></div>
+        <div class="gov-panel">
+            <h2 class="panel-header">III. Monetary Tools & Reserves</h2>
+            <p>The Central Bank maintains foreign exchange reserves totalling approximately eK 12.8B. Key tools include: reserve requirements (currently 12%), open market operations, and the e-Kwang Liquidity Facility for state-owned enterprises.</p>
+            <table class="gov-table">
+                <thead><tr><th>Indicator</th><th>Value</th></tr></thead>
+                <tbody>
+                    <tr>}<strong>Foreign Exchange Reserves</strong></span><td>eK 12.84B</span></tr>
+                    <tr>}<strong>Reserve Requirement Ratio</strong></span><td>12.00%</span></tr>
+                    <tr>}<strong>Policy Interest Rate</strong></span><td>3.75%</span></tr>
+                    <tr>}<strong>Interbank Lending Rate</strong></span><td>4.10%</span></tr>
+                    <tr>}<strong>Consumer Price Index (CPI)</strong></span><td>102.4 (base 2020)</span></tr>
+                </tbody>
+            </table>
+        </div>
 
-        <div class="gov-panel"><h2 class="panel-header">IV. Currency Sync Partners</h2><p>The following nations have signed e-Kwang Currency Sync agreements with Sinowa, enabling direct digital currency conversion and settlement:</p><ul style="margin-left: 24px;"><li>The Devorist State of Darkening Empire</li><li>Additional partners pending ratification</li></ul></div>
+        <div class="gov-panel">
+            <h2 class="panel-header">IV. Currency Sync Partners</h2>
+            <p>The following nations have signed e-Kwang Currency Sync agreements with Sinowa, enabling direct digital currency conversion and settlement:</p>
+            <ul style="margin-left: 24px;"><li>The Devorist State of Darkening Empire</li><li>Additional partners pending ratification</li></ul>
+        </div>
     </main>
-    <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · Central Bank</p></div></div></footer>
+    <footer class="gov-footer">
+        <div class="footer-container">
+            <div class="footer-meta"><p>© 2026 People's Republic of Sinowa · Central Bank</p></div>
+        </div>
+    </footer>
     <script>
         document.getElementById("ek-usd").innerHTML = "1 eK = $1.42 USD";
         document.getElementById("ek-eur").innerHTML = "1 eK = €1.31 EUR";

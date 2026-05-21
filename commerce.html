@@ -1,86 +1,63 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ministry of Commerce - Sinowa</title>
-    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="gov-header">
-        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council • The People's Republic of Sinowa</p></div>
-    </header>
-    
-    <nav class="gov-nav">
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="structure.html">Defence & State</a>
-            <a href="commerce.html" style="color: var(--sinowa-gold);">Commerce & Tech</a>
-            <a href="housing.html">Housing</a>
-            <a href="education.html">Education</a>
-            <a href="services.html">Labour & Health</a>
-            <a href="immigration.html">Home Affairs</a>
-            <a href="embassy.html">Foreign Affairs</a>
-            <a href="statistics.html">Statistics</a>
-            <a href="bank.html">Central Bank</a>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button>
-    </nav>
+<!DOCTYPE html> 
+<html lang="en-GB"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Commerce - Sinowa</title> 
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png"> 
+    <link rel="stylesheet" href="style.css"> 
+    <style> 
+        .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; } 
+        .gov-panel { background: var(--card-bg); border: 1px solid var(--border-color); border-top: 4px solid var(--sinowa-blue); border-radius: 6px; padding: 30px; margin-bottom: 35px; box-shadow: var(--shadow-sm); }
+        .panel-header { margin-top: 0; margin-bottom: 20px; font-size: 22px; font-family: "Times New Roman", Times, serif; color: var(--sinowa-blue); border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+        [data-theme="dark"] .panel-header { color: var(--sinowa-gold); }
+    </style> 
+</head> 
+<body> 
+    <header class="gov-header"> 
+        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"> 
+        <div class="gov-title"> 
+            <h1>SINOWA.GOV.SN</h1> 
+            <p>The State Council • The People's Republic of Sinowa</p> 
+        </div> 
+    </header> 
 
-    <div class="container-wide">
-        <div class="inner-content">
-            <h2 class="page-title">Ministry of Commerce & Technological Innovation</h2>
-            <p style="color: var(--text-muted); font-size: 15px;">The engine of the Sinowan Asian Century. The Ministry oversees the booming private sector, manages Special Economic Zones (SEZs), and ensures that capitalist innovation remains strictly guided by the national interests of the Vanguard Party.</p>
+    <nav class="gov-nav"> 
+        <div class="nav-links"> 
+            <a href="index.html">Home</a> 
+            <a href="structure.html">Government & Defence</a> 
+            <a href="commerce.html" style="color: var(--sinowa-gold);">Commerce</a> 
+            <a href="housing.html">Housing</a> 
+            <a href="education.html">Education</a> 
+            <a href="services.html">Public Programmes</a> 
+            <a href="immigration.html">Home Affairs</a> 
+            <a href="embassy.html">Foreign Affairs</a> 
+            <a href="statistics.html">Statistics</a> 
+            <a href="bank.html">Central Bank</a> 
+        </div> 
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button> 
+    </nav> 
 
-            <div class="services-grid" style="margin-top: 30px;">
-                <div class="service-block" style="margin: 0;">
-                    <h3 style="color: var(--sinowa-blue);">Special Economic Zones (SEZs)</h3>
-                    <p>Designated coastal and industrial hubs where foreign direct investment (FDI) operates under hyper-capitalist efficiency. These zones drive the development of green-energy EV manufacturing, e-commerce networks, and high-tech software engineering, generating massive capital influxes for the sovereign treasury.</p>
-                </div>
-                
-                <div class="service-block" style="margin: 0; border-left-color: var(--sinowa-blue);">
-                    <h3 style="color: var(--sinowa-red);">The "Golden Share" Protocol</h3>
-                    <p>While the private sector generates immense wealth, the State Council permanently retains a "1% Golden Share" and a mandatory board seat in all major corporate conglomerates. This ensures that tech giants and corporate monopolies never subvert national security or deviate from the Party's long-term economic plans.</p>
-                </div>
+    <div class="container-wide"> 
+        <div class="inner-content"> 
+            <h2 class="page-title">Ministry of Commerce & Technological Innovation</h2> 
+            <p style="color: var(--text-muted); font-size: 15px;">Regulating the private sector, managing Special Economic Zones (SEZs), and driving industrial growth.</p> 
+
+            <div class="gov-panel">
+                <h2 class="panel-header">State-Guided Capitalism & Corporate Oversight</h2>
+                <p style="font-size: 14.5px; line-height: 1.6; color: var(--text-color);">Sinowa supports a booming, vibrant private sector to drive technological innovation and export growth. However, under our State-Guided framework, the State Council retains a <strong>"Golden Share" (1%) and a mandatory board seat</strong> in all major corporations. This ensures that private profit generation never diverges from the collective national interest.</p>
             </div>
+        </div> 
+    </div> 
 
-            <div class="matrix-table" style="margin-top: 40px; border-radius: 8px; overflow: hidden;">
-                <table style="width: 100%; border-collapse: collapse;">
-                    <thead>
-                        <tr>
-                            <th style="background: var(--sinowa-blue); color: white; padding: 14px; text-align: left; border-bottom: 3px solid var(--sinowa-red);">Corporate Sector</th>
-                            <th style="background: var(--sinowa-blue); color: white; padding: 14px; text-align: left; border-bottom: 3px solid var(--sinowa-red);">Market Status</th>
-                            <th style="background: var(--sinowa-blue); color: white; padding: 14px; text-align: left; border-bottom: 3px solid var(--sinowa-red);">Vanguard Oversight</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 14px;"><strong>E-Commerce & Digital Payments</strong></td>
-                            <td style="padding: 14px;"><span class="status-low">DOMINANT EXPORT</span></td>
-                            <td style="padding: 14px;">Integrated into SinowaLink App</td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid var(--border-color);">
-                            <td style="padding: 14px;"><strong>Heavy Logistics & Port Management</strong></td>
-                            <td style="padding: 14px;"><span class="status-med">STATE-OWNED ENTERPRISE (SOE)</span></td>
-                            <td style="padding: 14px;">Total Operational Control</td>
-                        </tr>
-                        <tr>
-                            <td style="padding: 14px;"><strong>Advanced Artificial Intelligence</strong></td>
-                            <td style="padding: 14px;"><span class="status-low">RAPID EXPANSION</span></td>
-                            <td style="padding: 14px;">Golden Share Veto Active</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
-    <script>
-        function toggleTheme() { const currentTheme = document.documentElement.getAttribute('data-theme'); if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); } else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); } }
-        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); }
-    </script>
-</body>
+    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking data ledger synchronised.</p></footer> 
+    <script> 
+        function toggleTheme() { 
+            const currentTheme = document.documentElement.getAttribute('data-theme'); 
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); } 
+            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); } 
+        } 
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); } 
+    </script> 
+</body> 
 </html>

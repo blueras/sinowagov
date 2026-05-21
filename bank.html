@@ -8,19 +8,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
-    <header class="gov-header"><div class="header-container"><div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div><button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button></div></header>
+    <header class="gov-header">
+        <div class="header-container">
+            <div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div>
+            <button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button>
+        </div>
+    </header>
     <nav class="gov-nav"><div class="nav-container"><div class="nav-links"><a href="index.html">Home</a><a href="structure.html">Defence & Structure</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Public Programmes</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html">Statistics</a><a href="bank.html" class="active">Central Bank</a><a href="sinowalink.html">SinowaLink App</a></div></div></nav>
     <main class="main-content">
-        <div style="text-align: center; margin-bottom: 24px;"><img src="https://i.postimg.cc/XY5GSGqJ/Central-Bank-of-Sinowa.png" style="max-width: 180px;" alt="Central Bank Logo"></div>
+        <div style="text-align: center; margin-bottom: 24px;"><img src="https://i.postimg.cc/XY5GSGqJ/Central-Bank-of-Sinowa.png" style="max-width: 160px;" alt="Central Bank Logo"></div>
         <div class="gov-panel"><h2 class="panel-header">Central Bank of Sinowa</h2><p><strong>Sovereign Issuing Authority · Supreme Monetary Policy Organ</strong></p><p>The Central Bank holds an absolute monopoly over the issuance of legal tender. All e-Kwang (eK) currency is fully digital, backed by state production metrics.</p></div>
-        <div class="gov-panel"><h2 class="panel-header">Live Exchange Rates</h2><table class="gov-table"><thead><tr><th>Currency Pair</th><th>Rate</th><th>Last Updated</th></tr></thead><tbody><tr><td>eK → USD</td><td id="ek-usd">Loading...</td><td rowspan="3">Live</td></tr><tr><td>eK → EUR</td><td id="ek-eur">Loading...</td></tr><tr><td>eK → GBP</td><td id="ek-gbp">Loading...</td></tr></tbody></table></div>
+        <div class="gov-panel"><h2 class="panel-header">Live Exchange Rates</h2><table class="gov-table"><thead><tr><th>Currency Pair</th><th>Rate</th></tr></thead><tbody><tr><td>eK → USD</td><td id="ek-usd">Loading...</td></tr><tr><td>eK → EUR</td><td id="ek-eur">Loading...</td></tr><tr><td>eK → GBP</td><td id="ek-gbp">Loading...</td></tr></tbody></table></div>
+        <div class="gov-panel"><h2 class="panel-header">Monetary Policy</h2><p>The Central Bank maintains foreign exchange reserves of approximately eK 12.8B. Key tools: reserve requirements (12%), open market operations, and the e-Kwang Liquidity Facility.</p></div>
     </main>
     <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · Central Bank</p></div></div></footer>
     <script>
-        function updateRates() { document.getElementById("ek-usd").innerHTML = "1 eK = $1.42 USD"; document.getElementById("ek-eur").innerHTML = "1 eK = €1.31 EUR"; document.getElementById("ek-gbp").innerHTML = "1 eK = £1.12 GBP"; }
-        updateRates();
-        function toggleTheme(){let t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}
+        document.getElementById("ek-usd").innerHTML = "1 eK = $1.42 USD";
+        document.getElementById("ek-eur").innerHTML = "1 eK = €1.31 EUR";
+        document.getElementById("ek-gbp").innerHTML = "1 eK = £1.12 GBP";
+        function toggleTheme(){const t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}
         document.getElementById('themeToggle').addEventListener('click',toggleTheme);
         if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
     </script>

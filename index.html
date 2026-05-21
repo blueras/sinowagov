@@ -6,6 +6,36 @@
     <title>GOV.SN - People's Republic of Sinowa</title>
     <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png">
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Auto-scroll animations */
+        @keyframes autoScrollNews {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        @keyframes autoScrollDecrees {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); }
+        }
+        .ticker-vertical-track {
+            animation: autoScrollNews 40s linear infinite;
+        }
+        .decrees-vertical-track {
+            animation: autoScrollDecrees 35s linear infinite;
+        }
+        .ticker-scroll-box:hover .ticker-vertical-track,
+        .decrees-container:hover .decrees-vertical-track {
+            animation-play-state: paused;
+        }
+        .decrees-container {
+            height: 380px;
+            overflow: hidden;
+            position: relative;
+        }
+        .decrees-vertical-track {
+            position: absolute;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <header class="gov-header">
@@ -40,23 +70,37 @@
             <p style="font-size: 18px; margin-bottom: 20px;">The official digital service of the People's Republic of Sinowa — a modern socialist state combining central planning with technological innovation.</p>
             <p>Sinowa operates under a single-party socialist system focused on collective prosperity, industrial modernisation, and social harmony.</p>
         </div>
+        
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 36px;">
+            <!-- Live News Ticker with auto-scroll -->
             <div class="gov-panel">
                 <h2 class="panel-header" style="font-size: 22px;">🌍 Live Global News Feed</h2>
-                <div class="ticker-scroll-box" id="newsFeed"><div id="newsList"></div></div>
+                <div class="ticker-scroll-box">
+                    <div class="ticker-vertical-track" id="newsTrack"></div>
+                </div>
             </div>
+
+            <!-- Live Decrees Feed with auto-scroll -->
             <div class="gov-panel">
                 <h2 class="panel-header" style="font-size: 22px;">📜 Recent State Decrees</h2>
-                <div class="decrees-container" id="decreesFeed"><div id="decreesList"></div></div>
+                <div class="decrees-container">
+                    <div class="decrees-vertical-track" id="decreesTrack"></div>
+                </div>
             </div>
         </div>
+
         <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 28px; margin-top: 20px;">
             <div class="gov-panel"><h3>📊 Quick Stats</h3><div id="quickStats"></div></div>
-            <div class="gov-panel"><h3>⚙️ Popular Services</h3><ul style="margin-left: 20px;"><li><a href="immigration.html" style="color:var(--primary);">Passport & ID Application</a></li><li><a href="statistics.html" style="color:var(--primary);">Live Economic Data</a></li><li><a href="sinowalink.html" style="color:var(--primary);">Download SinowaLink</a></li></ul></div>
-            <div class="gov-panel"><h3>📢 Announcement</h3><p>Social Credit System v2.0 now live. Check your score on SinowaLink.</p></div>
+            <div class="gov-panel"><h3>⚙️ Popular Services</h3><ul style="margin-left: 20px;"><li><a href="immigration.html" style="color:var(--primary);">📄 Passport & ID Application</a></li><li><a href="statistics.html" style="color:var(--primary);">📊 Live Economic Data</a></li><li><a href="sinowalink.html" style="color:var(--primary);">📱 Download SinowaLink</a></li><li><a href="embassy.html" style="color:var(--primary);">🌍 Visa Information</a></li></ul></div>
+            <div class="gov-panel"><h3>📢 Announcement</h3><p>Social Credit System v2.0 now live. Check your score on SinowaLink.</p><p style="margin-top: 10px;">HSR Phase II construction begins Q2 2026.</p></div>
         </div>
     </main>
-    <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · State Council</p></div></div></footer>
+    <footer class="gov-footer">
+        <div class="footer-container">
+            <div class="footer-meta"><p>© 2026 People's Republic of Sinowa · State Council</p></div>
+            <div class="footer-meta"><p>Version 3.0 · Live data synced from NationStates</p></div>
+        </div>
+    </footer>
     <script>
         function toggleTheme() {
             const current = document.documentElement.getAttribute('data-theme');
@@ -66,21 +110,38 @@
         document.getElementById('themeToggle').addEventListener('click', toggleTheme);
         if (localStorage.getItem('theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
 
+        // News items (duplicated for seamless scrolling)
         const newsItems = [
-            { title: "Sinowa announces new High-Speed Rail corridor", source: "State Media", time: "2 hours ago", img: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=150" },
-            { title: "Global markets rally following trade agreement", source: "Reuters", time: "4 hours ago", img: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=150" },
-            { title: "Social Credit Tier A reaches 14.2%", source: "Bloomberg", time: "6 hours ago", img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=150" },
-            { title: "Sinowa and allies sign currency sync", source: "FT", time: "12 hours ago", img: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=150" }
+            { title: "Sinowa announces new High-Speed Rail corridor connecting 3 major cities", source: "State Media", time: "2 hours ago", img: "https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg?w=60&h=60&fit=crop" },
+            { title: "Global markets rally following Sinowa's new trade agreement with Eastern bloc", source: "Reuters", time: "4 hours ago", img: "https://images.pexels.com/photos/373912/pexels-photo-373912.jpeg?w=60&h=60&fit=crop" },
+            { title: "Social Credit Tier A population reaches 14.2% as compliance increases", source: "Bloomberg", time: "6 hours ago", img: "https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg?w=60&h=60&fit=crop" },
+            { title: "Sinowa and allied nations sign historic digital currency sync agreement", source: "Financial Times", time: "12 hours ago", img: "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?w=60&h=60&fit=crop" },
+            { title: "New education reforms abolish high-stakes exams, stress levels drop 42%", source: "BBC", time: "1 day ago", img: "https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?w=60&h=60&fit=crop" },
+            { title: "Foreign investment in Sinowa's SEZs jumps 34% year-on-year", source: "WSJ", time: "1 day ago", img: "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?w=60&h=60&fit=crop" },
+            { title: "SinowaLink surpasses 10M daily active users", source: "TechCrunch", time: "2 days ago", img: "https://images.pexels.com/photos/210182/pexels-photo-210182.jpeg?w=60&h=60&fit=crop" }
         ];
-        document.getElementById('newsList').innerHTML = newsItems.map(item => `<div class="ticker-news-card"><img src="${item.img}" onerror="this.src='https://placehold.co/60x60/0a4b8a/white?text=News'"><div><div class="ticker-meta">${item.source} · ${item.time}</div><div class="ticker-headline">${item.title}</div></div></div>`).join('');
         
-        const decrees = [
-            { title: "Decree 928: Social Credit Update", date: "2026-03-20", desc: "New volunteer metrics added." },
-            { title: "Decree 927: High-Speed Rail Phase II", date: "2026-03-18", desc: "eK 4.2B allocated." },
-            { title: "Decree 926: Education Reform", date: "2026-03-15", desc: "SAM framework implemented." }
-        ];
-        document.getElementById('decreesList').innerHTML = decrees.map(d => `<div class="decree-item"><div class="decree-title">${d.title}</div><div class="decree-date">${d.date}</div><div>${d.desc}</div></div>`).join('');
-        document.getElementById('quickStats').innerHTML = `<div style="display:flex; justify-content:space-between; padding:8px 0;"><strong>GDP:</strong> <span style="color:var(--primary);">eK 7.84B</span></div><div style="display:flex; justify-content:space-between; padding:8px 0;"><strong>Population:</strong> <span style="color:var(--primary);">12.0M</span></div><div style="display:flex; justify-content:space-between; padding:8px 0;"><strong>GDP per capita:</strong> <span style="color:var(--primary);">eK 1,308</span></div>`;
-    </script>
-</body>
-</html>
+        // Duplicate news items for seamless loop
+        const allNews = [...newsItems, ...newsItems];
+        
+        function renderNews() {
+            const container = document.getElementById('newsTrack');
+            container.innerHTML = allNews.map(item => `
+                <div class="ticker-news-card">
+                    <img src="${item.img}" onerror="this.src='https://placehold.co/60x60/0a4b8a/white?text=News'">
+                    <div>
+                        <div class="ticker-meta">${item.source} · ${item.time}</div>
+                        <div class="ticker-headline">${item.title}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+        renderNews();
+
+        // Decrees items (duplicated for seamless scrolling)
+        const decreesItems = [
+            { title: "Decree 928: Social Credit Algorithm Update", date: "2026-03-20", desc: "New metrics for volunteer work and community service added to scoring matrix." },
+            { title: "Decree 927: High-Speed Rail Phase II Approved", date: "2026-03-18", desc: "eK 4.2B allocated for new rail corridors connecting western provinces." },
+            { title: "Decree 926: Education Assessment Reform", date: "2026-03-15", desc: "SAM framework fully implemented nationwide, abolishing Gaokao-style exams." },
+            { title: "Decree 925: Foreign Investment Incentives", date: "2026-03-12", desc: "Tax breaks for green energy investors in Special Economic Zones." },
+            {

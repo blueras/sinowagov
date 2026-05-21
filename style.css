@@ -6,7 +6,6 @@
    ============================================ */
 
 :root {
-    /* Primary Brand Colours */
     --gov-blue: #1d70b8;
     --gov-blue-dark: #003078;
     --gov-blue-light: #5694ca;
@@ -15,27 +14,18 @@
     --gov-gold: #d4af37;
     --gov-black: #0b0c0c;
     --gov-white: #ffffff;
-    
-    /* Backgrounds */
     --bg-body: #f3f2f1;
     --bg-card: #ffffff;
     --bg-panel: #ffffff;
     --bg-hover: #f8f8f8;
-    
-    /* Text Colours */
     --text-primary: #0b0c0c;
     --text-secondary: #1d70b8;
     --text-muted: #505a5f;
     --text-light: #ffffff;
-    
-    /* Borders & Shadows */
     --border-color: #b1b4b6;
     --border-focus: #fd0;
     --shadow-sm: 0 2px 6px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-    
-    /* Layout */
     --container-width: 1200px;
     --spacing-xs: 4px;
     --spacing-sm: 8px;
@@ -43,8 +33,6 @@
     --spacing-lg: 24px;
     --spacing-xl: 32px;
     --spacing-2xl: 48px;
-    
-    /* Border Radius */
     --radius-sm: 4px;
     --radius-md: 8px;
     --radius-lg: 12px;
@@ -61,15 +49,9 @@
     --border-color: #2d2d3a;
     --gov-blue: #3b82f6;
     --gov-blue-dark: #1d4ed8;
-    --gov-blue-light: #60a5fa;
 }
 
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -77,12 +59,9 @@ body {
     color: var(--text-primary);
     line-height: 1.5;
     font-size: 16px;
-    font-weight: 400;
 }
 
-/* ============================================
-   PAGE WRAPPER - THE FIX FOR STRETCHING
-   ============================================ */
+/* Page Wrapper - Prevents stretching */
 .page-wrapper {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -106,28 +85,10 @@ body {
     flex-wrap: wrap;
     gap: var(--spacing-lg);
 }
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-lg);
-}
-.header-flag {
-    height: 60px;
-    width: auto;
-    border-radius: var(--radius-sm);
-    border: 1px solid rgba(255,255,255,0.2);
-}
-.gov-title h1 {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    margin: 0;
-}
-.gov-title p {
-    font-size: 13px;
-    margin: var(--spacing-xs) 0 0;
-    opacity: 0.7;
-}
+.header-left { display: flex; align-items: center; gap: var(--spacing-lg); }
+.header-flag { height: 60px; width: auto; border-radius: var(--radius-sm); border: 1px solid rgba(255,255,255,0.2); }
+.gov-title h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; margin: 0; }
+.gov-title p { font-size: 13px; margin: var(--spacing-xs) 0 0; opacity: 0.7; }
 
 .theme-toggle-btn {
     background: rgba(255,255,255,0.1);
@@ -140,9 +101,7 @@ body {
     font-size: 14px;
     transition: all 0.2s;
 }
-.theme-toggle-btn:hover {
-    background: rgba(255,255,255,0.2);
-}
+.theme-toggle-btn:hover { background: rgba(255,255,255,0.2); }
 
 /* Navigation */
 .gov-nav {
@@ -172,24 +131,16 @@ body {
     border-radius: var(--radius-md);
     transition: all 0.2s;
 }
-.nav-links a:hover {
-    background: var(--gov-blue);
-    color: var(--text-light);
-}
-.nav-links a.active {
-    background: var(--gov-blue);
-    color: var(--text-light);
-}
+.nav-links a:hover { background: var(--gov-blue); color: var(--text-light); }
+.nav-links a.active { background: var(--gov-blue); color: var(--text-light); }
 
 /* Main Content */
 .main-content {
-    max-width: var(--container-width);
-    margin: var(--spacing-2xl) auto;
-    padding: 0 var(--spacing-lg);
+    margin: var(--spacing-2xl) 0;
     min-height: 60vh;
 }
 
-/* Cards / Panels */
+/* Cards */
 .gov-panel {
     background: var(--bg-panel);
     border: 1px solid var(--border-color);
@@ -199,9 +150,7 @@ body {
     box-shadow: var(--shadow-sm);
     transition: box-shadow 0.2s;
 }
-.gov-panel:hover {
-    box-shadow: var(--shadow-md);
-}
+.gov-panel:hover { box-shadow: var(--shadow-md); }
 
 .panel-header {
     font-size: 26px;
@@ -241,9 +190,7 @@ body {
     vertical-align: top;
     color: var(--text-primary);
 }
-.gov-table tr:hover td {
-    background: var(--bg-hover);
-}
+.gov-table tr:hover td { background: var(--bg-hover); }
 
 /* Buttons */
 .gov-button {
@@ -256,15 +203,11 @@ body {
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: all 0.2s;
-    text-decoration: none;
     display: inline-block;
 }
-.gov-button:hover {
-    background: var(--gov-blue-dark);
-    transform: translateY(-1px);
-}
+.gov-button:hover { background: var(--gov-blue-dark); transform: translateY(-1px); }
 
-/* Form Elements - Native UI with accent-color */
+/* Form Elements - Native UI */
 input, textarea, select {
     width: 100%;
     padding: var(--spacing-md);
@@ -274,7 +217,6 @@ input, textarea, select {
     color: var(--text-primary);
     font-family: inherit;
     font-size: 14px;
-    transition: all 0.2s;
 }
 input:focus, textarea:focus, select:focus {
     outline: none;
@@ -311,12 +253,9 @@ label {
     justify-content: space-between;
     gap: var(--spacing-xl);
 }
-.footer-meta p {
-    margin: var(--spacing-xs) 0;
-    opacity: 0.7;
-}
+.footer-meta p { margin: var(--spacing-xs) 0; opacity: 0.7; }
 
-/* Utility Classes */
+/* Utility */
 .inset-text {
     border-left: 4px solid var(--gov-blue);
     background: var(--bg-hover);
@@ -324,9 +263,7 @@ label {
     margin: var(--spacing-xl) 0;
     border-radius: var(--radius-md);
 }
-.warning-text {
-    border-left-color: var(--gov-red);
-}
+.warning-text { border-left-color: var(--gov-red); }
 .status-low { color: var(--gov-green); font-weight: 600; }
 .status-med { color: #ed6c02; font-weight: 600; }
 .status-high { color: var(--gov-red); font-weight: 600; }
@@ -343,17 +280,8 @@ label {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
 }
-.image-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-.image-card .caption {
-    padding: var(--spacing-md);
-    font-weight: 500;
-    background: var(--bg-panel);
-    color: var(--text-primary);
-}
+.image-card img { width: 100%; height: 200px; object-fit: cover; }
+.image-card .caption { padding: var(--spacing-md); font-weight: 500; }
 
 .checkbox-grid {
     display: grid;
@@ -365,10 +293,7 @@ label {
     margin: var(--spacing-md) 0;
 }
 
-.ticker-scroll-box {
-    height: 380px;
-    overflow-y: auto;
-}
+.ticker-scroll-box { height: 380px; overflow-y: auto; }
 .ticker-news-card {
     display: flex;
     align-items: center;
@@ -384,20 +309,10 @@ label {
     object-fit: cover;
     border-radius: var(--radius-sm);
 }
-.ticker-headline {
-    font-weight: 600;
-    color: var(--gov-blue);
-    margin-bottom: var(--spacing-xs);
-}
-.ticker-meta {
-    font-size: 11px;
-    color: var(--text-muted);
-}
+.ticker-headline { font-weight: 600; color: var(--gov-blue); margin-bottom: var(--spacing-xs); }
+.ticker-meta { font-size: 11px; color: var(--text-muted); }
 
-.decrees-container {
-    height: 380px;
-    overflow-y: auto;
-}
+.decrees-container { height: 380px; overflow-y: auto; }
 .decree-item {
     padding: var(--spacing-md);
     border-left: 3px solid var(--gov-gold);
@@ -405,14 +320,8 @@ label {
     background: var(--bg-hover);
     border-radius: var(--radius-md);
 }
-.decree-title {
-    font-weight: 700;
-    color: var(--gov-gold);
-}
-.decree-date {
-    font-size: 11px;
-    color: var(--text-muted);
-}
+.decree-title { font-weight: 700; color: var(--gov-gold); }
+.decree-date { font-size: 11px; color: var(--text-muted); }
 
 @keyframes autoScrollNews {
     0% { transform: translateY(0); }
@@ -422,20 +331,13 @@ label {
     0% { transform: translateY(0); }
     100% { transform: translateY(-50%); }
 }
-.ticker-vertical-track {
-    animation: autoScrollNews 40s linear infinite;
-}
-.decrees-vertical-track {
-    animation: autoScrollDecrees 35s linear infinite;
-}
+.ticker-vertical-track { animation: autoScrollNews 40s linear infinite; }
+.decrees-vertical-track { animation: autoScrollDecrees 35s linear infinite; }
 .ticker-scroll-box:hover .ticker-vertical-track,
-.decrees-container:hover .decrees-vertical-track {
-    animation-play-state: paused;
-}
+.decrees-container:hover .decrees-vertical-track { animation-play-state: paused; }
 
 @media (max-width: 768px) {
     .page-wrapper { padding: 0 var(--spacing-md); }
-    .main-content { padding: 0 var(--spacing-md); }
     .gov-panel { padding: var(--spacing-lg); }
     .page-title { font-size: 28px; }
     .panel-header { font-size: 22px; }

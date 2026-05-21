@@ -11,14 +11,10 @@
     <a href="#main-content" class="govuk-skip-link">Skip to main content</a>
     <header class="gov-header"><div class="header-container"><div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div><button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button></div></header>
     <nav class="gov-nav"><div class="nav-container"><div class="nav-links"><a href="index.html">Home</a><a href="structure.html">Defence & Structure</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Public Programmes</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html" class="active">Statistics</a><a href="bank.html">Central Bank</a><a href="sinowalink.html">SinowaLink App</a></div></div></nav>
-    <main id="main-content" class="main-content">
+    <main class="main-content">
         <div class="gov-panel"><h2 class="panel-header">National Bureau of Statistics · Live Economic Ledger</h2><p>This page securely queries live data from NationStates via the NSEconomy API. All figures update automatically on each page load.</p><a href="http://www.broomdces.com/nseconomy/nations.php?nation=Sinowa" target="_blank" class="gov-button">📊 View Raw Data on NSEconomy</a></div>
-
-        <div class="gov-panel"><h2 class="panel-header">Core Macroeconomic Metrics</h2><table class="gov-table"><thead><tr><th>Metric</th><th>Current Value</th><th>Status</th></tr></thead><tbody><tr><td>Gross Domestic Product (GDP)</td><td id="gdp-val">Loading...</td><td style="color:#2e7d32;">Live Sync</td></tr><tr><td>GDP Per Capita</td><td id="gdp-capita">Loading...</td><td style="color:#2e7d32;">Live Sync</td></tr><tr><td>Population</td><td id="pop-val">Loading...</td><td style="color:#2e7d32;">Live Census</td></tr><tr><td>Average Annual Worker Salary</td><td id="avg-salary">Loading...</td><td style="color:#2e7d32;">Calculated</td></tr><tr><td>Income Tax Rate</td><td id="tax-rate">Loading...</td><td style="color:#2e7d32;">Fixed Directive</td></tr><tr><td>e-Kwang Exchange Rate</td><td id="exchange-val">Loading...</td><td style="color:#2e7d32;">Managed Float</td></tr></tbody></table></div>
-
-        <div class="gov-panel"><h2 class="panel-header">Demographics & Governance</h2><table class="gov-table"><thead><tr><th>Metric</th><th>Value</th></tr></thead><tbody><tr><td>Major Industry</td><td id="industry-val">Loading...</td></tr><tr><td>Government Type</td><td id="gov-type">Loading...</td></tr><tr><td>Crime Index</td><td id="crime-val">Loading...</td></tr><tr><td>Law Enforcement Level</td><td id="law-val">Loading...</td></tr></tbody></table></div>
-
-        <div class="gov-panel"><h2 class="panel-header">NSEconomy Integration</h2><div class="inset-text">This bureau automatically pulls real-time statistics from the official NationStates API. Data reflects your nation's actual in-game metrics including GDP, population, industry classification, government type, and freedom indices. Last sync: <span id="timestamp">just now</span></div></div>
+        <div class="gov-panel"><h2 class="panel-header">Core Macroeconomic Metrics</h2><table class="gov-table"><thead><tr><th>Metric</th><th>Current Value</th><th>Status</th></tr></thead><tbody><tr><td>GDP</td><td id="gdp-val">Loading...</td><td>Live Sync</td></tr><tr><td>GDP Per Capita</td><td id="gdp-capita">Loading...</td><td>Live Sync</td></tr><tr><td>Population</td><td id="pop-val">Loading...</td><td>Live Census</td></tr><tr><td>Average Salary</td><td id="avg-salary">Loading...</td><td>Calculated</td></tr><tr><td>Tax Rate</td><td id="tax-rate">Loading...</td><td>Fixed</td></tr><tr><td>e-Kwang Exchange</td><td id="exchange-val">Loading...</td><td>Managed Float</td></tr></tbody></table></div>
+        <div class="gov-panel"><h2 class="panel-header">Social Credit Distribution</h2><table class="gov-table"><thead><tr><th>Tier</th><th>Population %</th><th>Score Range</th></tr></thead><tbody><tr><td>A (Optimised)</td><td>14.2%</td><td>800-950</td></tr><tr><td>B (Stable)</td><td>79.5%</td><td>600-799</td></tr><tr><td>C (Monitored)</td><td>5.1%</td><td>400-599</td></tr><tr><td>D (Restricted)</td><td>1.2%</td><td>Below 400</td></tr></tbody></table></div>
     </main>
     <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · Bureau of Statistics</p></div></div></footer>
     <script>
@@ -32,31 +28,19 @@
                 const xml = parser.parseFromString(text, "text/xml");
                 const pop = parseFloat(xml.getElementsByTagName("POPULATION")[0]?.textContent || 12) * 1000000;
                 const gdp = parseFloat(xml.getElementsByTagName("GDP")[0]?.textContent || 7.848) * 1000000;
-                const industry = xml.getElementsByTagName("MAJORINDUSTRY")[0]?.textContent || "Basket Weaving";
-                const gov = xml.getElementsByTagName("GOVT")[0]?.textContent || "Single-Party Socialist State";
-                const crime = xml.getElementsByTagName("LAWANDORDER")[0]?.textContent || "Low";
-                document.getElementById("pop-val").innerText = Math.round(pop).toLocaleString() + " citizens";
-                document.getElementById("gdp-val").innerText = "eK " + gdp.toLocaleString('en-GB', {minimumFractionDigits:2});
-                document.getElementById("gdp-capita").innerText = "eK " + (gdp/pop).toLocaleString('en-GB', {minimumFractionDigits:2});
-                document.getElementById("industry-val").innerText = industry;
-                document.getElementById("gov-type").innerText = gov;
-                document.getElementById("crime-val").innerText = crime + " coefficient";
-                document.getElementById("law-val").innerText = "Vanguard Patrol Active";
-                document.getElementById("tax-rate").innerText = "37.00%";
-                document.getElementById("avg-salary").innerText = "eK " + ((gdp/pop)*1.55).toLocaleString('en-GB', {minimumFractionDigits:2});
-                document.getElementById("exchange-val").innerText = "1 eK = $" + (1.20 + (gdp/pop/4000)).toFixed(2) + " USD";
-                document.getElementById("timestamp").innerText = new Date().toLocaleTimeString();
+                document.getElementById("pop-val").innerHTML = Math.round(pop).toLocaleString() + " citizens";
+                document.getElementById("gdp-val").innerHTML = "eK " + gdp.toLocaleString('en-GB', {minimumFractionDigits:2});
+                document.getElementById("gdp-capita").innerHTML = "eK " + (gdp/pop).toLocaleString('en-GB', {minimumFractionDigits:2});
+                document.getElementById("tax-rate").innerHTML = "37.00%";
+                document.getElementById("avg-salary").innerHTML = "eK " + ((gdp/pop)*1.55).toLocaleString('en-GB', {minimumFractionDigits:2});
+                document.getElementById("exchange-val").innerHTML = "1 eK = $" + (1.20 + (gdp/pop/4000)).toFixed(2) + " USD";
             } catch(e) {
-                document.getElementById("pop-val").innerText = "12,000,000 citizens";
-                document.getElementById("gdp-val").innerText = "eK 7,848,840,000";
-                document.getElementById("gdp-capita").innerText = "eK 1,308.14";
-                document.getElementById("industry-val").innerText = "Basket Weaving";
-                document.getElementById("gov-type").innerText = "Single-Party Socialist State";
-                document.getElementById("crime-val").innerText = "Low coefficient";
-                document.getElementById("law-val").innerText = "Vanguard Patrol Active";
-                document.getElementById("tax-rate").innerText = "37.00%";
-                document.getElementById("avg-salary").innerText = "eK 2,026.13";
-                document.getElementById("exchange-val").innerText = "1 eK = $1.42 USD";
+                document.getElementById("pop-val").innerHTML = "12,000,000 citizens";
+                document.getElementById("gdp-val").innerHTML = "eK 7,848,840,000";
+                document.getElementById("gdp-capita").innerHTML = "eK 1,308.14";
+                document.getElementById("tax-rate").innerHTML = "37.00%";
+                document.getElementById("avg-salary").innerHTML = "eK 2,026.13";
+                document.getElementById("exchange-val").innerHTML = "1 eK = $1.42 USD";
             }
         }
         fetchLiveData();

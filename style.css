@@ -1,44 +1,36 @@
 :root {
-    --sinowa-blue: #003078; /* Government Blue */
-    --sinowa-gold: #c5a059;
-    --sinowa-red: #d4351c;
-    --text-color: #0b0c0c;
-    --bg-color: #f3f2f1;
+    --sinowa-blue: #1c3b6f;
+    --sinowa-red: #8B0000;
+    --sinowa-gold: #FFD700;
+    --sinowa-green: #1E6B38;
+    --light-bg: #f4f6f9;
     --card-bg: #ffffff;
+    --text-color: #2c3e50;
+    --text-muted: #627d98;
+    --border-color: #eaeef2;
+    --shadow-sm: 0 2px 6px rgba(0,0,0,0.05);
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    margin: 0;
-    line-height: 1.5;
-}
+body { font-family: sans-serif; background-color: var(--light-bg); color: var(--text-color); margin: 0; line-height: 1.5; }
 
-/* Page wrapper forces content into the centre */
-.page-wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+/* Constrains content to prevent wide-screen stretching */
+.page-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
-/* Header & Nav */
-.gov-header { background: #0b0c0c; color: white; padding: 20px 0; border-bottom: 5px solid var(--sinowa-blue); }
-.gov-header .page-wrapper { display: flex; align-items: center; gap: 20px; }
-.gov-title h1 { margin: 0; font-size: 28px; }
-.header-flag { height: 50px; width: auto; border: 1px solid #ccc; }
+.gov-header { background: var(--card-bg); padding: 20px; display: flex; align-items: center; border-bottom: 4px solid var(--sinowa-green); }
+.header-flag { height: 50px; width: auto; margin-right: 20px; }
+.gov-title h1 { margin: 0; font-size: 24px; color: var(--sinowa-blue); }
 
-.gov-nav { background: #ffffff; border-bottom: 1px solid #b1b4b6; padding: 15px 0; display: flex; gap: 20px; justify-content: center; position: sticky; top: 0; }
-.gov-nav a { color: var(--gov-blue); text-decoration: underline; font-weight: 700; font-size: 14px; text-transform: uppercase; }
+.gov-nav { background: var(--sinowa-blue); padding: 10px 0; display: flex; justify-content: center; gap: 15px; position: sticky; top: 0; }
+.gov-nav a { color: white; text-decoration: none; font-size: 12px; font-weight: 700; text-transform: uppercase; }
 
-/* Main Grid Layout */
-.main-content {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 40px;
-    padding: 40px 0;
-}
+.main-layout { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-top: 30px; }
+.card { background: var(--card-bg); padding: 25px; border: 1px solid var(--border-color); border-radius: 8px; margin-bottom: 20px; }
 
-.card { background: var(--card-bg); padding: 30px; border: 1px solid #b1b4b6; margin-bottom: 20px; }
-.decree-item { border-bottom: 1px solid #b1b4b6; padding: 12px 0; font-size: 14px; }
-.stat-val { font-weight: 700; float: right; font-family: monospace; }
+/* Ticker Fixes */
+.ticker-scroll-box { height: 245px; overflow: hidden; position: relative; }
+.ticker-vertical-track { position: absolute; width: 100%; animation: scrollVerticalTicker 20s linear infinite; }
+@keyframes scrollVerticalTicker { 0% { transform: translateY(0); } 100% { transform: translateY(-246px); } }
+.ticker-news-card { display: flex; align-items: center; background: var(--light-bg); border-left: 4px solid var(--sinowa-blue); padding: 10px; margin-bottom: 10px; gap: 10px; }
+
+.stat-val { font-family: monospace; font-weight: 700; float: right; }
+.decree-badge { background: var(--sinowa-red); color: white; font-size: 10px; padding: 2px 5px; border-radius: 3px; }

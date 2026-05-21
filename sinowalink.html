@@ -10,11 +10,25 @@
 <body>
     <header class="gov-header">
         <div class="header-container">
-            <div class="header-left"><img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"><div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div></div>
+            <div class="header-left">
+                <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
+                <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>The State Council · People's Republic of Sinowa</p></div>
+            </div>
             <button class="theme-toggle-btn" id="themeToggle">🌓 Dark/Light mode</button>
         </div>
     </header>
-    <nav class="gov-nav"><div class="nav-container"><div class="nav-links"><a href="index.html">Home</a><a href="structure.html">Defence & Structure</a><a href="commerce.html">Commerce</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Public Programmes</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html">Statistics</a><a href="bank.html">Central Bank</a><a href="sinowalink.html" class="active">SinowaLink App</a></div></div></nav>
+    <nav class="gov-nav">
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="index.html">Home</a><a href="structure.html">Defence & Structure</a>
+                <a href="commerce.html">Commerce</a><a href="housing.html">Housing</a>
+                <a href="education.html">Education</a><a href="services.html">Public Programmes</a>
+                <a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a>
+                <a href="statistics.html">Statistics</a><a href="bank.html">Central Bank</a>
+                <a href="sinowalink.html" class="active">SinowaLink App</a>
+            </div>
+        </div>
+    </nav>
     <main class="main-content">
         <div class="gov-panel" style="text-align: center;">
             <h2 class="panel-header">SinowaLink · The National Digital Ecosystem</h2>
@@ -40,11 +54,36 @@
             <div class="gov-panel"><h3>🚆 Transport Integration</h3><ul><li>Contactless transit on all buses & metro (tap with phone)</li><li>High-speed rail booking & digital boarding pass</li><li>Ride-hailing (SinowaGo) & bike-sharing (SinowaCycle)</li><li>Real-time traffic and route planning</li><li>Parking payment and EV charging station locator</li></ul></div>
         </div>
 
-        <div class="gov-panel"><h2 class="panel-header">Mandatory Registration</h2><div class="inset-text">All citizens and permanent residents are required by law to register on SinowaLink within 30 days of turning 12 (or upon receiving residency). Visitors may use a limited guest version without full civic features. Registration requires biometric verification at any Home Affairs office.</div><div class="inset-text"><strong>Security & Privacy:</strong> All data is encrypted and stored on sovereign servers within Sinowan territory. Biometric authentication is optional but recommended for full functionality. Your data is never sold to third parties and is protected under State Privacy Law Chapter 12.</div></div>
+        <div class="gov-panel">
+            <h2 class="panel-header">Mandatory Registration</h2>
+            <div class="inset-text">All citizens and permanent residents are required by law to register on SinowaLink within 30 days of turning 12 (or upon receiving residency). Visitors may use a limited guest version without full civic features. Registration requires biometric verification at any Home Affairs office.</div>
+            <div class="inset-text"><strong>Security & Privacy:</strong> All data is encrypted and stored on sovereign servers within Sinowan territory. Biometric authentication is optional but recommended for full functionality. Your data is never sold to third parties and is protected under State Privacy Law Chapter 12.</div>
+        </div>
 
-        <div class="gov-panel"><h2 class="panel-header">SinowaLink Kids — Parental Controls</h2><p>Parents can limit screen time, restrict social features, approve contacts, and monitor activity through the Family Link dashboard. The Kids version includes the full school curriculum portal where homework assignments and grades are automatically synced from the National Education System.</p><table class="gov-table"><thead><tr><th>Feature</th><th>Kids (ages 6-12)</th><th>Teens (13-17)</th><th>Adult (18+)</th></tr></thead><tbody><tr><td>Social messaging</span><td>Limited (pre-approved contacts only)</span><td>Full but monitored by parents</span><td>Full</span></tr><tr><td>Video streaming</span><td>Child-safe content only</span><td>Age-restricted (parental override)</span><td>Full (all content)</span></tr><tr><td>Payment features</span><td>None (blocked)</span><td>Allowance wallet only (parent-controlled)</span><td>Full banking access</span></td><tr><td>School portal</span><td>Mandatory, fully integrated</span><td>Mandatory, fully integrated</span><td>Optional (continuing education)</span></tr><tr><td>Screen time limits</span><td>Enforced by parent</span><td>Advisory only</span><td>None</span></td></tbody></tr></div>
+        <div class="gov-panel">
+            <h2 class="panel-header">SinowaLink Kids — Parental Controls</h2>
+            <p>Parents can limit screen time, restrict social features, approve contacts, and monitor activity through the Family Link dashboard. The Kids version includes the full school curriculum portal where homework assignments and grades are automatically synced from the National Education System.</p>
+            <table class="gov-table">
+                <thead><tr><th>Feature</th><th>Kids (ages 6-12)</th><th>Teens (13-17)</th><th>Adult (18+)</th></tr></thead>
+                <tbody>
+                    <tr><td>Social messaging</span><td>Limited (pre-approved contacts only)</span><td>Full but monitored by parents</span><td>Full</span></tr>
+                    <tr><td>Video streaming</span><td>Child-safe content only</span><td>Age-restricted (parental override)</span><td>Full (all content)</span></tr>
+                    <tr><td>Payment features</span><td>None (blocked)</span><td>Allowance wallet only (parent-controlled)</span><td>Full banking access</span></tr>
+                    <tr><td>School portal</span><td>Mandatory, fully integrated</span><td>Mandatory, fully integrated</span><td>Optional (continuing education)</span></tr>
+                    <tr><td>Screen time limits</span><td>Enforced by parent</span><td>Advisory only</span><td>None</span></tr>
+                </tbody>
+            </table>
+        </div>
     </main>
-    <footer class="gov-footer"><div class="footer-container"><div class="footer-meta"><p>© 2026 People's Republic of Sinowa · SinowaLink Digital Service</p></div></div></footer>
-    <script>function toggleTheme(){const t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}document.getElementById('themeToggle').addEventListener('click',toggleTheme);if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');</script>
+    <footer class="gov-footer">
+        <div class="footer-container">
+            <div class="footer-meta"><p>© 2026 People's Republic of Sinowa · SinowaLink Digital Service</p></div>
+        </div>
+    </footer>
+    <script>
+        function toggleTheme(){const t=document.documentElement.getAttribute('data-theme');t==='dark'?document.documentElement.removeAttribute('data-theme'):document.documentElement.setAttribute('data-theme','dark');localStorage.setItem('theme',t==='dark'?'light':'dark')}
+        document.getElementById('themeToggle').addEventListener('click',toggleTheme);
+        if(localStorage.getItem('theme')==='dark')document.documentElement.setAttribute('data-theme','dark');
+    </script>
 </body>
 </html>

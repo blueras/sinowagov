@@ -1,33 +1,69 @@
-<!DOCTYPE html>
-<html lang="en-GB">
-<head>
-    <meta charset="UTF-8">
-    <title>Housing - SINOWA.GOV.SN</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="gov-header">
-        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag">
-        <div class="gov-title"><h1>SINOWA.GOV.SN</h1><p>Ministry of Housing & Urban Development</p></div>
-    </header>
+<!DOCTYPE html> 
+<html lang="en-GB"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Housing - Sinowa</title> 
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/hGY2BrFf/Sinowa-Communist-Party-(SCP).png"> 
+    <link rel="stylesheet" href="style.css"> 
+    <style> 
+        .nav-links { display: flex !important; flex-wrap: wrap !important; gap: 2px; } 
+        .gov-panel { background: var(--card-bg); border: 1px solid var(--border-color); border-top: 4px solid var(--sinowa-blue); border-radius: 6px; padding: 30px; margin-bottom: 35px; box-shadow: var(--shadow-sm); }
+        .gov-panel.green-accent { border-top-color: var(--sinowa-green); }
+        .panel-header { margin-top: 0; margin-bottom: 20px; font-size: 22px; font-family: "Times New Roman", Times, serif; color: var(--sinowa-blue); border-bottom: 2px solid var(--border-color); padding-bottom: 10px; }
+        [data-theme="dark"] .panel-header { color: var(--sinowa-gold); }
+    </style> 
+</head> 
+<body> 
+    <header class="gov-header"> 
+        <img class="header-flag" src="https://www.nationstates.net/images/flags/uploads/sinowa__654445.png" alt="Flag"> 
+        <div class="gov-title"> 
+            <h1>SINOWA.GOV.SN</h1> 
+            <p>The State Council • The People's Republic of Sinowa</p> 
+        </div> 
+    </header> 
 
-    <nav class="gov-nav">
-        <a href="index.html">Home</a><a href="structure.html">Defence & State</a><a href="commerce.html">Commerce & Tech</a><a href="housing.html">Housing</a><a href="education.html">Education</a><a href="services.html">Labour & Health</a><a href="immigration.html">Home Affairs</a><a href="embassy.html">Foreign Affairs</a><a href="statistics.html">Statistics</a><a href="bank.html">Central Bank</a>
-    </nav>
+    <nav class="gov-nav"> 
+        <div class="nav-links"> 
+            <a href="index.html">Home</a> 
+            <a href="structure.html">Government & Defence</a> 
+            <a href="commerce.html">Commerce</a> 
+            <a href="housing.html" style="color: var(--sinowa-gold);">Housing</a> 
+            <a href="education.html">Education</a> 
+            <a href="services.html">Public Programmes</a> 
+            <a href="immigration.html">Home Affairs</a> 
+            <a href="embassy.html">Foreign Affairs</a> 
+            <a href="statistics.html">Statistics</a> 
+            <a href="bank.html">Central Bank</a> 
+        </div> 
+        <button class="theme-toggle" onclick="toggleTheme()">🌓 Toggle Dark Mode</button> 
+    </nav> 
 
-    <div class="container-wide">
-        <h2 class="page-title">Housing & Urban-Rural Development</h2>
-        
-        <div class="gov-panel">
-            <h3>I. The Sovereign Land Monopoly & 70-Year Leaseholds</h3>
-            <p>In accordance with socialist constitutional parameters, <strong>the State retains absolute ownership of 100% of all land</strong> within the People's Republic of Sinowa. However, to foster personal prosperity and wealth generation, citizens are permitted to purchase and trade <strong>70-year residential leaseholds</strong> on state land. This creates a booming, highly lucrative property market while ensuring the government retains ultimate territorial sovereignty.</p>
-        </div>
+    <div class="container-wide"> 
+        <div class="inner-content"> 
+            <h2 class="page-title">Ministry of Housing & Urban Development</h2> 
+            <p style="color: var(--text-muted); font-size: 15px;">Managing land monopolies, urban planning grids, and residential allocations.</p> 
 
-        <div class="gov-panel">
-            <h3>II. Municipal Integration (Hukou System)</h3>
-            <p>To prevent unbalanced population density and ensure social services are perfectly allocated, all citizens are registered under a strict municipal residency framework. Access to local top-tier medical facilities and elite public schools is seamlessly linked to an individual's registered geographic node. Transferring residency to a Tier-1 megacity requires a high Social Credit score and targeted industrial sector approval.</p>
-        </div>
-    </div>
-    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office.</p></footer>
-</body>
+            <div class="gov-panel">
+                <h2 class="panel-header">I. 70-Year Leasehold Model</h2>
+                <p style="font-size: 14.5px; line-height: 1.6; color: var(--text-color);">In accordance with socialist constitutional parameters, <strong>the State retains absolute ownership of 100% of all land</strong>. Citizens are permitted to purchase and trade 70-year residential leaseholds on state land. This balances robust private investment and modern urban maintenance while ensuring the government retains ultimate territorial sovereignty.</p>
+            </div>
+
+            <div class="gov-panel green-accent">
+                <h2 class="panel-header">II. Municipal Integration (Hukou System)</h2>
+                <p style="font-size: 14.5px; line-height: 1.6; color: var(--text-color);">The Municipal Residency framework manages urban infrastructure capacity. Your residency status (Hukou) determines your immediate access to local medical clinics and educational nodes. Residency transitions to Tier-1 megacities are algorithmically managed by the Ministry of Home Affairs to prevent urban over-saturation.</p>
+            </div>
+        </div> 
+    </div> 
+
+    <footer><p>© 2026 People's Republic of Sinowa. State Council Information Office. Internal tracking data ledger synchronised.</p></footer> 
+    <script> 
+        function toggleTheme() { 
+            const currentTheme = document.documentElement.getAttribute('data-theme'); 
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); } 
+            else { document.documentElement.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); } 
+        } 
+        if (localStorage.getItem('theme') === 'dark') { document.documentElement.setAttribute('data-theme', 'dark'); } 
+    </script> 
+</body> 
 </html>
